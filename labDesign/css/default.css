@@ -1,0 +1,35 @@
+﻿.header
+{
+    padding:10px;
+    background-color:aqua;
+}
+
+.header, nav, ul, li a
+{
+       padding:10px;
+}
+
+    .header nav
+    {        
+        background-color:aliceblue;
+    }
+
+.sample
+{
+    overflow: hidden;
+    background-color: #808080;       
+}
+
+    .sample li
+    {            
+        float: left;
+        background-color: #a84f4f;
+        margin: 0 10px 0 0;
+    }
+
+        .sample li a
+        {       
+            background-color: blue;     
+            color: #fff;
+            display:block;                 
+        }

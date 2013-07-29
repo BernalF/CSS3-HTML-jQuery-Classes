@@ -1,0 +1,11 @@
+{
+    "title": "Themes for Brackets",
+    "name": "themesforbrackets",
+    "description": "Themes to costumize the Brackets experience",
+    "version": "0.2.6",
+    "author": "Jacob Lauritzen <jacsebl@hotmail.com>",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/Jacse/themes-for-brackets.git"
+    }
+}
