@@ -1,39 +1,149 @@
-﻿body
-{
-    font-family: Arial,Helvetica, sans-serifl;
-}
-
-.clear
+﻿.clear
 {
     clear: both;
 }
 
-.sample
+.mainContainer
 {
-    width: 200px;    
-    background: red;
-    margin: 100px auto;
-    padding: 10px;
-    border: 1px solid #000;
+    width: 1000px;
+    margin: auto;
+    background: #e80dc8;
+    overflow: hidden;
 }
 
+.menu,
+.menu li
+{
+    overflow: hidden;
+    background: #0e2dc3;
+    padding: 10px;
+}
 
-    .sample p
-    {        
-        line-height: 150px;
-        background: green;
-        text-align: center;
-        padding:10px;
-        margin: 0 10px;
+    .menu li
+    {
+        background: #c10611;
+        float: left;
+        margin-right: 10px;
     }
 
-        .sample p span
+        .menu li a
         {
-            background: #dbd012;
-            display:block;
+            color: #fff;
+            padding: 10px;
+            display: block;
+            background: #070606;
         }
 
-p.daa
+.content
 {
-    margin-top:10px;    
+    background: #066;
+    overflow: hidden;
 }
+
+    .content > li
+    {
+        float: left;
+    }
+
+    .content li.header
+    {
+        background: #9f3;
+        float: none;
+        padding: 10px;
+    }
+
+.section,
+.aside
+{
+    padding: 10px;
+}
+
+li.section
+{
+    background: #FC3;
+    width: 680px;
+}
+
+    li.section h3
+    {
+        background: #669;
+        line-height: 30px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    li.section p
+    {
+        background: #09C;              
+    }
+
+    .tarea
+    {
+        background: #09C;
+        padding: 10px;
+        height: 210px;
+    }
+
+        .tarea li:nth-child(1)
+        {
+        }
+        .tarea li:nth-child(1)
+        {
+        }
+        .tarea li:nth-child(1)
+        {
+        }
+        .tarea li:nth-child(1)
+        {
+        }
+        .tarea li:nth-child(1)
+        {
+        }
+        .tarea li:nth-child(1)
+        {
+        }
+        .tarea li:nth-child(1)
+        {
+        }
+
+li.aside
+{
+    background: #699;
+    width: 280px;
+    padding: 10px 10px 0 10px;
+}
+
+    li.aside li
+    {
+        background: #C60;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    li.aside a
+    {
+        display: block;
+        background: #66C;
+        line-height: 20px;
+        color: #fff;
+    }
+
+.content li.footer
+{
+    background: #C30;
+    float: none;
+    clear: both;
+    padding: 10px;
+}
+
+/*p{
+	color:;
+	line-height:;
+    letter-spacing:;
+    text-transform:;
+    text-decoration:;
+    text-indent:;
+    word-spacing:;
+    word-wrap:;
+    text-shadow:;
+}*/
