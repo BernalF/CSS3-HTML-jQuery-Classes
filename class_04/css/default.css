@@ -1,0 +1,175 @@
+﻿.clear
+{
+    clear: both;
+}
+
+.mainContainer
+{
+    width: 1000px;
+    margin: auto;
+    background: #e80dc8;
+    overflow: hidden;
+}
+
+.menu,
+.menu li
+{
+    overflow: hidden;
+    background: #0e2dc3;
+    padding: 10px;
+}
+
+    .menu li
+    {
+        background: #c10611;
+        float: left;
+        margin-right: 10px;
+    }
+
+        .menu li a
+        {
+            color: #fff;
+            padding: 10px;
+            display: block;
+            background: #070606;
+        }
+
+        
+        .menu li a:hover
+        {
+            color: #070606;
+            background: #fff;
+        }
+
+.content
+{
+    background: #066;
+    overflow: hidden;
+}
+
+    .content > li
+    {
+        float: left;
+    }
+
+    .content li.header
+    {
+        background: #9f3;
+        float: none;
+        padding: 10px;
+    }
+
+.section,
+.aside
+{
+    padding: 10px;
+}
+
+li.section
+{
+    background: #FC3;
+    width: 680px;
+}
+
+    li.section h3
+    {
+        background: #669;
+        line-height: 30px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+
+.tarea
+{
+    background: #066;
+    padding: 10px;
+    /*height: 230px;*/
+}
+
+    .tarea li
+    {
+        border-bottom: 1px solid #070606;
+        padding-bottom: 2px;
+    }
+
+        .tarea li:nth-child(1) p
+        {
+            color: #c10611;
+        }
+
+        .tarea li:nth-child(2) p
+        {
+            line-height: 40px;
+        }
+
+        .tarea li:nth-child(3) p
+        {
+            letter-spacing: 2px;
+        }
+
+        .tarea li:nth-child(4) p
+        {
+            text-transform: uppercase;
+        }
+
+        .tarea li:nth-child(5) p
+        {
+            text-decoration: line-through;
+        }
+
+        .tarea li:nth-child(6) p
+        {
+            text-indent: 50px;
+        }
+
+        .tarea li:nth-child(7) p
+        {
+            word-spacing: 30px;
+        }
+
+        .tarea li:nth-child(8) p
+        {
+            word-wrap: break-word;
+        }
+
+        .tarea li:nth-child(9) p
+        {
+            text-shadow: 2px 2px #FF0000;
+        }
+
+
+li.aside
+{
+    background: #699;
+    width: 280px;
+    padding: 10px 10px 0 10px;
+}
+
+    li.aside li
+    {
+        background: #C60;
+        padding: 10px;
+        margin-bottom: 11px;
+    }
+
+    li.aside a
+    {
+        display: block;
+        background: #66C;
+        line-height: 20px;
+        color: #fff;
+    }
+
+    li.aside a:hover
+    {        
+        background: #fff;
+        color: #66C;
+    }
+
+.content li.footer
+{
+    background: #C30;
+    float: none;
+    clear: both;
+    padding: 10px;
+}
