@@ -34,6 +34,13 @@
             background: #070606;
         }
 
+        
+        .menu li a:hover
+        {
+            color: #070606;
+            background: #fff;
+        }
+
 .content
 {
     background: #066;
@@ -72,39 +79,64 @@ li.section
         margin-bottom: 10px;
     }
 
-    li.section p
+.tarea
+{
+    background: #066;
+    padding: 10px;
+    /*height: 230px;*/
+}
+
+    .tarea li
     {
-        background: #09C;              
+        border-bottom: 1px solid #070606;
+        padding-bottom: 2px;
     }
 
-    .tarea
-    {
-        background: #09C;
-        padding: 10px;
-        height: 210px;
-    }
+        .tarea li:nth-child(1) p
+        {
+            color: #c10611;
+        }
 
-        .tarea li:nth-child(1)
+        .tarea li:nth-child(2) p
         {
+            line-height: 40px;
         }
-        .tarea li:nth-child(1)
+
+        .tarea li:nth-child(3) p
         {
+            letter-spacing: 2px;
         }
-        .tarea li:nth-child(1)
+
+        .tarea li:nth-child(4) p
         {
+            text-transform: uppercase;
         }
-        .tarea li:nth-child(1)
+
+        .tarea li:nth-child(5) p
         {
+            text-decoration: line-through;
         }
-        .tarea li:nth-child(1)
+
+        .tarea li:nth-child(6) p
         {
+            text-indent: 50px;
         }
-        .tarea li:nth-child(1)
+
+        .tarea li:nth-child(7) p
         {
+            word-spacing: 30px;
         }
-        .tarea li:nth-child(1)
+
+        .tarea li:nth-child(8) p
         {
+            word-wrap: break-word;
         }
+
+        .tarea li:nth-child(9) p
+        {
+            text-shadow: 2px 2px #FF0000;
+        }
+
 
 li.aside
 {
@@ -117,7 +149,7 @@ li.aside
     {
         background: #C60;
         padding: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 11px;
     }
 
     li.aside a
@@ -128,6 +160,12 @@ li.aside
         color: #fff;
     }
 
+    li.aside a:hover
+    {        
+        background: #fff;
+        color: #66C;
+    }
+
 .content li.footer
 {
     background: #C30;
@@ -135,15 +173,3 @@ li.aside
     clear: both;
     padding: 10px;
 }
-
-/*p{
-	color:;
-	line-height:;
-    letter-spacing:;
-    text-transform:;
-    text-decoration:;
-    text-indent:;
-    word-spacing:;
-    word-wrap:;
-    text-shadow:;
-}*/
