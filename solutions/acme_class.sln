@@ -6,20 +6,20 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "labDesign", "http://localho
 		UseIISExpress = "false"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/labDesign"
-		Debug.AspNetCompiler.PhysicalPath = "C:\Projects\CSS3-HTML-jQuery-Classes\labDesign\"
+		Debug.AspNetCompiler.PhysicalPath = "C:\Projects\acme_class\html_css\labDesign\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\labDesign\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/labDesign"
-		Release.AspNetCompiler.PhysicalPath = "C:\Projects\CSS3-HTML-jQuery-Classes\labDesign\"
+		Release.AspNetCompiler.PhysicalPath = "C:\Projects\acme_class\html_css\labDesign\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\labDesign\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "C:\Projects\CSS3-HTML-jQuery-Classes\labDesign\"
+		SlnRelativePath = "C:\Projects\acme_class\html_css\labDesign\"
 	EndProjectSection
 EndProject
 Global
