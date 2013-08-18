@@ -1,0 +1,302 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section
+{
+    display: block;
+}
+
+body
+{
+    font-family: Consolas, sans-serif;
+    min-height: 740px;
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background: -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background: -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background: -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background: radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+}
+
+b, strong
+{
+    font-weight: bold;
+}
+
+i, em
+{
+    font-style: italic;
+}
+
+ol, ul
+{
+    list-style: none;
+}
+
+blockquote, q
+{
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after
+    {
+        content: '';
+        content: none;
+    }
+
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body
+{
+    min-height: 740px;
+    color: #EEE;
+    background: #333333;
+    background: -webkit-radial-gradient(center bottom, circle farthest-corner, #666666, #333333, black);
+    background: -moz-radial-gradient(center bottom, circle farthest-corner, #666666, #333333, black);
+    background: -o-radial-gradient(center bottom, circle farthest-corner, #666666, #333333, black);
+    background: -ms-radial-gradient(center bottom, circle farthest-corner, #666666, #333333, black);
+    background: radial-gradient(center bottom, circle farthest-corner, #666666, #333333, black);
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.step
+{
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+.impress-enabled .step
+{
+    margin: 0;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+    .impress-enabled .step.active
+    {
+        opacity: 1;
+    }
+
+.step:not(.active)
+{
+    opacity: 0;
+}
+
+.slide
+{
+    display: block;
+    width: 900px;
+    height: 700px;
+    color: #EEE;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .9);
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -1px;
+    position: relative;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 40px 60px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+}
+
+    .slide q
+    {
+        display: block;
+        font-size: 50px;
+        line-height: 72px;
+        margin-top: 100px;
+    }
+
+        .slide q strong
+        {
+            white-space: nowrap;
+        }
+
+#overview
+{
+    display: none;
+}
+
+#impress.step-overview .step
+{
+    opacity: 1;
+    cursor: pointer;
+}
+
+a
+{
+    color: #EEE;
+    padding: 0.2em 0.3em 0.4em 0.3em;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+    a:link
+    {
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+        a:link:hover
+        {
+            background: rgba(255,255,255, 0.2);
+        }
+
+#title h1
+{
+    font-size: 190px;
+    -webkit-transform: translateZ(50px);
+    -moz-transform: translateZ(50px);
+    -ms-transform: translateZ(50px);
+    -o-transform: translateZ(50px);
+    transform: translateZ(50px);
+}
+
+/* EOF Content */
+
+/* Fallback */
+
+.fallback-message
+{
+    font-family: sans-serif;
+    line-height: 1.3;
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+    border: 1px solid #E4C652;
+    border-radius: 10px;
+    background: #EEDC94;
+}
+
+    .fallback-message p
+    {
+        margin-bottom: 10px;
+        color: #333333;
+    }
+
+.impress-supported .fallback-message
+{
+    display: none;
+}
+
+/* EOF Fallback */
+
+.hint
+{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    background: rgba(0,0,0,0.5);
+    color: #EEE;
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    z-index: 100;
+    opacity: 0;
+    -webkit-transform: translateY(400px);
+    -moz-transform: translateY(400px);
+    -ms-transform: translateY(400px);
+    -o-transform: translateY(400px);
+    transform: translateY(400px);
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+    -moz-transition: opacity 1s, -moz-transform 0.5s 1s;
+    -ms-transition: opacity 1s, -ms-transform 0.5s 1s;
+    -o-transition: opacity 1s, -o-transform 0.5s 1s;
+    transition: opacity 1s, transform 0.5s 1s;
+}
+
+.impress-enabled .hint
+{
+    display: block;
+}
+
+
+.impress-on-init .hint
+{
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition: opacity 1s 5s, -webkit-transform 0.5s 4.5s;
+    -moz-transition: opacity 1s 5s, -moz-transform 0.5s 4.5s;
+    -ms-transition: opacity 1s 5s, -ms-transform 0.5s 4.5s;
+    -o-transition: opacity 1s 5s, -o-transform 0.5s 4.5s;
+    transition: opacity 1s 5s, transform 0.5s 4.5s;
+}
+
+.impress-enabled
+{
+    pointer-events: none;
+}
+
+    .impress-enabled #impress
+    {
+        pointer-events: auto;
+    }
+
+/* Init Styles presentation*/
+
+#init p
+{
+    display: block;
+    font-size: 70px;
+    line-height: 72px;
+    margin-top: 100px;
+    text-align: center;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d; /* Y U need this Firefox?! */
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}

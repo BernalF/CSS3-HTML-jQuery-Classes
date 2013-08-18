@@ -6,20 +6,41 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "labDesign", "http://localho
 		UseIISExpress = "false"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/labDesign"
-		Debug.AspNetCompiler.PhysicalPath = "C:\Projects\acme_class\html_css\labDesign\"
+		Debug.AspNetCompiler.PhysicalPath = "..\html_css\labDesign\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\labDesign\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/labDesign"
-		Release.AspNetCompiler.PhysicalPath = "C:\Projects\acme_class\html_css\labDesign\"
+		Release.AspNetCompiler.PhysicalPath = "..\html_css\labDesign\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\labDesign\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "C:\Projects\acme_class\html_css\labDesign\"
+		SlnRelativePath = "..\html_css\labDesign\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "labJS", "http://localhost:8081/labJS", "{5DAF08FA-B97A-4A7E-B532-36443906FFA2}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/labJS"
+		Debug.AspNetCompiler.PhysicalPath = "..\js_jquery\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\labJS\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/labJS"
+		Release.AspNetCompiler.PhysicalPath = "..\js_jquery\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\labJS\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\js_jquery\"
 	EndProjectSection
 EndProject
 Global
@@ -29,6 +50,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C80691F8-4D19-49AA-BF3C-7C31708C1A90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C80691F8-4D19-49AA-BF3C-7C31708C1A90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DAF08FA-B97A-4A7E-B532-36443906FFA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DAF08FA-B97A-4A7E-B532-36443906FFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

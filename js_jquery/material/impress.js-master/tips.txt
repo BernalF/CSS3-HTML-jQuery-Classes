@@ -1,0 +1,9 @@
+
+    data-x = the x co-ordinate of the slide
+    data-y = the y co-ordinate of the slide
+    data-z = the z co-ordinate of the slide (how far/close it appears to the user)
+    data-scale = scales your slide by a factor of this value. A data-scale of 5 would be 5 times the original size of your slide
+    data-rotate = rotates your slide by the specified number of degrees
+    data-rotate-x = For 3D slides. This is the number of degrees it should be rotated about the x-axis. (Tilt forward/lean back)
+    data-rotate-y = For 3D slides. This is the number of degrees it should be rotated about the y-axis (swing in from the left/right)
+    data-rotate-z = For 3D slides. This is the number of degrees it should be rotated about the z-axis

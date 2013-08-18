@@ -84,15 +84,14 @@ table {
 body {
     font-family: 'PT Sans', sans-serif;
     min-height: 740px;
-    color: #EEE;
-    background: #333333;
-    background: -webkit-radial-gradient(center bottom, circle farthest-corner, #666666, #333333, black);
-    background: -moz-radial-gradient(center bottom, circle farthest-corner, #666666, #333333, black);
-    background: -o-radial-gradient(center bottom, circle farthest-corner, #666666, #333333, black);
-    background: -ms-radial-gradient(center bottom, circle farthest-corner, #666666, #333333, black);
-    background: radial-gradient(center bottom, circle farthest-corner, #666666, #333333, black);
-    -webkit-font-smoothing: antialiased;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
 }
 
 /*
