@@ -466,7 +466,19 @@ a
         padding-top: 20px;
     }
 
-.impress-on-s0-q .rly
+.ohh
+{
+    float: right;    
+    opacity: 0;
+    display: none;
+}
+
+.impress-enabled .ohh
+{
+    display: block;
+}
+
+.impress-on-s0-q .ohh
 {
     float: right;
     width: 300px;
