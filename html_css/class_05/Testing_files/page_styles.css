@@ -1,0 +1,299 @@
+.MainHolder{
+	width:1000px;
+	margin:auto;
+	height:600px;
+	background:#fff;
+	position:relative;
+	overflow:hidden;
+}
+
+.bodyCar {
+	width: 850px;
+	height: 100px;
+	background: #09C;
+	position:absolute;
+	top:350px;
+	left:50px;
+}
+
+.bodyCar:before {
+	content: "";
+	position: absolute;
+	top: -100px;
+	right:0px;
+	width: 0;
+	height: 0;
+	border-left:0px solid transparent;
+	border-right: 200px solid transparent;
+	border-bottom: 100px solid #09C;
+}
+.bodyCar:after {
+	content: "";
+	position: absolute;
+	top:-200px;
+	left: 0px;
+	width: 0;
+	height: 0;
+	border-left: 90px solid transparent;
+	border-right: 200px solid transparent;
+	border-bottom:200px solid #09C;
+}
+
+/* ROOF CAR */
+.roofCar {
+	width:500px;
+	height:200px;
+	background: #09C;
+	position:absolute;
+	top:150px;
+	left:120px;
+}
+.roofCar:before {
+	content: "";
+	position: absolute;
+	top:0px;
+	right:-170px;
+	width: 0;
+	height: 0;
+	border-left:0px solid transparent;
+	border-right: 170px solid transparent;
+	border-bottom: 150px solid #09C;
+}
+.roofCar:after {
+	content:"";
+	position: absolute;
+	top:100px;
+	right:-80px;
+	width: 90px;
+	height: 100px;
+	background:#09C;
+}
+
+/* FRONT WINDOWS */
+.frontWindows{
+	width:20px;
+	height:130px;
+	background:#6CF;
+	position:absolute;
+	top:160px;
+	left:611px;
+}
+.frontWindows:before {
+	content:"";
+	position: absolute;
+	top:0px;
+	right:-150px;
+	width: 0;
+	height: 0;
+	border-left:0px solid transparent;
+	border-right: 150px solid transparent;
+	border-bottom: 130px solid #6CF;
+}
+.frontWindows:after {
+	content:"";
+	position: absolute;
+	top:0px;
+	left:-40px;
+	width:0px;
+	height:0px;
+	border-left:40px solid transparent;
+	border-right: 0px solid transparent;
+	border-top: 130px solid #6CF;
+}
+
+/* FRONT DOR */
+
+.frontDoor{
+	width:180px;
+	height:280px;
+	background:rgba(255,255,255,.2);
+	position:absolute;
+	top:160px;
+	left:380px;
+}
+
+.frontDoor:before {
+	content:"";
+	position: absolute;
+	top:0px;
+	right:-35px;
+	width: 0;
+	height: 0;
+	border-left:0px solid transparent;
+	border-right: 35px solid transparent;
+	border-bottom: 130px solid rgba(255,255,255,.2);
+}
+
+.frontDoor:after{
+	width:35px;
+	height:150px;
+	background:rgba(255,255,255,.2);
+	position:absolute;
+	display:block;
+	content:"";
+	bottom:0px;
+	right:-35px;
+}
+
+/* FRONT DOOR WINDOW */
+
+/* BACK DOOR WINDOW */
+
+.frontDoorWindow{
+	width:150px;
+	height:120px;
+	background:#6CF;
+	position:absolute;
+	top:170px;
+	left:390px;
+}
+
+.frontDoorWindow:before {
+	content:"";
+	position: absolute;
+	top:0px;
+	right:-45px;
+	width: 0;
+	height: 0;
+	border-left:0px solid transparent;
+	border-right:35px solid transparent;
+	border-bottom:120px solid #6CF;
+}
+
+/* BACK DOOR */
+
+.backDoor{
+	width:180px;
+	height:280px;
+	background:rgba(255,255,255,.2);
+	position:absolute;
+	top:160px;
+	left:190px;
+}
+
+.backDoor:before {
+	content:"";
+	position: absolute;
+	top:0px;
+	left:-35px;
+	width: 0;
+	height: 0;
+	border-left:35px solid transparent;
+	border-right: 0px solid transparent;
+	border-bottom: 130px solid rgba(255,255,255,.2);
+}
+
+.backDoor:after{
+	width:35px;
+	height:150px;
+	background:rgba(255,255,255,.2);
+	position:absolute;
+	display:block;
+	content:"";
+	bottom:0px;
+	left:-35px;
+}
+
+/* BACK DOOR WINDOW */
+
+.backDoorWindow{
+	width:150px;
+	height:120px;
+	background:#6CF;
+	position:absolute;
+	top:170px;
+	left:210px;
+}
+
+.backDoorWindow:before {
+	content:"";
+	position: absolute;
+	top:0px;
+	left:-45px;
+	width: 0;
+	height: 0;
+	border-left:35px solid transparent;
+	border-right: 0px solid transparent;
+	border-bottom: 120px solid #6CF;
+}
+
+/* BACK WHEEL */
+
+.backWheel{
+	width:160px;
+	height:160px;
+	background:#333;
+	position:absolute;
+	top:370px;
+	left:100px;
+	border-radius:100%;
+}
+
+.backWheel:before{
+	display:block;
+	content:"";
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:80px;
+	height:80px;
+	margin:-40px;
+	border-radius:100%;
+	background-color:#999;
+}
+
+/* FRONT WHELL */
+
+.frontWheel{;
+	width:160px;
+	height:160px;
+	background:#333;
+	position:absolute;
+	top:370px;
+	left:600px;
+	border-radius:100%;
+}
+
+.frontWheel:before{
+	display:block;
+	content:"";
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:80px;
+	height:80px;
+	margin:-40px;
+	border-radius:100%;
+	background-color:#999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

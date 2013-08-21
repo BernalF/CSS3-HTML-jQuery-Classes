@@ -1,0 +1,13 @@
+/* GENERAL ATTRIBUTES */
+html, body{
+	width:100%;
+	height:100%;
+}
+
+body{
+	font-family:'open sans', 'segoe ui', Arial, Helvetica, sans-serif;
+}
+
+.clear{
+	clear:both;
+}
