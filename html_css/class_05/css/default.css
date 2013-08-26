@@ -1,0 +1,215 @@
+﻿
+.mainContent
+{
+    margin: auto;
+    overflow: hidden;    
+}
+
+.car
+{
+    position: relative;
+    width: 390px;
+    height: 380px;
+    background: #142576;
+    margin: 100px auto;
+}
+
+.arriba
+{
+    width: 390px;
+    height: 190px;
+    background: #142576;
+    position: relative;
+    overflow:hidden;
+}
+
+.abajo
+{
+    width: 390px;
+    height: 190px;
+    background: #142576;
+}
+
+.trompa,
+.puerta1,
+.puerta2,
+.atras
+{
+    width: 190px;
+    height: 190px;
+    position: absolute;
+}
+
+.trompa
+{
+    left: -190px;
+    overflow: hidden;
+    background: #142576;
+}
+
+.puerta1
+{
+    background: #1b3281;
+}
+
+.puerta2
+{
+    background: #1b3281;
+    left: 200px;
+}
+
+.atras
+{
+    background: #142576;
+    right: -190px;
+}
+
+.blanca,
+.roja
+{
+    height: 60px;
+}
+
+.blanca
+{
+    width: 40px;
+    margin: 10px 0 0 10px;
+    background: #fff;
+}
+
+.roja
+{
+    width: 30px;
+    background: #f00;
+    margin: 0 0 0 15px;
+}
+
+.manilla
+{
+    width: 60px;
+    height: 20px;
+    margin: 5px;
+    background: #050505;
+}
+
+.atras .blanca
+{
+    float: right;
+    margin-right: 10px;
+    height: 80px;
+    width: 35px;
+}
+
+.amarilla
+{
+    background: #ffd800;
+    width: 30px;
+    height: 70px;
+    margin: 5px 0 5px 5px;
+}
+
+.wc
+{
+    position: relative;
+    width: 190px;
+    height: 190px;
+}
+
+.llanta
+{
+    position: relative;
+    width: 130px;
+    height: 130px;
+    background: #050505;
+    -moz-border-radius: 65px;
+    border-radius: 65px;
+    left: -65px;
+    top: 90px;
+}
+
+.puerta2 .llanta
+{
+    left: initial;
+    left: 130px;
+    z-index: 30;
+}
+
+.aro
+{
+    width: 65px;
+    height: 65px;
+    background: #808080;
+    margin: 0 auto;
+    -moz-border-radius: 32.5px;
+    border-radius: 32.5px;
+    left: 32.5px;
+    position: absolute;
+    top: 32.5px;
+}
+
+.arriba div
+{
+    width: 155px;
+    height: 178px;
+    background: #1b1818;
+    margin: 10px 20px 30px 10px;
+    position: absolute;
+}
+
+    .arriba div:nth-child(1)
+    {
+        left: -145px;
+    }
+
+    .arriba div:nth-child(2)
+    {
+        left: 22px;
+    }
+
+    .arriba div:nth-child(3)
+    {
+        left: 192px;
+    }
+
+    .arriba div:nth-child(4)
+    {
+        right: -155px;
+    }
+
+.rack
+{
+    width:440px;
+    height:10px;
+    background:#808080;
+    position:absolute;
+    top:-25px;    
+    right:10px;
+    left:-30px;
+}
+
+    .rack article
+    {
+        position:relative;
+    }
+
+        .rack article div
+        {
+            width:10px;
+            height:40px;
+            position:absolute;
+            background:#808080;
+            top: -15px;
+        }
+
+    .rack article div:nth-child(1)
+    {
+        left:60px;
+    }
+    .rack article div:nth-child(2)
+    {
+        left:217px;
+    }
+    .rack article div:nth-child(3)
+    {
+        left:374px;
+    }
