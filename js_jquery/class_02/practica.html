@@ -2,12 +2,62 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
+    <style>
+        body, div, ul, li, h1, h2, h3, h4, h5, form, input, textarea, p, table, tr, td
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul
+        {
+            list-style: none;
+            border: 1px solid;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
 
     <form name="myForm" id="myForm" action="success.html">
-        <input type="submit" id="btnDone" value="Save" />
+
+        <ul>
+            <li>
+                <label>Name</label></li>
+            <li>
+                <input type="text" id="txtName" /></li>
+            <li>
+                <label>Age</label></li>
+            <li>
+                <input type="text" id="txtAge" /></li>
+            <li>
+                <label>Have children</label></li>
+            <li>
+                <label>Yes</label>
+                <input type="radio" id="rd1" name="child" />
+                <label>No</label>
+                <input type="radio" id="rd2" name="child" />
+            </li>
+            <li></li>
+            <li>
+                <input type="submit" id="btnDone" value="Save" />
+
+            </li>
+            <li></li>
+        </ul>
+
+
+
+
+
+
+
     </form>
+
 
 </body>
 </html>
+<script>
+
+</script>
