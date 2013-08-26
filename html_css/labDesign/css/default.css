@@ -2,45 +2,9 @@
 .mainContent
 {
     width: 1000px;
-    height: 600px;
+    height: 400px;
     margin: auto;
     background: #0c0b0b;    
     overflow: hidden;
     
-}
-
-.content
-{
-    width: 1000px;
-    height: 300px;
-    margin: auto;  
-    background:#808080;  
-    margin-top:100px;
-}
-
-.notChasis
-{
-    width:600px;
-    height:150px;
-    background:#0d238b;
-    margin:auto;
-    overflow:hidden;
-}
-
-.chasis
-{
-    width:800px;
-    height:150px;
-    background:#0d238b;
-    margin:auto;
-    position:relative;
-}
-
-.puerta1
-{
-    background:#28a59e;
-    width:200px;
-    height:150px;
-    position:absolute;
-    top:40%;
 }

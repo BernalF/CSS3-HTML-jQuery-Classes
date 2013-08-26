@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        hr, h3, p
+        {
+            margin:1px;
+            padding:1px;
+        }
+        div
+        {
+            width: 150px;
+            height: 20px;
+            background: #0094ff;
+            margin-top: 10px;
+        }
+
+        #notes
+        {
+            width: 400px;
+            background: #fff;
+            overflow: hidden;
+            height: 480px;
+            display: none;
+        }
+
+            #notes img
+            {
+                margin: auto;
+            }   
+    </style>
+</head>
+<body>
+    <hr />
+    <h3> To review</h3>
+    <a href="#" onclick="document.getElementById('notes').style.display = 'block'">show</a>
+    <a href="#" onclick="document.getElementById('notes').style.display = 'none'">hide</a>
+    <div id="notes">
+        <p>
+            When a web page is loaded, the browser creates a Document Object Model of the page.
+        The HTML DOM model is constructed as a tree of Objects:
+        </p>
+        <img src="images/DOMstructure.png" class="dom" width="400" height="250" />
+        <ul>
+            <li>JavaScript can change all the HTML elements in the page</li>
+            <li>JavaScript can change all the HTML attributes in the page</li>
+            <li>JavaScript can change all the CSS styles in the page</li>
+            <li>JavaScript can react to all the events in the page</li>            
+        </ul>
+    </div>
+    <hr />
+<!--    <p id="intro">Finding HTML elements by id</p>
+
+    <p id="P1" class="">Finding HTML elements by tagName</p>
+
+    <img id="image" src="images/koohala.jpg" style="display: block;" />
+
+    <input type="button" value="Hide text" onclick="document.getElementById('P1').style.visibility = 'hidden'" />
+
+    <input type="button" value="Show text" onclick="document.getElementById('P1').style.visibility = 'visible'" />
+
+    <input type="text" id="fname" onchange="myFunction()" style="display: block;">
+
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)">Mouse Over Me</div>
+
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)">Click Me</div>
+
+    <div id="newp"></div>
+    <input type="button" value="Create" onclick="create()" />
+    <input type="button" value="Remove" onclick="removec()" />-->
+
+</body>
+</html>
+
+<script>
+
+    /*
+    //-- Finding HTML elements by id
+    x = document.getElementById("intro");
+    document.write('<br> by ID => ' + x.innerHTML + '<br>');
+
+    //-- Finding HTML elements by tagName
+    var y = document.getElementsByTagName("p");
+    document.write('by tagName  => ' + y[1].innerHTML + '<br>');
+
+    //-- Changing html content
+    document.getElementById("intro").innerHTML = "Text Changed by id";
+
+    //-- Changing an HTML Attribute
+    document.getElementById("image").width = "100";
+
+    //-- Changing HTML Style
+    document.getElementById("P1").style.color = "blue";
+    document.getElementById("P1").style.fontWeight = "bold";
+
+    //-- Events
+    //Onchange 
+    function myFunction() {
+        var x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+    }
+
+    //Onmouseover - onmouseOut
+    function mOver(obj) {
+        obj.innerHTML = "Yeah!"
+    }
+
+    function mOut(obj) {
+        obj.innerHTML = "Mouse Over Me"
+    }
+
+    //onmousedown - onmouseup
+    function mDown(obj) {
+        obj.style.backgroundColor = "#1ec5e5";
+        obj.innerHTML = "Release Me"
+    }
+
+    function mUp(obj) {
+        obj.style.backgroundColor = "#D94A38";
+        obj.innerHTML = "Yeah"
+    }
+
+    //onload event
+    window.onload = function () { alert('all full loaded'); };
+
+    //Create  content
+    function create() {
+        var para = document.createElement("p");
+        para.setAttribute('id', 'pd');
+        var node = document.createTextNode("This is a js creation.");
+        para.appendChild(node);
+
+        var element = document.getElementById("newp");
+        element.appendChild(para);
+    }
+
+    function removec() {
+        var parent = document.getElementById("newp");
+        var child = document.getElementById("pd");
+        parent.removeChild(child);
+    }
+    */
+</script>
