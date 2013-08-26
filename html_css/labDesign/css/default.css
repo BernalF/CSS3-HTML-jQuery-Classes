@@ -163,12 +163,12 @@
 
     .arriba div:nth-child(2)
     {
-        left: 20px;
+        left: 22px;
     }
 
     .arriba div:nth-child(3)
     {
-        left: 190px;
+        left: 192px;
     }
 
     .arriba div:nth-child(4)
@@ -184,7 +184,7 @@
     position:absolute;
     top:-25px;    
     right:10px;
-    left:-20px;
+    left:-30px;
 }
 
     .rack article
@@ -203,13 +203,13 @@
 
     .rack article div:nth-child(1)
     {
-        left:50px;
+        left:60px;
     }
     .rack article div:nth-child(2)
     {
-        left:210px;
+        left:217px;
     }
     .rack article div:nth-child(3)
     {
-        left:360px;
+        left:374px;
     }
