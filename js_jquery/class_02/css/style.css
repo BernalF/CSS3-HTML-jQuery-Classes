@@ -1,0 +1,76 @@
+﻿body, div, ul, li, h1, h2, h3, h4, h5, form, input, textarea, p, table, tr, td
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+}
+
+body
+{
+    background: #464a53;
+    color: #fff;
+}
+
+ul
+{
+    list-style: none;
+    border: 1px solid #5a5c63;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.errormsj
+{
+    color: #ee4343;
+    font-size: 11px;
+    display: block;
+}
+
+#myForm
+{
+    width: 400px;
+    margin: 10% auto;
+}
+
+.form
+{
+    overflow: hidden;
+}
+
+    .form li
+    {
+        float: left;
+        padding-bottom: 10px;
+    }
+
+        .form li:nth-child(odd)
+        {
+            width: 40%;
+        }
+
+        .form li:nth-child(even)
+        {
+            width: 60%;
+        }
+
+        .form li:nth-last-child(1)
+        {
+            width: 100%;
+            text-align: right;
+        }
+
+.width100
+{
+    width: 100% !important;
+}
+
+#listSons
+{
+    width: 60%;
+}
+
+.hide
+{
+    display: none;
+}

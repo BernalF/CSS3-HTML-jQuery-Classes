@@ -1,63 +1,138 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
     <title></title>
-    <style>
-        body, div, ul, li, h1, h2, h3, h4, h5, form, input, textarea, p, table, tr, td
-        {
-            margin: 0;
-            padding: 0;
-        }
-
-        ul
-        {
-            list-style: none;
-            border: 1px solid;
-            margin: 10px;
-            padding: 10px;
-        }
-    </style>
+    <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
-
     <form name="myForm" id="myForm" action="success.html">
-
-        <ul>
+        <ul class="form">
             <li>
-                <label>Name</label></li>
+                <label>Name *</label></li>
             <li>
-                <input type="text" id="txtName" /></li>
+                <input type="text" id="txtName" name="txtName" onfocus="clean(this);" />
+                <label id="msj1" class="errormsj hide"></label>
+            </li>
             <li>
                 <label>Age</label></li>
             <li>
-                <input type="text" id="txtAge" /></li>
+                <input type="text" id="txtAge" name="txtAge" onchange="justNbrs(this);" onfocus="clean(this);" />
+                <label id="msj2" class="errormsj hide"></label>
+            </li>
             <li>
-                <label>Have children</label></li>
+                <label>Have Sons</label></li>
             <li>
                 <label>Yes</label>
-                <input type="radio" id="rd1" name="child" />
+                <input type="radio" id="rd1" name="child" onclick="radioCheck();" />
                 <label>No</label>
-                <input type="radio" id="rd2" name="child" />
+                <input type="radio" id="rd2" name="child" onclick="radioCheck();" />
             </li>
-            <li></li>
+            <li id="l1" class="width100 center hide">
+                <label>Type the name of the Sons</label>
+            </li>
+            <li id="l2" class="width100 center hide">
+                <label>Name</label>
+                <input type="text" id="txtConName" />
+                <input type="button" value="Add" id="btnAdd" onclick="addtoList();" />
+            </li>
+            <li id="l3" class="width100 hide">
+                <select name="listSons" id="listSons" size="6" multiple="multiple">
+                </select>
+                <input type="button" value="Remove" id="btnRemove" onclick="removeOptionSelected();" />
+            </li>
             <li>
-                <input type="submit" id="btnDone" value="Save" />
-
+                <input type="submit" id="btnDone" value="Save" onclick="return save();" />
             </li>
-            <li></li>
         </ul>
-
-
-
-
-
-
-
     </form>
-
-
 </body>
 </html>
 <script>
+
+    //Save Function
+    function save() {
+        if (document.myForm.txtName.value == '') {
+            document.getElementById("msj1").innerHTML = 'The Name is required';
+            document.getElementById("msj1").style.display = 'block';
+            return false;
+        }
+        else if (document.myForm.txtAge.value == '') {
+            document.getElementById("msj2").innerHTML = 'The Age is required';
+            document.getElementById("msj2").style.display = 'block';
+            return false;
+        }
+        else if (!justNbrs(document.getElementById("txtAge"))) {
+            return false;
+        }
+        else {
+            document.getElementById("msj1").innerHTML = '';
+            document.getElementById("msj1").style.display = 'none';
+            return true;
+        }
+    }
+
+    //Validate numbers on input
+    function justNbrs(el) {
+        if (isNaN(el.value)) {
+            document.getElementById("msj2").innerHTML = 'Please enter just Numbers';
+            document.getElementById("msj2").style.display = 'block';
+            return false;
+        }
+        else
+            return true;
+    }
+
+    //Radio button Check handler
+    function radioCheck() {
+        var elements = document.getElementsByName('child');
+        for (var i = 0, l = elements.length; i < l; i++) {
+            if (elements[i].checked) {
+                document.getElementById('l1').style.display = 'none';
+                document.getElementById('l2').style.display = 'none';
+                document.getElementById('l3').style.display = 'none';
+            }
+            else {
+                document.getElementById('l1').style.display = 'block';
+                document.getElementById('l2').style.display = 'block';
+                document.getElementById('l3').style.display = 'block';
+            }
+        }
+    }
+
+    //Add names to the list
+    function addtoList() {
+        var txtConName = document.getElementById('txtConName');
+        if (!txtConName.value == '') {
+            createOptions(txtConName.value);
+            txtConName.value = '';
+        }
+    }
+
+    //Create options dinamically
+    function createOptions(text) {
+        var option = document.createElement('option');
+        option.text = text;
+        option.value = 'myvalue';
+        var select = document.getElementById('listSons');
+        select.appendChild(option);
+    }
+
+    //Remove the selected options
+    function removeOptionSelected() {
+        var select = document.getElementById('listSons');
+        for (i = select.length - 1; i >= 0; i--) {
+            if (select.options[i].selected) {
+                var r = confirm("Are you sure you want to deleted?");
+                if (r == true) {
+                    select.remove(i);
+                }
+            }            
+        }
+    }
+
+    //Clean error msj
+    function clean(el) {
+        el.parentNode.childNodes[3].innerHTML = '';
+    }
 
 </script>
