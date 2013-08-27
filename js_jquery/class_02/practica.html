@@ -48,7 +48,6 @@
 </body>
 </html>
 <script>
-
     //Save Function
     function save() {
         if (document.myForm.txtName.value == '') {
@@ -70,7 +69,6 @@
             return true;
         }
     }
-
     //Validate numbers on input
     function justNbrs(el) {
         if (isNaN(el.value)) {
@@ -81,7 +79,6 @@
         else
             return true;
     }
-
     //Radio button Check handler
     function radioCheck() {
         var elements = document.getElementsByName('child');
@@ -98,7 +95,6 @@
             }
         }
     }
-
     //Add names to the list
     function addtoList() {
         var txtConName = document.getElementById('txtConName');
@@ -107,7 +103,6 @@
             txtConName.value = '';
         }
     }
-
     //Create options dinamically
     function createOptions(text) {
         var option = document.createElement('option');
@@ -116,7 +111,6 @@
         var select = document.getElementById('listSons');
         select.appendChild(option);
     }
-
     //Remove the selected options
     function removeOptionSelected() {
         var select = document.getElementById('listSons');
@@ -129,10 +123,8 @@
             }            
         }
     }
-
     //Clean error msj
     function clean(el) {
         el.parentNode.childNodes[3].innerHTML = '';
     }
-
 </script>
