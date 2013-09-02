@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="default.css" />
+
+</head>
+<body>
+    <div id="divContent">
+        <div id="divHeader">
+            <ul>
+                <li>Name<span id="ReqName" class="fieldrequired requiredHidden"> Required Field</span></li>
+                <li>
+                    <input type="text" id="txtName" /></li>
+                <li>Age<span id="ReqAge" class="fieldrequired requiredHidden"> Required Field</span>
+
+                </li>
+                <li>
+                    <input type="text" id="txtAge" />
+                    <span id="NumField" class="fieldrequired requiredHidden">Enter a value from 0-999</span></li>
+                <li>Have Sons?</li>
+                <li>
+                    <input type="radio" id="ckbYes" name="Sons" value="Yes" onchange="ShowDescription()" />Yes
+                <input type="radio" id="ckbNo" name="Sons" value="No" onchange="HideDescription()" />No
+                </li>
+
+            </ul>
+
+        </div>
+        <div id="divDescription">
+            <ul>
+                <li>Type the name of the sons</li>
+                <li>
+                    <input type="text" id="txtSonName" /><a href="#" class="btn" onclick="Add()">Add</a></li>
+                <li></li>
+                <li>
+                    <select id="lstSons" multiple="multiple">
+                    </select><a href="#" class="btn" onclick="Remove()">Remove</a></li>
+
+            </ul>
+
+        </div>
+        <ul>
+            <li><a href="#" class="btn" onclick="Save()">Save</a></li>
+        </ul>
+        <br />
+        <br />
+    </div>
+</body>
+</html>
+
+<script src="code.js"></script>
+
