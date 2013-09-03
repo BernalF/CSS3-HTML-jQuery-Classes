@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        ul
+        {
+            list-style: none;
+        }
+
+        .secBtns li
+        {
+            margin-top: 5px;
+            display: inline;
+        }
+
+        a
+        {
+            display: block;
+            padding: 20px;
+            width: 200px;
+            background: #46b217;
+            margin: 10px;
+        }
+
+        .p3
+        {
+            color: #2418c3;
+            font-size: 30px;
+        }
+
+        .main
+        {
+            margin: auto;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="secBtns">
+            <li>
+                <input type="button" value="Hide All ancords" onclick="hideAllA();" />
+            </li>
+            <li>
+                <input type="button" value="Show All ancords" onclick="showAllA();" />
+            </li>
+            <li>
+                <input type="button" value="Hide by ID ancords" onclick="hideByID();" />
+            </li>
+            <li>
+                <input type="button" value="Show by ID ancords" onclick="showbyID();" />
+            </li>
+            <li>
+                <input type="button" value="Hide by class ancords" onclick="hidebyClass();" />
+            </li>
+            <li>
+                <input type="button" value="Show by class ancords" onclick="showbyClass();" />
+            </li>
+        </ul>
+        <hr />
+    </div>
+    <div class="main">
+        <a href="#" id="a1" onclick="hideMe(this);">Hides the current Element</a>
+        <a href="#" onclick="ShowSibling();">Show Sibling</a>
+        <a href="#" id="p2">By ID</a>
+        <a href="#" class="p3">By class</a>
+    </div>
+
+</body>
+</html>
+
+<script src="../js/jquery-2.0.3.js"></script>
+<script>
+    $(function () {
+
+        function hideMe(el) {
+            $(el).hide();
+        }
+
+        function ShowSibling(el) {
+            $('#a1').show();
+        }
+
+        function hideAllA() {
+            $('a').hide();
+        }
+
+        function showAllA() {
+            $('a').show();
+        }
+
+        function showbyID() {
+            $('#p2').show();
+        }
+
+        function hideByID() {
+            $('#p2').hide();
+        }
+
+        function hidebyClass() {
+            $('.p3').hide();
+        }
+
+        function showbyClass() {
+            $('.p3').show();
+        }
+    });
+</script>
