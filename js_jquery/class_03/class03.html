@@ -6,13 +6,13 @@
         ul
         {
             list-style: none;
-            overflow:hidden;
+            overflow: hidden;
         }
 
         .secBtns li
         {
             margin: 0 0 10px 10px;
-            float: left;            
+            float: left;
         }
 
         a
@@ -73,38 +73,36 @@
 
 <script src="../js/jquery-2.0.3.js"></script>
 <script>
-    $(function () {
+    function hideMe(el) {
+        $(el).hide();
+    }
 
-        function hideMe(el) {
-            $(el).hide();
-        }
+    function ShowSibling(el) {
+        $('#a1').show();
+    }
 
-        function ShowSibling(el) {
-            $('#a1').show();
-        }
+    function hideAllA() {
+        $('a').hide();
+    }
 
-        function hideAllA() {
-            $('a').hide();
-        }
+    function showAllA() {
+        $('a').show();
+    }
 
-        function showAllA() {
-            $('a').show();
-        }
+    function showbyID() {
+        $('#p2').show();
+    }
 
-        function showbyID() {
-            $('#p2').show();
-        }
+    function hideByID() {
+        $('#p2').hide();
+    }
 
-        function hideByID() {
-            $('#p2').hide();
-        }
+    function hidebyClass() {
+        $('.p3').hide();
+    }
 
-        function hidebyClass() {
-            $('.p3').hide();
-        }
+    function showbyClass() {
+        $('.p3').show();
+    }
 
-        function showbyClass() {
-            $('.p3').show();
-        }
-    });
 </script>
