@@ -6,201 +6,59 @@
     height: 400px;
     margin: auto;
     overflow: hidden;
-    /*border: 1px solid #000;
-    background: url(../images/grass.png) no-repeat bottom, url(../images/logo.png) no-repeat center, rgba(19, 33, 148, 0.96);*/
 }
 
-.picadely li
+.sample li
 {
-    float: left;
-    background: url(../images/icons.png) no-repeat;
-    width: 40px;
-    height: 40px;    
-    margin:10px;
+    display: block;
+    font-size: 40px;
+    color: #000;
+    padding: 20px 20px 20px 120px;
+    line-height: 60px;
+    background: #34cf07;
+    position: relative;
+    margin: 10px;
 }
 
-    .picadely li:nth-child(1)
+    .sample li:before
     {
-        background-position: 0 0;
-        background-color: #ff6a00;
+        content: attr(title);
+        display: block;
+        width: 100px;
+        height: 100px;
+        background: #00ff90;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        line-height: 100px;
     }
 
-    .picadely li:nth-child(2)
+    .sample li:hover:before
     {
-        background-position: -40px 0;
-        background-color: #fcff00;
+        background: #ff6a00;
+        color: #00ff90;
     }
 
-    .picadely li:nth-child(3)
+    .sample li:nth-child(odd)
     {
-        background-position: -80px 0;
-        background-color: #00ffef;
+        background: #ffd800;
     }
 
-    .picadely li:nth-child(4)
-    {
-        background-position: -120px 0;
-        background-color: #e9b5ac;
-    }
+.check input[type="checkbox"]:before
+{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #1f21ad;
+    border: solid 1px #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
-    .picadely li:nth-child(5)
-    {
-        background-position: -160px 0;
-        background-color: #c8be49;
-    }
-
-    .picadely li:nth-child(6)
-    {
-        background-position: -200px 0;
-        background-color: #bd87db;
-    }
-
-    .picadely li:nth-child(7)
-    {
-        background-position: -240px 0px;
-        background-color: #69f59b;
-        width:20px;
-        height:20px;
-    }
-
-    .picadely li:nth-child(8)
-    {
-        background-position: -260px 0px;
-        background-color: #c19c82;
-        width:20px;
-        height:19px;
-    }
-
-    .picadely li:nth-child(9)
-    {
-        background-position: -260px -19px;
-        background-color: #351ac1;
-        width:21px;
-        height:21px;
-    }
-
-    .picadely li:nth-child(10)
-    {
-        background-position: 0 -40px;
-        background-color: #0628c7;
-    }
-
-    .picadely li:nth-child(11)
-    {
-        background-position: -40px -40px;
-        background-color: #072e0e;
-        width:25px;
-        height:25px;
-    }
-
-    .picadely li:nth-child(12)
-    {
-        background-position: -80px -40px;
-        background-color: #756f6a;
-        width:25px;
-        height:25px;
-    }
-
-    .picadely li:nth-child(13)
-    {
-        background-position: -120px -40px;
-        background-color: #38302a;
-        width:25px;
-        height:25px;
-    }
-
-    .picadely li:nth-child(14)
-    {
-        background-position: -160px -40px;
-        background-color: #e9b5ac;
-    }
-
-    .picadely li:nth-child(15)
-    {
-        background-position: -200px -40px;
-        background-color: #c6331e;
-    }
-
-    .picadely li:nth-child(16)
-    {
-        background-position: -240px -40px;
-        background-color: #41ff00;
-    }
-
-    .picadely li:nth-child(17)
-    {
-        background-position: 0px -80px;
-        background-color: #5f716c;
-        width:80px;
-        height:80px;
-        
-    }
-
-    .picadely li:nth-child(18)
-    {
-        background-position: -80px -80px;
-        background-color: #94472e;
-    }
-
-    .picadely li:nth-child(19)
-    {
-        background-position: -80px -120px;
-        background-color: #20ceae;
-    }
-
-    .picadely li:nth-child(20)
-    {
-        background-position: -120px -80px;
-        background-color: #94472e;
-    }
-
-    .picadely li:nth-child(21)
-    {
-        background-position: -120px -120px;
-        background-color: #707dae;
-    }
-
-    .picadely li:nth-child(22)
-    {
-        background-position: -160px -80px;
-        background-color: #ffffff;
-    }
-
-    .picadely li:nth-child(23)
-    {
-        background-position: -160px -120px;
-        background-color: #9b267f;
-    }
-
-    .picadely li:nth-child(24)
-    {
-        background-position: -200px -80px;
-        background-color: #c600ff;
-    }
-
-    .picadely li:nth-child(25)
-    {
-        background-position: -200px -120px;
-        background-color: #808080;
-    }
-
-    .picadely li:nth-child(26)
-    {
-        background-position: -240px -80px;
-        background-color: #f5ff00;
-    }
-
-    .picadely li:nth-child(27)
-    {
-        background-position: -240px -120px;
-        background-color: #ff0000;
-    }
-
-    .picadely li:nth-child(28)
-    {
-        background-position: 0 -160px;
-        background-color: #4cff00;
-        width: 160px;
-        height: 130px;
-        
-    }
+.check input[type="checkbox"]:checked:before
+{
+    background:#808080;
+}
