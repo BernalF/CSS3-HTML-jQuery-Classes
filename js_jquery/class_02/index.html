@@ -5,10 +5,9 @@
     <style>
         hr, h3, p
         {
-            margin: 1px;
-            padding: 1px;
+            margin:1px;
+            padding:1px;
         }
-
         div
         {
             width: 150px;
@@ -29,94 +28,33 @@
             #notes img
             {
                 margin: auto;
-            }
+            }   
     </style>
 </head>
 <body>
+<!--    <p id="intro">Finding HTML elements by id</p>
 
-    <p id="intro">Finding HTML elements by id</p>
-
-    <p id="P1">Finding HTML elements by tagName</p>
+    <p id="P1" class="">Finding HTML elements by tagName</p>
 
     <img id="image" src="images/koohala.jpg" style="display: block;" />
-
 
     <input type="button" value="Hide text" onclick="document.getElementById('P1').style.visibility = 'hidden'" />
 
     <input type="button" value="Show text" onclick="document.getElementById('P1').style.visibility = 'visible'" />
 
-  
-    <input type="text" id="fname" onchange="myFunction()" style="display: block;" />
- 
+    <input type="text" id="fname" onchange="myFunction()" style="display: block;">
+
     <div onmouseover="mOver(this)" onmouseout="mOut(this)">Mouse Over Me</div>
-     
+
     <div onmousedown="mDown(this)" onmouseup="mUp(this)">Click Me</div>
 
     <div id="newp"></div>
     <input type="button" value="Create" onclick="create()" />
-    <input type="button" value="Remove" onclick="removeP()" />
+    <input type="button" value="Remove" onclick="removec()" />-->
 
 </body>
 </html>
+
 <script>
-    //change by ID
-    var x = document.getElementById("intro");
-    document.write('<br/> by ID ->' + x.innerHTML + '<br/>');
-
-    //change by tagName
-    var y = document.getElementsByTagName('p');
-    document.write('by tagName ->' + y[1].innerHTML);
-
-    //change html content
-    x.innerHTML = 'Text Changed';
-
-    //change html attribute
-    document.getElementById('image').width = '80';
-
-    //change html style
-    document.getElementById('P1').style.color = 'red';
-    document.getElementById('P1').style.fontWeight = 'bold';
    
-    function myFunction() {
-        var x = document.getElementById('fname');
-        x.value = x.value.toUpperCase();
-    }
-
-    function mOver(el) {
-        el.innerHTML = 'Yeah!';
-    }
-
-    function mOut(el) {
-        el.innerHTML = 'Mouse Over Me';
-    }
-
-    function mDown(el) {
-        el.style.backgroundColor = 'yellow';
-        el.innerHTML = 'yeah!';
-    }
-
-    function mUp(el) {
-        el.style.backgroundColor = '#0094ff';
-        el.innerHTML = 'Click Me';
-    }
-
-    //Create Content
-    function create() {
-        var pe = document.createElement('p');
-        pe.setAttribute('id', 'pe1');
-        var node = document.createTextNode('This is a js creation');
-        pe.appendChild(node);
-
-        var el = document.getElementById('newp');
-        el.appendChild(pe);
-    }
-
-    function removeP() {
-        var parent = document.getElementById("newp");
-        var child = document.getElementById("pe1");
-        parent.removeChild(child);
-    }
-
-   // window.onload = function () { alert('All full loaded;') };
-
 </script>
