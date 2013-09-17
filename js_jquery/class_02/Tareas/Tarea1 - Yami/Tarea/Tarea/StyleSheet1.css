@@ -1,0 +1,67 @@
+﻿.Label {
+    display: block;
+    margin: 12px 0 0 0;
+    color: #FFFFFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Label2 {
+    margin: 12px 0 0 0;
+    color: #FFFFFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text {
+    display: block;
+    margin: 10px 0 0 0;
+}
+
+.text2 {
+   
+    margin: 10px 0 0 0;
+}
+
+.sonlist {
+   
+    margin: 10px 0 0 0;
+    width: 255px;
+}
+
+.divclass {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.radiobuttons {
+    margin: 10px 0 0 0;
+    color: #FFFFFF;
+}
+
+.span {
+    color: #FFFFFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.form {
+    border: thin solid #808080;
+    padding: 10px;
+    width: 500px;
+}
+
+.boton {
+    text-align: right;
+    margin: 20px 10px 10px 0;
+}
+
+body {
+    background-color: #000000;
+}
+
+.Message {
+    text-align: center;
+    color: #3333FF;
+    margin: 300px 0 0 0;
+    font-family: 'Arial Black';
+}

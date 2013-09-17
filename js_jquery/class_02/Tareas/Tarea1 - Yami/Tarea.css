@@ -1,0 +1,28 @@
+.Label 
+{
+display: block;
+margin:  12px 0 0 0; 
+
+}
+
+.text
+{
+display: block;
+margin: 10px 0 0 0; 
+
+}
+
+.divclass
+{
+ border: 1px solid #00FF00;
+ width: 200px;
+ display: inline-block; 
+ vertical-align: top;
+
+}
+
+.radiobuttons
+{
+margin: 10px 0 0 0;
+}
+
