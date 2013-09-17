@@ -32,8 +32,8 @@
     </style>
 </head>
 <body>
-<!--    <p id="intro">Finding HTML elements by id</p>
-
+   <p id="intro">Finding HTML elements by id</p>
+ 
     <p id="P1" class="">Finding HTML elements by tagName</p>
 
     <img id="image" src="images/koohala.jpg" style="display: block;" />
@@ -47,7 +47,7 @@
     <div onmouseover="mOver(this)" onmouseout="mOut(this)">Mouse Over Me</div>
 
     <div onmousedown="mDown(this)" onmouseup="mUp(this)">Click Me</div>
-
+<!--
     <div id="newp"></div>
     <input type="button" value="Create" onclick="create()" />
     <input type="button" value="Remove" onclick="removec()" />-->
@@ -56,5 +56,30 @@
 </html>
 
 <script>
-   
+    //Finding HTML by elements by id - busquen p
+    var x = document.getElementById("intro");
+    document.write("</br> by ID -> " + x.innerHTML + '</br>');
+
+    //Finding HTML by elements by TagName 
+    //- busquen segundo p
+    var y = document.getElementsByTagName("p");
+    document.write("by Tag Name -> " + y[1].innerHTML);
+
+    //Cambien el texto del primer P
+    document.getElementById("intro").innerHTML = "<b>Luis lo cambio<b>";
+    document.getElementById("P1").innerText = "Luis lo cambio";
+
+    //change html attribute
+    document.getElementById("image").width = "100";
+
+    //change html style
+    document.getElementById("intro").style.color = "red";
+
+    //onchange
+    function myFunction() {
+        //document.getElementById("fname").style.textTransform = "uppercase";
+        var x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+    }
+
 </script>

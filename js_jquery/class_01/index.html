@@ -7,18 +7,76 @@
 
 </body>
 </html>
+<script>    
+    //Types in Javascript
+    // Number, Object, undefined, null, bool, string, Array
 
-<script>
+    //Number
+    var x = 10;
+    console.log(x);
+    var x1 = -10;
+    console.log(typeof(x1));
+    var x2 = 10e2;
+    console.log(x2);
 
-    function myFunction() {
-        var x = "", i = 0;
-        while (i < 5) {
-            x+=' -> ' + i;
-            i++;
-        }
-        console.log( x);
+    //String
+    var s = "Hi";
+    var s1 = 'Hi';
+    var s2 = 'Hi "Amigo"';
+    console.log(s2);
+
+    //bool -> true false
+    
+    //null
+    var x = null;
+    console.log(typeof(x));
+
+    //undefined
+    var f;
+    console.log(typeof (f));
+
+    //Arrays
+    var arr1 = new Array();
+    var arr2 = [];
+    
+    var arr3 = ["pos 1", "pos 2"];
+    console.log(arr3["0"]);
+
+    //Objects
+    var obj1 = new Object();
+    var obj2 = {
+        uno: 1,
+        dos: "dos"
+    };
+
+    var y = 1;
+    var y = "1";
+    var y = undefined;
+
+
+    //= is used to assign values.
+	//	+ is used to add values.
+    //	+, -, *, /, %, ++, --, +=, -=, *=, /=
+
+    //var h = 1;
+   // h++;
+    //console.log(h++); //-> 1 
+   // console.log(++h); //-> 2
+
+    //== , ===, !=, !==,>, <, <=, >=
+    
+    //popup boxes
+   // alert("alerta");
+    //confirm("Confirm");
+    //prompt("Campo de texto", "texto para imprimir");
+
+    //function
+    function x(){
+        
     }
-
-    myFunction();
+    //local variables
+    //Global variables
+    console.log(2 - "1");
+    console.log(1 == "1");
 
 </script>
