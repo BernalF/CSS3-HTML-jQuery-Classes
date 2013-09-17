@@ -1,0 +1,131 @@
+﻿.main {
+    background-color:#1e1e1e;    
+    height:auto;
+    width:auto;    
+}
+
+.form {
+    margin-top:100px;
+    margin-right:auto;
+    margin-bottom: 70px;
+    margin-left: auto;
+
+    /*float:left;    */
+    height:auto;
+    width:500px;
+    overflow:hidden;
+    background-color:#2a2a2a;
+    color:white;
+    padding:30px;
+    border:2px solid gray;
+    border-radius:10px;    
+    font-family:Calibri;
+    box-shadow: 0px 0px 50px 1px gray;
+
+}
+
+div.row {
+    display:block;
+    float:left;    
+    width:500px;
+}
+
+div.label {
+    float:left;
+    width:80px;
+    text-align:right;
+    margin-right:5px;
+    margin-bottom:5px;
+}
+
+
+
+div.a1 {
+    float:left;
+    
+}
+
+#removeSon {
+    background: url('delete.png') no-repeat;    
+    cursor:pointer;
+    border: none;
+    width:15px;
+}
+
+#saveSon {
+    background: url('save.png') no-repeat;    
+    cursor:pointer;
+    border: none;
+    margin-left:5px;
+    width:15px;
+}
+
+#iName {
+    width:162px;
+}
+
+div#up {
+    margin-left:105px;
+    display:block;
+}
+
+div#haveSons {
+    margin-left:105px;    
+    display:block;
+}
+
+#textArea {        
+    margin-top:5px;  
+    width:231px;    
+}
+
+p {
+    font-style:italic;
+}
+
+.button {
+    float:right;
+}
+
+#pe2 {
+    color:red;
+    width:230px;
+    text-align:center;    
+}
+
+#pe3 {
+    color:red;    
+    width:230px;
+    text-align:center;
+}
+
+#pe4 {
+    color:red;    
+    width:230px;
+    text-align:center;
+}
+
+.background {
+    background: url('images/abstract.jpg') no-repeat;        
+}
+
+#informationDiv {
+    margin-top:170px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:1px;    
+    padding-bottom:1px;    
+    overflow:hidden;
+    width:300px;    
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 10px #888888;
+    color:gray;
+    font-family:Calibri;
+    font-style:italic;
+    text-align:center;
+}
+
+.saveAll {
+    float:right;
+}
