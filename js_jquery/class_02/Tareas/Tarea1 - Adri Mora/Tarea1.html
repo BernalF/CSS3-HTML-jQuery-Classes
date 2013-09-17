@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html defanghtml_xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="screen">
+        <div class="header">
+        </div>
+        <div class="body">
+            <div class="aside">
+            </div>
+            <div class="content" style="">
+                <defanghtml_form action="http://www.w3schools.com" method="post">
+                    <table>
+                          <tr>
+                              <td>
+                                    <p>Name *</p>
+                              </td>
+                              <td>
+                                    <defanghtml_input id="lName" type=text  size="90">
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                    <p>Age *</p>
+                              </td>
+                              <td>
+                                    <defanghtml_input id="Age" name="Age" type=number size="5" />
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                    <p>Have Sons?</p>
+                              </td>
+                              <td>
+                                    <defanghtml_input type="radio" name="select" value="Yes" onclick="ShowDetail();">Yes
+                                    <defanghtml_input type="radio" name="select" value="No" onclick="HideDetail();">No
+                              </td>
+                          </tr>
+                    </table> 
+                    <div id="AdditionalData" style="visibility:hidden">
+                        <p>Type the Name of the Sons</p>
+                        <table>
+                          <tr>
+                              <td>
+                                    <p>Name</p>
+                              </td>
+                              <td>
+                                    <defanghtml_input id="NameToAdd" type="text" size="80"/>
+                              </td>
+                              <td>
+                                  <defanghtml_input type="button" onclick="Add()" value="Add">
+                              </td>
+                          </tr>
+                            <tr>
+                              <td colspan="2">
+                                    <defanghtml_textarea id="textareaID" style="text-align:left;width:100%" rows="6">
+                                    </defanghtml_textarea>
+                              </td>
+                              <td>
+                                  <defanghtml_input type="button" onclick="Remove()" value="Remove">
+                              </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p><defanghtml_input type="submit" value="Save"></p>
+                </defanghtml_form>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+</body>
+</html>
+<!--<defanghtml_script>
+    
+        
+    function ShowDetail()
+    {
+        var y = document.getElementById('AdditionalData');
+        y.style.visibility="visible"
+    }
+
+    function HideDetail()
+    {
+        var y = document.getElementById('AdditionalData');
+        y.style.visibility="hidden"
+        
+    }
+    
+    function Add()
+    {
+        
+        var pe = document.createElement('p');
+        pe.setAttribute('id','pe1');
+
+        var y = document.getElementById('textareaID');
+        var z = document.getElementById('NameToAdd').value + "\n";
+        document.getElementById('NameToAdd').value = '';
+        var txt = document.createTextNode(z);
+
+        pe.appendChild(txt);
+        y.appendChild(pe);
+        
+    }
+    
+
+        function Remove()
+    {
+        
+        
+        var parent = document.getElementById('textareaID');
+        var child = document.getElementById('pe1');
+        
+        parent.removeChild(child);
+        
+    }
+
+
+</defanghtml_script>-->

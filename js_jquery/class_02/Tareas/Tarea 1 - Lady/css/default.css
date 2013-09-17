@@ -1,0 +1,208 @@
+/****************************************************************************************************************/
+/** Created by: Andrea Corrales Delgado 																	    */
+/** Styling and CSS for Validation and Basic use of forms														*/
+/** Date: 02/09/2013																						 	*/
+/****************************************************************************************************************/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    background-color: #9ca2aa;
+    font-family: helvetica;
+}
+
+header {
+	margin: 0 auto 40px auto;
+	width: 900px;
+	background: url("../images/sprite.png") no-repeat top center;
+	height: 40px;
+}
+
+footer {
+	width: 300px;
+    height: 20px;
+    margin: 40px auto 0 auto;
+}
+
+header h1 {
+    color: #FFF;
+	padding: 40px 0 0 0;
+	text-align: center;
+}
+footer p {
+    background: url("../images/star.png") no-repeat top left;
+    height: 20px;
+	text-align: center;
+	font-style: italic;
+}
+
+section {
+	margin: 0 auto;
+	width: 900px;
+}
+label span {
+	color: red;
+}
+
+#sons_info {
+	display: none;
+}
+#error_messages {
+    width: 250px;
+	display: none;
+	border: 2px solid red;
+	color: red;
+	background-color: #e8cbd1;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px 0 10px 55px;
+}
+
+/***********************************************************************************************************************/
+/*                                     styling for the form element 												   */
+/***********************************************************************************************************************/
+
+.class-form select {
+    border: 1px solid #ccc;
+    background-color: white;
+}
+.class-form select[multiple] {
+    overflow-x: scroll; 
+    overflow-y: hidden;
+    height: 100%;
+}
+.class-form label {
+    margin: 0.5em 0 0.2em;
+    font-size: 90%;
+}
+.class-form fieldset {
+    margin: 0;
+    padding: 0.35em 0 0.75em;
+    border: 0;
+}
+.class-form legend {
+    display: block;
+    width: 100%;
+    padding: 0.3em 0;
+    margin-bottom: 0.3em;
+    font-size: 125%;
+    color: #FFF;
+    border-bottom: 1px solid #e5e5e5;
+}	
+
+/* Aligned Forms */
+.class-form-aligned .class-control-group {
+    margin-bottom: 0.5em;
+}
+.class-form-aligned .class-control-group label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
+}
+.class-form-aligned .class-controls {
+    margin: 1.5em 0 0 10em;
+}
+.class-form .class-input-large {
+    width: 33%; 
+}
+
+.class-form input[readonly],
+.class-form select[readonly] {
+    background: #eee; /* menu hover bg color */
+    color: #777; /* menu text color */
+    border-color: #ccc;
+}
+
+.class-form input[type="text"],
+.class-form select{
+    background-color: #d9e2ed;
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 0.8em;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+}
+
+.class-form input[type="text"]:focus,
+.class-form select:focus{
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+    border-color: #129FEA;
+}
+
+.class-form input[type="radio"]:focus {
+    outline: thin dotted #333;
+    outline: 1px auto #129FEA;
+}
+.class-form .class-radio {
+    margin: 0.5em 0;
+    display: block;
+}
+
+.class-button {
+    display: inline-block;
+    *display: inline; /*IE 6/7*/
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: baseline;
+    text-align: center;
+    cursor: pointer;
+}
+
+.class-button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+.class-button {
+    font-size: 100%;
+    *font-size: 90%; /*IE 6/7 - To reduce IE's oversized button text*/
+    *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
+    padding: 0.5em 1.5em 0.5em;
+    color: #444; /* rgba not supported (IE 8) */
+    color: rgba(0, 0, 0, 0.80); /* rgba supported */
+    *color: #444; /* IE 6 & 7 */
+    border: 1px solid #999;  /*IE 6/7/8*/
+    border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+    background-color: #E6E6E6;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.class-button-primary:hover,
+.class-button-primary:focus {
+    background-color: #004daa;
+}
+
+.class-button-secondary:hover,
+.class-button-secondary:focus{
+    background-color: #8194aa;
+    color:#FFFFFF;
+}
+
+.class-button:focus {
+    outline: 0;
+}
+
+.class-button:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+}
+
+.class-button::-moz-focus-inner{
+    padding: 0;
+    border: 0;
+}
+
+.class-button-primary {
+    background-color: rgb(0, 120, 231);
+    color: #fff;
+}
+
+
+

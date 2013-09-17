@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JavaScript and CSS</title>
+    <link href="Styles/tarea.css" rel="stylesheet" type="text/css" />
+    <script>     
+        
+        function HideSonsSection(hide) {
+            if (hide == true) {
+                document.getElementById("sonssection").style.display = "none";
+            }
+            else {
+                document.getElementById("sonssection").style.display = "block";
+            }
+        }
+
+        function AddNewSon() {
+            var newson;
+            var sons;
+            newson = document.getElementById("son").value
+            if (newson != "") {
+                sons = document.getElementById("msg").value;
+                sons += "\n" + newson;
+                document.getElementById("msg").value = sons;
+                document.getElementById("son").value = "";
+            }
+            else {
+               alert("Please type a valid name!")
+            }
+
+       }
+
+       function selectTextareaLine() {
+           var lineNum;
+           var tarea = document.getElementById("msg");
+           var seleccion = tarea.selectionStart;
+           var lines = tarea.value.split("\n");
+           var startPos = 0, endPos = tarea.value.length;
+           var j = 0;
+           for (var x = 0; x < lines.length; x++) {
+               j = j + lines[x].length + 1;
+               if (seleccion <= j) {
+                   lineNum = x;              
+                   break;
+               }
+               startPos += (lines[x].length + 1);
+
+           }
+           var endPos = lines[lineNum].length + startPos;
+
+           if (typeof (tarea.selectionStart) != "undefined") {
+               tarea.focus();
+               tarea.selectionStart = startPos;
+               tarea.selectionEnd = endPos;
+               document.getElementById("SelectedSon").value = document.getSelection();
+               return true;
+           }
+
+           return false;
+       }
+
+       function RemoveSelectedSon() {
+           var tarea = document.getElementById("msg");
+           var string = tarea.value;
+           var newstring;
+           var son = document.getElementById("SelectedSon").value;
+           if (son != "") {
+               if (confirm('Are you sure you want to delete "' + son + '"?')) {
+                   newstring = string.replace(son, "");
+                   newstring = newstring.replace(/[\n\r](?!\w)/gi, '');
+                   tarea.value = newstring;
+                   document.getElementById("SelectedSon").value = "";
+               }
+           }
+           else {
+               alert("Please select a son to remove!");
+           }  
+       }  
+    </script>
+</head>
+<body>
+    <div id="header" class="titulo">
+        <h1>
+            Personal Information Form</h1>
+    </div>
+    <div id="wrapper" class="section">
+        <form action="result.htm" method="get">
+        <ul>
+            <li>
+                <label for="name">
+                    Name *</label>
+                <span class="fieldbox">
+                    <input type="text" name="name" id="name" value="" required /></span> </li>
+            <li>
+                <label for="email">
+                    Age *</label>
+                <span class="fieldbox">
+                    <input type="text" name="email" id="email" value="" required /></span> </li>
+            <li><span class="radiobuttons">
+                <label>
+                    Have Sons?</label>
+                <label for="yes">
+                    Yes</label>
+                <input type="radio" id="yes" name="havesons" value="yes" onclick="HideSonsSection(false);" />
+                <label for="no">
+                    No</label>
+                <input type="radio" id="no" name="havesons" value="no"  onclick="HideSonsSection(true);" checked="true"/>
+            </span></li>
+        </ul>
+        <span id="sonssection" class="sonsection">
+            <label class="fulllabel">
+                Type your son's names</label>
+            <label for="son" class="tabbedlabel">
+                Name</label>
+            <span class="inputbg">
+                <input type="text" name="son" id="son" />
+            </span>
+            <input type="button" class="button" value="Add" id="AddSon" onclick="AddNewSon();"/>
+            <span class="msgbox">
+                <textarea class="area" id="msg" name="msg" rows="6" cols="30" onclick="selectTextareaLine();"></textarea>
+            </span>
+            <label class="fulllabel" />
+            <input type="button" class="button" value="Remove" id="RemoveSon" onclick="RemoveSelectedSon();" />
+        </span>
+        <span class="footer">
+            <input type="submit" class="button" value="Save Form" id="sendbutton" name="sendbutton" />
+        </span>
+    </div>
+    <input type="hidden" id="SelectedSon" />
+    </form>
+</body>
+</html>
