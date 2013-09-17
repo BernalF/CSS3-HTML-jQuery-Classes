@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            font-style: normal;
+        }
+        #MainFrame
+        {
+            width: 440px;
+            background-color: #000000;
+            margin-left: auto;
+            overflow: hidden;
+            margin-right: auto;
+        }
+        #subFrame
+        {
+            border: #C0C0C0 solid;
+            margin: 20px;
+            width: 400px;
+            background-color: #000000;
+            overflow: hidden;
+        }
+        #SecondFrame
+        {
+            background-color: #000000;
+            overflow: hidden;
+        }
+        #thirdFrame
+        {
+            background-color: #000000;
+            overflow: hidden;
+        }
+        #SecondFrame ul
+        {
+            list-style-type: none;
+        }
+        #SecondFrame ul li
+        {
+            float: left;
+            width: 200px;
+            margin-top: 2px;
+        }
+        #thirdFrame ul
+        {
+            list-style-type: none;
+        }
+        #thirdFrame ul li
+        {
+            float: left;
+            width: 200px;
+            margin-top: 2px;
+        }
+        #thirdFrame ul #nameof
+        {
+            width: 400px;
+        }
+        span
+        {
+            border: #008080;
+            color: #FFFFFF;
+        }
+        #textarea
+        {
+        }
+        .ValidationError
+        {
+            border: thin #FF0000 solid;
+        }
+        #save
+        {
+            background-color: #C0C0C0;
+            margin-left: 158px;
+        }
+        .asterisk
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="MainFrame">
+        <div id="subFrame">
+            <div id="SecondFrame">
+                <ul>
+                    <li><span>Name</span><span class="asterisk">*</span></li>
+                    <li>
+                        <input id="name" type="text" />
+                    </li>
+                    <li><span>Age</span><span class="asterisk">*</span> </li>
+                    <li>
+                        <input id="age" type="text" onchange="validatenumber(this);" />
+                    </li>
+                    <li><span>Have song</span> </li>
+                    <li><span>Yes<input id="hasSongYes" type="checkbox" checked="checked" onclick="hasson(this);" />No<input
+                        id="hasnotSon" type="checkbox" onclick="hasnotSon(this);" />
+                    </span></li>
+                </ul>
+            </div>
+            <div id="thirdFrame">
+                <ul>
+                    <li id="nameof"><span>Type the name of the sons</span> </li>
+                    <li><span>Name</span> </li>
+                    <li>
+                        <input type="text" id="sonName" />
+                        <input type="button" id="add" onclick="addIem();" value="Add" />
+                    </li>
+                    <li>
+                        <textarea id="textarea" rows="4" cols="20"> </textarea></li>
+                    <li></li>
+                    <li>
+                        <input type="button" id="remove" onclick="removeIem();" value="Remove" /></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li>
+                        <input id="save" type="button" value="Save" onclick="save();" /></li>
+                </ul>
+            </div>
+            <p id="info" style="color: red; visibility: hidden;">
+                Information is requiered</p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+    String.prototype.trim = function() {
+	    return this.replace(/^\s+|\s+$/g,"");
+    }
+
+    function hasson(obj) {
+        obj.checked = true;
+        document.getElementById("hasnotSon").checked = false;
+        document.getElementById("thirdFrame").style.visibility = "visible"
+
+    }
+    function hasnotSon(obj) {
+        obj.checked = true;
+        document.getElementById("hasSongYes").checked = false;
+        document.getElementById("thirdFrame").style.visibility = "hidden"
+
+    } function validatenumber(obj) {
+        
+        var expression = "^[0-9]+$";
+        if (obj.value != "") {
+            if (obj.value.match(expression))
+                if (parseInt(obj.value) > 0) {
+                    obj.value = obj.value;
+                } else {
+                    alert("El valor " + obj.value + " no es un edad valida");
+                    obj.value = "";
+                }
+            else {
+                alert("El valor " + obj.value + " no es un edad valida");
+                obj.value = "";
+            }
+        }
+
+    }
+    //.replace(/^\s+|\s+$/g, "")
+    function addIem() {
+        
+        var obj = document.getElementById("sonName");
+        if (obj.value.toString().trim() != "") {
+            var isvalid = true;
+            for (var x = 0; x < sessionStorage.length; x++) {
+                var objaux = sessionStorage.key(x);
+                if (sessionStorage.getItem(objaux) == obj.value) {
+                    isvalid = false;
+                    alert("Name already exists");
+                }
+            }
+
+            if (isvalid == true) {
+                sessionStorage.setItem(sessionStorage.length, obj.value);
+                display();
+                obj.value = "";
+            }
+        } else {
+            alert("name can't be empty");
+        }
+
+    }
+    function display() {
+        var obj = document.getElementById("textarea");
+        obj.value = "";
+        var objaux;
+        for (var x = 0; x < sessionStorage.length; x++) {
+            objaux = sessionStorage.key(x);
+            objaux = sessionStorage.getItem(objaux)
+            obj.value += objaux + "\n";
+        }
+
+    }
+
+
+    function removeIem() {
+        var r = confirm("do you want to remove!")
+        if (r == true) {
+            sessionStorage.clear();
+            display();
+        }
+
+    }
+    function save() {
+
+        var age = document.getElementById("age");
+        var name = document.getElementById("name");
+
+        age.className = ""
+        name.className = ""
+        document.getElementById("info").style.visibility = "hidden"
+        if (name.value == "") {
+            name.className = "ValidationError"
+            document.getElementById("info").style.visibility = "visible"
+
+        }
+        if (age.value == "") {
+            age.className = "ValidationError"
+            document.getElementById("info").style.visibility = "visible"
+
+        }
+
+
+    }
+    
+</script>

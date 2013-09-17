@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Homework</title>
+        <link href="style.css" rel="stylesheet" />
+    </head>
+
+    <body class="main">        
+        <form class="form" method="get" action="result.html" onsubmit="return saveAll()">
+            <div id="up">
+                <div class="row">       
+                    <div class="label">
+                        <span>Name *</span>
+                    </div>
+                    <div class="field">
+                        <input type="text" id="NameField" />
+                    </div>                    
+                    <div class="field" id="vName"></div>  
+                </div>         
+                <div class="row">
+                    <div class="label">
+                        <span>Age *</span>
+                    </div>
+                    <div class="field">
+                        <input type="text" id="AgeField"/>
+                    </div>
+                    <div class="field" id="vAge"></div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        <span>Have Sons?</span>
+                    </div>
+                    <div class="field">
+                        <span>Yes</span><input type="radio" id="chkBoxY" name="Sons" value="Yes" onclick="showForm()"/>
+                        <span>No</span><input type="radio" id="chkBoxN" name="Sons" value="No" checked onclick="hideForm()"/>
+                    </div>
+                </div> 
+            </div>                            
+            <div id="haveSons">
+                <p>Type the name of the Sons</p>
+                            
+                <div class="a1">
+                    <span>Name </span><input id="iName" type="text"/><input type="button" id="saveSon" value="" onclick="saveName()"/>
+                </div>
+                <br />
+                <select id="textArea" multiple="multiple" size="6"></select>
+                <input type="button" id="removeSon" value="" onclick="return confirmFn()"/>
+                <div id="vSons"></div>
+            </div>
+            <div>
+                <input class="saveAll" type="submit" value="Save" />
+            </div> 
+        </form>           
+        
+    </body>
+</html>
+<script>
+    window.onload = function () {        
+        hideForm();
+    }
+
+    function showForm() {
+        document.getElementById('haveSons').style.display = 'block';
+    }
+
+    function hideForm() {
+        document.getElementById('haveSons').style.display = 'none';
+    }
+
+    function saveName() {
+        removeChildSons();
+        var count = 0;
+        var newOption = document.createElement('option');
+        newOption.text = document.getElementById("iName").value;
+        newOption.value = document.getElementById("iName").value;
+        var tSelect = document.getElementById('textArea');
+        if (newOption.text != "") {
+            if (tSelect.length > 0) {
+                for (var i = 0; i < tSelect.length; i++) {
+                    if (tSelect.options[i].text != newOption.text) {
+                        count++;
+                    } else {
+                        validateRepeatSons();                        
+                    }
+                }
+                if (count == tSelect.length) {
+                    tSelect.add(newOption, null);
+                    clearField();
+                }
+            } else {
+                tSelect.add(newOption, null);
+                clearField();
+            }
+        }
+    }
+
+    function confirmFn() {
+        var x;
+        var tSelect = document.getElementById('textArea');
+        var r=confirm("Do you want to delete this item?");
+        if (r==true)
+        {   
+            for (var i = tSelect.length - 1; i >= 0; i--) {
+                if (tSelect.options[i].selected) {                    
+                    tSelect.remove(i);
+                }
+            }            
+        }        
+    }    
+
+    function clearField() {        
+        document.getElementById('iName').value = '';        
+    }
+
+    function saveAll() {
+        validateName();
+        validateNumber();
+        validateCheckBox();
+        if ((validateName() && validateNumber() && validateCheckBox()) == true) {            
+            saveList();
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    function validateName() {
+        var el = document.getElementById('NameField');
+        var re = /^[A-z\s]+$/;
+        if (el.value == "") {
+            emptyFieldName();
+            return false;
+        } else if (!re.test(el.value)) {
+            numberFieldName();
+            return false;
+        } else {            
+            removeChildsName();
+            return true;
+        }
+    }
+
+    function validateNumber(){
+        var el = document.getElementById('AgeField');
+        var re = /^[0-9]+$/;
+        if (el.value == "") {
+            emptyFieldAge();
+            return false;
+        } else if (!re.test(el.value)) {
+            letterFieldAge();
+            return false;
+        } else {            
+            removeChildsAge();
+            return true;
+        }
+    }
+
+    function validateCheckBox() {
+        var chkBoxY = document.getElementById('chkBoxY');        
+        if (chkBoxY.checked == true) {            
+            if (validateSons() == true) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return true;
+        }
+    }
+
+    function emptyFieldName() {
+        removeChildsName();
+        var pe = document.createElement('p');
+        pe.setAttribute('id', 'pe2');
+        var node = document.createTextNode('Insert name');
+        pe.appendChild(node);        
+        
+        var vName = document.getElementById('vName');
+        vName.appendChild(pe);        
+    }
+
+    function numberFieldName() {
+        removeChildsName();
+        var pe = document.createElement('p');
+        pe.setAttribute('id', 'pe2');
+        var node = document.createTextNode('Only insert letters');
+        pe.appendChild(node);
+
+        var vName = document.getElementById('vName');
+        vName.appendChild(pe);
+    }
+
+    function emptyFieldAge() {
+        removeChildsAge();
+        var pe = document.createElement('p');
+        pe.setAttribute('id', 'pe3');
+        var node = document.createTextNode('Insert age');
+        pe.appendChild(node);
+
+        var vName = document.getElementById('vAge');
+        vName.appendChild(pe);
+    }
+
+    function letterFieldAge() {
+        removeChildsAge();
+        var pe = document.createElement('p');
+        pe.setAttribute('id', 'pe3');
+        var node = document.createTextNode('Only insert numbers');
+        pe.appendChild(node);
+
+        var vName = document.getElementById('vAge');
+        vName.appendChild(pe);
+    }
+
+    function removeChildsName() {
+        var parent = document.getElementById("vName");
+        var child = document.getElementById("pe2");
+
+        if (parent.childElementCount != 0) {
+            parent.removeChild(child);
+        }        
+    }
+
+    function removeChildsAge() {
+        var parent = document.getElementById("vAge");
+        var child = document.getElementById("pe3");
+
+        if (parent.childElementCount != 0) {
+            parent.removeChild(child);
+        }
+    }
+
+    function validateSons() {
+        removeChildSons();
+        var tSelect = document.getElementById('textArea');
+
+        if (tSelect.length == 0) {
+            var pe = document.createElement('p');
+            pe.setAttribute('id', 'pe4');
+            var node = document.createTextNode('Must exist at least one Name Son');
+            pe.appendChild(node);
+
+            var vName = document.getElementById('vSons');
+            vName.appendChild(pe);
+            return false;
+        }
+        return true;
+    }
+
+    function validateRepeatSons() {
+        removeChildSons();        
+        var pe = document.createElement('p');
+        pe.setAttribute('id', 'pe4');
+        var node = document.createTextNode('The name of the son is already on the list');
+        pe.appendChild(node);
+
+        var vName = document.getElementById('vSons');
+        vName.appendChild(pe);        
+    }
+
+    function removeChildSons() {
+        var parent = document.getElementById("vSons");
+        var child = document.getElementById("pe4");
+
+        if (parent.childElementCount != 0) {
+            parent.removeChild(child);
+        }
+    }
+
+    function saveList() {
+        var infoList = new Object();
+        var sonsList = new Object();
+        var chkBoxN = document.getElementById('chkBoxN');                
+        var sons = document.getElementById('textArea');
+        
+        infoList["Name"] = document.getElementById('NameField').value;
+        infoList["Age"] = document.getElementById('AgeField').value;
+        var message = infoList.Name + " with " + infoList.Age + " years old have the following sons:\n\n";
+        if (chkBoxN.checked == true) {
+            alert(infoList.Name + " with " + infoList.Age + " years old dont have sons");
+        } else {
+            for (var i = 0; i < sons.length; i++) {
+                sonsList["Son" + i] = sons.options[i].text;
+            }
+
+            for (var p in sonsList) {
+                message += '* ' + sonsList[p] + '\n';
+            }
+            alert(message);
+        }
+    }
+</script>
