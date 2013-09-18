@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="estilos.css">
+    </head>
+<body>
+<div class="form">
+<form name="myForm" action="https://www.google.com/" onsubmit="return validateForm()">
+    <ul class="a">
+        <li>
+        <label id="nom"> Name* </label>
+         <input id="Name" type="text" required/>
+        </li>
+        <li>
+        <label id="Age">Age*</label>
+        <input id="Age" type="text" required/>
+        </li>
+       </ul>
+    <p>Have sons?</p>
+    <label for="Yes">Yes</label>
+    <input id="P1" type="radio" value="Yes" name="Yes" onclick="test()">
+    <label for="No">No</label>
+    <input type="radio" name="No" value="No" id="P2" onclick="test()"/><br>
+   <!--<input class="boton" type="submit" value="Save">-->
+    <span id="oculto">
+    <p>Type the name of the sons</p>
+            Name <input type="text" id="txt2" name="txt2" value="" size="20"/>
+           <input type="button" id="boton1" name="boton1" onclick="Add();" value="Add" /><br>
+          <select id="select1"  name="select1" size="6">
+          <input type="button" onclick="remover()" value="Remove"><br>
+           <input id="boton" type="submit" value="Save" !important>
+           </select><p/>
+    </span>
+    </form>
+    </div>
+</body>
+</html>
+<script>  
+function validateForm()
+ {
+var x=document.getElementById("Age").value;
+if(x==""||isNaN(x))
+	{
+	alert("The field Age just accept number");
+	}
+     if(document.myForm.Name.value == "" )
+   {
+     alert( "Please provide your name!" );
+     document.myForm.Name.focus();
+     return false;
+    }      
+  }  
+function test(){
+        if (document.myForm.P1.checked == true) {
+            document.getElementById('oculto').style.display='block';
+        }
+     else {
+             document.getElementById('oculto').style.display='none';
+   }
+ } 
+ function Add()
+             {
+                 var texto = document.getElementById("txt2").value;
+ 
+                 if(texto != "" )
+                 {
+                     var objOption = new Option(texto);
+                     document.getElementById("select1").add( objOption );
+                     document.getElementById("txt2").value="";
+                 }
+             }
+function remover(){
+
+    var x;
+    var y = confirm("Esta seguro que quiere remover este dato");
+   if (y==true)
+   {
+     x= document.myForm.select1.options[document.myForm.select1.selectedIndex] = null;
+  }
+else
+  {
+  x=document.myForm.select1.options[document.myForm.select1.selectedIndex] = false;
+  }
+ }
+</script>
