@@ -1,0 +1,63 @@
+#mainConteiner
+{
+  background-color:white;
+  width:425px;
+  height:208px;
+  padding-top:50px;  
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.divFirstText
+{
+  background-color:black;
+  width:400px;
+  height:130px;
+  padding-top:35px;  
+ 
+}
+
+#SecondText
+{
+  background-color:black;
+  width:400px;
+  height:160px;
+}
+
+#bordermain
+{
+  background-color:red;
+  width:225px;
+  height:100px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#nombre
+{  
+  position:relative;
+  left:20px;        
+}
+#age
+{    
+  position:relative;
+  left:32px;      
+}
+
+#sel_list
+{   
+   
+        width:250px;
+}
+
+#mainsave
+{
+  float:right;
+}
+
+#secondSave
+{
+  float:right;
+}
+
+

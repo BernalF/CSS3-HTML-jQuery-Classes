@@ -1,0 +1,196 @@
+<!DOCTYPE Html>
+<html>
+    <head>
+        <title>
+           HomeWork Java Scripts 
+        </title>
+        <link href="Css.css" rel="stylesheet">
+    </head>
+    
+    <style> 
+       span {color:white;}
+       ul.divFirstText {list-style-type:circle;}
+    </style>
+    
+    <body> 
+    <form id="formulario" action="http://www.w3schools.com/css/" name="form1" onsubmit="return validacion()">  
+          
+  <div id="mainConteiner">
+    <div id="FirstText" class="divFirstText" style="visibility:visible"> 
+    
+        <ul> 
+         <li>           
+          <span >Name * </span>
+          <input type="text" id="nombre"/><br>
+         </li>              
+         <li>           
+          <span>Age * </span>   
+          <input type="text" id="age"/><br>       
+         </li>      
+         <li>
+          <span>Have Son ??</span>      
+          <input name="HaveSon" value="Y" type="radio" onclick="document.getElementById('SecondText').style.visibility='visible';ocultarSave();"/><span>Yes</span>     
+          <input name="HaveSon" value="N" type="radio" onclick="document.getElementById('SecondText').style.visibility='hidden';mostrarSave();"/><span>NO</span><br>  
+           
+          <button id="mainsave" onclick="validacion()">Save</button><br> 
+             
+        </li>                                
+        </ul>
+        
+                      
+            <!-----Hidden Information------> 
+                 
+    <div id="SecondText" class="divSecondText" style="visibility:hidden">             
+     <ul>
+        <li>
+         <span>Type the Name of the Sons</span><br>            
+         <span>Name:</span>
+         <input type="text" name="optval" id="optval" />
+         <input type="button" id="addopt" name="addopt" value="Add" onclick="adOption.addOption('sel_list', 'optval');" /> &nbsp;
+            
+          Select list:<br/>
+         <select name="sel_list" id="sel_list" size="2" onchange="adOption.selOpt(this.value, 'optval')"></select>
+         <input type="button" id="del_opt" name="del_opt" value="Remove" onclick="adOption.delOption('sel_list', 'optval');" />            
+         <button id="secondSave" onclick="displayArray()">Save</button><br>                   
+        </li>          
+     </ul>        
+    </div>          
+   </div>
+      
+  </div>        
+ </form>       
+ </body>
+
+ <script language="javascript" type="text/javascript">
+   
+  // Insert Item
+  var count1 = 0;
+  var count2 = 0;
+
+
+// Funtion Validate the Fields  
+function validacion()
+{  
+    var valor = document.getElementById("nombre").value;
+    if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) 
+    { 
+      alert('The Name is requierd field');
+      return false;   
+    }      
+    valor = document.getElementById("age").value;
+    if( isNaN(valor) || valor == null || valor.length == 0) 
+    {
+     alert('The Age is Numeric');
+     return false;
+    }   
+}
+          
+// Funtion Clear    
+function clearTextBox()
+{     
+   document.form1.optval.value = "";   
+}
+         
+function ocultarSave(){
+  document.getElementById('mainsave').style.display = 'none';
+}
+     
+function mostrarSave(){
+  document.getElementById('mainsave').style.display = 'block';
+}
+
+          
+// Create Object( Add and Delete )
+var adOption = new Object();
+
+  adOption.checkList = function(list, optval) {
+    var re = 0;      
+ var opts = document.getElementById(list).getElementsByTagName('option');
+          
+    for(var i=0; i<opts.length; i++) 
+    {
+      
+      if(opts[i].value == document.getElementById(optval).value) 
+      {   
+       
+        re = 1;     
+        break;
+      }
+    }   
+    return re;  
+   };
+
+//  Function Add Item Select 
+   adOption.addOption = function(list, optval) {
+    var opt_val = document.getElementById(optval).value;
+
+    if(opt_val.length > 0) {     
+      if(this.checkList(list, optval) == 0) {
+        var myoption = document.createElement('option');
+        myoption.value = opt_val;
+        myoption.innerHTML = opt_val;
+        document.getElementById(list).insertBefore(myoption, document.getElementById(list).firstChild);
+        document.getElementById(optval).value = '';          
+      }
+      else alert('The Name of child "'+opt_val+'" already added');
+      document.getElementById(optval).value = '';  
+    }
+    else alert('Add a value please');
+  };
+
+// Function Delete Item  Select 
+  adOption.delOption = function(list, optval)
+  {
+    var opt_val = document.getElementById(optval).value;
+    if(this.checkList(list, optval) == 1)
+     {          
+      var i;    
+      var x;
+      var r=confirm(" You want to remove any child");       
+      if (r==true)
+      {
+        x="You pressed OK!";           
+        var opts = document.getElementById(list).getElementsByTagName('option');
+        for(var i=0; i<opts.length; i++) 
+        {
+          if(opts[i].value == opt_val) 
+          {
+             document.getElementById(list).removeChild(opts[i]);
+             break;
+          }               
+        } 
+      }
+      else
+      {
+        x="You pressed Cancel!"; 
+      }      
+     }
+   else alert('Select the name of a child');
+   document.getElementById(optval).value = '';  
+  }
+  adOption.selOpt = function(opt, txtbox) { document.getElementById(txtbox).value = opt; }     
+  
+    
+// Funtion Display Array
+function displayArray()
+{ 
+  var x=document.getElementById("sel_list");
+  var txt="Sons: ";
+  var i;
+  for (i=0;i<x.length;i++)
+  {
+    txt=txt + "\n" + x.options[i].text;
+  }
+    alert(txt);
+    //myFunctionSave();    
+}
+
+/*// Funtion Redirect 
+function myFunctionSave()
+{  
+  alert('myFunctionSaveNIeto');
+
+  window.location.href = "http://w3schools.com";
+}     */
+</script>
+</html>
