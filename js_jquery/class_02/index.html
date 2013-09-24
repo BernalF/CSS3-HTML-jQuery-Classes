@@ -46,16 +46,59 @@
 
     <div onmouseover="mOver(this)" onmouseout="mOut(this)">Mouse Over Me</div>
 
-    <div onmousedown="mDown(this)" onmouseup="mUp(this)">Click Me</div>
-<!--
+    <div id="divClick" onmousedown="mDown()" onmouseup="mUp()">Click Me</div>
+
     <div id="newp"></div>
     <input type="button" value="Create" onclick="create()" />
-    <input type="button" value="Remove" onclick="removec()" />-->
+    <input type="button" value="Remove" onclick="removec()" />
 
 </body>
 </html>
 
 <script>
+    //1 Create Element, 2 Set Atributtes, 3 Crear Nodo texto, 4 unir 1 y 3    
+    function create() {
+        //1 crear elemento
+        var pe = document.createElement('p');
+        //2 ponerle atributos 
+        pe.setAttribute('id', 'pd1');
+        //3 crear nodo
+        var node = document.createTextNode('This is a js creation');
+        // 4 unir 1 con 3
+        pe.appendChild(node);
+
+        var element = document.getElementById('newp');
+        element.appendChild(pe);
+    }
+
+    function removec() {
+        var par = document.getElementById('newp');
+        var child = document.getElementById('pd1');
+        par.removeChild(child);
+    }
+
+
+    function mDown() {
+        var div = document.getElementById("divClick");
+        div.style.background = "yellow";
+        div.innerHTML = "Yeah!";
+    }
+
+    function mUp() {
+        document.getElementById("divClick").style.background = "blue";
+        document.getElementById("divClick").innerHTML = "Click Me";
+    }
+
+
+    function mOver(el) {
+        el.innerHTML = "Yeah!";
+    }
+    function mOut(el) {
+        el.innerHTML = "Mouse Over Me";
+    }
+
+
+
     //Finding HTML by elements by id - busquen p
     var x = document.getElementById("intro");
     document.write("</br> by ID -> " + x.innerHTML + '</br>');
