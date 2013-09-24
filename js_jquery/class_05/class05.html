@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body, div, ul, li, h1, h2, h3, h4, h5, form, input, textarea, p, table, tr, td
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+
+        .form
+        {
+            overflow:hidden;
+        }
+
+        body
+        {
+            background: #22252b;
+            color: #fff;
+        }
+
+        ul
+        {
+            list-style: none;
+            overflow: hidden;
+            text-align: justify;
+        }
+
+            ul li
+            {
+                padding: 5px;
+                border: 2px solid #5a5c63;
+            }
+
+        .maincontent
+        {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        a
+        {
+            color: #fff;
+            display: block;
+            text-decoration: none;
+        }
+
+        .containerP,
+        .containerD
+        {
+            overflow: hidden;
+        }
+
+            .containerD input, select, textarea
+            {
+                display: block;
+                margin: 2px;
+                color: #fff;
+                background: #01317d;
+            }
+
+            .containerD button
+            {
+                width: 50%;
+                float: left;
+            }
+
+        .containerP p
+        {
+            margin: 5px;
+            float: left;
+        }
+
+        .marked
+        {
+            border: 3px red solid;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincontent">
+        <ul class="form">
+            <li>
+                <div class="containerD">
+                    <input type="button" value="Input Button" />
+                    <input type="file" />
+                    <input type="password" />
+                    <input type="text" />
+                    <input type="text" disabled="disabled" />                    
+                </div>
+            </li>
+            <li>
+                <p>John Resig</p>
+                <p>George Martin</p>
+                <p>Malcom John Sinclair</p>
+                <p>J. Ohn</p>
+            </li>
+            <li></li>
+            <li class="containerP">
+                <a href="#" id="hMayor">Hermano Mayor</a>
+                <p class="pes">1</p>
+                <p>2</p>
+                <p class="pes">3</p>
+                <p>4</p>
+                <p class="pes">5</p>
+                <p>6</p>
+            </li>
+            <li>
+                <input type="hidden" id="mid" merchantid="3" />
+                <span>MerchantID:
+                    <label id="lblMID"></label>
+                </span>
+            </li>
+            <li>
+                <span>Total of Buttons: </span>
+                <label id="lbltbtns"></label>
+            </li>
+            <li>
+                <div class="containerD">
+                    <button onclick="findButton(); return false;">find button</button>
+                    <button onclick="findFile(); return false;">find file</button>
+                    <button onclick="findPassword(); return false;">find password</button>
+                    <button onclick="findText(); return false;">find textbox and textbox disabled</button>
+                    <button onclick="findContains(); return false;">Contains "John"</button>
+                    <button onclick="findEmpty(); return false;">li empty"</button>
+                    <button onclick="findIndex(); return false;">li index 2"</button>
+                    <button onclick="findGt(); return false;">li Gt 1"</button>
+                    <button onclick="findlt(); return false;">li Lt 1"</button>
+                    <button onclick="findSiblings(); return false;">Find Siblings Hermano Mayor</button>
+                    <button onclick="findParent(); return false;">Find Parent pes</button>
+                    <button onclick="findChildren(); return false;">Find Children containerP</button>
+                    <button onclick="findbyTwoClass(); return false;">find by maincontent and containerD class</button>
+                    <button onclick="insertAfter(); return false;">insert after hermano mayor</button>
+                    <button onclick="getAttrMID(); return false;">Get MerchantID</button>
+                    <button onclick="setAttrMID1(); return false;">Set MerchantID 10</button>
+                    <button onclick="setAttrMID2(); return false;">Set MerchantID 10 + 5</button>
+                    <button onclick="setAttrMID3(); return false;">Set MerchantID 20 and Add contractID 10</button>
+                    <button onclick="removeAttrCntID(); return false;">Remove contractID</button>
+                    <button onclick="getTotalBtns(); return false;">GetTotalOfButtons</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="../js/jquery-2.0.3.js"></script>
+<script>
+    //button Selector
+    function findButton() {     
+    }
+    //File Selector
+    function findFile() {        
+    }
+    //Password Selector
+    function findPassword() {        
+    }
+    //Text Selector
+    function findText() {
+    }
+    //Contains Selector
+    function findContains() {
+    }
+    //empty Selector
+    function findEmpty() {
+    }
+    //eq Selector
+    //get Selector
+    function findIndex() {
+    }
+    //find by maincontent and containerD class
+    function findbyTwoClass() {
+    }
+    //Greater than Selector
+    function findGt() {
+    }
+    //Less than Selector
+    function findlt() {
+    }
+    //siblings
+    function findSiblings() {
+    }
+    //parent
+    function findParent() {
+    }
+    //children
+    function findChildren() {
+    }
+    //after
+    function insertAfter() {
+    }   
+    //Retrieve Attributes
+    function getAttrMID() {
+    }
+    //Set Attributes – Type 01
+    function setAttrMID1() {
+    }
+    //Set Attributes – Type 02 - function
+    function setAttrMID2() {
+    }
+    //Set Attributes – Type 03 - obj
+    function setAttrMID3() {
+    }
+    //Remove Attributes
+    function removeAttrCntID() {
+    }    
+    //each
+    function getTotalBtns() {
+    }
+</script>
