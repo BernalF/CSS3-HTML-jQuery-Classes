@@ -8,6 +8,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI';
+
         }
 
         .form
@@ -108,7 +109,7 @@
                 <p class="pes">3</p>
                 <p>4</p>
                 <p class="pes">5</p>
-                <p>6</p>
+                <p>6</p>                
             </li>
             <li>
                 <input type="hidden" id="mid" merchantid="3" />
@@ -145,54 +146,77 @@
                 </div>
             </li>
         </ul>
-    </div>
+    </div>   
 </body>
 </html>
 <script src="../js/jquery-2.0.3.js"></script>
 <script>
     //button Selector
-    function findButton() {     
+    function findButton() {
+        $('input:button').addClass('marked');
     }
     //File Selector
-    function findFile() {        
+    function findFile() {
+        $('input:file').addClass('marked');
     }
     //Password Selector
-    function findPassword() {        
+    function findPassword() {
+        $('input:password').addClass('marked');
     }
     //Text Selector
     function findText() {
+        $('input:text:enabled').addClass('marked');
+        $('input:text:disabled').val('this is disabled');
     }
     //Contains Selector
     function findContains() {
+        $('p:contains("John")').css('text-decoration', 'underline');
     }
     //empty Selector
     function findEmpty() {
+        $('ul li:empty')
+            .text('Is Empty')
+            .css('background', 'gray');
     }
     //eq Selector
     //get Selector
     function findIndex() {
+        $('ul li:eq(2)')
+            .text('The number 3')
+            .css('background', 'gray');
     }
     //find by maincontent and containerD class
     function findbyTwoClass() {
+        $('.maincontent, .containerD').addClass('marked');        
     }
     //Greater than Selector
     function findGt() {
+        $('ul li:gt(1), ul li:eq(1)').css('background', 'brown');
     }
     //Less than Selector
     function findlt() {
+        $('ul li:lt(1)').css('background', 'orange');
     }
     //siblings
     function findSiblings() {
+        $('#hMayor').siblings('p').addClass('marked');
     }
     //parent
     function findParent() {
+        $('#hMayor').parent().addClass('marked');
     }
     //children
     function findChildren() {
+        $('.containerP').children().addClass('marked');
     }
     //after
     function insertAfter() {
-    }   
+        $('#hMayor').after('<p>0</p>');
+    }
+    //before
+    function insertBefore() {
+        $('#hMayor').before('<p>0</p>');
+    }
     //Retrieve Attributes
     function getAttrMID() {
     }
