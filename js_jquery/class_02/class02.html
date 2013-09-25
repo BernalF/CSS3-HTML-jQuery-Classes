@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>asd</title>
     <style>
         hr, h3, p
         {
@@ -53,6 +53,7 @@
     <p id="intro">Finding HTML elements by id</p>
 
     <p id="P1" class="">Finding HTML elements by tagName</p>
+    
 
     <img id="image" src="images/koohala.jpg" style="display: block;" />
 
@@ -62,7 +63,7 @@
 
     <input type="text" id="fname" onchange="myFunction()" style="display: block;">
 
-    <div onmouseover="mOver(this)" onmouseout="mOut(this)">Mouse Over Me</div>
+    <div onmouseover="mOver(this, caca)" onmouseout="mOut(this)">Mouse Over Me</div>
 
     <div onmousedown="mDown(this)" onmouseup="mUp(this)">Click Me</div>
 
@@ -88,9 +89,9 @@
     //-- Changing an HTML Attribute
     document.getElementById("image").width = "100";
 
-    //-- Changing HTML Style
+    //-- Changing HTML Style    
     document.getElementById("P1").style.color = "blue";
-    document.getElementById("P1").style.fontWeight = "bold";
+    document.getElementById("P1").style.fontWeight = "bold";    
 
     //-- Events
     //Onchange 
@@ -100,12 +101,12 @@
     }
 
     //Onmouseover - onmouseOut
-    function mOver(obj) {
-        obj.innerHTML = "Yeah!"
+    function mOver(obj, m) {
+        obj.innerHTML = "Yeah!";
     }
 
     function mOut(obj) {
-        obj.innerHTML = "Mouse Over Me"
+        obj.innerHTML = "Mouse Over Me";
     }
 
     //onmousedown - onmouseup

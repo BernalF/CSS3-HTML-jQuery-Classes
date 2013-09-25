@@ -59,13 +59,13 @@
     //1 Create Element, 2 Set Atributtes, 3 Crear Nodo texto, 4 unir 1 y 3    
     function create() {
         //1 crear elemento
-        var pe = document.createElement('p');
+        var pe = document.createElement('p'); //<p></p>
         //2 ponerle atributos 
-        pe.setAttribute('id', 'pd1');
+        pe.setAttribute('id', 'pd1'); //<p id="pd1"></p>
         //3 crear nodo
-        var node = document.createTextNode('This is a js creation');
+        var node = document.createTextNode('This is a js creation'); //
         // 4 unir 1 con 3
-        pe.appendChild(node);
+        pe.appendChild(node);//pe = <p id="pd1">This is a js creation</p>
 
         var element = document.getElementById('newp');
         element.appendChild(pe);
@@ -124,5 +124,19 @@
         var x = document.getElementById("fname");
         x.value = x.value.toUpperCase();
     }
+    var yu = {
+        name: '',
+        age: null,
+        haveSons: []
+    };
+    var arr = [];
+    arr.push('c');
+
+    yu.name = 'Yu Hsuan';
+    yu.age = 42;
+    yu.haveSons = arr;
+
+    console.log(yu);
+
 
 </script>
