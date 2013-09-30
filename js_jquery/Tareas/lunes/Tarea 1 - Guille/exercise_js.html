@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exercise JS</title>   
+	<link rel="stylesheet" href="reset.css" />	
+	<link rel="stylesheet" href="page_styles.css" />	
+  </head>
+  <body>
+	<form action="exercise2_js.html" method="POST">
+		<div id="" class="mainContainer">
+			<table class="formContainer">
+				<tr>
+					<td><label for="txtName">Name *:</label></td>
+					<td><input type="text" name="lastname" id="txtName" placeholder="Enter Name" required></td>
+				</tr>
+				<tr>
+					<td><label for="txtAge">Age *:</label></td>
+					<td><input type="text" name="age" id="txtAge" placeholder="Enter Age" pattern="^[1-9]{1,2}$" required></td>
+				</tr>
+				<tr>
+					<td><label for="txtAge">Have sons:</label></td>
+					<td>Yes<input type="radio" name="sons" id="cbxSons" value="y">
+							No<input type="radio" name="sons" id="cbxNoSons" value="n" checked></td>
+				</tr>
+			</table>
+			<div id="sonsContainer" class="sonsContainer hideContainer">
+				<label>Name of your son:</label>
+				<input type="text" id="txtSonName" placeholder="Name of son" >
+				<input type="button" value="Add Son" id="btnAdd" /></br>
+				<select id="ddlSons" size="6" multiple>				
+				</select>
+				<input id="btnRemove" type="button" value="Remove Names" />
+			</div>					
+			<input type="submit" value="Save Data" id="btnSave"/>
+		</div>		
+	</form>
+  </body>
+</html>
+<script>
+	var testModule = function(){
+		var sonNamesCounter = 0;
+		var resultObj = {};		
+		
+		var cbxSons = document.getElementById('cbxSons');
+		cbxSons.addEventListener('change',function(){
+			toggleSonsVisibility(true);
+		}, false);
+		
+		var cbxSons = document.getElementById('cbxNoSons');
+		cbxSons.addEventListener('change',function(){
+			toggleSonsVisibility(false);
+		}, false);
+		
+		function toggleSonsVisibility(visible){
+			var sonsContainer = document.getElementById('sonsContainer');
+			sonsContainer.style.display = visible ? 'block' : 'none';
+		}
+		
+		// Add Button logic
+		var btnAdd = document.getElementById('btnAdd');
+		btnAdd.addEventListener('click',function(){
+			var sonName = document.getElementById('txtSonName').value;
+			var sonNames = document.getElementById('ddlSons').options;		
+			var l = sonNames.length;
+			var isValid = true;
+			var i;
+			
+			for(i = 0; i < l; i++){
+				if(sonName === sonNames[i].value){
+					isValid = false;
+					//return false;
+				}
+			}
+			
+			if(isValid && sonName){
+				sonNamesCounter++;
+				sonNames.add(new Option(sonName));				
+			} else if(!sonName){ 
+				alert('Please enter a name.');
+			} else{
+				alert('You already enter this name: ' + sonName);
+			}	
+		}, false);
+		
+		// Remove Button logic		
+		var btnRemove = document.getElementById('btnRemove');
+		btnRemove.addEventListener('click',function(){
+			if(sonNamesCounter){
+				var ddlSons = document.getElementById('ddlSons');
+				var selectedIndex = ddlSons.selectedIndex;			
+				
+				if(selectedIndex >= 0 && confirm('Really want to delete this name?')){
+					ddlSons.options.remove(selectedIndex);			
+					sonNamesCounter--;				
+				} else if(selectedIndex < 0){
+					alert('Please select a name to remove from the list.')
+				}
+			} else{
+				alert('Please add names to the list.')
+			}
+		}, false);
+		
+		// Save Button logic
+		var btnSave = document.getElementById('btnSave');
+		btnSave.addEventListener('click',	function save(e){
+			var sonsCounter;
+			var patt = /^[1-9]{1,2}$/;
+			var txtName = document.getElementById('txtName');
+			var txtAge = document.getElementById('txtAge');
+			
+			console.log(document.getElementById('ddlSons').options);
+			
+			if(txtAge.validity.valid && txtName.validity.valid){				
+				sonsCounter = document.getElementById('ddlSons').options.length;		
+				if(!sonsCounter && document.getElementById('cbxSons').checked){
+					alert('Must add sons names or check the "No" sons radio button.');
+					e.preventDefault();
+				}		
+			}		
+		}, false);
+			
+		// Form logic	
+		var formObj = document.getElementsByTagName('form')[0];	
+		formObj.addEventListener("submit", function (event) {  
+			var val1 = document.getElementById('txtName').value;
+			var val2 = document.getElementById('txtAge').value;	
+			var val3 = [];
+			var opts = document.getElementById('ddlSons').options;
+			var l = opts.length;
+			var i;
+			
+			for(i = 0; i < l; i++){
+				val3.push(opts[i].text);
+			}
+			
+			resultObj = {
+				"name": val1,
+				"age": val2,
+				"sonsNames": val3
+			};
+			sessionStorage.tmpObj = JSON.stringify(resultObj);		
+		}, false);
+		
+	}();	
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

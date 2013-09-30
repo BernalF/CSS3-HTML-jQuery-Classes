@@ -1,0 +1,42 @@
+
+body{
+	background: #eee;
+}
+
+.mainContainer{
+	border: 1px solid navy;
+	margin: 10% auto;
+	width: 600px;	
+	padding: 10px;
+	overflow:hidden;
+	background: #ccc;
+}
+
+.mainContainer .p1{
+	text-indent: 20px;
+}
+
+.mainContainer .p2{
+	text-indent: 30px;
+}
+
+.mainContainer .p3{
+	text-indent: 40px;
+}
+
+.formContainer{
+	width: 100%;
+	line-height:30px;
+}
+
+.hideContainer{
+	display:none;
+}
+
+#ddlSons{
+width:250px;
+}
+
+#btnSave{
+	float:right;
+}
