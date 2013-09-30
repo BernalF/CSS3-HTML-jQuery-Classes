@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HomeworkYu</title>
+    <link rel="stylesheet" href="css/freeStyle.css"/>        
+</head>
+<body>
+    <form  id="formYu" name="formYu">
+        <ul class="form">
+            <li>
+                <label>Mission *</label>
+			</li>
+            <li>
+                <input type="text" id="mission" name="mission"/>
+                <label id="missionAlert" class="alert hide"></label>
+            </li>			
+            <li>
+                <label>Number *</label>
+			</li>
+            <li>
+                <input type="text" id="number" name="number" maxlength="2" onfocus="clean(this);"/>				
+                <label id="numAlert" class="alert hide"></label>
+            </li>
+
+            <li>
+                <label>Somebody will come with me?</label></li>
+            <li>
+                <label>Yes</label>
+                <input type="radio" id="poSupuesto" name="radioB" onclick="checkPoSupuesto();" />
+                <label>No</label>
+                <input type="radio" id="poFavor" name="radioB" onclick="checkPoSupuesto();" />
+            </li>
+            <li id="l1" class="width100 hide">
+                <label>Type the name of the friends</label>
+                <label>Name</label>
+                <input type="text" id="friendName" />
+                <input type="button" value="Add" id="btnAdd"/>
+                <select name="friends" id="friends" size="6"></select>
+                <input type="button" value="Remove" id="btnRemove"/>
+            
+            </li>
+			<li><input type="submit" id="save" value="save" onclick="return validationYu();" /> </li>
+        </ul>
+    </form>
+</body>
+<script>
+
+function validateNum(){
+  var num=document.getElementById("number").value;
+  if(isNaN(num))
+	{
+	  document.getElementById("numAlert").innerHTML = 'Please enter only numbers^^';
+	  return false;
+	}
+}
+
+function validationYu()
+ {
+   var num=document.getElementById("number").value;
+   var mi=document.getElementById("mission").value;
+    if(num == '')
+	{	  
+     document.getElementById("missionAlert").innerHTML = 'Please enter Buzz mission ^^ ';
+	 document.getElementById("missionAlert").style.display = 'block';
+	 return false;
+	}	
+     else if(mi == '')
+    {
+	 document.getElementById("numAlert").innerHTML = 'Please enter Buzz number ^^ ';
+	 document.getElementById("numAlert").style.display = 'block';
+     return false;
+    } 
+    else if(!valiNum(document.getElementById("number")))
+	{
+	  return false;
+	}
+	else{
+	   document.getElementById("numAlert").innerHTML = '';
+	   document.getElementById("numAlert").style.display = 'none';
+	   document.getElementById("missionAlert").innerHTML = '';
+	   document.getElementById("missionAlert").style.display = 'none';
+	}
+  }  
+  
+  function valiNum(num)  {
+if (isNaN(num.value)) {
+document.getElementById("numAlert").innerHTML = 'Please enter only numbers^^';
+	  return false;
+ }
+}
+
+  function checkPoSupuesto() {
+        var f = document.getElementsByName('radioB');
+        for (var i = 0, l = f.length; i < l; i++) {
+            if (f[i].checked) {
+
+                document.getElementById('l1').style.display = 'none';
+
+            }
+            else {
+                document.getElementById('l1').style.display = 'block';
+            }
+
+        }
+
+    }  
+	
+/*	function checkPoSupuestoI(){	
+	       var f = document.getElementsByName('radioB');
+
+        for (var i = 0, l = f.length; i < l; i++) {
+
+            if (document.getElementsById('poSupuesto').checked) {
+
+                document.getElementById('l1').style.display = 'block';
+
+            }
+			else if (document.getElementsById('poFavor').checked)
+			{
+			    document.getElementById('l1').style.display = 'none';
+			}
+        }			
+	}*/
+
+</script>
+</html>

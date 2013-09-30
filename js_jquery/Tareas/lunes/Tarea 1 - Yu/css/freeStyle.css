@@ -1,0 +1,72 @@
+body, ul, li, form, input
+{
+    font-family: 'Impact';
+	color:#319416;
+
+} 
+
+#formYu
+{
+    width: 430px;
+    position:absolute;
+    top: 80px;
+    left:750px;        
+}
+
+.form
+{
+    overflow: hidden;
+}
+
+body
+{
+    background-image:url("../images/BuzzLightyear.jpg");
+    background-repeat:no-repeat;
+}
+
+ul
+{    
+    border: 3px solid #3B0DE1;   
+    margin: 10px;
+    padding: 10px;
+	list-style: none;
+}
+
+
+.alert
+{
+    color: #E95A37;
+    font-size: 10px;
+    display: none;
+}
+
+.hide
+{
+    display: none;
+} 
+
+.form li
+    {
+        float: left;
+        padding-bottom: 12px;
+  }
+  
+.form li:nth-child(odd)
+        {
+            width: 40%;
+    }
+
+.form li:nth-child(even)
+        {
+      width: 60%;
+    }
+
+.form li:nth-last-child(1)
+            {
+            width: 95%;
+            text-align: right;
+      }
+
+
+ 
+

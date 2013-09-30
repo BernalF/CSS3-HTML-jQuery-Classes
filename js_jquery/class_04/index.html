@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        body, div, ul, li, h1, h2, h3, h4, h5, form, input, textarea, p, table, tr, td
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+
+        body
+        {
+            background: #22252b;
+            color: #fff;
+        }
+
+        ul
+        {
+            list-style: none;
+            overflow: hidden;
+            text-align: justify;
+        }
+
+            ul li
+            {
+                padding: 5px;
+                border: 2px solid #5a5c63;
+            }
+
+        .maincontent
+        {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        a
+        {
+            color: #fff;
+            display: block;
+            text-decoration: none;
+        }
+
+        .redH
+        {
+            color: red;
+        }
+
+        .green
+        {
+            color: #029605;
+        }
+
+        .byclass
+        {
+            font-family: Cambria;
+        }
+
+        .font30
+        {
+            font-size: 30px;
+        }
+
+        .containerP
+        {
+            overflow: hidden;
+        }
+
+            .containerP p
+            {
+                margin: 5px;
+                float: left;
+            }
+
+            .containerP a
+            {
+                float: left;
+            }
+    </style>
+</head>
+<body>
+    <div class="maincontent">
+        <ul class="form">
+            <li><a href="#" id="aID" onclick="byID(); return false;">Find by ID</a></li>
+            <li><a href="#" onclick="byTagName(); return false;">Find by TagName</a></li>
+            <li><a href="#" class="byclass" onclick="byClassName(); return false;">Find by class Name</a></li>
+            <li><a href="#" id="h1" onclick="hideElement(); return false;">Hide Me</a></li>
+            <li><a href="#" id="h2" onclick="ShowElement(); return false;">Show Me</a></li>
+            <li>
+                <div id="A1"></div>
+                <a href="#" onclick="createH1(); return false;">Create H1</a>
+            </li>
+            <li>
+                <a href="#" id="btnAddClass" onclick="addClassH(); return false;">Add Class to H1</a>
+            </li>
+            <li><a href="#" onclick="allRed(); return false;">All elements color red</a></li>
+            <li>
+                <a href="#" onclick="currentEl(this); return false;">Select Current element and increase fontsize</a>
+            </li>
+            <li class="containerP">
+                <p class="pes">1</p>
+                <p>2</p>
+                <p class="pes">3</p>
+                <p>4</p>
+                <p class="pes">5</p>
+                <p>6</p>
+                <br />
+                <a href="#" onclick="pesChangeColor(); return false;">Selects all p elements with class="pes" inside li with class 'containerP' and change color</a>
+            </li>
+            <li><a href="#" onclick="firstLi(); return false;">Selects the first li element and hide</a></li>
+            <li><a href="#" onclick="byAttibute(); return false;">Selects all elements with an href attribute</a></li>
+            <li><a href="#" onclick="byAttibute(); return false;">Selects all elements with an href attribute and </a></li>
+            <li>
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <a href="#" onclick="selectAll(); return false;">Selects all input with type checkbox</a>
+            </li>
+            <li>
+                <a href="#" onclick="pesChangeColorOdd(); return false;">Selects all odd p elements inside li with class 'containerP' and change color</a>
+            </li>
+            <li>
+                <a href="#" hreflang="en">Some text</a>
+                <a href="#" hreflang="en-UK">Some other text</a>
+                <a href="#" hreflang="english">will not be outlined</a>
+                <a href="#" onclick="containPrefix(); return false;">Selects all Attribute Contains Prefix Selector [name|="value"]</a>
+            </li>
+            <li class="ej1">
+                <input name="man-news">
+                <input name="milkman">
+                <input name="letterman2">
+                <input name="newmilk">
+                <a href="#" onclick="containName(); return false;">Selects all Contains Selector Attribute [name*="value"] </a>
+            </li>
+            <li class="ej2">
+                <input name="man-news">
+                <input name="milk man">
+                <input name="letterman2">
+                <input name="newmilk">
+                <a href="#" onclick="containWord(); return false;">Selects all Attribute Contains Word Selector [name~="value"] </a>
+            </li>
+            <li class="ej3">
+                <input name="newsletter">
+                <input name="milkman">
+                <input name="jobletter">
+                <a href="#" onclick="endsWith(); return false;">Selects all Attribute Ends With Selector [name$="value"]</a>
+            </li>
+            <li class="ej4">
+                <input name="newsletter">
+                <input name="milkman">
+                <input name="newsboy">
+                <a href="#" onclick="StartsWith(); return false;">Selects all Attribute Ends With Selector [name$="value"]</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="../js/jquery-2.0.3.js"></script>
+<script>
+
+    //Selectors by ID
+    function byID() {
+      
+    }
+
+    //Selectors by tagName
+    function byTagName() {
+      
+    }
+
+    //Selectors by Class
+    function byClassName() {
+      
+    }
+
+    //Hide element
+    function hideElement() {
+      document.getElementById('h1').style.display = "none";
+      
+    }
+
+    //Show Element
+    function ShowElement() {
+      document.getElementById('h1').style.display = "block";
+      
+    }
+
+    //Create one H1 element
+    function createH1() {
+        var h1 = document.createElement('h1');
+        h1.innerHTML = "Created with js";
+        h1.setAttribute('id', 'newH1');
+        document.getElementById('A1').appendChild(h1);      
+    }
+
+    //Add Class to H1 generated
+    function addClassH() {
+        var h1 = document.getElementById('newH1');
+        h1.className = "redH";        
+    }
+
+    //Change color for all elements
+    function allRed() {        
+    }
+
+    //Select Current element and increase fontsize
+    function currentEl(me) {        
+    }
+
+    //Selects all p elements with class="pes" 
+    //inside li with class 'containerP' and change color
+    function pesChangeColor() {        
+    }
+
+    //Selects the first <li> element of the first <ul> and hide
+    function firstLi() {        
+    }
+
+    //Selects all elements with an href attribute 
+    //and change font family and font size without addclass function
+    function byAttibute() {        
+    }
+
+    //Selects all input with type checkbox
+    function selectAll() {        
+    }
+
+    //Selects all odd p elements inside li 
+    //with class 'containerP' and change color
+    function pesChangeColorOdd() {        
+    }
+
+    //Selects all Attribute Contains Prefix Selector [name|="value"]
+    //Selects elements that have the specified attribute 
+    //with a value either equal to a given string or 
+    //starting with that string followed by a "-"
+    function containPrefix() {
+        $("a[hreflang|='en']")
+            .css("border", "3px dotted green");
+    }
+
+    //Selects all Contains Selector Attribute [name*="value"] 
+    //Selects elements that have the specified attribute 
+    //with a value containing the a given substring.
+    function containName() {
+        $(".ej1 input[name*='man']").val("has man in it!");
+    }
+
+    //Selects all Attribute Contains Word Selector [name~="value"]
+    // Selects elements that have the specified 
+    //attribute with a value containing a given word, 
+    //delimited by spaces
+    function containWord() {
+        $(".ej2 input[name~='man']").val("mr. man is in it!");
+    }
+
+    //Attribute Ends With Selector [name$="value"]
+    //Selects elements that have the specified 
+    //attribute with a value ending exactly with a given string. 
+    //The comparison is case sensitive.
+    function endsWith() {
+        $(".ej3 input[name$='letter']").val("a letter");
+    }
+
+
+    //Attribute Starts With Selector [name^="value"]
+    //Selects elements that have the specified attribute with a value beginning exactly with a given string.
+    function StartsWith() {
+        $(".ej4 input[name^='news']").val("news here!");
+    }
+
+</script>

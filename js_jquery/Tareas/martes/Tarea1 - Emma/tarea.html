@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Tarea 1 Padawan Level</title>
+        <meta name="description" content="Tarea 1 padawan">
+        <link rel="stylesheet" href="tarea.css">
+    </head>
+    <body>
+        <form name="myForm2" id="myForm2" action="tareaExito.html">
+            <ul class="form">
+                <li>
+                    <label>Name:*</label>
+                </li>
+                <li>
+                    <input type="text" name="txtName" id="txtName"/>
+                </li>    
+                <li>
+                    <label>Age:*</label>
+                </li>
+                <li>
+                    <input type="text" name="txtAge" id="txtAge" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+                </li>    
+                <li>
+                    <label>Has Sons?:</label>
+                </li>
+                <li>
+                    <input type="radio" id="rbYes" name="rbSons" value="Yes" onchange="showSection();" />Yes
+                    <input type="radio" id="rbNo" name="rbSons" value="No" onchange="hideSection();"/>No 
+                </li>
+                <li id="hideArea1" class="width100 center hide">
+                    <label>Type the name of the Sons:</label>
+                </li>
+                <li id="hideArea2" class="width100 center hide">
+                    <label>Name:</label>
+                    <input type="text" id="txtSonName" name="txtSonName"/>
+                    <input type="button" id="btnAdd" name="btnAdd" value="Add" onclick="addSon();" />                   
+                </li>
+                <li id="hideArea3" class="width100 center hide">
+                    <select multiple name="lstSons" id="lstSons" class="width100" size="6"/>
+                    <input type="button" id="btnRemoveSon" name="btnRemoveSon" value="Remove" onclick="removeSon();" />
+                </li>
+                <li>
+                    <input type="submit" id="btnSave" value="Save" onclick="return Save();"/>
+                </li>
+            </ul>
+        </form>
+    </body>
+</html>
+<script>
+    function Person (_name, _age, _hasSons) {
+        this.name = _name;
+        this.age = _age;
+        this.hasSons = _hasSons;
+        this.sons = [];
+        var _lstSons = document.getElementById("lstSons");
+        for (var j=0; j<_lstSons.length; j++) {
+            this.sons.push(_lstSons.options[j].text);
+        }
+    }
+ 
+    Person.prototype.getInfo = function() {
+        var result = 'Name: ' + this.name + ', Age: ' + this.age + '\n';
+        var sons='';
+        for (var l=0; l<this.sons.length; l++) {
+            sons += 'Son: ' + this.sons[l] + '\n';
+        }
+        return result + sons;
+    };
+    
+    function addSon() {
+        var selectLista = document.getElementById("lstSons");        
+        var hijo = document.getElementById("txtSonName");
+        
+        if (hijo.value == "") {
+            alert("Please Type a name for the son");
+            return;
+        }        
+        
+        var found = false;
+        //iterate
+        for (var i=0; i<selectLista.length; i++) {
+            if (selectLista.options[i].text == hijo.value) {
+                found = true;
+                break;
+            }
+        }
+        
+        if (!found) {
+            var opcion = document.createElement("option");
+            opcion.text = hijo.value;
+            opcion.value = hijo.value;
+            selectLista.appendChild(opcion);
+            hijo.value = "";
+        }
+        else {
+            alert('The element ' + hijo.value + ' already exists');
+        }
+    }
+    
+    function removeSon() {
+        var selectLista = document.getElementById("lstSons");
+        
+        if (selectLista.selectedIndex >= 0) {
+            var optiona = selectLista.options[selectLista.selectedIndex];
+            if (confirm("Do you wish to remove the element " + optiona.text + " ?") == true) {
+                var selectLista = document.getElementById("lstSons");
+                var optiona = selectLista.options[selectLista.selectedIndex];
+                selectLista.removeChild(optiona);
+            }
+        }
+        else {
+            alert('There are no elements selected to be deleted');
+        }
+    }
+    
+    function showSection() {
+        document.getElementById("hideArea1").style.display = "block";
+        document.getElementById("hideArea2").style.display = "block";
+        document.getElementById("hideArea3").style.display = "block";
+        return false;
+    }
+    
+    function hideSection() {
+        document.getElementById("hideArea1").style.display = "none";
+        document.getElementById("hideArea2").style.display = "none";
+        document.getElementById("hideArea3").style.display = "none";
+        return false;
+    }
+    
+    function Save() {
+        // validate name is required
+        //alert(document.getElementById('txtName').innerHTML);
+        if (document.getElementById('txtName').value == '') {
+            alert('Name is required');
+            return false;
+        }
+        
+        if (document.getElementById('txtAge').value == '') {
+            alert('Age is required');
+            return false;
+        }
+        
+        //save Info
+        var p = new Person(document.getElementById('txtName').value, document.getElementById('txtAge').value, "Yes");
+        alert(p.getInfo());
+        return true;
+    }
+</script>

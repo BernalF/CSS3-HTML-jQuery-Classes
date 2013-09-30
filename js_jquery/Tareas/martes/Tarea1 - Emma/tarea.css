@@ -1,0 +1,49 @@
+ul
+{
+    list-style-type:none;
+    border: 2px solid #5a5c63;    
+    margin: 10px;
+    padding: 10px;
+}
+
+.width100 {
+    width:200px;
+}
+
+#myForm2
+{
+    width: 400px;
+    margin: 10% auto;
+}
+
+body
+{
+    background: pink;
+    color: #fff;
+}
+
+.form {
+    overflow: hidden;
+}
+
+.form li
+{
+    float: left;
+    padding-bottom: 10px;
+}
+
+.form li:nth-child(odd)
+{
+    width: 40%;
+}
+
+.form li:nth-child(even)
+{
+    width: 60%;
+}
+
+.form li:nth-last-child(1)
+{
+    width: 100%;
+    text-align: right;
+            }
