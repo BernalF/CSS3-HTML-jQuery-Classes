@@ -242,7 +242,7 @@
 
     //Selects all input with type checkbox
     function selectAll() {
-        $(':checkbox').attr('checked', 'checked');
+        $('input:checkbox').attr('checked', 'checked');
     }
 
     //Selects all odd p elements inside li 
@@ -254,7 +254,7 @@
     //Selects all Attribute Contains Prefix Selector [name|="value"]
     //Selects elements that have the specified attribute 
     //with a value either equal to a given string or 
-    //starting with that string followed by a "-"
+    //starting with that string followed by a "-"    
     function containPrefix() {
         $("a[hreflang|='en']")
             .css("border", "3px dotted green");
@@ -270,7 +270,7 @@
     //Selects all Attribute Contains Word Selector [name~="value"]
     // Selects elements that have the specified 
     //attribute with a value containing a given word, 
-    //delimited by spaces
+    //delimited by spaces 
     function containWord() {
         $(".ej2 input[name~='man']").val("mr. man is in it!");
     }

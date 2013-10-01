@@ -114,45 +114,28 @@
    
     //Retrieve Attributes
     function getAttrMID() {
-        var $mid = $('#mid').attr('merchantID');
-        $('#lblMID').html($mid);
+       
 
     }
     //Set Attributes – Type 01
     function setAttrMID1() {
-        $('#mid').attr('merchantID', '10');
-        getAttrMID();
+        
     }
     //Set Attributes – Type 02 - function
     function setAttrMID2() {
-        $('#mid').attr('merchantID', function () {
-            return 10 + 5;
-        });
-        getAttrMID();
+       
     }
     //Set Attributes – Type 03 - obj
     function setAttrMID3() {
-        $('#mid').attr({
-            'merchantID': 20,
-            'contractID': 10
-        });
-        $('#mid')
-            .siblings('span')
-            .after('<span><label> - ContractID: ' + $('#mid').attr('contractID') + '</label></span>');
-        getAttrMID();
+        
     }
     //Remove Attributes
     function removeAttrCntID() {
-        $('#mid').removeAttr('contractID');
-        $('#mid').siblings('span:eq(1)').remove();
+       
     }    
     //each
     function getTotalBtns() {
-        var $btns = $('.containerD button');
-        $btns.each(function (i, val) {
-            $(val).addClass('marked');
-        });
-        $('#lbltbtns').html($btns.length);
+      
     }
 
     //------------------------ Events
