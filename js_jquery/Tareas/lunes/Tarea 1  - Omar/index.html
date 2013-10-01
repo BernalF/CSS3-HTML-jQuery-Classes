@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>OMR</title>
+        <link href="bootstrap.css" rel="stylesheet">
+        <link href="signin.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div class="container" style="width:300px">
+            <div class="horizontal-form">
+                <h2 class="form-signin-heading">Please sign in</h2>
+                <div class="row form-group">
+                    <label for="inputName" class="col-lg-2 control-label">Name*</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="inputName" placeholder="Name" onblur="requiredField(this)">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="inputAge" class="col-lg-2 control-label">Age*</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="inputAge" placeholder="Age" onblur="requiredField(this)">
+                    </div>
+                </div>
+                <div id="sonForm" class="row form-group">
+                    <label for="inputAge" for="inputHasSons" class="col-lg-2 control-label">Sons?</label>
+                    <div class="col-lg-10">
+                        <div class="radio-inline">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="yes" onclick="showSonsForm(this)">Yes</label>
+                        </div>
+                        <div class="radio-inline">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="no" checked onclick="showSonsForm(this)">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="sonsForm1" class="row form-group" style="display:none">
+                    <label for="inputnNameSon" class="col-lg-2 control-label">Name</label>
+                    <div class="col-lg-7">
+                        <input type="text" class="form-control" id="inputnNameSon" placeholder="inputnNameSon">
+                    </div>
+                    <div class="col-lg-2">
+                        <button class="btn" type="button" onclick="addChild()">Add</button>
+                    </div>
+                </div>
+                <div id="sonsForm2" class="row form-group" style="display:none">
+                    <div class="col-lg-8">
+                        <select id="sons" multiple class="form-control"></select>
+                    </div>
+                    <div class="text-right">
+                        <button class="btn" type="button" onclick="removeOption()">Remove</button>
+                    </div>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="Button" onclick="getInfo()">Save</button>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        function requiredField(itemHTML) {
+            if (itemHTML != undefined) {
+                itemHTML.parentElement.parentElement.classList.remove('has-error');
+                if (itemHTML.value.length = 0 || itemHTML.value == undefined || itemHTML.value == "") {
+                    itemHTML.parentElement.parentElement.classList.add('has-error');
+                }
+            }
+        }
+
+        function showSonsForm(itemHTML) {
+            if (itemHTML.value == "yes") { //
+
+                document.getElementById("sonsForm1").style.display = "block";
+                document.getElementById("sonsForm2").style.display = "block";
+            } else {
+                document.getElementById("sonsForm1").style.display = "none";
+                document.getElementById("sonsForm2").style.display = "none";
+            }
+        }
+
+        function addChild() {
+            var sonName = document.getElementById("inputnNameSon").value;
+            document.getElementById("inputnNameSon").value = "";
+
+            var x = document.getElementById("sons");
+            var option = document.createElement("option");
+            option.text = sonName;
+            try {
+                x.add(option, x.options[null]);
+            } catch (e) {
+                x.add(option, null);
+            }
+        }
+
+        function removeOption() {
+            var x = document.getElementById("sons");
+            x.remove(x.selectedIndex);
+        }
+
+        function getInfo() {
+            var children = document.getElementById("sons");
+            var infoChildren = "";
+
+            for (var i = 0; i < children.length; i++) {
+                infoChildren = infoChildren + children[i].value;
+
+                if (i < children.length - 1) {
+                    infoChildren = infoChildren +",";
+                }
+            }
+
+            var info = {
+                name: document.getElementById("inputName").value,
+                age: document.getElementById("inputAge").value,
+                Children: infoChildren
+            }
+
+            alert(JSON.stringify(info));
+        }
+    </script>
+
+</html>

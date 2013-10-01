@@ -1,0 +1,38 @@
+#texta{
+   height: 6.5em; 
+   width: 300px;
+}
+.info{
+margin:100px auto;
+border:#424242 solid;
+background-color:#0B6138;
+height:675px;
+width:600px;
+}
+body{
+background-color:#088A4B;
+font-family:Calibri;
+}
+li{
+padding:10px;
+    clear:both;
+    margin:10px;
+}
+.options div{
+float:left;
+display:block;
+padding:10px;
+margin:0 10px;
+
+
+}
+h1{
+    text-align:center;
+    padding:10px;
+}
+.removebutton{
+float:right;
+}
+input{
+margin:10px;
+}
