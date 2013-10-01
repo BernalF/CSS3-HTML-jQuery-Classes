@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body, div, ul, li, h1, h2, h3, h4, h5, form, input, textarea, p, table, tr, td
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+
+        .form
+        {
+            overflow:hidden;
+        }
+
+        body
+        {
+            background: #22252b;
+            color: #fff;
+        }
+
+        ul
+        {
+            list-style: none;
+            overflow: hidden;
+            text-align: justify;
+        }
+
+            ul li
+            {
+                padding: 5px;
+                border: 2px solid #5a5c63;
+            }
+
+        .maincontent
+        {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        a
+        {
+            color: #fff;
+            display: block;
+            text-decoration: none;
+        }
+
+        .containerP,
+        .containerD
+        {
+            overflow: hidden;
+        }
+
+            .containerD input, select, textarea
+            {
+                display: block;
+                margin: 2px;
+                color: #fff;
+                background: #01317d;
+            }
+
+            .containerD button
+            {
+                width: 50%;
+                float: left;
+            }
+
+        .containerP p
+        {
+            margin: 5px;
+            float: left;
+        }
+
+        .marked
+        {
+            border: 3px red solid;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincontent">
+        <ul class="form">
+            <li>
+                <input type="hidden" id="mid" merchantid="3" />
+                <span>MerchantID:
+                    <label id="lblMID"></label>
+                </span>
+            </li>
+            <li>
+                <span>Total of Buttons: </span>
+                <label id="lbltbtns"></label>
+            </li>
+            <li>
+                <div class="containerD">
+                    <button id="btn1" onclick="getAttrMID(); return false;">Get MerchantID</button>
+                    <button class="button" onclick="setAttrMID1(); return false;">Set MerchantID 10</button>
+                    <button id="btn3" onclick="setAttrMID2(); return false;">Set MerchantID 10 + 5</button>
+                    <button class="button" onclick="setAttrMID3(); return false;">Set MerchantID 20 and Add contractID 10</button>
+                    <button id="btn4" onclick="removeAttrCntID(); return false;">Remove contractID</button>
+                    <button onclick="getTotalBtns(); return false;">GetTotalOfButtons</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="../js/jquery-2.0.3.js"></script>
+<script>
+   
+    //Retrieve Attributes
+    function getAttrMID() {
+        var $mid = $('#mid').attr('merchantID');
+        $('#lblMID').html($mid);
+
+    }
+    //Set Attributes – Type 01
+    function setAttrMID1() {
+        $('#mid').attr('merchantID', '10');
+        getAttrMID();
+    }
+    //Set Attributes – Type 02 - function
+    function setAttrMID2() {
+        $('#mid').attr('merchantID', function () {
+            return 10 + 5;
+        });
+        getAttrMID();
+    }
+    //Set Attributes – Type 03 - obj
+    function setAttrMID3() {
+        $('#mid').attr({
+            'merchantID': 20,
+            'contractID': 10
+        });
+        $('#mid')
+            .siblings('span')
+            .after('<span><label> - ContractID: ' + $('#mid').attr('contractID') + '</label></span>');
+        getAttrMID();
+    }
+    //Remove Attributes
+    function removeAttrCntID() {
+        $('#mid').removeAttr('contractID');
+        $('#mid').siblings('span:eq(1)').remove();
+    }    
+    //each
+    function getTotalBtns() {
+        var $btns = $('.containerD button');
+        $btns.each(function (i, val) {
+            $(val).addClass('marked');
+        });
+        $('#lbltbtns').html($btns.length);
+    }
+
+    //------------------------ Events
+    //on - off (click)
+
+    //trigger
+
+    //Document Ready + external js File + migrate previous click functions + module pattern definition
+    
+
+
+
+</script>

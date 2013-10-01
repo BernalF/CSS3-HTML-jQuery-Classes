@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta chartset="utf-8">
+	
+	<title>Demo HTML5 Template</title>
+	
+        <link rel="stylesheet" href="Tarea 1.css">
+    
+    <script>
+      function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+ 
+         return true;
+      }
+        
+      function noHaveSons(evt)
+      {
+          var x=document.getElementById("sondiv");
+          x.remove();
+      }
+//      function HaveSons(evt)
+//      {
+//          var x=document.getElementById("sondiv");
+//          x.add();
+//      }
+      function addValueToList(nameSon)
+      {
+        var s=document.form1.select1; 
+
+       
+        var option=document.createElement("option"); 
+        option.value=nameSon;
+        option.text=nameSon; 
+      }
+    
+        function insertOption(evt)
+
+        {
+        
+        elm=document.getElementById("texto").value;
+        var y=document.createElement('option');
+        
+        y.text=elm;
+        
+        var x=document.getElementById("Select1");
+        
+        try
+        
+        {x.add(y,null); }
+        
+        catch(ex)
+        
+        {x.add(y); }
+        document.getElementById("texto").value="";
+        }
+        
+        function removeOption()
+        {
+            confirm("Esta seguro que desea eliminar este valor");
+            if(confirm)
+            {
+            var x=document.getElementById("Select1");
+            x.remove(x.selectedIndex);
+            }
+        }
+    </script>
+    </head>
+    
+    <body>
+        <form id="form1" class="maindiv">
+            <div class="border">
+                <ul class="Info">
+                    <li >Name* </li>
+                    <li >Age* </li>
+                    <li >Have sons? </li>
+                </ul>
+                  <ul  class="Info">
+                    <li > <input type="text" required/></li>
+                    <li > <input type="text" onkeypress="return isNumberKey(event)" required /></li>
+                    <li > <input type="radio" name="yes" id="1" onclick="HaveSons(event)"/>Yes <input type="radio" name="no" id="0" onclick="noHaveSons(event)"/>No</li>
+                </ul>
+                <div  class="son" id="sondiv">
+                    <ul class="Info">
+                        <li >Type name of the sons </li>
+                        <li >Name <input type="text" id="texto"/> 
+                                  <input type="button" value="Add"  style="color:#354179" onclick="insertOption(event)"/> 
+                        </li>
+                      
+                        <li ><select name="drop1" id="Select1" size="6" multiple="multiple" style="width:195px"></select> 
+                            <input type="button" value="Remove"  style="color:#354179" onclick="removeOption()"> </li>
+                     </ul>
+                     <ul id=”lista”></ul>
+               </div>
+                <div  class="btnsave">
+                    <input type="submit" name="save" id="save" style="color:#354179" value="Save"/> 
+               </div>
+            </div>
+        </form>
+    </body>
+</html>

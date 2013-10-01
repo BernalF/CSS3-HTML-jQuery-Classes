@@ -1,0 +1,35 @@
+
+
+.Info {
+    display:inline-block;
+    list-style-type:none;
+    color:#354179;
+    
+}
+/*
+.Info li {
+    line-height:20px;
+    align-content:stretch;  
+}
+*/
+.btnsave {
+   text-align:right;
+   width:360px;
+   color:#354179;
+   margin-bottom:10px;
+ 
+}
+.border {
+    width:370px;
+    border-color:#51566E;
+    border-style:double;
+    margin:50px;
+    
+}
+
+.maindiv {
+  width:450px;
+  background-color:grey;  
+    height:50%;
+    padding:10px;
+}
