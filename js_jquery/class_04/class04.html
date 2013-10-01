@@ -73,6 +73,8 @@
                 float: left;
             }
 
+           
+
             .containerP a
             {
                 float: left;
@@ -131,6 +133,7 @@
                 <input name="man-news">
                 <input name="milkman">
                 <input name="letterman2">
+                <p class="pes"></p>
                 <input name="newmilk">
                 <a href="#" onclick="containName(); return false;">Selects all Contains Selector Attribute [name*="value"] </a>
             </li>
@@ -167,17 +170,17 @@
 
     //Selectors by tagName
     function byTagName() {
-        console.log($('a')[1]);
+        console.log($('div'));
     }
 
     //Selectors by Class
     function byClassName() {
-        console.log($('.byclass'));
+        console.log($('.ej4'));
     }
 
     //Hide element
     function hideElement() {
-        //document.getElementById('h1').style.display = "none";
+        //document.getElementById('h1').style.display = "none";        
         $('#h1').hide();
     }
 
@@ -191,9 +194,9 @@
     function createH1() {
         //var h1 = document.createElement('h1');
         //h1.innerHTML = "Created with js";
-        //h1.setAttribute('id', 'newH1');
-        //document.getElementById('A1').appendChild(h1);
+        //h1.setAttribute('id', 'newH1');        
         var h1 = $('<h1 id="newH1">Created with js</h1>');
+        //document.getElementById('A1').appendChild(h1);
         $('#A1').html(h1);
     }
 
@@ -201,12 +204,12 @@
     function addClassH() {
         //var h1 = document.getElementById('newH1');
         //h1.className = "redH";
-        $('#newH1').addClass("redH");
+        $('#newH1').addClass('redH');
     }
 
     //Change color for all elements
     function allRed() {
-        $('*').addClass("redH");
+        $('*').addClass('redH');
     }
 
     //Select Current element and increase fontsize
@@ -217,15 +220,13 @@
     //Selects all p elements with class="pes" 
     //inside li with class 'containerP' and change color
     function pesChangeColor() {
-        //forma1
-        $('li.containerP p.pes').addClass("redH");
-        //forma2
-        $('li.containerP')
-            .find('p.pes')
-            .addClass("redH");
+        //forma 1
+        $('li.containerP p.pes').addClass('redH');
+        //forma 2
+        $('li.containerP').find('p.pes').addClass('redH');
     }
 
-    //Selects the first <li> element of the first <ul> and hide
+    //Selects the first <li> element in a <ul> and hide
     function firstLi() {
         $('ul li:first').hide();
     }
@@ -233,19 +234,20 @@
     //Selects all elements with an href attribute 
     //and change font family and font size without addclass function
     function byAttibute() {
-        $('a').css({
-            'font-size': '30px',
-            'font-family': 'Helvetica'
-        });
+        $('a[href]').css(
+            {
+                'font-size': '30px',
+                'font-family': 'Helvetica'
+            });
     }
 
     //Selects all input with type checkbox
     function selectAll() {
-        $(':checkbox').attr('checked', 'checked');        
+        $('input:checkbox').attr('checked', 'checked');
     }
 
     //Selects all odd p elements inside li 
-    //with class 'containerP' and change color
+    //with class 'containerP' and add class Green
     function pesChangeColorOdd() {
         $('.containerP p:odd').addClass('green');
     }
