@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+    <link rel="stylesheet" href="reset.css">
+     <link rel="stylesheet" href="default.css">
+    <!--<script src="functions.js"></script>-->
+    </head>
+<body>
+   <form id="personalinformation" name="personalinformation" class="info" onsubmit="return validateForm()">
+       <h1>Tarea JS</h1>
+       <ul><li>Name*:<input type="text" id="name" /></li>
+       <li>Age*:<input type="text" id="age" onkeypress="return IsNumber(event)" /></li>
+        <li>Have Sons?</li>
+         <li class="options">
+         <div><p>Yes</p></div>
+       <div> <input  type="radio" value="Yes" name="question" id="yes" onClick="Visible()" /></div>
+      <div><p>No</p></div>  
+       <div><input  type="radio" value="No" name="question" id="no" onClick="Invisible()" text="NO"/></div>
+        </li>
+        
+        <li>Type the name of the sons</li>
+      <li>Name:<input type="text" name="nameson" id="nametext" /><input type="button" value="send" onclick="AddText()" /></li>
+       <li><textarea name="sonsname" rows="6" cols="60" type="textarea"  id="texta"></textarea> </li>
+      <li class="removebutton"><input type="button" value="remove" onclick="removeElement()" id="removebtn" /></li>
+       <li><input type="submit" value="Save" onclick="formSubmit()"></li>
+       </ul>     
+       
+</form>
+</body>
+</html>
