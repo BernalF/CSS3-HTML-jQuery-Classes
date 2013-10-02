@@ -1,0 +1,226 @@
+﻿<p>
+    <span style="color: #ff8c00;"><span style="font-size: 20px;">Javascript DOM (Document Object Model) Manipulation</span></span>
+</p>
+When a web page is loaded, the browser creates a Document Object Model of the page.</p>
+    <br />
+The HTML DOM model is constructed as a tree of Objects:
+<p>
+    <img alt="" src="http://www.w3schools.com/js/pic_htmltree.gif" style="width: 486px; height: 266px;" />
+</p>
+<p>
+    <br />
+    With a programmable object model, JavaScript gets all the power it needs to create dynamic HTML:
+    <br />
+    <ul>
+        <li>&nbsp;&nbsp;&nbsp; JavaScript can change all the HTML elements in the page</li>
+        <li>&nbsp;&nbsp;&nbsp; JavaScript can change all the HTML attributes in the page</li>
+        <li>&nbsp;&nbsp;&nbsp; JavaScript can change all the CSS styles in the page</li>
+        <li>&nbsp;&nbsp;&nbsp; JavaScript can react to all the events in the page</li>
+    </ul>
+</p>
+<h2>
+    <b></b></h2>
+<p>
+    <span style="color: #ff8c00;"><span style="font-size: 20px;">Finding HTML Elements</span></span><br />
+    Often, with JavaScript, you want to manipulate HTML elements.
+    <br />
+    To do so, you have to find the elements first. There are a couple of ways to do this:
+    <ul>
+        <li>&nbsp;&nbsp;&nbsp; Finding HTML elements by id</li>
+        <li>&nbsp;&nbsp;&nbsp; Finding HTML elements by tag name</li>
+        <li>&nbsp;&nbsp;&nbsp; Finding HTML elements by class name</li>
+    </ul>
+</p>
+<p>
+    <span style="color: #ff8c00;"><span style="font-size: 20px;">Finding HTML Elements by Id</span></span><br />
+    Example
+    <br />
+    HTML
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;p id=&quot;intro&quot;&gt;Finding HTML elements by id&lt;/p&gt;
+    </div>
+    Javascript
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;script&gt;<br />
+        //-- Finding HTML elements by id<br />
+        &nbsp;&nbsp;&nbsp; x = document.getElementById(&quot;intro&quot;);<br />
+        &nbsp;&nbsp;&nbsp; document.write(&#39;&lt;br&gt; by ID =&gt; &#39; + x.innerHTML + &#39;&lt;br&gt;&#39;);<br />
+        &lt;/script&gt;
+    </div>
+</p>
+<p>
+    <span style="color: #ff8c00;"><span style="font-size: 20px;">Finding HTML elements by tagName</span></span><br />
+    Example
+    <br />
+    HTML
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;p id=&quot;P1&quot; class=&quot;&quot;&gt;Finding HTML elements by tagName&lt;/p&gt;
+    </div>
+    Javascript
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;script&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp; //-- Finding HTML elements by tagName<br />
+        &nbsp;&nbsp;&nbsp; var y = document.getElementsByTagName(&quot;p&quot;);<br />
+        &nbsp;&nbsp;&nbsp; document.write(&#39;by tagName&nbsp; =&gt; &#39; + y[1].innerHTML + &#39;&lt;br&gt;&#39;);<br />
+        &lt;/script&gt;
+    </div>
+</p>
+<p>
+    <span style="color: #ff8c00;"><span style="font-size: 20px;">Changing html content</span></span><br />
+    Example
+    <br />
+    HTML
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;p id=&quot;intro&quot;&gt;Finding HTML elements by id&lt;/p&gt;
+    </div>
+    Javascript
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;script&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp; //-- Changing html content<br />
+        &nbsp;&nbsp;&nbsp; document.getElementById(&quot;intro&quot;).innerHTML = &quot;Text Changed by id&quot;;<br />
+        &lt;/script&gt;
+    </div>
+</p>
+<p>
+    <span style="color: #ff8c00;"><span style="font-size: 20px;">Changing an HTML Attribute</span></span><br />
+    Example
+    <br />
+    HTML
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;img id=&quot;image&quot; src=&quot;images/koohala.jpg&quot; style=&quot;display: block;&quot; /&gt;
+    </div>
+    Javascript
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;script&gt;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp; //-- Changing an HTML Attribute<br />
+        &nbsp;&nbsp;&nbsp; document.getElementById(&quot;image&quot;).width = &quot;100&quot;;<br />
+        &lt;/script&gt;
+    </div>
+</p>
+<p>
+    <span style="color: #ff8c00;"><span style="font-size: 20px;">Changing HTML Style</span></span><br />
+    Example
+    <br />
+    HTML
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;p id=&quot;P1&quot; class=&quot;&quot;&gt;Finding HTML elements by tagName&lt;/p&gt;
+    </div>
+    Javascript
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;script&gt;<br />
+        &nbsp;&nbsp;&nbsp; //-- Changing HTML Style<br />
+        &nbsp;&nbsp;&nbsp; document.getElementById(&quot;P1&quot;).style.color = &quot;blue&quot;;<br />
+        &nbsp;&nbsp;&nbsp; document.getElementById(&quot;P1&quot;).style.fontWeight = &quot;bold&quot;;<br />
+        &lt;/script&gt;
+    </div>
+</p>
+<p>
+    <span style="color: #ff8c00;"><span style="font-size: 20px;">Onchange Event</span></span><br />
+    The onchange event are often used in combination with validation of input fields.
+    <br />
+    Below is an example of how to use the onchange. The upperCase() function will be called when a user changes the content of an input field
+    <br />
+    Example
+    <br />
+    HTML
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;input type=&quot;text&quot; id=&quot;fname&quot; onchange=&quot;myFunction()&quot; style=&quot;display: block;&quot;&gt;
+    </div>
+    Javascript
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;script&gt;<br />
+        &nbsp;&nbsp;&nbsp; function myFunction() {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var x = document.getElementById(&quot;fname&quot;);<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x.value = x.value.toUpperCase();<br />
+        &nbsp;&nbsp;&nbsp; }<br />
+        &lt;/script&gt;
+    </div>
+</p>
+<p>
+    <span style="color: #ff8c00;"><span style="font-size: 20px;">Onmouseover - OnmouseOut Event</span></span><br />
+    The onmouseover and onmouseout events can be used to trigger a function when the user mouses over, or out of, an HTML element.
+    <br />
+    Example
+    <br />
+    HTML
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;div onmouseover=&quot;mOver(this)&quot; onmouseout=&quot;mOut(this)&quot;&gt;Mouse Over Me&lt;/div&gt;
+    </div>
+    Javascript
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;script&gt;<br />
+        &nbsp;&nbsp; function mOver(obj) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; obj.innerHTML = &quot;Yeah!&quot;<br />
+        &nbsp;&nbsp;&nbsp; }
+        <br />
+        <br />
+        &nbsp;&nbsp;&nbsp; function mOut(obj) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; obj.innerHTML = &quot;Mouse Over Me&quot;<br />
+        &nbsp;&nbsp;&nbsp; }
+        <br />
+        &lt;/script&gt;
+    </div>
+</p>
+<p>
+    <span style="color: #ff8c00;"><span style="font-size: 20px;">Onmousedown - Onmouseup Event</span></span><br />
+    The onmousedown, onmouseup, and onclick events are all parts of a mouse-click. First when a mouse-button is clicked, the onmousedown event is triggered, then, when the mouse-button is released, the onmouseup event is triggered, finally, when the mouse-click is completed, the onclick event is triggered.
+    <br />
+    Example
+    <br />
+    HTML
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;div onmousedown=&quot;mDown(this)&quot; onmouseup=&quot;mUp(this)&quot;&gt;Click Me&lt;/div&gt;
+    </div>
+    Javascript
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;script&gt;<br />
+        &nbsp;&nbsp; function mDown(obj) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; obj.style.backgroundColor = &quot;#1ec5e5&quot;;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; obj.innerHTML = &quot;Release Me&quot;<br />
+        &nbsp;&nbsp;&nbsp; }
+        <br />
+        <br />
+        &nbsp;&nbsp;&nbsp; function mUp(obj) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; obj.style.backgroundColor = &quot;#D94A38&quot;;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; obj.innerHTML = &quot;Yeah&quot;<br />
+        &nbsp;&nbsp;&nbsp; }
+        <br />
+        &lt;/script&gt;
+    </div>
+</p>
+<p>
+    <span style="color: #ff8c00;"><span style="font-size: 20px;">Create&nbsp; dynamic content</span></span><br />
+    To add a new element to the HTML DOM, you must create the element (element node) first, and then append it to an existing element
+    <br />
+    Example
+    <br />
+    HTML
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;div id=&quot;newp&quot;&gt;&lt;/div&gt;<br />
+        &lt;input type=&quot;button&quot; value=&quot;Create&quot; onclick=&quot;create()&quot; /&gt;<br />
+        &lt;input type=&quot;button&quot; value=&quot;Remove&quot; onclick=&quot;removec()&quot; /&gt;
+    </div>
+    Javascript
+    <div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+        &lt;script&gt;<br />
+        &nbsp; function create() {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var para = document.createElement(&quot;p&quot;);<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; para.setAttribute(&#39;id&#39;, &#39;pd&#39;);<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var node = document.createTextNode(&quot;This is a js creation.&quot;);<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; para.appendChild(node);
+        <br />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var element = document.getElementById(&quot;newp&quot;);<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; element.appendChild(para);<br />
+        &nbsp;&nbsp;&nbsp; }
+        <br />
+        <br />
+        &nbsp;&nbsp; function removec() {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var parent = document.getElementById(&quot;newp&quot;);<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var child = document.getElementById(&quot;pd&quot;);<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; parent.removeChild(child);<br />
+        &nbsp;&nbsp;&nbsp; }
+        <br />
+        &lt;/script&gt;
+    </div>
+</p>

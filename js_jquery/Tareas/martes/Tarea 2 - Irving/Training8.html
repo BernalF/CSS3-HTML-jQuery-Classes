@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style> 
+        body, div, ul, li, h1, h2, h3, h4, h5, form, input, textarea, p, table, tr, td
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+
+        .form
+        {
+            overflow:hidden;
+        }
+
+        body
+        {
+            background: #22252b;
+            color: #fff;
+        }
+
+        ul
+        {
+            list-style: none;
+            overflow: hidden;
+            text-align: justify;
+        }
+
+            ul li
+            {
+                padding: 5px;
+                border: 2px solid #5a5c63;
+            }
+
+        .maincontent
+        {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        a
+        {
+            color: #fff;
+            display: block;
+            text-decoration: none;
+        }
+
+        .containerP,
+        .containerD
+        {
+            overflow: hidden;
+        }
+
+            .containerD input, select, textarea
+            {
+                display: block;
+                margin: 2px;
+                color: #fff;
+                background: #01317d;
+            }
+
+            .containerD button
+            {
+                width: 50%;
+                float: left;
+            }
+
+        .containerP p
+        {
+            margin: 5px;
+            float: left;
+        }
+
+        .marked
+        {
+            border: 3px red solid;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincontent">
+        <ul class="form">
+            <li>
+                <defanghtml_input type="hidden" id="mid" merchantid="3" />
+                <span>MerchantID:
+                    <defanghtml_label id="lblMID"></defanghtml_label>
+                </span>
+            </li>
+            <li>
+                <span>Total of Buttons: </span>
+                <defanghtml_label id="lbltbtns"></defanghtml_label>
+            </li>
+            <li>
+                <div class="containerD">
+                    <defanghtml_button id="btn1">Get MerchantID</defanghtml_button>
+                    <defanghtml_button class="button">Set MerchantID 10</defanghtml_button>
+                    <defanghtml_button id="btn3">Set MerchantID 10 + 5</defanghtml_button>
+                    <defanghtml_button class="button">Set MerchantID 20 and Add contractID 10</defanghtml_button>
+                    <defanghtml_button id="btn4">Remove contractID</defanghtml_button>
+                    <defanghtml_button onclick="getTotalBtns(); return false;">GetTotalOfButtons</defanghtml_button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<!--<defanghtml_script src="js/jquery-2.0.3.js"></defanghtml_script>-->
+
+<!--<defanghtml_script>
+   
+    $(function () {
+        //Retrieve Attributes
+        function getAttrMID() {
+            var mid = $('#mid').attr('merchantid');
+            $('#lblMID').html(mid);
+        }
+
+
+        //------------------------ Events
+        //on - off (click)
+
+        $('#btn1').off('click.btn1').on('click.btn1', function () {
+            getAttrMID();
+            return false;
+        });
+
+        //Set attributes - tipo 1
+        $('button.button:eq(0)').off('click.btn2').on('click.btn2', function () {
+            $('#mid').attr('merchantid', '10');
+            getAttrMID();
+            return false;
+        });
+
+        //Set attributes - tipo 2 function
+        $('#btn3').off('click.btn3').on('click.btn3', function () {
+            $('#mid').attr('merchantid', function () {
+                return 10 + 5;
+            });
+            getAttrMID();
+            return false;
+        });
+
+        //tipo 3 objeto
+        $('button.button:eq(1)').off('click.btn5').on('click.btn5', function () {
+            $('#mid').attr({
+                'merchantid': '20',
+                'contractid': '10'
+            });
+            getAttrMID();
+            $('#mid')
+                .siblings('span')
+                .after(
+                            '<span>ContractID: <defanghtml_label id="lblCID">'
+                            + $('#mid').attr('contractid')
+                            + '</defanghtml_label></span>'
+                        );
+            return false;
+        });
+
+        //remove contractid
+        $('#btn4').off('click.btn4').on('click.btn4', function () {
+            $('#mid').removeAttr('contractid');
+            $('#mid').siblings('span:eq(1)').remove();
+            return false;
+        });
+
+        //For each (count buttons)
+        $('.containerD button:last').off('click.btn6').on('click.btn6', function () {
+            var $btns = $('.containerD button');
+            $btns.each(function (i, val) {
+                $(val).addClass('marked');
+            });
+            $('#lbltbtns').html($btns.length);
+            return false;
+        });
+    });
+
+</defanghtml_script>-->

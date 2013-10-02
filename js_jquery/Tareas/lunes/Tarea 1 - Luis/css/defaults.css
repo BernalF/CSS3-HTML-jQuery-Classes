@@ -1,0 +1,50 @@
+.maincontent{
+    width:300px;
+    height:500px;
+    border: 1px solid black;
+    margin: auto;
+    background-color:gray; 
+}
+
+span{
+    color:red;
+    font-size:10px;
+    display:none;
+}
+
+
+.maincontent ul {
+    width:100%;
+    display:inline-block;
+}
+
+
+.maincontent ul li {
+  
+    float: left;
+    padding-left:10px;
+    padding-top:10px;
+
+}
+
+
+#addSons {
+    width:100%;
+    padding-top:100px;
+    display:none;
+
+}
+
+#btnSaveContainer {
+     padding-top:10px;
+     text-align:right;
+}
+
+#ListSonsContainer {
+    padding-left:10px;
+}
+
+#ListSons {
+    width:218px;
+    padding-left:10px;
+}

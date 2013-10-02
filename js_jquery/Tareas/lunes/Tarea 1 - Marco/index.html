@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JAVASCRIPT CLASS 2 HOMEWORK</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/defaults.css" />
+</head>
+<body>
+    <div class="perdiv" id='personaldiv'>
+        <ul>
+            <li><label>Name *</label></li>
+            <li><input id="txtname" type="text"/></li>
+            <li><label>Age *</label></li>
+            <li><input id="txtage" onkeypress='validateNum(event)' type="text"/></li>            
+            <li><label>Have Sons?</label></li>           
+            <li>
+                <input type="radio" onclick="showSondiv('sondiv','Y');" name="optson"   value="Yes">Yes
+                <input type="radio" onclick="showSondiv('sondiv','N');" name="optson" checked="checked" value="No">No
+            </li>    
+        </ul>
+        <div  class="sonsdiv" id='sondiv'>
+            <ul>
+                <li>
+                    <label>Type the name of the Sons</label>
+                </li>
+                <li>
+                    <Label>Name</Label>
+                    <input id="sonname"type="text"/>
+                    <button id="Addson" value="Add" onclick="addson();">Add</button>
+                </li>
+                <li>
+                    <textarea readonly  class="list" id="sonList"></textarea>
+                    <button id="Addson" value="Add" onclick="removeson();">Remove</button>
+                </li>
+            </ul>
+        </div>
+        <ul>
+            <li><button value="Save"   onclick="Save();">Save</button></li>
+        </ul>
+    </div>
+    
+</body>
+</html>
+<script type="text/javascript">
+    function showSondiv(id,opt){
+        if (opt == 'Y' ){
+            document.getElementById(id).style.display = "block";
+        } else {
+            document.getElementById(id).style.display = "none";
+        }
+    }
+    function addson() {
+        var newson = document.getElementById('sonname').value ;
+        if (newson != ""){
+            if (verifySonName(newson)) 
+            {
+                newson += '\n';
+                document.getElementById('sonList').value += newson;     
+                document.getElementById('sonname').value = "";
+            }
+        }
+    }
+    
+    function verifySonName(sonname){
+        var result = true;
+        var textArea = document.getElementById("sonList");
+        var arrayOfLines = textArea.value.split("\n");    
+        for (var i = 0; i < arrayOfLines.length; i++) {
+            if (arrayOfLines[i].toUpperCase() == sonname.toUpperCase()) 
+            {
+                alert('Son already ADDED!!!!');
+                result = false;
+                return false;
+                break;
+            }
+        }
+        if (result = true)
+            return true;
+    }
+    function removeson(){
+            
+        var textArea = document.getElementById("sonList");
+        var a = textArea.value.substr(0, textArea.selectionStart).split("\n").length;
+        var sb = "";
+        if (a>0){
+            var arrayOfLines = textArea.value.split("\n");    
+            for (var i = 0; i < arrayOfLines.length; i++) {
+                if ((a - 1) == i){
+                    if (arrayOfLines[i] != ""){
+                        var r=confirm("Do you really want to remove " + arrayOfLines[i] + " as your son (bad father)");
+                        if (r==true)
+                        {
+                          alert('Son removed');
+                          break;
+                        }
+                    }
+                } else {
+                    sb += arrayOfLines[i];
+                    sb += '\n';                    
+                }
+        }
+            document.getElementById('sonList').value = sb;
+        }
+    }
+    function validateFields(){
+        var validate  = true;
+        var textage = document.getElementById('txtage').value ;
+        var textname = document.getElementById('txtname').value ;
+        var textArea = document.getElementById("sonList");
+        var optOptions = document.getElementsByName("optson");
+        var optsel;
+        for (var i = 0, length = optOptions.length; i < length; i++) {
+            if (optOptions[i].checked) {
+               optsel = optOptions[i].value;
+               break;
+            }
+        }
+        if ((textage != "") && (textname != "")){
+            validate = true;
+        }else{
+            validate = false;
+        }
+        if ((optsel == "Yes") && (validate)){
+            var arrayOfLines = textArea.value.split("\n");    
+            if (arrayOfLines<=0){
+                validate  = false;
+                alert('You did not add any son! Add at least one or click on NO option')
+            }
+        }else{
+            if (!validate){
+                alert('Please fill all the required fields!');
+            }
+        }
+        
+        if (validate)
+            return true;
+        else 
+            return false;    
+    }
+    
+    function Save(){
+        if (validateFields()){
+            var textage = document.getElementById('txtage').value ;
+            var textname = document.getElementById('txtname').value ;
+            var textArea = document.getElementById("sonList").value;
+            var data = new Array();
+            data[0] = textage;
+            data[1] = textname;
+            data[2] = textArea;
+            var packed = "";
+            for (i = 0; (i < data.length); i++) {
+                if (i > 0) {
+                  packed += ",";
+                }
+                packed += escape(data[i]);
+              }
+              window.location = "result.html?" + packed;
+        }
+        
+  }
+    function validateNum(evt) {
+          var theEvent = evt || window.event;
+          var key = theEvent.keyCode || theEvent.which;
+          key = String.fromCharCode( key );
+          var regex = /[0-9]|\./;
+          if( !regex.test(key) ) {
+            theEvent.returnValue = false;
+            if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+        
+  
+}
+</script>
+
+
+

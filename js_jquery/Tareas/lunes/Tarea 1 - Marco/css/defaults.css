@@ -1,0 +1,25 @@
+body
+{
+    background:grey;
+}
+.perdiv
+{
+    background:grey;
+    margin:20px;
+    width:400px;
+    border-style:solid;
+}
+.perdiv .ul .li
+{
+    margin:10px;
+}
+.sonsdiv 
+{
+    display:none;
+}
+
+.list
+{
+    width:300px;
+    height:100px;
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JAVASCRIPT CLASS 2 HOMEWORK</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/defaults.css" />
+</head>
+<body>
+    <div id='personaldiv'>
+        <ul>
+            <li><label>Name</label></li>
+            <li><input readonly id="txtname" type="text"/></li>
+            <li><label>Age</label></li>
+            <li><input id="txtage" readonly type="text"/></li>            
+            <li><label>Sons:</label></li>           
+            <li><textarea readonly  class="list" id="sonList"></textarea></li>
+        </ul>
+    </div>
+    
+</body>
+</html>
+<script>
+  var query = window.location.search;
+  if (query.substring(0, 1) == '?') {
+    query = query.substring(1);
+  }
+  var data = query.split(','); 
+  document.getElementById('txtage').value = data[0] ;
+  document.getElementById('txtname').value = data[1] ;
+  document.getElementById("sonList").value = data[2];
+</script>

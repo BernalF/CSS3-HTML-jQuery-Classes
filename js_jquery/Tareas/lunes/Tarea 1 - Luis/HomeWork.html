@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DEMO HTML 5</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/defaults.css">
+</head>
+<body class="maincontent">
+    <ul>
+        <li>Name *</li>
+        <li><input id="txtName" type="text" /></li>
+        <li><span id="SpanName">Value is required</span></li>
+    </ul>
+
+    <ul>
+        <li>Age *</li>
+        <li><input id="txtAge" type="text" onkeypress="return IsNumber(event)"/></li>
+        <li><span id="SpanAge">Value is required</span></li>
+    </ul>
+    <ul>
+        <li>Have Sons? *</li>
+        <li>
+            <input id="rdYes" onclick="ShowSection();" name="sons" type="radio" value="Yes" />  Yes
+            <input id="rdNo" name="sons" onclick="HideSection();" type="radio" value="No" />  No
+        </li>
+    </ul>
+
+
+    <div id="addSons">
+        <p>Type the name of the sons</p>
+        <ul>
+            <li>Name *</li>
+            <li>
+                <input id="txtNameSon" type="text" />
+                <input id="btnAdd" type="button" onclick="AddSon();" value="Add" />
+            </li>
+            <li><span id="Span1">Value is required</span></li>
+        </ul>
+        <div id="ListSonsContainer">
+            <select id="ListSons" name="sometext" multiple="multiple">
+            </select>
+            <input id="btnRemove" type="button" onclick="RemoveSon();" value="Remove" />
+        </div>
+
+    </div>
+
+    <div id="btnSaveContainer">
+        <input id="btnSave" type="button" onclick="SaveData();" value="Save" />
+    </div>
+
+</body>
+</html>
+<script>
+    function ShowSection() {
+        document.getElementById('addSons').style.display = "block";
+    }
+
+    function HideSection() {
+        document.getElementById('addSons').style.display = "none";
+    }
+
+    function AddSon() {
+        var OptNew = document.createElement('option');
+        var nameSon = document.getElementById('txtNameSon').value;
+
+        OptNew.text = nameSon;
+        OptNew.value = nameSon;
+        var exist = false;
+        var listbox = document.getElementById('ListSons');
+
+        for (var i = listbox.length - 1; i >= 0; i--) {
+            if (listbox.options[i].value == nameSon) {
+                exist = true;
+            }
+        }
+        if (!exist) {
+            try {
+                listbox.add(OptNew, null);
+            }
+            catch (ex) {
+                listbox.add(OptNew);
+            }
+        }
+    }
+
+    function RemoveSon() {
+        var agree = confirm("Desea borrar el registro?");
+        if (agree == true) {
+
+            var listbox = document.getElementById('ListSons');
+            for (var i = listbox.length - 1; i >= 0; i--) {
+                if (listbox.options[i].selected) {
+                    listbox.remove(i);
+                }
+            }
+        }
+    }
+
+    function SaveData() {
+        document.getElementById("SpanName").style.display = "none";
+        document.getElementById("SpanAge").style.display = "none";
+
+        if (document.getElementById("txtName").value == "") {
+            document.getElementById("SpanName").style.display = "block";
+        }
+
+        if (document.getElementById("txtAge").value == "") {
+            document.getElementById("SpanAge").style.display = "block";
+        }
+    }
+
+    function IsNumber(evento) {
+        var charCode = (evento.which) ? evento.which : evento.keyCode;
+        if (charCode != 46 && charCode > 31
+          && (charCode < 48 || charCode > 57))
+            return false;
+
+        return true;
+    }
+</script>
