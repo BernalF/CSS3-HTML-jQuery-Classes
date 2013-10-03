@@ -1,0 +1,98 @@
+.mainContainer{
+  padding:80px;
+}
+
+.mainContainer div {
+    border-style: solid;
+    margin: 0 auto;
+    width: 366px;
+    overflow:hidden;
+}
+
+.title{
+  font-weight:bold;
+  font-size: 20px;
+  margin: 94px;
+}
+
+.title2{
+  font-size: 20px;
+  margin: 80px;
+}
+
+input type["text"]{
+ height:12px;
+ width:120px;
+ font-size:10px;
+}
+.sarra{
+ height:100px;
+ width:189px;
+}
+
+/*-------------Form List-------------*/
+
+.formList{
+ width:300px;
+ margin:0 auto;
+ padding:10px 0 0 0;
+}
+
+.formList li:nth-child(2n+1) {
+    width: 30%;
+}
+
+.formList li:nth-child(2n) {
+    width: 70%;
+}
+
+.formList li {
+    float: left;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+li {
+    color: #353434;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+
+input type["text"]
+{
+  width:10px;
+    background:red;
+}
+
+
+/*-----------------Form List 2---------------*/
+.formList2{
+ width:300px;
+ margin:0 auto;
+ padding:10px 0 0 0;
+}
+
+.formList2 li {
+  float: left;
+  overflow: hidden;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+
+.save{
+ display: block;
+ width: 1px;
+}
+
+.save input{
+  margin: 5px 0 9px 148px;
+}
+
+#inv{
+ border-style:none;
+ display:none;
+}
+

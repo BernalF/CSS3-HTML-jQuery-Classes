@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../css/reset.css" type="text/css" rel="stylesheet">
+        <link href="../css/default.css" type="text/css" rel="stylesheet">
+      <title>HomeWork 1 JavaScript Andres</title>
+    </head>
+    <body>
+        
+        <div class="mainContainer">
+            <div>
+             <label class="title">Personal Information</label>
+            
+             <ul class="formList">
+              <li><label>Name:</label></li>
+              <li><input type="text" id="tname" placeholder="Name"></li>
+              <li><label>Age:</label></li>
+              <li><select id="age"><option value="">Select</option></select></li>
+              <li><label>Adddress:</label></li>
+              <li><input type="text" id="tadd" placeholder="Address"></li>
+              <li><label>Email:</label></li>
+              <li><input type="text" id="temail" placeholder="Email"></li>
+              <li><label>Telephone:</label></li>
+              <li><input type="text" id="telephone" placeholder="Telephone" maxlength="8"></li>
+              <li><label>Have Sons?</label></li>
+              <li><input type="radio" name="sRadio" onclick="radioClick(this)" id="yRadio" value="unchecked" checked="false"> Yes 
+                  <input type="radio" name="sRadio" onclick="radioClick(this)" id="nRadio" checked="true"> No</li>    
+             </ul>
+                
+             <div id="inv">      
+              <label class="title2">Type the name of the Sons</label>
+                
+              <ul class="formList2">
+               <li><label>Name</label></li>
+               <li><input type="text" id="tname1" placeholder="Name"><input type="button" value="Add" onclick="addEle()" id="tNameE"></li>
+               <li><select size="4" class="sarra" multiple="multiple" id="selecta"></select><input type="button" onclick="deleteElem()" value="Remove"></li>
+              </ul>           
+             </div>  
+                
+                <label class="save"><input type="button" value="Save" onclick="validation()" id="save"></label>
+                
+            </div>
+        </div>
+        
+    </body>
+</html>
+
+<script type="text/javascript" src="../js/default.js"></script>
+
+
+
