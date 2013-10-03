@@ -1,0 +1,108 @@
+/* GLOBAL ATRIBUTES STARTS */
+
+
+
+/* GLOBAL ATRIBUTES ENDS */
+
+/* GLOBAL CLASSES STARTS */
+
+.clear {
+	clear:both;
+}
+
+input{
+	border:none;
+	background:#CCC;
+}
+
+input[type=text]{
+	display:block;
+	height:25px;
+	width:100%;
+	line-height:25px;
+}
+
+select{
+	display:block;
+	width:100%;
+	border:none;
+	background:#CCC;
+}
+
+/* GLOBAL CLASSES ENDS */
+
+.container{
+	width:390px;
+	margin:auto;
+}
+
+/* FORM STARTS */
+
+.form{
+	overflow:hidden;
+	padding:20px 20px 0 20px;
+}
+
+.form2{
+	overflow:hidden;
+	padding:0 20px;
+}
+
+.form2 li,
+.form li{
+	float:left;
+	line-height:25px;
+	padding-bottom:10px;
+}
+
+.form li:nth-child(odd),
+.form2 li:nth-child(odd){
+	width:150px;
+	clear:both;
+}
+
+.form li:nth-child(even),
+.form2 li:nth-child(even){
+	width:200px;
+}
+
+.form li:nth-child(even) label:nth-child(2){
+	margin-left:30px;
+}
+
+.form2{
+	display:none;
+}
+
+a{
+	display:inline-block;
+	line-height:30px;
+	padding:0 10px;
+	background:#0CC;
+	color:#FFF;
+	margin:5px 0;
+}
+
+a:hover{
+	background:#069;
+}
+
+#Remove{
+	float:right;
+}
+
+#Send input{
+	display:block;
+	line-height:30px;
+	height:30px;
+	width:100%;
+	cursor:pointer;
+	background:#0CC;
+	color:#FFF;
+}
+
+#Send input:hover{
+	background:#069;
+}
+
+/* FORM ENDS */

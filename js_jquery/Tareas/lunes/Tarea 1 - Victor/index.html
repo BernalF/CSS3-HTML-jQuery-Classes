@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 2</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/defaults.css" />
+    <link rel="stylesheet" type="text/css" href="css/page_styles.css" />
+</head>
+<body>
+
+<div class="mainHolder">
+	
+    <form name="Form" action="#" onsubmit="required()">
+    
+    <header>
+    	<h1 class="title">Contact Information</h1>
+    	<nav id="MainNav">
+        	<ul class="navigation">
+            	<li><label class="" title="test">Name:</label></li>
+                <li> <input type="text" id="txtName"></li>
+               
+            </ul>
+        </nav>
+	<nav id="MainNav">
+        	<ul class="navigation">
+            	    <li><label class="" title="test">Age:</label></li>
+                    <li><input type="text" id="txtAge">
+               
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section class="contentHolder">
+            <header>
+                 <label class="" title="test">Have a sons:</label>
+                 <input type="radio" class="radio" id="rdb_yes" value="YES" onclick="selectRadioButton(this)"/><label>YES</label>
+                 <input type="radio" class="radio" id="rdb_No"  value="NO" onclick="selectRadioButton(this)"/><label>NO</label>
+            </header>
+            <article id="art"  class="content divHide">
+                <ul class="sample1">
+                  <li> <p>Type the name of the sons</p></li>
+                    <li><label class="" title="test">Name:</label>  <input type="text" id="txtNameSon">  <input type="button"                                                     onclick="addValuetoArray()" value="Add"/></li>
+                    <li> <textarea id="txtAreaSons" readonly></textarea></li>
+                    <li>  <input type="button" onclick="getSel()" value="Remove"/></li>
+                </ul>
+                
+               
+            </article>
+        <input type="submit" value="Submit">
+    </section>
+    
+    
+    </form>
+</div>
+
+</body>
+</html>
+
+<script>
+    
+     var arrSons = new Array();
+    
+    function required(){
+        var name = document.forms["Form"]["txtName"].value;  
+        var age = document.forms["Form"]["txtAge"].value;
+        var result = true;
+        
+        
+        if (name == "")  
+        {  
+            alert("Please input a Name");  
+            result =  false;  
+        }
+        if (age == "")  
+        {  
+            alert("Please input a Age");  
+           result =  false;   
+        }
+       
+       if(!age.match(/^\d+/))
+        {
+            alert("Please only enter numeric characters only for your Age! (Allowed input:0-9)");
+            result =  false;  
+        }
+        
+        if(result == true){
+            alert("Success!");
+             return result;
+        }
+    }    
+    
+    function selectRadioButton(radio)
+        {
+        
+            var rdbYes=document.getElementById("rdb_yes");
+            var rdbNo=document.getElementById("rdb_No");
+            
+            
+            if(radio.checked)
+            {
+                radio.checked = true;
+            }
+            else
+            {
+                radio.checked = false;
+            }
+            
+            if(radio == rdbYes){
+                 document.getElementById("art").className = "content divShow";
+                rdbNo.checked = false;
+                
+            }else{
+                document.getElementById("art").className = "content divHide";
+                rdbYes.checked = false;
+            }
+            
+           
+        }  
+    function addValuetoArray(){
+       
+        arrSons.push(document.getElementById("txtNameSon").value + '\n');
+        document.getElementById("txtAreaSons").value = arrSons;
+    }
+    
+    function getSel()
+{
+        var textarea = document.getElementById("txtAreaSons");
+        var start = textarea.selectionStart;
+        var end = textarea.selectionEnd;
+        var sel = textarea.value.substring(start, end);
+     
+        var i = arrSons.indexOf(sel+ '\n');
+            if(i != -1) {
+                arrSons.splice(i, 1);
+            }
+    document.getElementById("txtAreaSons").value = arrSons;
+}
+    
+</script>
+
+

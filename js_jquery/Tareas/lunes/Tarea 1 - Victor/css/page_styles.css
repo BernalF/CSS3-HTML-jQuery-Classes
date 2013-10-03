@@ -1,0 +1,84 @@
+h1.title{
+	background-color:orange;
+	line-height:70px;
+	text-align:center;
+    font-family:arial,helvetica,sans-serif;
+    font-size:30px;    
+}
+
+#MainNav{
+    height:30px;
+}
+
+#MainNav ul.navigation li{
+    height:30px;
+    width:43px;
+    text-align:center;
+     background-color:#666;
+    vertical-align:middle;
+    
+}
+#MainNav ul.navigation li a{
+     height:30px;
+    display:block;
+    color:white;
+    vertical-align:middle;
+   
+}
+
+.mainHolder .contentHolder header .title{
+    margin-bottom:0px;
+    
+}
+
+#art .content{
+text-align:center;
+}
+
+
+.content ul{
+	overflow:hidden;
+	background-color:#666;
+}
+
+.content ul li{	
+	background:#666;
+	line-height:40px;
+}
+
+.content ul{
+    list-style-type: none;
+    text-align: center;
+} 
+
+
+.divHide{
+    display:none;
+}
+
+.divShow{
+    display:block;
+}
+
+#txtAreaSons{
+    width:300px;
+    height:100px;
+    resize:none;
+}
+
+
+#txtName,#txtAge,#txtNameSon {
+height:20px; 
+width:220px; 
+padding:5px 8px;
+}
+ textarea {
+padding:8px; 
+width:300px;
+}
+ button {
+margin-left:90px;
+}
+
+
+/*999999*/

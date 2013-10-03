@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Demo HTML5 Template</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/defaults.css">
+</head>
+
+<body>
+<section class="container">
+<form name="myform">
+	<ul class="form">
+    	<li><label>Name</label></li>
+        <li><input type="text" id="Fname" /></li>
+        <li><label>Age</label></li>
+        <li><input type="text" onkeypress='age(event)' id="Age" /></li>
+        <li><label>Have Children</label></li>
+        <li><label>Yes <input type="radio" name="children" id="ChildYes" onclick="showForm()" /></label> <label>No <input type="radio" name="children" id="ChildNo" onclick="hideForm()" /></label></li>
+    </ul>
+    <ul class="form2" id="ChildsInfo">
+    	<li><label>What they names are?</label></li>
+    	<li>
+        	<input type="text" id="ChildName" />
+        	<a href="#" id="Add" onclick="addChild()">Add</a>
+            <a href="#" id="Remove" onclick="removeOption()">Remove</a>
+            
+            <select name="ChildList" id="ChildList" size="6" multiple="multiple">
+            </select>
+        </li>
+    </ul>
+    <p id="Send"><input type="submit" value="Submit" onmouseup="validateForm()" /></p>
+</form>
+</section>
+
+<!-- JQUERY STRARTS -->
+<script src="js/jquery-1.10.1.min"></script>
+<script>
+
+function age(evt) {
+	var theEvent = evt || window.event;
+	var key = theEvent.keyCode || theEvent.which;
+	key = String.fromCharCode( key );
+	var regex = /[0-9]|\./;
+	if( !regex.test(key) ) {
+		theEvent.returnValue = false;
+		if(theEvent.preventDefault) theEvent.preventDefault();
+	}
+}
+
+function validateForm(){
+	var x=document.getElementById("Fname").value;
+	var y=document.getElementById("Age").value;
+	
+	if ((x==null || x=="") && (y==null || y=="")){
+		alert("First name and Age must be filled out");
+		return false;
+	} else if ((x==null || x=="") && (y!=null || y!="")){
+		alert("First name must be filled out");
+		return false;
+	}if ((x!=null || x!="") && (y==null || y=="")){
+		alert("Age must be filled out");
+		return false;
+	} else if ((x!=null || x!="") && (y!=null || y!="")){
+		alert("Your info will be send, thank you");
+		document.forms["myform"].submit();
+		return false;
+	}
+}
+
+function addChild(){
+	if(document.getElementById("ChildName").value == ""){
+		alert("Add a name, don't be dumb");
+	} else {
+		var x=document.getElementById("ChildList");
+		var option=document.createElement("option");
+		option.text=document.getElementById("ChildName").value;
+		try{
+			x.add(option,x.options[null]);
+		} catch (e){
+			x.add(option,null);
+		}
+	}
+}
+
+function showForm(){
+	document.getElementById("ChildsInfo").style.display = "block";
+}
+
+function hideForm(){
+	document.getElementById("ChildsInfo").style.display = "none";
+}
+
+function myFunction(){
+	var r=confirm("You are about to kill your child!");
+	
+	if (r==true){
+		x="You pressed OK!";
+	} else {
+		x="You pressed Cancel!";
+	}
+	
+	document.getElementById("demo").innerHTML=x;
+}
+
+function removeOption(){
+	var r=confirm("You are about to kill your child!");
+	if (r==true){
+		var s=document.getElementById("ChildList");
+		s.remove(s.selectedIndex);
+	}
+} 
+</script>
+</body>
+</html>

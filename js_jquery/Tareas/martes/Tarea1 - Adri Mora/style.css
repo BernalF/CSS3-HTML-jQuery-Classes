@@ -1,0 +1,29 @@
+screen {
+    width:1000px;
+    background-color:#0094ff;
+    height:800px;
+}
+.header {
+    background-color:white;
+    height:50px;
+}
+.body {
+    height:700px;
+    background-color:white;
+}
+.content {
+    background-color:#ff6a00;
+    height:700px;
+    width:750px;
+    float:left;
+}
+.aside {
+    background-color:white;
+    height:700px;
+    width:250px;
+    float:left;
+}
+.footer {
+    background-color:white;
+    height:50px;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html defanghtml_xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
     <link href="style.css" rel="stylesheet" />
@@ -12,14 +12,14 @@
             <div class="aside">
             </div>
             <div class="content" style="">
-                <defanghtml_form action="http://www.w3schools.com" method="post">
+                <form action="http://www.w3schools.com" method="post">
                     <table>
                           <tr>
                               <td>
                                     <p>Name *</p>
                               </td>
                               <td>
-                                    <defanghtml_input id="lName" type=text  size="90">
+                                    <input id="lName" type=text  size="90">
                               </td>
                           </tr>
                           <tr>
@@ -27,7 +27,7 @@
                                     <p>Age *</p>
                               </td>
                               <td>
-                                    <defanghtml_input id="Age" name="Age" type=number size="5" />
+                                    <input id="Age" name="Age" type=number size="5" />
                               </td>
                           </tr>
                           <tr>
@@ -35,8 +35,8 @@
                                     <p>Have Sons?</p>
                               </td>
                               <td>
-                                    <defanghtml_input type="radio" name="select" value="Yes" onclick="ShowDetail();">Yes
-                                    <defanghtml_input type="radio" name="select" value="No" onclick="HideDetail();">No
+                                    <input type="radio" name="select" value="Yes" onclick="ShowDetail();">Yes
+                                    <input type="radio" name="select" value="No" onclick="HideDetail();">No
                               </td>
                           </tr>
                     </table> 
@@ -48,25 +48,25 @@
                                     <p>Name</p>
                               </td>
                               <td>
-                                    <defanghtml_input id="NameToAdd" type="text" size="80"/>
+                                    <input id="NameToAdd" type="text" size="80"/>
                               </td>
                               <td>
-                                  <defanghtml_input type="button" onclick="Add()" value="Add">
+                                  <input type="button" onclick="Add()" value="Add">
                               </td>
                           </tr>
                             <tr>
                               <td colspan="2">
-                                    <defanghtml_textarea id="textareaID" style="text-align:left;width:100%" rows="6">
-                                    </defanghtml_textarea>
+                                    <textarea id="textareaID" style="text-align:left;width:100%" rows="6">
+                                    </textarea>
                               </td>
                               <td>
-                                  <defanghtml_input type="button" onclick="Remove()" value="Remove">
+                                  <input type="button" onclick="Remove()" value="Remove">
                               </td>
                             </tr>
                         </table>
                     </div>
-                    <p><defanghtml_input type="submit" value="Save"></p>
-                </defanghtml_form>
+                    <p><input type="submit" value="Save"></p>
+                </form>
             </div>
         </div>
         <div class="footer">
@@ -74,7 +74,7 @@
     </div>
 </body>
 </html>
-<!--<defanghtml_script>
+<script>
     
         
     function ShowDetail()
@@ -119,4 +119,4 @@
     }
 
 
-</defanghtml_script>-->
+</script>
