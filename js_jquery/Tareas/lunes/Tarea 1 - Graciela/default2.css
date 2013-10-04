@@ -1,0 +1,209 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+#completed {
+    background: url("stripe.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding: 50px 100px;
+}
+#message {
+    height:200px;
+    width:600px;
+    margin: 0 auto;
+}
+#message h2 {
+    background: none repeat scroll 0 0 #333333;
+    color: #FFFFFF;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+#toregister {
+    background: url("stripe.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    font-family: Helvetica,sans-serif;
+    font-size: 13px;
+    padding: 50px 100px;
+}
+#content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: auto !important;
+    margin: 20px auto;
+    min-height: 500px;
+    padding: 10px 10px;
+    width: 800px;
+}
+#main {
+    float: left; 
+    margin: 0 10px; 
+    width: 600px;
+}
+#petInformation {
+    float: left; 
+    margin: 0 10px; 
+    width: 600px;
+}
+#button-submit {
+    float: right; 
+    margin: 0 10px; 
+    width: 800px;
+}
+#details {
+    float: right;
+    margin: 0;
+    width:390px; 
+}
+#grid {
+    float: right;
+    margin: 0; 
+    width:300px;
+}
+h2 {
+    color: #474E69;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+h4 {
+    color: #474E69;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-style:italic;
+}
+p {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+input {
+    border: 1px solid #E5E5E5;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    color: #999999;
+    padding: 5px;
+    width: 200px;
+}
+input:hover, input:focus {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+.form label {
+    color: #999999;
+    margin-left: 10px;
+}
+#save {
+    background-color: #474E69;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    height: 40px;
+    width: 100px;
+}
+#havepetYes, #havepetNo {
+    width: 10px;
+}
+#button-submit button {
+    float: right;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-top: 0;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+p label.infield {
+    text-align: left;
+}
+label {
+    float: left;
+    font-size: 14px;
+    margin-right: 15px;
+    padding-top: 5px;
+    text-align: right;
+    width: 100px;
+}
+
+div #details {
+    float: left;
+    width: 300px;
+}
+p label.detail {
+    float: none;
+}
+#petInformation {
+    margin-top: 25px;
+    width: 600px;
+}
+#grid table td input {
+    border: 1px solid #CCCCCC;
+    font-size: 12px;
+    margin: 0;
+    width: 60px;
+}
+#petInformation input {
+    border: 2px solid #CCCCCC;
+    font-family: Helvetica,sans-serif;
+    font-size: 1.4em;
+    margin: 0 0 10px;
+    padding: 5px;
+    width: 471px;
+}
+#petInformation input.detail {
+    border: 1px solid #CCCCCC;
+    font-family: Helvetica,sans-serif;
+    font-size: 12px;
+    margin: 0 0 10px;
+    padding: 5px;
+    width: 100px;
+}
+#petInformation input:focus {
+    border: 2px solid #990000;
+}
+#petInformation input.addDetail {
+    float: right;
+    width: 100px;
+}
+p #addPet.addDetail {
+    border: 1px solid #CCCCCC;
+    float: none;
+    font-size: 12px;
+}
+.table {
+    font: normal 12px/150% Arial, Helvetica, sans-serif; 
+    background: #fff; 
+    overflow: hidden; 
+    border: 1px solid #36752D; 
+    -webkit-border-radius: 3px; 
+    -moz-border-radius: 3px; 
+    border-radius: 3px; 
+}
+.table table { 
+    border-collapse: collapse; 
+    text-align: left; 
+    width: 100%; 
+} 
+.table table td { 
+    padding: 3px 10px; 
+}
+.table tr:first-child {
+    background-color: #008000;
+    color: #FFFFFF;
+}
+.table tr:first-child td:first-child {
+    background-color: #FFFFFF;
+}
+.table table tr:first-child { 
+    border: none; 
+    background: #DFFFDE; 
+    color: #275420;}
+.table table td { 
+    color: #275420; 
+    border-left: 1px solid #C6FFC2;
+    font-size: 12px;
+    font-weight: normal; 
+}
+.table table td { 
+    background: #DFFFDE; 
+    color: #275420; 
+}
+.table table td:first-child { 
+    border-left: none; 
+}
+.table table tr:last-child td { 
+    border-bottom: none; 
+}

@@ -1,0 +1,153 @@
+﻿<html>
+<head>
+    <title>Family Pet</title>
+    <link rel="stylesheet" type="text/css" href="default2.css" />
+ </head>
+<body id="toregister">
+    <form class="form" method="post" onsubmit="return redirect()">
+        <div id="content">
+            <div id="main">
+                <h2>Registration</h2>
+                <p>
+                <label for="regname" class="infield">* Name</label>
+                <input id="regname" name="regname" required="required" type="text" class="text"/>
+                </p>
+                <p>
+                    <label for="regage" class="infield">* Age</label>
+                    <input id="regage" name="regage" required="required" type="number" min="0" max="130" class="text"/>
+                </p>
+                <p>
+                    <label for="regemail" class="infield">* Email</label>
+                    <input id="regemail" name="regemail" type="email" required="required" placeholder="example@domain.com" class="text" />
+                </p>
+                 <p>
+                    <label for="havepets" class="infield"> Have pets? </label>
+                    <label class="infield"><input type="radio" name="havepet" id="havepetYes" value="Yes" onclick="displaySection(this);" class="text" /> Yes</label>
+                    <label class="infield"><input type="radio" name="havepet" id="havepetNo" value="No" onclick="displaySection(this);" class="text"  /> No</label>
+                </p>
+            </div>
+            <div id="petInformation" style="display:none;">
+                <h4>Pet Information</h4>
+                <div id="details">
+                    <p>
+                        <label class="detail" for="petname">Name</label>
+                        <input class="detail" id="petname" name="petname" type="text"/>
+                    </p>
+                    <p>
+                        <label class="detail" for="petcolor">Color</label>
+                        <select class="detail" id="petcolor" name="petcolor">
+                            <option value="White">White</option>
+                            <option value="Black">Black</option>
+                            <option value="Yellow">Yellow</option>
+                            <option value="Green">Green</option>
+                            <option value="Red">Red</option>
+                            <option value="Brown">Brown</option>
+                            <option value="Gray">Gray</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label class="detail" for="pettype">Type</label>
+                        <select class="detail" id="pettype" name="pettype">
+                            <option value="Dog">Dog</option>
+                            <option value="Cat">Cat</option>
+                            <option value="Bird">Bird</option>
+                            <option value="Snike">Snike</option>
+                            <option value="Monkey">Monkey</option>
+                            <option value="Cow">Cow</option>
+                            <option value="Rat">Rat</option>
+                        </select>
+                    </p>
+                    <p>
+                        <input class="addDetail" type="button" id="addPet" value="Add" onclick="addRow()" />
+                    </p>
+                </div>
+                <div id="grid">
+                    <table id="petGrid" class="table">
+                        <tr>
+                            <td></td>
+                            <td><b>Name</b></td>
+                            <td><b>Color</b></td>
+                            <td><b>Type</b></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="button-submit">
+                <button id="save" type="submit" class="submit">Register</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+<script type="text/javascript">
+
+    function addRow() {
+        var petname = document.getElementById("petname");
+        var petcolor = document.getElementById("petcolor");
+        var pettype = document.getElementById("pettype");
+        var table = document.getElementById("petGrid");
+        var seltype = pettype.options.selectedIndex;
+        var selcolor = petcolor.options.selectedIndex;
+
+        if (petname.value.length == 0) {
+            alert("Please type the pet's name");
+            return false;
+        }
+        else {
+            if (existRow(petname.value.toLowerCase(), pettype.options[seltype].value.toLowerCase()) == false) {
+                var rowCount = table.rows.length;
+                var row = table.insertRow(rowCount);
+
+                row.insertCell(0).innerHTML = '<input type="button" value = "Delete" onClick="deleteRow(this)">';
+                row.insertCell(1).innerHTML = petname.value;
+                row.insertCell(2).innerHTML = petcolor.options[seltype].value;
+                row.insertCell(3).innerHTML = pettype.options[seltype].value;
+            }
+
+            document.getElementById("petname").value = "";
+            document.getElementById("petcolor").options.selectedIndex = 0;
+            document.getElementById("pettype").options.selectedIndex = 0;
+        }
+    }
+
+    function existRow(name, type) {
+        var result = false;
+        var table = document.getElementById("petGrid");
+        for (var i = table.rows.length - 1; i > 0; i--) {
+            if (table.rows.item(i).cells[1].innerHTML.toLowerCase() == name && table.rows.item(i).cells[3].innerHTML.toLowerCase() == type) {
+                result = true;
+                break;
+            }
+        }
+        return result;
+    }
+
+    function deleteRow(obj) {
+        var result = confirm("Are you sure want to delete the record?");
+        if (result == true) {
+            var index = obj.parentNode.parentNode.rowIndex;
+            var table = document.getElementById("petGrid");
+            table.deleteRow(index);
+        }
+    }
+
+    function displaySection(e) {
+        var options = document.getElementsByName(e.name);
+        document.getElementById('petInformation').style.display = (options[0].checked) ? 'block' : 'none';
+        document.getElementById('petInformation').style.display = (options[1].checked) ? 'none' : 'block';
+
+        if (document.getElementById("havepetNo").checked) {
+            var table = document.getElementById("petGrid");
+            for (var i = table.rows.length - 1; i > 0; i--) {
+                table.deleteRow(i);
+            }
+        }
+    }
+
+    function redirect() {
+        var url = "Completed.html";
+        window.location.replace(url);
+        return false;
+    }
+   
+</script>
