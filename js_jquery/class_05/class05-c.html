@@ -12,7 +12,7 @@
 
         .form
         {
-            overflow:hidden;
+            overflow: hidden;
         }
 
         body
@@ -67,11 +67,11 @@
                 float: left;
             }
 
-        .containerP p
-        {
-            margin: 5px;
-            float: left;
-        }
+            .containerP p
+            {
+                margin: 5px;
+                float: left;
+            }
 
         .marked
         {
@@ -91,7 +91,7 @@
                     <input type="file" />
                     <input type="password" />
                     <input type="text" />
-                    <input type="text" disabled="disabled" />                    
+                    <input type="text" disabled="disabled" />
                 </div>
             </li>
             <li>
@@ -111,16 +111,6 @@
                 <p>6</p>
             </li>
             <li>
-                <input type="hidden" id="mid" merchantid="3" />
-                <span>MerchantID:
-                    <label id="lblMID"></label>
-                </span>
-            </li>
-            <li>
-                <span>Total of Buttons: </span>
-                <label id="lbltbtns"></label>
-            </li>
-            <li>
                 <div class="containerD">
                     <button onclick="findButton(); return false;">find button</button>
                     <button onclick="findFile(); return false;">find file</button>
@@ -136,12 +126,6 @@
                     <button onclick="findChildren(); return false;">Find Children containerP</button>
                     <button onclick="findbyTwoClass(); return false;">find by maincontent and containerD class</button>
                     <button onclick="insertAfter(); return false;">insert after hermano mayor</button>
-                    <button onclick="getAttrMID(); return false;">Get MerchantID</button>
-                    <button onclick="setAttrMID1(); return false;">Set MerchantID 10</button>
-                    <button onclick="setAttrMID2(); return false;">Set MerchantID 10 + 5</button>
-                    <button onclick="setAttrMID3(); return false;">Set MerchantID 20 and Add contractID 10</button>
-                    <button onclick="removeAttrCntID(); return false;">Remove contractID</button>
-                    <button onclick="getTotalBtns(); return false;">GetTotalOfButtons</button>
                 </div>
             </li>
         </ul>
@@ -162,7 +146,7 @@
     function findPassword() {
         $(":password").addClass("marked");
     }
-    //Text Selector
+    //Text Selector - find textbox and textbox disabled
     function findText() {
         $(":text").addClass("marked");
         $("input:disabled").val("this are disable");
@@ -208,47 +192,5 @@
     //after
     function insertAfter() {
         $('#hMayor').after('<p>0</p>');
-    }   
-    //Retrieve Attributes
-    function getAttrMID() {
-        var $mid = $('#mid').attr('merchantID');
-        $('#lblMID').html($mid);
-
-    }
-    //Set Attributes – Type 01
-    function setAttrMID1() {
-        $('#mid').attr('merchantID', '10');
-        getAttrMID();
-    }
-    //Set Attributes – Type 02 - function
-    function setAttrMID2() {
-        $('#mid').attr('merchantID', function () {
-            return 10 + 5;
-        });
-        getAttrMID();
-    }
-    //Set Attributes – Type 03 - obj
-    function setAttrMID3() {
-        $('#mid').attr({
-            'merchantID': 20,
-            'contractID': 10
-        });
-        $('#mid')
-            .siblings('span')
-            .after('<span><label> - ContractID: ' + $('#mid').attr('contractID') + '</label></span>');
-        getAttrMID();
-    }
-    //Remove Attributes
-    function removeAttrCntID() {
-        $('#mid').removeAttr('contractID');
-        $('#mid').siblings('span:eq(1)').remove();
-    }    
-    //each
-    function getTotalBtns() {
-        var $btns = $('.containerD button');
-        $btns.each(function (i, val) {
-            $(val).addClass('marked');
-        });
-        $('#lbltbtns').html($btns.length);
     }
 </script>

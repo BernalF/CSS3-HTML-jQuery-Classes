@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -97,12 +97,12 @@
             </li>
             <li>
                 <div class="containerD">
-                    <button id="btn1" onclick="getAttrMID(); return false;">Get MerchantID</button>
-                    <button class="button" onclick="setAttrMID1(); return false;">Set MerchantID 10</button>
-                    <button id="btn3" onclick="setAttrMID2(); return false;">Set MerchantID 10 + 5</button>
-                    <button class="button" onclick="setAttrMID3(); return false;">Set MerchantID 20 and Add contractID 10</button>
-                    <button id="btn4" onclick="removeAttrCntID(); return false;">Remove contractID</button>
-                    <button onclick="getTotalBtns(); return false;">GetTotalOfButtons</button>
+                    <button id="btn1">Get MerchantID</button>
+                    <button class="button">Set MerchantID 10</button>
+                    <button id="btn3">Set MerchantID 10 + 5</button>
+                    <button class="button">Set MerchantID 20 and Add contractID 10</button>
+                    <button id="btn4">Remove contractID</button>
+                    <button>GetTotalOfButtons</button>
                 </div>
             </li>
         </ul>
@@ -111,52 +111,53 @@
 </html>
 <script src="../js/jquery-2.0.3.js"></script>
 <script>
-   
-    //Retrieve Attributes
-    function getAttrMID() {
-        var $mid = $('#mid').attr('merchantID');
-        $('#lblMID').html($mid);
+    $(document).ready(function () {
 
-    }
-    //Set Attributes – Type 01
-    function setAttrMID1() {
-        $('#mid').attr('merchantID', '10');
-        getAttrMID();
-    }
-    //Set Attributes – Type 02 - function
-    function setAttrMID2() {
-        $('#mid').attr('merchantID', function () {
-            return 10 + 5;
+        $('#btn1').off('click.btn1').on('click.btn1', function () {
+            getAttrMID();
         });
-        getAttrMID();
-    }
-    //Set Attributes – Type 03 - obj
-    function setAttrMID3() {
-        $('#mid').attr({
-            'merchantID': 20,
-            'contractID': 10
+        $('.containerD button:eq(1)').off('click.btn10').on('click.btn10', function () {
+            $('#mid').attr('merchantID', '10');
+            getAttrMID();
+            return false;
         });
-        $('#mid')
-            .siblings('span')
-            .after('<span><label> - ContractID: ' + $('#mid').attr('contractID') + '</label></span>');
-        getAttrMID();
-    }
-    //Remove Attributes
-    function removeAttrCntID() {
-        $('#mid').removeAttr('contractID');
-        $('#mid').siblings('span:eq(1)').remove();
-    }    
-    //each
-    function getTotalBtns() {
-        var $btns = $('.containerD button');
-        $btns.each(function (i, val) {
-            $(val).addClass('marked');
+        $("#btn3").off('click.btn3').on('click.btn3', function () {
+            $('#mid').attr('merchantID', function () {
+                return 10 + 5;
+            });
+            getAttrMID();
+            return false;
         });
-        $('#lbltbtns').html($btns.length);
-    }
+        $('.containerD button:eq(3)').click(function () {
+            $('#mid').attr({
+                'merchantID': 20,
+                'contractID': 10
+            });
+            $('#mid')
+                .siblings('span')
+                .after('<span><label> - ContractID: ' + $('#mid').attr('contractID') + '</label></span>');
+            getAttrMID();
+            return false;
+        });
+        $("#btn4").off('click.btn4').on('click.btn4', function () {
+            $('#mid').removeAttr('contractID');
+            $('#mid').siblings('span:eq(1)').remove();
+            return false;
+        });
+        $('.containerD button:eq(5)').off('click.btn15').on('click.btn15', function () {
+            var $btns = $('.containerD button');
+            $btns.each(function (i, val) {
+                $(val).addClass('marked');
+            });
+            $('#lbltbtns').html($btns.length);
+            return false;
+        });
+    });
+            ///Retrieve Attributes
+            function getAttrMID() {
+                var $mid = $('#mid').attr('merchantID');
+                $('#lblMID').html($mid);
 
-    //------------------------ Events
-    //on - off (click)
-    //migrate previous click functions + Document Ready
-    
+            }
+
 </script>

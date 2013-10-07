@@ -8,12 +8,11 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI';
-
         }
 
         .form
         {
-            overflow:hidden;
+            overflow: hidden;
         }
 
         body
@@ -68,11 +67,11 @@
                 float: left;
             }
 
-        .containerP p
-        {
-            margin: 5px;
-            float: left;
-        }
+            .containerP p
+            {
+                margin: 5px;
+                float: left;
+            }
 
         .marked
         {
@@ -92,7 +91,7 @@
                     <input type="file" />
                     <input type="password" />
                     <input type="text" />
-                    <input type="text" disabled="disabled" />                    
+                    <input type="text" disabled="disabled" />
                 </div>
             </li>
             <li>
@@ -109,18 +108,8 @@
                 <p class="pes">3</p>
                 <p>4</p>
                 <p class="pes">5</p>
-                <p>6</p>                
-            </li>
-            <li>
-                <input type="hidden" id="mid" merchantid="3" />
-                <span>MerchantID:
-                    <label id="lblMID"></label>
-                </span>
-            </li>
-            <li>
-                <span>Total of Buttons: </span>
-                <label id="lbltbtns"></label>
-            </li>
+                <p>6</p>
+            </li>           
             <li>
                 <div class="containerD">
                     <button onclick="findButton(); return false;">find button</button>
@@ -137,102 +126,69 @@
                     <button onclick="findChildren(); return false;">Find Children containerP</button>
                     <button onclick="findbyTwoClass(); return false;">find by maincontent and containerD class</button>
                     <button onclick="insertAfter(); return false;">insert after hermano mayor</button>
-                    <button onclick="getAttrMID(); return false;">Get MerchantID</button>
-                    <button onclick="setAttrMID1(); return false;">Set MerchantID 10</button>
-                    <button onclick="setAttrMID2(); return false;">Set MerchantID 10 + 5</button>
-                    <button onclick="setAttrMID3(); return false;">Set MerchantID 20 and Add contractID 10</button>
-                    <button onclick="removeAttrCntID(); return false;">Remove contractID</button>
-                    <button onclick="getTotalBtns(); return false;">GetTotalOfButtons</button>
                 </div>
             </li>
         </ul>
-    </div>   
+    </div>
 </body>
 </html>
 <script src="../js/jquery-2.0.3.js"></script>
 <script>
     //button Selector
     function findButton() {
-        $('input:button').addClass('marked');
+
     }
     //File Selector
     function findFile() {
-        $('input:file').addClass('marked');
+
     }
     //Password Selector
     function findPassword() {
-        $('input:password').addClass('marked');
+
     }
-    //Text Selector
+    //Text Selector - find textbox and textbox disabled
     function findText() {
-        $('input:text:enabled').addClass('marked');
-        $('input:text:disabled').val('this is disabled');
+
     }
-    //Contains Selector
+    //Contains Selector - Contains "John"
     function findContains() {
-        $('p:contains("John")').css('text-decoration', 'underline');
+
     }
-    //empty Selector
+    //empty Selector - li empty
     function findEmpty() {
-        $('ul li:empty')
-            .text('Is Empty')
-            .css('background', 'gray');
+
     }
-    //eq Selector
+    //eq Selector - li index 2"
     //get Selector
     function findIndex() {
-        $('ul li:eq(2)')
-            .text('The number 3')
-            .css('background', 'gray');
-    }
-    //find by maincontent and containerD class
-    function findbyTwoClass() {
-        $('.maincontent, .containerD').addClass('marked');        
+
     }
     //Greater than Selector
     function findGt() {
-        $('ul li:gt(1), ul li:eq(1)').css('background', 'brown');
+
     }
     //Less than Selector
     function findlt() {
-        $('ul li:lt(1)').css('background', 'orange');
+
+    }
+    //find by maincontent and containerD class
+    function findbyTwoClass() {
+
     }
     //siblings
     function findSiblings() {
-        $('#hMayor').siblings('p').addClass('marked');
+
     }
     //parent
     function findParent() {
-        $('#hMayor').parent().addClass('marked');
+
     }
     //children
     function findChildren() {
-        $('.containerP').children().addClass('marked');
+
     }
     //after
     function insertAfter() {
-        $('#hMayor').after('<p>0</p>');
-    }
-    //before
-    function insertBefore() {
-        $('#hMayor').before('<p>0</p>');
-    }
-    //Retrieve Attributes
-    function getAttrMID() {
-    }
-    //Set Attributes – Type 01
-    function setAttrMID1() {
-    }
-    //Set Attributes – Type 02 - function
-    function setAttrMID2() {
-    }
-    //Set Attributes – Type 03 - obj
-    function setAttrMID3() {
-    }
-    //Remove Attributes
-    function removeAttrCntID() {
-    }    
-    //each
-    function getTotalBtns() {
+
     }
 </script>
