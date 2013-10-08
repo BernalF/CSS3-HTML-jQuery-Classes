@@ -20,8 +20,11 @@ moduloName = (function () {
         console.log(param1 + options.param2);
     };
 
+
+
     // Public API - metodos publicos
     return {
         init: initialize
     };
 })();
+
