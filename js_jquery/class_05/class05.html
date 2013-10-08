@@ -109,7 +109,7 @@
                 <p>4</p>
                 <p class="pes">5</p>
                 <p>6</p>
-            </li>           
+            </li>
             <li>
                 <div class="containerD">
                     <button onclick="findButton(); return false;">find button</button>
@@ -136,59 +136,82 @@
 <script>
     //button Selector
     function findButton() {
-
+        $('input:button').addClass('marked');
     }
     //File Selector
     function findFile() {
-
+        $('input:file').addClass('marked');
     }
     //Password Selector
     function findPassword() {
-
+        $('input:password').addClass('marked');
     }
     //Text Selector - find textbox and textbox disabled
     function findText() {
-
+        $('input:text').addClass('marked')
+        $('input:disabled').val("disabled");
     }
     //Contains Selector - Contains "John"
     function findContains() {
-
+        $('p:contains("John")').css('text-decoration', 'underline');
     }
     //empty Selector - li empty
     function findEmpty() {
-
+        $('li:empty')
+            .text('Was Empty')
+            .css('background', 'gray');
     }
     //eq Selector - li index 2"
     //get Selector
     function findIndex() {
-
+        $('ul li:eq(2)').text('number 3').css('background', 'gray');
+        //$('ul li')[2].text('number 3').css('background', 'gray');
+        //$('ul li').get(2).text('number 3').css('background', 'gray');
+        //$('ul li:nth-child(3)').text('number 3').css('background', 'gray');
     }
     //Greater than Selector
     function findGt() {
-
+        $('li:gt(1)').css('background', 'brown');
     }
     //Less than Selector
     function findlt() {
-
+        $('li:lt(1), li:eq(1)').css('background', 'orange');
     }
     //find by maincontent and containerD class
     function findbyTwoClass() {
-
+        $('.maincontent, .containerD').addClass('marked');
     }
     //siblings
     function findSiblings() {
-
+        $('#hMayor').siblings().addClass('marked');
     }
-    //parent
+    //parent - closest
     function findParent() {
-
+        $('#hMayor').parent().addClass('marked');
+        //$('#hMayor').closest('ul').addClass('marked');
     }
     //children
     function findChildren() {
-
+        $('li.containerP').children().addClass('marked');
     }
     //after
     function insertAfter() {
+        $('#hMayor').before('<p>0</p>');
+        $('#hMayor').after('<p>0</p>');
+        $('#hMayor').text('<span> - 0</span>');
+        $('#hMayor').html('<span> - 0</span>');
+        $('#hMayor').append('<span> - 0</span>');
+        $('#hMayor').prependTo .prepend('<p>0</p>');
+        
+        //Andres - prependTo
+        //Yu - appendTo
+        //Melanie - insertAfter
+        //Lupe - insertBefore
+        //Marco - load
+		//Berman - empty
 
     }
+    //html
+
+    //append
 </script>
