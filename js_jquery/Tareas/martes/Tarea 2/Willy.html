@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style> 
+        body, div, ul, li, h1, h2, h3, h4, h5, form, input, textarea, p, table, tr, td
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+
+        .form
+        {
+            overflow:hidden;
+        }
+
+        body
+        {
+            background: #22252b;
+            color: #fff;
+        }
+
+        ul
+        {
+            list-style: none;
+            overflow: hidden;
+            text-align: justify;
+        }
+
+            ul li
+            {
+                padding: 5px;
+                border: 2px solid #5a5c63;
+            }
+
+        .maincontent
+        {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        a
+        {
+            color: #fff;
+            display: block;
+            text-decoration: none;
+        }
+
+        .containerP,
+        .containerD
+        {
+            overflow: hidden;
+        }
+
+            .containerD input, select, textarea
+            {
+                display: block;
+                margin: 2px;
+                color: #fff;
+                background: #01317d;
+            }
+
+            .containerD button
+            {
+                width: 50%;
+                float: left;
+            }
+
+        .containerP p
+        {
+            margin: 5px;
+            float: left;
+        }
+
+        .marked
+        {
+            border: 3px red solid;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincontent">
+        <ul class="form">
+            <li>
+                <input type="hidden" id="mid" merchantid="3" />
+                <span>MerchantID:
+                    <label id="lblMID"></label>
+                </span>
+            </li>
+            <li>
+                <span>Total of Buttons: </span>
+                <label id="lbltbtns"></label>
+            </li>
+            <li>
+                <div class="containerD">
+                    <button id="btn1" >Get MerchantID</button>
+                    <button class="button" >Set MerchantID 10</button>
+                    <button id="btn3">Set MerchantID 10 + 5</button>
+                    <button class="button">Set MerchantID 20 and Add contractID 10</button>
+                    <button id="btn4" >Remove contractID</button>
+                    <button id="btn5" onclick="getTotalBtns(); return false;">GetTotalOfButtons</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="../jquery-2.0.3.js"></script>
+<script>
+   
+    //Retrieve Attributes
+    function getAttrMID() {
+        var $mid = $('#mid').attr('merchantID');
+        $('#lblMID').html($mid);
+
+    }
+
+    //------------------------ Events
+    //on - off (click)
+    $('#btn1').off('click.btn1').on('click.btn1', function() {
+        getAttrMID();
+        return false;
+    });
+    
+    $('button.button:eq(0)').off('click.btn2').on('click.btn2', function(){
+        
+        //Set Attributes – Type 01
+        $('#mid').attr('merchantID', '10');
+        getAttrMID();
+        
+        return false;
+    });
+    
+    $('#btn3').off('click.btn3').on('click.btn3', function() {
+        
+    //Set Attributes – Type 02 - function
+        $('#mid').attr('merchantID', function () {
+            return 10 + 5;
+        });
+        getAttrMID();
+
+        return false;
+    });
+    
+     $('button.button:eq(1)').off('click.btn8').on('click.btn8', function(){
+        
+        //Set Attributes – Type 03 - obj
+        $('#mid').attr({
+            'merchantID': 20,
+            'contractID': 10
+        });
+        $('#mid')
+            .siblings('span')
+            .after('<span><label> - ContractID: ' + 
+                   $('#mid').attr('contractID') +'</label></span>');
+                    getAttrMID();
+         
+        return false;
+    });
+    
+    $('#btn4').off('click.btn4').on('click.btn4', function() {
+        
+        //Remove Attributes
+        $('#mid').removeAttr('contractID');
+        $('#mid').siblings('span:eq(1)').remove();
+   
+        return false;
+    });
+    
+    $('#btn5').off('click.btn5').on('click.btn5', function() {
+        
+        //each
+        var $btns = $('.containerD button');
+        $btns.each(function (i, val) {
+            $(val).addClass('marked');
+        });
+        $('#lbltbtns').html($btns.length);
+
+        return false;
+        
+    });
+    
+</script>
