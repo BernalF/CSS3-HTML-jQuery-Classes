@@ -12,7 +12,7 @@
 
         .form
         {
-            overflow: hidden;
+            overflow:hidden;
         }
 
         body
@@ -67,11 +67,11 @@
                 float: left;
             }
 
-            .containerP p
-            {
-                margin: 5px;
-                float: left;
-            }
+        .containerP p
+        {
+            margin: 5px;
+            float: left;
+        }
 
         .marked
         {
@@ -97,12 +97,12 @@
             </li>
             <li>
                 <div class="containerD">
-                    <button id="btn1">Get MerchantID</button>
-                    <button class="button">Set MerchantID 10</button>
-                    <button id="btn3">Set MerchantID 10 + 5</button>
-                    <button class="button">Set MerchantID 20 and Add contractID 10</button>
-                    <button id="btn4">Remove contractID</button>
-                    <button>GetTotalOfButtons</button>
+                    <button id="btn1" onclick="getAttrMID(); return false;">Get MerchantID</button>
+                    <button class="button" onclick="setAttrMID1(); return false;">Set MerchantID 10</button>
+                    <button id="btn3" onclick="setAttrMID2(); return false;">Set MerchantID 10 + 5</button>
+                    <button class="button" onclick="setAttrMID3(); return false;">Set MerchantID 20 and Add contractID 10</button>
+                    <button id="btn4" onclick="removeAttrCntID(); return false;">Remove contractID</button>
+                    <button onclick="getTotalBtns(); return false;">GetTotalOfButtons</button>
                 </div>
             </li>
         </ul>
@@ -111,76 +111,34 @@
 </html>
 <script src="../js/jquery-2.0.3.js"></script>
 <script>
-    $(function () {
 
-        //Retrieve Attributes
-        function getAttrMID() {
-            var mid = $('#mid').attr('merchantid');
-            $('#lblMID').html(mid);
-        }
-        //------------------------ Events
-        //on - off (click)
-        $('#btn1').off('click.btn1').on('click.btn1', function () {
-            getAttrMID();
-            return false;
-        });
+    //Retrieve Attributes
+    function getAttrMID() {      
 
-        //Set Attributes – Type 01
-        $('button.button:eq(0)').off('click.btn2').on('click.btn2', function () {
-            $('#mid').attr('merchantid', '10');
-            getAttrMID();
-            return false;
-        });
+    }
+    //Set Attributes – Type 01
+    function setAttrMID1() {
+     
+    }
+    //Set Attributes – Type 02 - function
+    function setAttrMID2() {
+       
+    }
+    //Set Attributes – Type 03 - obj
+    function setAttrMID3() {
+   
+    }
+    //Remove Attributes
+    function removeAttrCntID() {
+     
+    }
+    //each
+    function getTotalBtns() {
+  
+    }
 
-        //Set Attributes – Type 02 - function
-        $('#btn3').off('click.btn3').on('click.btn3', function () {
-            $('#mid').attr('merchantid', function () {
-                return 10 + 5;
-            });
-            getAttrMID();
-            return false;
-        });
-
-        //Set Attributes – Type 03 - obj
-        //Change merchantID and Add ContractID and print next to the merchantID
-        $('button.button:last').off('click.btn4').on('click.btn4', function () {
-            $('#mid').attr({
-                'merchantid': '20',
-                'contractid': '520'
-            });
-            getAttrMID();
-            $('#mid')
-                .siblings('span')
-                .after(
-                            '<span>ContractID:<label id="lblCID">'
-                            + $('#mid').attr('contractid')
-                            + '</label></span>'
-                        );
-            return false;
-        });
-
-        //Remove Attributes
-        $('#btn4').off('click.btn5').on('click.btn5', function () {
-            var $mid = $('#mid');
-            $mid.removeAttr('contractid');
-            $mid.siblings('span:eq(1)').remove();
-            return false;
-        });
-
-        //each - GetTotalOfButtons and mark it
-        $('.containerD button:last').off('click.btn6').on('click.btn6', function () {
-            var $btns = $('.containerD button');
-            $btns.each(function () {
-                $(this).addClass('marked');
-            });
-            $('#lbltbtns').html($btns.length);
-        });
-
-        //Document Ready 
-        //+ external js File 
-        //+ module pattern definition
-    });
-
-
+    //------------------------ Events
+    //on - off (click)
+    //migrate previous click functions + Document Ready
 
 </script>
