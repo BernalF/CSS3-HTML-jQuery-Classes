@@ -1,5 +1,6 @@
 ﻿///
 /// Lectura Recomendada http://www.etnassoft.com/2011/04/11/el-patron-de-modulo-en-javascript-en-profundidad/
+//                      http://www.etnassoft.com/2011/04/18/ampliando-patron-modulo-javascript-submodulos/
 ///
 
 // Namespace for the library

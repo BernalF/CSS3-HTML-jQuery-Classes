@@ -5,3 +5,8 @@
 Best Practices
 	http://gregfranko.com/jquery-best-practices/#/26
 
+
+Mal uso return false
+	http://www.etnassoft.com/2011/04/19/jquery-el-mal-uso-de-return-false/
+
+

@@ -1,10 +1,12 @@
-﻿
+﻿/*
+* class07 javascript Module
+*/
 var class07 = {};
-
 class07 = (function () {
-
+    //Privates vars
     var options = {};
 
+    //Init Method or Constructor
     var initialize = function (opts) {
         $.extend(options, opts);
         handleClick();
@@ -15,7 +17,7 @@ class07 = (function () {
         var mid = $('#mid').attr('merchantid');
         $('#lblMID').html(mid);
     };
-    //------------------------ Events
+    //Handler Click btn 1
     var handleClick = function () {
         $('#btn1').off('click.btn1').on('click.btn1', function () {            
             getAttrMID();
@@ -28,7 +30,7 @@ class07 = (function () {
     }
 })();
 
-/*
+/* To me moved to module
 
 $(function () {
 
@@ -94,9 +96,5 @@ $(function () {
         });
         $('#lbltbtns').html($btns.length);
     });
-
-    //+ external js File 
-    //+ module pattern definition
 });
-
 */

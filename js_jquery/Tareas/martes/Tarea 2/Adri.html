@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body, div, ul, li, h1, h2, h3, h4, h5, form, input, textarea, p, table, tr, td
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+
+        .form
+        {
+            overflow:hidden;
+        }
+
+        body
+        {
+            background: #22252b;
+            color: #fff;
+        }
+
+        ul
+        {
+            list-style: none;
+            overflow: hidden;
+            text-align: justify;
+        }
+
+            ul li
+            {
+                padding: 5px;
+                border: 2px solid #5a5c63;
+            }
+
+        .maincontent
+        {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        a
+        {
+            color: #fff;
+            display: block;
+            text-decoration: none;
+        }
+
+        .containerP,
+        .containerD
+        {
+            overflow: hidden;
+        }
+
+            .containerD input, select, textarea
+            {
+                display: block;
+                margin: 2px;
+                color: #fff;
+                background: #01317d;
+            }
+
+            .containerD button
+            {
+                width: 50%;
+                float: left;
+            }
+
+        .containerP p
+        {
+            margin: 5px;
+            float: left;
+        }
+
+        .marked
+        {
+            border: 3px red solid;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincontent">
+        <ul class="form">
+            <li>
+                <input type="hidden" id="mid" merchantid="3" />
+                <span>MerchantID:
+                    <label id="lblMID"></label>
+                </span>
+            </li>
+            <li>
+                <span>Total of Buttons: </span>
+                <label id="lbltbtns"></label>
+            </li>
+            <li>
+                <div class="containerD">
+                    <button id="btn1">Get MerchantID</button>
+                    <button class="button" onclick="setAttrMID1(); return false;">Set MerchantID 10</button>
+                    <button id="btn3" onclick="setAttrMID2(); return false;">Set MerchantID 10 + 5</button>
+                    <button class="button" onclick="setAttrMID3(); return false;">Set MerchantID 20 and Add contractID 10</button>
+                    <button id="btn4" onclick="removeAttrCntID(); return false;">Remove contractID</button>
+                    <button onclick="getTotalBtns(); return false;">GetTotalOfButtons</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="JS/jquery-2.0.3.js"></script>
+<script>
+
+    $(function () {
+
+        //------------------------ Events
+        //on - off (click)
+        $('#btn1').off('click.btn1').on('click.btn1', function () {
+            var $mid = $('#mid').attr('merchantid');
+            $('#lblMID').html($mid);
+            return false;
+        });
+
+
+        // Remove the onclick event
+        var $allButtons = $('.containerD #btn1').siblings()
+        $allButtons.each(function () {
+            $(this).removeAttr('onclick')
+        });
+
+        // Add ID's to each button
+        $($allButtons.get(0)).attr('id', 'btnsetAttrMID1');
+        $($allButtons.get(2)).attr('id', 'btnsetAttrMID3');
+        $($allButtons.get(4)).attr('id', 'btngetTotalBtns');
+
+        // Implement the onclick event
+        $('#btnsetAttrMID1').off('click.btnsetAttrMID1').on('click.btnsetAttrMID1', function () {
+            var $mid = $('#mid').attr('merchantid', '10').attr('merchantid');
+            $('#lblMID').html($mid);
+            return false;
+        });
+
+        $('#btn3').off('click.btn3').on('click.btn3', function () {
+
+            $('#mid').attr('merchantid', function () {
+                $('#lblMID').html(10 + 5);
+                return false
+            });
+
+        });
+
+        $('#btnsetAttrMID3').off('click.btnsetAttrMID3').on('click.btnsetAttrMID3', function () {
+
+
+            $('#mid')
+            .attr({
+                'merchantid': '20',
+                'contractid': '520'
+            })
+            .siblings('span')
+            .after('<span>ContractID:<label id="lblCID">' +
+                    $('#mid').attr('contractid') +
+                    '</label></span>');
+
+            var $mid = $('#mid').attr('merchantid');
+            $('#lblMID').html($mid);
+
+        });
+
+        $('#btn4').off('click.btn4').on('click.btn4', function () {
+
+            $('#mid')
+            .removeAttr('contractid')
+            .siblings('span:eq(1)').remove();
+
+        });
+
+        $('#btngetTotalBtns').off('click.btngetTotalBtns').on('click.btngetTotalBtns', function () {
+
+            var $butt = $('.containerD button');
+
+            $butt.each(function () {
+                $(this).addClass('marked');
+            });
+            $('#lbltbtns').html($butt.length);
+        });
+
+    });
+
+</script>
