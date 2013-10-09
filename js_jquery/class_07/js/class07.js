@@ -28,8 +28,6 @@ class07 = (function () {
     }
 })();
 
-
-
 /*
 
 $(function () {
