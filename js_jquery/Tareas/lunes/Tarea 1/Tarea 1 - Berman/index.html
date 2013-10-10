@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home Work JS #1</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/defaults.css" />
+    <script src="js/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+    <div class="mainContainer">
+        <form action="result.html" onsubmit="return validateMe()">
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <ul class="twoCols">
+                    <li>
+                        <label>Name <span>*</span></label>
+                    </li>
+                    <li>
+                        <input type="text" id="txtName" onblur="validate(this)"/></li>                        
+                    <li>
+                        <label>Age <span>*</span></label>
+                    </li>
+                    <li>
+                        <input type="text" id="txtAge" onblur="validate(this)"/></li>
+                    <li>
+                        <label>Do you have childrens?</label>
+                    </li>
+                    <li>
+                        <label>Yes</label>&nbsp;<input type="radio" name="childrens" onclick="showChildrensArea(this)" />&nbsp;&nbsp;&nbsp;&nbsp;<label>No</label>&nbsp;<input type="radio" name="childrens" checked onclick="    hideChildrensArea(this)" /></li>
+
+                </ul>
+                <ul id="childrensArea" class="OneCol hide">
+                    <li>
+                        <label>Type the name of your child</label>
+                    </li>
+                    <li>
+                        <label>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" id="txtChildName" />&nbsp;&nbsp;
+                        <button type="button" class="green" onclick="addChildName()">Add</button></li>
+                    <li>
+                        <select id="selChildsNames" multiple>
+                        </select>&nbsp;&nbsp;
+                        <button type="button" class="red" onclick="delChildName()">Delete</button>
+                    </li>
+                </ul>
+                <ul class="OneCol">
+                    <li>
+                        <hr />
+                    </li>
+                    <li class="right">
+                        <button type="submit" class="orange">Save</button>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+
+
+
+    function hideChildrensArea(obj) {
+        if (obj.checked) {
+            document.getElementById("childrensArea").className = "OneCol hide";
+            document.getElementById("txtChildName").value = "";
+            var sel = document.getElementById("selChildsNames");
+
+            for (var i = sel.options.length - 1; i >= 0; i--) {
+                select.remove(i);
+            }
+
+            document.getElementById("txtChildName").focus();
+        }
+    }
+
+    function showChildrensArea(obj) {
+        if (obj.checked) {
+            document.getElementById("childrensArea").className = "OneCol";
+        }
+    }
+
+
+    function addChildName() {
+        var txt = document.getElementById("txtChildName");
+        if (txt.value.length > 0) {
+            var sel = document.getElementById("selChildsNames");
+            for (var i = 0; i < sel.options.length; i++) {
+                if (sel.options[i].text == txt.value) {
+                    alert("Child Name: '" + txt.value + "' was added.... " + annoy());
+                    return;
+                }
+            }
+            sel.add(new Option(txt.value), null);
+            txt.value = "";
+            txt.focus();
+        } else {
+            alert("Please type a valid name.... " + annoy());
+        }
+    }
+
+    function delChildName() {
+        var sel = document.getElementById("selChildsNames");
+        if (sel.options.length > 0) {
+            if (sel.selectedIndex >= 0) {
+                if (confirm(niceAnnoy()))
+                    sel.remove(sel.selectedIndex);
+            } else {
+                alert("There isn't selected item to remove... " + annoy());
+            }
+        } else {
+            alert("There isn't available items to remove... " + annoy());
+        }
+    }
+
+    function annoy() {
+        var result = ["loser", "misfit", "defeated", "freak"];
+        return "You are a " + result[Math.floor((Math.random() * 4))] + "!!";
+    }
+
+    function niceAnnoy() {
+        var result = ["Friend", "Buddy", "Pal", "Folk", "Fellow","Mate"];
+        return result[Math.floor((Math.random() * 6))] + ", Are you sure about it?";
+    }
+
+    function validateMe() {
+        var txtName = document.getElementById("txtName");
+        var txtAge = document.getElementById("txtAge");
+        if (!((txtName.value.length > 0) && (txtAge.value.length > 0))) {
+            alert("Ops, There are something wrong... Validation failed :(\n\n" + annoy());
+            validate(txtName);
+            validate(txtAge);
+            return false;
+        }
+        return true;
+    }
+
+    function validate(obj) {
+        if (!obj.value.length > 0) {
+            obj.className = "inputError";
+            obj.focus();
+        } else
+            obj.className = "";
+
+    }
+
+
+</script>
