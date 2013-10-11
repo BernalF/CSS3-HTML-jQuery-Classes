@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>insertAfter demo</title>
+  <style> 
+ body, div, ul, li, h1, h2, h3, h4, h5, form, input, textarea, p, table, tr, td
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+
+        body
+        {
+            background: #22252b;
+            color: #fff;
+        }
+        .maincontent
+        {
+            width: 700px;
+            margin: 0 auto;
+          margin-top:10px;
+        }
+      #hmundo{
+        
+          border: 2px solid #DF0174; 
+          text-align:center;
+      } 
+     .divRed{
+       border: 2px solid #088A4B; 
+       text-align:center;
+      }      
+  </style>
+  <!--<defanghtml_script src="C:\Users\Melany\Desktop\jquerylab\jquery.js"></defanghtml_script>-->
+</head>
+<body>
+<div class="maincontent">
+<div id="hmundo">Hola mundo</div>
+ <defanghtml_button id="after" onclick="after()">After</defanghtml_button>
+  <defanghtml_button id="insertAfter" onclick="insertAfter()">Insert After</defanghtml_button>
+<defanghtml_button id="insertAfterMove" onclick="insertAfterMove()">Insert After Move</defanghtml_button>
+ 
+</div>
+</body>
+<!--<defanghtml_script>
+function insertAfter(){
+$("<div class='divRed'>Insert After</div>").insertAfter("#hmundo");
+}
+function insertAfterMove(){
+$("#hmundo").insertAfter(".divRed");
+}
+function after(){
+$("#hmundo").after("<div class='blueBox'>After</div>");
+}
+</defanghtml_script>-->
+</html>
