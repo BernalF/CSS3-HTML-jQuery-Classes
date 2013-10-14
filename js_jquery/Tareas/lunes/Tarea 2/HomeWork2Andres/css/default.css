@@ -1,0 +1,23 @@
+.clear{
+ clear:both;
+}
+
+.mainContainer{
+  width:458px;
+  margin:0 auto;
+  overflow:hidden;
+  border: 1px solid;
+  height:325px;
+  padding:20px;
+}
+
+.buttons{
+    margin:43px auto;
+    width:180px;
+}
+
+
+footer{
+ margin:0 194px;
+}
+

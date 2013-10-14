@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <form name="myForm" id="myForm" action="success.html">
+        <ul class="form">
+            <li>
+                <label>Name *</label></li>
+            <li>
+                <input type="text" id="txtName" name="txtName" placeholder="Name" />
+                <label id="msj1" class="errormsj hide"></label>
+            </li>
+            <li>
+                <label>Age *</label></li>
+            <li>
+                <input type="text" id="txtAge" name="txtAge" placeholder="Age" />
+                <label id="msj2" class="errormsj hide"></label>
+            </li>
+            <li>
+                <label>Have Sons?</label></li>
+            <li>
+                <label>Yes</label>
+                <input type="radio" id="rd1" name="child" value="Yes" />
+                <label>No</label>
+                <input type="radio" id="rd2" name="child" value="No" />
+            </li>
+            <li></li>
+        </ul>
+        <div class="sideCtiner hide">
+            <h3>Sons Information</h3>
+            <div class="leftSide">
+                <ul class="form">
+                    <li>
+                        <label>Son Name</label></li>
+                    <li>
+                        <input type="text" id="txtNameI" name="txtName" placeholder="Son Name" />
+                    </li>
+                    <li>
+                        <label>Genre</label></li>
+                    <li>
+                        <select id="genreSelect">
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </li>
+                    <li>
+                        <button id="btnAdd">Add</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="rightSide">
+                <table id="sonsGrid" class="table">
+                    <thead class="header">
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Genre</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btnctainer">
+            <button id="btnDone">Save</button>
+        </div>
+    </form>
+</body>
+</html>
+<script src="../js/jquery-2.0.3.js"></script>
+<script src="js/practicaModule.js"></script>
+<script>
+    $(function () {
+        practicaModule.init();
+    });
+</script>

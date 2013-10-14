@@ -1,0 +1,58 @@
+<!doctype html>
+    
+<html>
+    
+<head>
+ <title>Andres Homework</title> 
+    <link href="../css/default.css" rel="stylesheet" type="text/css">
+</head>
+    
+<body>
+    
+   <div class="mainContainer">
+      <h1>Prepend & PrependTo Diference</h1>
+    
+    <div class="buttons">
+       
+       <input type="button" name="prepend" id="prepend" value="Prepend" onclick="prepend()">
+       
+       <input type="button" name="prependTo" id="prependTo" value="PrependTo" onclick="prependTo()">
+        
+        <input type="button" name="fua" id="fua" value="Fua" onclick="fua()"> 
+       
+    </div>
+       
+      <p id="parra">Juanito</p>
+       
+       <footer><img src="../img/creative.png"></footer>
+   </div> 
+       
+</body>
+    
+    
+</html>
+    
+<script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+<script type="text/javascript">
+    
+    
+function prepend() {  
+    $('#parra').prepend(" <b class='parra1'>Hello</b> ");
+    $(".parra2").hide();
+    $(".fua").hide();
+    }
+    
+function prependTo() {  
+    $(" <b class='parra2'>Bye</b> ").prependTo('#parra');
+    $(".parra1").hide();
+    $(".fua").hide();
+    }
+        
+    function fua() {  
+    //var a= document.getElementById('parra');
+    $("<img src='../img/fua.jpg' width='100px' height='100px'> class='fua'").prependTo('#parra');
+    $(".parra1").hide();
+    $(".parra2").hide();
+    }
+
+</script>
