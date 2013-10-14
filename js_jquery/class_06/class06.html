@@ -50,6 +50,15 @@
                 <button onclick="appendToYu(this); return false;">appendTo Yu</button>
             </li>
             <li>
+                <span class="title">--> prepend: Andres Monge</span>
+                <div class="buttons">
+                    <input type="button" name="prepend" id="prepend" value="Prepend" onclick="prepend()">
+                    <input type="button" name="prependTo" id="prependTo" value="PrependTo" onclick="prependTo()">
+                    <input type="button" name="fua" id="fua" value="Fua" onclick="fua()">
+                </div>
+                <p id="parra">Juanito</p>
+            </li>
+            <li>
                 <span class="title">--> Load: Marco</span>
                 <button id="btnload1">Text</button>
                 <button id="btnload2">HTML</button>
@@ -142,6 +151,25 @@
     function appendYu() {
         $("#app1").append("<b>Yu </b>");
         $("#app2").append("<b>me </b>");
+    }
+    //---------------------------------------------------------- prepend - Andres
+    function prepend() {
+        $('#parra').prepend(" <b class='parra1'>Hello</b> ");
+        $(".parra2").hide();
+        $(".fua").hide();
+    }
+
+    function prependTo() {
+        $("<b class='parra2'>Bye</b> ").prependTo('#parra');
+        $(".parra1").hide();
+        $(".fua").hide();
+    }
+
+    function fua() {
+        //var a= document.getElementById('parra');
+        $("<img src='images/fua.jpg' width='100px' height='100px'> class='fua'").prependTo('#parra');
+        $(".parra1").hide();
+        $(".parra2").hide();
     }
     //---------------------------------------------------------- load - Marco
     function loadButton(type) {
