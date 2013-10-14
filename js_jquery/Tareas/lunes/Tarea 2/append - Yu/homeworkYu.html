@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Yu's homework</title>
+  <link rel="stylesheet" href="css/freeStyle.css" />
+ </head>
+   <body>
+    <div class="mainContainer">
+    <p id='app1'>I am </p>
+    <p id='app2'>You are not </p>
+    <button onclick="appendToYu(); return false;">Who are you??</button>
+	</div>
+   </body>
+</html>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+function appendToYu(){
+ $("<b>Yu </b>").appendTo("#app1");
+ $("<b>me </b>").appendTo("#app2");
+}
+
+function appendYu(){
+  $("#app1").append("<b>Yu </b>");
+  $("#app2").append("<b>me </b>");
+}
+</script>
+
+
+<!--
+appendTo
+$(content).appendTo(selector)
+append
+$(selector).append(content,function(index,html))
+-->

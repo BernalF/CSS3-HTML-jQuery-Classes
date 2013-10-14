@@ -1,0 +1,81 @@
+﻿<html>
+<head>
+    <title></title>
+     <style>
+         ol,ul {
+	        list-style:none;
+        }
+        button .replacewith{
+            display: block;
+            margin: 3px;
+            color: red;
+            width: 200px;
+        }
+        div .replacewith{
+            color: red;
+            border: 2px solid blue;
+            width: 200px;
+            margin: 3px;
+            text-align: center;
+        }
+        .lists {
+        width:200px;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #C9C9C9;
+        font-weight: normal;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        background: #E3E3E3;
+        color: #2E2E2E;
+        border-bottom: 1px solid #7C7B7B;
+        }
+         .underline {
+             text-decoration:underline;
+             color:red;
+         }
+    </style>
+</head>
+<body>
+    <div class="replacewith">
+        <h2>.replaceWith Example</h2>
+        <button id="changeP">Change paragraph</button>
+        <p>This is a paragraph</p>
+
+        <button class="addRed">First Button</button>
+        <button class="addRed">Second Button</button>
+        <button class="addRed">Third Button</button>
+
+    </div>
+    <div class="replaceall">
+        <h2>.replaceAll Example</h2>
+
+        <button id="allA">Replace class a</button>
+        <button id="allB">Replace class b</button>
+        <button id="allC">Replace last p</button>
+        <p class="a">First paragraph</p>
+        <p class="b">Second paragraph</p>
+        <p class="c">Last paragraph</p>
+    </div>
+    
+</body>
+</html>
+   <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+    $("#changeP").click(function () {
+        $(this).replaceWith("<ul class='lists'><li>List1</li><li>List2</li><li>List3</li><li>List4</li></ul>");
+    });
+    $("button.addRed").click(function () {
+        $(this).replaceWith("<div class='replacewith'>" + $(this).text() + "</div>");
+    });
+    $("#allA").click(function () {
+        $('<p class="one">The First!</p>').replaceAll(".a");
+    });
+    $("#allB").click(function () {
+        $('<p class="underline">Second paragraph</p>').replaceAll("p.b");
+    });
+    $("#allC").click(function () {
+        $("<span><b>This is the last 'p'</b></span>").replaceAll("p:last");
+    });
+      
+</script>

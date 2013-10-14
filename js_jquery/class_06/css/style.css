@@ -1,0 +1,145 @@
+﻿  body, div, ul, li, h1, h2, h3, h4, h5, form, input, textarea, p, table, tr, td
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+
+        .form
+        {
+            overflow: hidden;
+        }
+
+        body
+        {
+            background: #22252b;
+            color: #fff;
+        }
+
+        ul
+        {
+            list-style: none;
+            overflow: hidden;
+            text-align: justify;
+        }
+
+            ul li
+            {
+                padding: 5px;
+                border: 2px solid #5a5c63;
+            }
+
+        .maincontent
+        {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        a
+        {
+            color: #fff;
+            display: block;
+            text-decoration: none;
+        }
+
+        .containerP,
+        .containerD
+        {
+            overflow: hidden;
+        }
+
+            .containerD input, select, textarea
+            {
+                display: block;
+                margin: 2px;
+                color: #fff;
+                background: #01317d;
+            }
+
+            .containerD button
+            {
+                width: 50%;
+                float: left;
+            }
+
+            .containerP p
+            {
+                margin: 5px;
+                float: left;
+            }
+
+        .marked
+        {
+            border: 3px red solid;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .title
+        {
+            font-size: 16px;
+            font-family: Verdana;
+        }
+
+        .div
+        {
+            margin: 10px;
+            padding: 12px;
+            border: 2px solid #666;
+            width: 200px;
+        }
+
+        button .replacewith
+        {
+            margin: 3px;
+            color: red;
+        }
+
+        div .replacewith
+        {
+            margin: 3px;
+        }
+
+        .replacewith span,
+        .replaceall span
+        {
+            display: block;
+        }
+
+        .lists
+        {
+            width: 200px;
+            margin: 0;
+            padding: 0;
+            border: 1px solid #C9C9C9;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            background: #E3E3E3;
+            color: #2E2E2E;
+            border-bottom: 1px solid #7C7B7B;
+        }
+
+        .underline
+        {
+            text-decoration: underline;
+            color: #9f2c2c;
+        }
+
+        #hmundo
+        {
+            border: 2px solid #DF0174;
+            text-align: center;
+        }
+
+        .divGreen
+        {
+            border: 2px solid #088A4B;
+            text-align: center;
+        }
+
+        .blueDiv
+        {
+            border: 2px solid #4000FF;
+            text-align: center;
+        }

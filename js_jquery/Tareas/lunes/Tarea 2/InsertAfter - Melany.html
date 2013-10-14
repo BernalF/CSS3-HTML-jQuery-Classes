@@ -27,31 +27,35 @@
           border: 2px solid #DF0174; 
           text-align:center;
       } 
-     .divRed{
+     .divGreen{
        border: 2px solid #088A4B; 
        text-align:center;
       }      
+	  .blueDiv{
+	    border: 2px solid #4000FF; 
+       text-align:center;
+	  }
   </style>
-  <!--<defanghtml_script src="C:\Users\Melany\Desktop\jquerylab\jquery.js"></defanghtml_script>-->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 </head>
 <body>
 <div class="maincontent">
 <div id="hmundo">Hola mundo</div>
- <defanghtml_button id="after" onclick="after()">After</defanghtml_button>
-  <defanghtml_button id="insertAfter" onclick="insertAfter()">Insert After</defanghtml_button>
-<defanghtml_button id="insertAfterMove" onclick="insertAfterMove()">Insert After Move</defanghtml_button>
+  <button id="after" onclick="after()">After</button>
+  <button id="insertAfter" onclick="insertAfter()">Insert After</button>
+  <button id="insertAfterMove" onclick="insertAfterMove()">Insert After Move</button>
  
 </div>
 </body>
-<!--<defanghtml_script>
+<script>
 function insertAfter(){
-$("<div class='divRed'>Insert After</div>").insertAfter("#hmundo");
+$("<div class='divGreen'>Insert After</div>").insertAfter("#hmundo");
 }
 function insertAfterMove(){
-$("#hmundo").insertAfter(".divRed");
+$("#hmundo").insertAfter(".divGreen");
 }
 function after(){
-$("#hmundo").after("<div class='blueBox'>After</div>");
+$("#hmundo").after("<div class='blueDiv'>After</div>");
 }
-</defanghtml_script>-->
+</script>
 </html>

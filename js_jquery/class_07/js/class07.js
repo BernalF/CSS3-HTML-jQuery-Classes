@@ -24,11 +24,13 @@ class07 = (function () {
             return false;
         });
     };
+
     
     return {
-        init: initialize
+        init: initialize        
     }
 })();
+
 
 /* To me moved to module
 

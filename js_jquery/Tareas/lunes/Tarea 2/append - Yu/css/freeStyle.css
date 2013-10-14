@@ -1,0 +1,26 @@
+body                               
+{
+    font-family:Helvetica,Futura,Arial,Verdana,sans-serif;
+	background-image:url("../images/iAmYu.png");
+    background-repeat:no-repeat;
+	background-position: top center;
+	color:#319416;
+} 
+
+.mainContainer{
+    width:500px;
+    margin:auto;
+    overflow:hidden;
+	position:absolute;
+	top: 80px;
+	left:550px;
+}
+
+
+
+
+
+
+
+ 
+

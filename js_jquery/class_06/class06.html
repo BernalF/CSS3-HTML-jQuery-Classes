@@ -2,91 +2,13 @@
 <html>
 <head>
     <title></title>
-    <style>
-        body, div, ul, li, h1, h2, h3, h4, h5, form, input, textarea, p, table, tr, td
-        {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI';
-        }
-
-        .form
-        {
-            overflow:hidden;
-        }
-
-        body
-        {
-            background: #22252b;
-            color: #fff;
-        }
-
-        ul
-        {
-            list-style: none;
-            overflow: hidden;
-            text-align: justify;
-        }
-
-            ul li
-            {
-                padding: 5px;
-                border: 2px solid #5a5c63;
-            }
-
-        .maincontent
-        {
-            width: 700px;
-            margin: 0 auto;
-        }
-
-        a
-        {
-            color: #fff;
-            display: block;
-            text-decoration: none;
-        }
-
-        .containerP,
-        .containerD
-        {
-            overflow: hidden;
-        }
-
-            .containerD input, select, textarea
-            {
-                display: block;
-                margin: 2px;
-                color: #fff;
-                background: #01317d;
-            }
-
-            .containerD button
-            {
-                width: 50%;
-                float: left;
-            }
-
-        .containerP p
-        {
-            margin: 5px;
-            float: left;
-        }
-
-        .marked
-        {
-            border: 3px red solid;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-    </style>
+    <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
     <div class="maincontent">
         <ul class="form">
             <li>
-                <input type="hidden" id="mid" merchantid="3" />
+                <input type="hidden" id="mid" merchantid="520" />
                 <span>MerchantID:
                     <label id="lblMID"></label>
                 </span>
@@ -105,6 +27,62 @@
                     <button onclick="getTotalBtns(); return false;">GetTotalOfButtons</button>
                 </div>
             </li>
+            <li>
+                <span class="title">--> InsertAfter: Melany Delgado</span>
+                <div id="hmundo">Hola mundo</div>
+                <button id="after" onclick="after()">After</button>
+                <button id="insertAfter" onclick="insertAfter()">Insert After</button>
+                <button id="insertAfterMove" onclick="insertAfterMove()">Insert After Move</button>
+            </li>
+            <li id="lupe">
+                <span class="title">--> InsertBefore: Guadalupe Campos</span>
+                <a href="http://www.mkyong.com/jquery/jquery-before-and-insertbefore-example/" target="_blank">Insert before reading</a>
+                <div class="div" style="background-color: blue;"></div>
+                <div class="div" style="background-color: green;"></div>
+                <div class="div" style="background-color: red;"></div>
+                <div class="div" id="source"></div>
+            </li>
+            <li id="yu">
+                <span class="title">--> append: Yu Hsuan Hsu</span>
+                <div id='app1'>I am </div>
+                <div id='app2' class="app2">You are not </div>
+                <button onclick="appendYu(); return false;">Who are you?</button>
+                <button onclick="appendToYu(this); return false;">appendTo Yu</button>
+            </li>
+            <li>
+                <span class="title">--> Load: Marco</span>
+                <button id="btnload1">Text</button>
+                <button id="btnload2">HTML</button>
+                <button id="btnload3">Partial</button>
+                <div class="div" id="loadDiv"></div>
+            </li>
+            <li>
+                <span class="title">--> empty: Berman Romero</span>
+                <p id="pempty">Hello, <span>Class</span> <em>and teacher</em>.</p>
+                <button id="empty">Call empty() on above paragraph</button>
+            </li>
+            <li>
+                <span class="title">--> replaceWith - replaceAll: Graciela Paniagua</span>
+                <div class="replacewith">
+                    <span>- replaceWith Example</span>
+                    <button id="changeP">Change paragraph</button>
+                    <p>This is a paragraph</p>
+                    <button class="addRed">First Button</button>
+                    <button class="addRed">Second Button</button>
+                    <button class="addRed">Third Button</button>
+
+                </div>
+                <hr />
+                <div class="replaceall">
+                    <span>- replaceAll Example</span>
+                    <button id="allA">Replace class a</button>
+                    <button id="allB">Replace class b</button>
+                    <button id="allC">Replace last p</button>
+                    <p class="a">First paragraph</p>
+                    <p class="b">Second paragraph</p>
+                    <p class="c">Last paragraph</p>
+                </div>
+            </li>
         </ul>
     </div>
 </body>
@@ -113,32 +91,98 @@
 <script>
 
     //Retrieve Attributes
-    function getAttrMID() {      
+    function getAttrMID() {
 
     }
     //Set Attributes – Type 01
     function setAttrMID1() {
-     
+
     }
     //Set Attributes – Type 02 - function
     function setAttrMID2() {
-       
+
     }
     //Set Attributes – Type 03 - obj
     function setAttrMID3() {
-   
+
     }
     //Remove Attributes
     function removeAttrCntID() {
-     
+
     }
     //each
     function getTotalBtns() {
-  
+
     }
 
     //------------------------ Events
     //on - off (click)
     //migrate previous click functions + Document Ready
+
+    //---------------------------------------------------------- Insert after - Melany
+    function insertAfter() {
+        $("<div class='divGreen'>Insert After</div>").insertAfter("#hmundo");
+    }
+    function insertAfterMove() {
+        $("#hmundo").insertAfter(".divGreen");
+    }
+    function after() {
+        $("#hmundo").after("<div class='blueDiv'>After</div>");
+    }
+    //---------------------------------------------------------- Insert before - Lupe
+    $("#lupe .div").click(function () {
+        $("#source").insertBefore(this);
+    });
+    //---------------------------------------------------------- append - Yu
+    function appendToYu(btn) {
+        $(btn).appendTo("#app1");
+        $("<b>Yu </b>").appendTo("#app1");
+        $("<b>me </b>").appendTo("#app2");
+    }
+    function appendYu() {
+        $("#app1").append("<b>Yu </b>");
+        $("#app2").append("<b>me </b>");
+    }
+    //---------------------------------------------------------- load - Marco
+    function loadButton(type) {
+        if (type == 'txt')
+            $("#loadDiv").load('loadfiles/loadedText.txt');
+        if (type == 'html')
+            $("#loadDiv").load('loadfiles/loadedpage.html');
+        if (type == 'img')
+            $("#loadDiv").load("loadfiles/loadedpage.html #maincontentx");
+    };
+
+    $("#btnload1").click(function () {
+        loadButton('txt');
+    });
+    $("#btnload2").click(function () {
+        loadButton('html');
+    });
+    $("#btnload3").click(function () {
+        loadButton('img');
+    });
+
+    //---------------------------------------------------------- Empty - Berman
+    $("#empty").click(function () {
+        $("#pempty").empty();
+    });
+
+    //---------------------------------------------------------- replaceWith - replaceAll - Graciela
+    $("#changeP").click(function () {
+        $(this).replaceWith("<ul class='lists'><li>List1</li><li>List2</li><li>List3</li><li>List4</li></ul>");
+    });
+    $("button.addRed").click(function () {
+        $(this).replaceWith("<div class='replacewith div'>" + $(this).text() + "</div>");
+    });
+    $("#allA").click(function () {
+        $('<p class="marked">The First!</p>').replaceAll(".a");
+    });
+    $("#allB").click(function () {
+        $('<p class="underline">Second paragraph</p>').replaceAll("p.b");
+    });
+    $("#allC").click(function () {
+        $("<span><b>This is the last 'p'</b></span>").replaceAll("p:last");
+    });
 
 </script>

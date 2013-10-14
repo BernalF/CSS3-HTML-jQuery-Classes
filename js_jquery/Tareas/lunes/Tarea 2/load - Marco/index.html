@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title></title>    
+</head>
+<body>
+    <div class="maincontent">
+        <ul class="form">
+            <li>
+                <button id="btnload1">Text</button>
+				<button id="btnload2">HTML</button>
+				<button id="btnload3">Partial</button>
+            </li>
+			<li>
+				<div id="loadDiv"></div>
+			</li>
+        </ul>
+    </div>
+</body>
+</html>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+	  $("#btnload1").click(function(){
+		loadButton('txt');
+	  });
+	  $("#btnload2").click(function(){
+		loadButton('html');
+	  });
+	  $("#btnload3").click(function(){
+		loadButton('img');
+	  });
+	});
+    //button Selector
+    function loadButton(type) {
+		if (type == 'txt') 
+			$("#loadDiv").load('loadedText.txt'); 	  
+		if (type == 'html') 
+			$("#loadDiv").load('loadedpage.html'); 	  
+		if (type == 'img') 
+			$("#loadDiv").load("loadedpage.html #maincontentx"); 	  
+    }
+    
+</script>
