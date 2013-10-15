@@ -19,7 +19,7 @@
             </li>
             <li>
                 <div class="containerD">
-                    <button id="btn1" onclick="getAttrMID(); return false;">Get MerchantID</button>
+                    <button id="btn1">Get MerchantID</button>
                     <button class="button" onclick="setAttrMID1(); return false;">Set MerchantID 10</button>
                     <button id="btn3" onclick="setAttrMID2(); return false;">Set MerchantID 10 + 5</button>
                     <button class="button" onclick="setAttrMID3(); return false;">Set MerchantID 20 and Add contractID 10</button>
@@ -98,35 +98,64 @@
 </html>
 <script src="../js/jquery-2.0.3.js"></script>
 <script>
-
     //Retrieve Attributes
     function getAttrMID() {
-
+        var mid = $('#mid').attr('merchantid');
+        $('#lblMID').html(mid);
     }
+
+    $(function () {
+        $('#btn1').off('click.btn1').on('click.btn1', function () {
+            getAttrMID();
+            return false;
+        });
+    });
+
+
     //Set Attributes – Type 01
     function setAttrMID1() {
-
+        $('#mid').attr('merchantid', '920');
+        getAttrMID();
     }
     //Set Attributes – Type 02 - function
     function setAttrMID2() {
-
+        $('#mid').attr('merchantid', function () {
+            return 520 + 10;
+        });
+        getAttrMID();
     }
     //Set Attributes – Type 03 - obj
     function setAttrMID3() {
+        var $mid = $('#mid');
+        $mid.attr({
+            'merchantid': 5003,
+            'contractid': 1314520
+        });
 
+        $mid
+            .siblings('span')
+            .after('<span>ContractID:<label id="lblCID">'
+                    + $mid.attr('contractid')
+                    + '</label></span>');
+        getAttrMID();
     }
     //Remove Attributes
     function removeAttrCntID() {
-
+        $('#mid').removeAttr('contractid');
+        $('#lblCID').parent('span').remove();
     }
     //each
     function getTotalBtns() {
-
+        var $bts = $('.containerD button');
+        $bts.each(function () {
+            $(this).addClass('marked');
+        });
+        $('#lbltbtns').html($bts.length);
     }
-
     //------------------------ Events
     //on - off (click)
-    //migrate previous click functions + Document Ready
+    //migrate previous click functions    
+
 
     //---------------------------------------------------------- Insert after - Melany
     function insertAfter() {
