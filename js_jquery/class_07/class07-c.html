@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body, div, ul, li, h1, h2, h3, h4, h5, form, input, textarea, p, table, tr, td
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+
+        .form
+        {
+            overflow: hidden;
+        }
+
+        body
+        {
+            background: #22252b;
+            color: #fff;
+        }
+
+        ul
+        {
+            list-style: none;
+            overflow: hidden;
+            text-align: justify;
+        }
+
+            ul li
+            {
+                padding: 5px;
+                border: 2px solid #5a5c63;
+            }
+
+        .maincontent
+        {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        a
+        {
+            color: #fff;
+            display: block;
+            text-decoration: none;
+        }
+
+        .containerP,
+        .containerD
+        {
+            overflow: hidden;
+        }
+
+            .containerD input, select, textarea
+            {
+                display: block;
+                margin: 2px;
+                color: #fff;
+                background: #01317d;
+            }
+
+            .containerD button
+            {
+                width: 50%;
+                float: left;
+            }
+
+            .containerP p
+            {
+                margin: 5px;
+                float: left;
+            }
+
+        .marked
+        {
+            border: 3px red solid;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincontent">
+        <ul class="form">
+            <li>
+                <input type="hidden" id="mid" merchantid="3" />
+                <span>MerchantID:
+                    <label id="lblMID"></label>
+                </span>
+            </li>
+            <li>
+                <span>Total of Buttons: </span>
+                <label id="lbltbtns">Temp Text</label>
+            </li>
+            <li>
+                <div class="containerD">
+                    <button id="btn1">Get MerchantID</button>
+                    <button class="button">Set MerchantID 10</button>
+                    <button id="btn3">Set MerchantID 10 + 5</button>
+                    <button class="button">Set MerchantID 20 and Add contractID 10</button>
+                    <button id="btn4">Remove contractID</button>
+                    <button id="btn5">Zoila</button>
+                    <button>GetTotalOfButtons</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="../js/jquery-2.0.3.js"></script>
+<script src="js/class07.js"></script>
+<script>
+    $(function () {
+        class07.init({
+            param1: 10
+        });
+    });
+</script>

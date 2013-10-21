@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="maincontent">
+        <ul class="form">
+            <li>
+                <input type="hidden" id="mid" merchantid="520" />
+                <span>MerchantID:
+                    <label id="lblMID"></label>
+                </span>
+            </li>
+            <li>
+                <span>Total of Buttons: </span>
+                <label id="lbltbtns"></label>
+            </li>
+            <li>
+                <div class="containerD">			
+					<button id="btn1" >Get MerchantID</button>
+                    <button id="btn2" class="button">Set MerchantID 10</button>
+                    <button id="btn3" >Set MerchantID 10 + 5</button>
+                    <button id="btn4" class="button">Set MerchantID 20 and Add contractID 10</button>
+                    <button id="btn5" >Remove contractID</button>
+                    <button id="btn6" >GetTotalOfButtons</button>
+                </div>
+            </li>
+         
+        </ul>
+    </div>
+</body>
+</html>
+<!--script src="../js/jquery-2.0.3.js"></script-->
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+
+
+$(function () {
+		$('#btn1').off('click.btn1').on('click.btn1', function(){
+			getAttrMID();
+			return false;
+		});
+		
+		$('#btn2').off('click.btn2').on('click.btn2', function(){
+		   $('#mid').attr('merchantid', '920');
+		   getAttrMID();
+		});
+		
+		$('#btn3').off('click.btn3').on('click.btn3', function(){
+		   $('#mid').attr('merchantid', function(){
+			return 520 + 10 ;
+			});
+			getAttrMID();
+		});
+		
+		$('#btn4').off('click.btn4').on('click.btn4', function(){
+		   		$('#mid').attr(
+				{
+					'merchantid': 5003,
+					'contractid': 1314520
+				});
+				
+				$('#mid')
+				 .siblings('span')
+				 .after('<span>ContractID:<label id="lblCID">' + $('#mid').attr('contractid') + '</label></span>');
+				 getAttrMID();
+		});
+		
+		$('#btn5').off('click.btn5').on('click.btn5', function(){
+			$('#mid').removeAttr('contractid');
+			$('#lblCID').parent('span').remove();
+		});
+		
+		$('#btn6').off('click.btn6').on('click.btn6', function(){
+		   $('.containerD button').each(function(i,obj) {
+			$(obj).addClass('marked');
+				});
+				
+				$('#lbltbtns').html($('.containerD button').length);
+		});
+
+	//Retrieve Attributes
+    function getAttrMID() {		
+	   var mid = $('#mid').attr('merchantid');
+		$('#lblMID').html(mid);		
+    }
+   
+});
+	
+	</script>

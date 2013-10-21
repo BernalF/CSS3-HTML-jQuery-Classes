@@ -22,7 +22,6 @@ moduloName = (function () {
     };
 
 
-
     // Public API - metodos publicos
     return {
         init: initialize
