@@ -191,7 +191,7 @@
             return false;
         });
         //each - GetTotalOfButtons and mark it
-        $('.containerD button:last').off('click.btn6').on('click.btn6', function () {
+        $('button:last').off('click.btn6').on('click.btn6', function () {
             var $btns = $('.containerD button');
             $btns.each(function () {
                 $(this).addClass('marked');
