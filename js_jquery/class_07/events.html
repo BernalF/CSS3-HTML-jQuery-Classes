@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body, div, ul, li, h1, h2, h3, h4, h5, form, input, textarea, p, table, tr, td
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+
+        body
+        {
+            background: #22252b;
+            color: #fff;
+        }
+
+        ul
+        {
+            list-style: none;
+            overflow: hidden;
+            text-align: justify;
+        }
+
+            ul li
+            {
+                padding: 5px;
+                border: 2px solid #5a5c63;
+            }
+
+        .maincontent
+        {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        a
+        {
+            color: #fff;
+            display: block;
+        }
+
+        .div
+        {
+            padding: 15px;
+            border: 2px solid #666;
+            margin-top: 10px;
+            height: 100px;
+        }
+
+            .div a
+            {
+                width: 80px;
+                font-size: small;
+            }
+
+        .red
+        {
+            border-color: red;
+        }
+
+        .green
+        {
+            border-color: #1eb70d;
+        }
+
+        .yellow
+        {
+            border-color: #c7b812;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincontent">
+        <ul id="usuarios">
+            <li>
+                <a href="#"></a>
+            </li>
+            <li>
+                <a href="#"></a>
+            </li>
+        </ul>
+        <div class="padre div green">
+            Padre
+        <a href="https://www.google.com/" target="_blank">Google</a>
+            <div class="hijo div yellow">
+                Hijo
+            <div class="nieto div red">
+                Nieto
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../js/jquery-2.0.3.js"></script>
+<script>
+    $(function () {
+        //----------------------------------------------------------------------------------------------------
+        //--> Manejo Eventos Jquery --------------------------------------------------------------------------            
+        /*
+            live() y bind() : V1.0 – Última actualización en V1.4.3
+            delegate(): V1.4.2 – Última actualización en V1.4.3
+            on(): V1.7
+        */
+        //--> Bind -------------------------------------------------------------------------------------------
+        //-- Asociar un evento a un elemento del DOM = onclick javascript
+        $('#usuarios li a').bind('click', function (e) { alert('bind'); });
+
+        $('#usuarios li a').click(function (e) { alert('click'); });
+        /* Contras
+            - No hay delegacion del evento para objetos nuevos
+            - La asociación del evento se hace de antemano y a todos los elementos del selector
+        */
+        //----------------------------------------------------------------------------------------------------
+        //--> Live -------------------------------------------------------------------------------------------
+        /*
+            Igual que el Bind con la diferencia que asocia el elemento al root del DOM, y cuando el
+            evento se dispara y llega al root se comprueba si el selector concuerda y ejecuta la funcion
+
+            Ventaja: se pueden crear cosas dinamicamente
+
+        */
+
+        // $("#usuarios li a").live("click", function (e) { alert('live'); });
+
+        /* Contras
+            - El chaining no funciona
+            - Obsoleto
+            - DOM grandes el perfomance baja
+        */
+        //----------------------------------------------------------------------------------------------------
+        //--> Delegate ---------------------------------------------------------------------------------------
+        /*
+            Asocia el evento a un selector en vez de asociar el selector y el evento al document
+        */
+        $("#usuarios").delegate("li a", "click", function (e) { alert('delegate'); });
+        /*
+            Pros: 
+                - Podemos elegir donde asociar el evento/selector
+                - Chaining funciona perfectamente
+                - Podemos usar la “magia” de live ya que si añadimos elementos dinamicamente estos 
+                  funcionaran correctamente.
+                - Aunque jQuery aun tiene que comparar los eventos con los selectores, al definir el propio 
+                  root los datos a comparar son muy inferiores. (mini contra)
+        */
+        //----------------------------------------------------------------------------------------------------
+        //--> on ---------------------------------------------------------------------------------------------
+        // - posee todas las ventajas de delegate() pero a su vez sirve como la función bind() - orden
+        // Bind
+        $("#usuarios li a").on("click", function (e) { alert('bind on'); });
+        $("#usuarios li a").bind("click", function (e) { alert('bind'); });
+        // Delegate
+        $("#usuarios").on("click", "li a", function (e) { alert('delegate on'); });
+        $("#usuarios").delegate("li a", "click", function (e) { alert('delegate'); });
+        /*
+            Pros
+                - Trae una forma secilla de usar todos los métodos y más facil de enteder
+                - Incluye todas las ventajas de delegate() y puede ser usado como bind()
+        */
+        //----------------------------------------------------------------------------------------------------
+        //--> Conclusiones -----------------------------------------------------------------------------------
+        /*       
+            - Usar bind() tiene un costo muy alto ya que asocia el evento a todos los selectores
+            - No debemos utilizar más live() ya que es un método antiguo y trae problemas de rendimiento.
+            - El nuevo on() reemplaza a bind() o delegate() según como sea usado.
+        */
+        //----------------------------------------------------------------------------------------------------
+        //--> Propagación de los eventos ---------------------------------------------------------------------
+        /*
+            Cuando se dispara un evento, se inicia una ascensión desde el elemento “SELECTOR-OBJETIVO” que lo 
+            desencadenó hasta llegar al  ”Document”, pasando por el ”Body”. Durante ese recorrido, cualquier
+            elemento que lo contenga (sea padre) al elemento que originó el evento, si tiene programado el 
+            mismo evento, éste será disparado una vez finalizado el anterior, y así sucesivamente hasta arriba.
+        */
+        //--> event.stopPropagation() ------------------------------------------------------------------------
+        $(".nieto").on("click", function (e) {
+            alert("nieto");
+            //alert("He hecho " + e.type + " en el elemento " + e.target.nodeName + " de la clase '.nieto'");
+            //alert("El ratón estaba en las coordenadas: x= " + e.pageX + " , y= " + e.pageY + "");
+            //e.stopPropagation();
+        });
+        $(".hijo").on("click", function (e) {
+            alert("hijo");
+            //alert("He hecho " + e.type + " en el elemento " + e.target.nodeName + " de la clase '.hijo'");
+            //alert("El ratón estaba en las coordenadas: x= " + e.pageX + " , y= " + e.pageY + "");
+            //e.stopPropagation();
+        });
+        $(".padre").on("click", function (e) {
+            alert("padre");
+            //alert("He hecho " + e.type + " en el elemento " + e.target.nodeName + " de la clase '.padre'");
+            //alert("El ratón estaba en las coordenadas: x= " + e.pageX + " , y= " + e.pageY + "");
+            //e.stopPropagation();
+        });
+        //----------------------------------------------------------------------------------------------------
+        //--> event.stopImmediatePropagation() ---------------------------------------------------------------
+        //$(".nieto").on("click", function (e) {
+        //    alert("clic en nieto");
+        //    //e.stopImmediatePropagation();
+        //});
+        //$(".nieto").on("click", function (e) {
+        //    alert("Este evento clic sobre la clase '.nieto' procedería de otra librería");
+        //});
+        //$(".nieto").on("click", function (e) {
+        //    alert("Y este clic, de una tercera librería, también sobre la clase '.nieto'");
+        //});
+        //----------------------------------------------------------------------------------------------------
+        //--> event.preventDefault() -------------------------------------------------------------------------
+        // Evitar la acción por defecto del navegador
+        //$(".padre").on("click", function (e) {
+            //return false;
+            // e.preventDefault();
+            //alert("padre");
+            // e.stopImmediatePropagation();
+        //});
+        //----------------------------------------------------------------------------------------------------
+    });
+</script>

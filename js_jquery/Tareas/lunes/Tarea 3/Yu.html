@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="maincontent">
+        <ul class="form">
+            <li>
+                <input type="hidden" id="mid" merchantid="520" />
+                <span>MerchantID:
+                    <label id="lblMID"></label>
+                </span>
+            </li>
+            <li>
+                <span>Total of Buttons: </span>
+                <label id="lbltbtns"></label>
+            </li>
+            <li>
+                <div class="containerD">
+                    <button id="btn1">Get MerchantID</button>
+                    <button class="button">Set MerchantID 920</button>
+                    <button id="btn3">Set MerchantID 520 + 10</button>
+                    <button class="button">Set MerchantID 570 and Add contractID 1314920</button>
+                    <button id="btn4">Remove Contract ID</button>
+                    <button> Counter..VIVA LA LOTERÍA :p </button>
+                </div>
+            </li>    
+        </ul>
+    </div>
+</body>
+</html>
+<script src="js/jquery-1.10.2.js"></script>
+<script>
+    //Retrieve Attributes
+    function getAttrMID() {
+        var mid = $('#mid').attr('merchantid');
+        $('#lblMID').html(mid);
+    }
+	
+	// get Merchant ID
+	$(function () {
+        $('#btn1').off('click.btn1').on('click.btn1',
+		function () {
+            getAttrMID();
+            return false;
+        });    
+	
+	// set Merchant ID 920
+	
+	        $('button.button:eq(0)').off('click.btn2').on('click.btn2', 
+			function() {
+            $('#mid').attr('merchantid', '920');
+            getAttrMID();
+            return false;
+        });
+		
+    // Set Merchant ID 520 + 10	     :D
+	        $('#btn3').off('click.btn3').on('click.btn3', 
+			function() {
+            $('#mid').attr('merchantid', function () {
+                return 520 + 10;
+            });
+            getAttrMID();
+            return false;
+            });
+	
+	// Set Merchant ID 570 & Contract ID 1314920
+	    $('button.button:eq(1)').off('click.btn5').on('click.btn5', 
+		function(){
+            $('#mid').attr({
+                'merchantid': 570,
+                'contractid': 1314920
+            });
+            getAttrMID();
+            $('#mid')
+                .siblings('span')
+                .after(
+                            '<span>ContractID: <defanghtml_label id="lblCID">'
+                            + $('#mid').attr('contractid')
+                            + '</defanghtml_label></span>'
+                        );
+            return false;
+        });
+	
+	// Remove Contract ID
+	$('#btn4').off('click.btn4').on('click.btn4', 
+	function(){
+            $('#mid').removeAttr('contractid');
+            $('#lblCID').parent('span').remove();
+           return false;
+    });		
+	
+	// Get Total of buttons
+	
+	        $('.containerD button:last').off('click.btn6').on('click.btn6', 
+			function(){
+             var $bts = $('.containerD button');
+              $bts.each(function () {
+              $(this).addClass('marked');
+            });
+              $('#lbltbtns').html($bts.length);
+            });
+	});	
+</script>

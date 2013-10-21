@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="maincontent">
+        <ul class="form">
+            <li>
+                <input type="hidden" id="mid" merchantid="520" />
+                <span>MerchantID:
+                    <label id="lblMID"></label>
+                </span>
+            </li>
+            <li>                
+                <span>Total of Buttons: </span>
+                <label id="lbltbtns"></label>
+            </li>
+            <li>
+                <div class="containerD">
+                    <button id="btn1">Get MerchantID</button>
+                    <button class="button">Set MerchantID 10</button>
+                    <button id="btn3">Set MerchantID 10 + 5</button>
+                    <button class="button">Set MerchantID 20 and Add contractID 10</button>
+                    <button id="btn4">Remove contractID</button>
+                    <button>GetTotalOfButtons</button>
+                </div>
+            </li>
+            <li>
+                <span class="title">--> InsertAfter: Melany Delgado</span>
+                <div id="hmundo">Hola mundo</div>
+                <button id="after" onclick="after()">After</button>
+                <button id="insertAfter" onclick="insertAfter()">Insert After</button>
+                <button id="insertAfterMove" onclick="insertAfterMove()">Insert After Move</button>
+            </li>
+            <li id="lupe">
+                <span class="title">--> InsertBefore: Guadalupe Campos</span>
+                <a href="http://www.mkyong.com/jquery/jquery-before-and-insertbefore-example/" target="_blank">Insert before reading</a>
+                <div class="div" style="background-color: blue;"></div>
+                <div class="div" style="background-color: green;"></div>
+                <div class="div" style="background-color: red;"></div>
+                <div class="div" id="source"></div>
+            </li>
+            <li id="yu">
+                <span class="title">--> append: Yu Hsuan Hsu</span>
+                <div id='app1'>I am </div>
+                <div id='app2' class="app2">You are not </div>
+                <button onclick="appendYu(); return false;">Who are you?</button>
+                <button onclick="appendToYu(this); return false;">appendTo Yu</button>
+            </li>
+            <li>
+                <span class="title">--> prepend: Andres Monge</span>
+                <div class="buttons">
+                    <input type="button" name="prepend" id="prepend" value="Prepend" onclick="prepend()">
+                    <input type="button" name="prependTo" id="prependTo" value="PrependTo" onclick="prependTo()">
+                    <input type="button" name="fua" id="fua" value="Fua" onclick="fua()">
+                </div>
+                <p id="parra">Juanito</p>
+            </li>
+            <li>
+                <span class="title">--> Load: Marco</span>
+                <button id="btnload1">Text</button>
+                <button id="btnload2">HTML</button>
+                <button id="btnload3">Partial</button>
+                <div class="div" id="loadDiv"></div>
+            </li>
+            <li>
+                <span class="title">--> empty: Berman Romero</span>
+                <p id="pempty">Hello, <span>Class</span> <em>and teacher</em>.</p>
+                <button id="empty">Call empty() on above paragraph</button>
+            </li>
+            <li>
+                <span class="title">--> replaceWith - replaceAll: Graciela Paniagua</span>
+                <div class="replacewith">
+                    <span>- replaceWith Example</span>
+                    <button id="changeP">Change paragraph</button>
+                    <p>This is a paragraph</p>
+                    <button class="addRed">First Button</button>
+                    <button class="addRed">Second Button</button>
+                    <button class="addRed">Third Button</button>
+
+                </div>
+                <hr />
+                <div class="replaceall">
+                    <span>- replaceAll Example</span>
+                    <button id="allA">Replace class a</button>
+                    <button id="allB">Replace class b</button>
+                    <button id="allC">Replace last p</button>
+                    <p class="a">First paragraph</p>
+                    <p class="b">Second paragraph</p>
+                    <p class="c">Last paragraph</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="../jquery-2.0.3.min.js"></script>
+<script>
+	
+	$(function(){
+		$('#btn1').off('click.btn1').on('click.btn1',function(){
+			getAttrMID();
+			return false;
+		});
+		$('#btn1').next('.button').off('click.btn2').on('click.btn2',function(){
+			setAttrMID1(); 
+			return false;
+		});	
+		$('#btn3').off('click.btn3').on('click.btn3',function(){
+			setAttrMID2(); 
+			return false;
+		});	
+		$('#btn3').next('.button').off('click.btn4').on('click.btn4',function(){
+			setAttrMID3(); 
+			return false;
+		});	
+		$('#btn4').off('click.btn5').on('click.btn5',function(){
+			removeAttrCntID();
+			return false;
+		});	
+		$('#btn4').next('button').off('click.btn6').on('click.btn6',function(){
+			getTotalBtns(); 
+			return false;
+		});	
+	});
+	
+    //Retrieve Attributes
+    function getAttrMID() {
+						var mid = $('#mid').attr('merchantid');
+						$('#lblMID').html(mid);
+    }
+    //Set Attributes – Type 01
+    function setAttrMID1() {
+						$('#mid').attr('merchantid','920');
+						getAttrMID();
+    }
+    //Set Attributes – Type 02 - function
+    function setAttrMID2() {
+							$('#mid').attr('merchantid',function(){
+											return 520 + 10;							
+							});
+							getAttrMID();
+    }
+    //Set Attributes – Type 03 - obj
+    function setAttrMID3() {
+    				var $mid = $('#mid');
+							//$('#mid').attr('merchantid',5003).attr('contractid',900045365);
+							$mid.attr({
+															'merchantid':5003,
+															'contractid':900045365
+							});
+							
+							$mid
+															.siblings('span')
+															.after('<span>ContractID:<label id="lblCID">'
+																	+$mid.attr('contractid')
+																	+'</label></span>');
+							getAttrMID();								
+															
+    }
+    //Remove Attributes
+    function removeAttrCntID() {
+						$('#mid').removeAttr('contractid');
+						$('#lblCID').parent('span').remove();
+    }
+    //each
+    function getTotalBtns() {//lbltbtns
+    var $btn=$('.containerD button');
+							$btn.each(function(i,obj){
+											$(obj).addClass('marked');
+							});
+							$('#lbltbtns').html($btn.length);
+    }
+
+    //------------------------ Events
+    //on - off (click)
+    //migrate previous click functions + Document Ready
+
+    //---------------------------------------------------------- Insert after - Melany
+    function insertAfter() {
+        $("<div class='divGreen'>Insert After</div>").insertAfter("#hmundo");
+    }
+    function insertAfterMove() {
+        $("#hmundo").insertAfter(".divGreen");
+    }
+    function after() {
+        $("#hmundo").after("<div class='blueDiv'>After</div>");
+    }
+    //---------------------------------------------------------- Insert before - Lupe
+    $("#lupe .div").click(function () {
+        $("#source").insertBefore(this);
+    });
+    //---------------------------------------------------------- append - Yu
+    function appendToYu(btn) {
+        $(btn).appendTo("#app1");
+        $("<b>Yu </b>").appendTo("#app1");
+        $("<b>me </b>").appendTo("#app2");
+    }
+    function appendYu() {
+        $("#app1").append("<b>Yu </b>");
+        $("#app2").append("<b>me </b>");
+    }
+    //---------------------------------------------------------- prepend - Andres
+    function prepend() {
+        $('#parra').prepend(" <b class='parra1'>Hello</b> ");
+        $(".parra2").hide();
+        $(".fua").hide();
+    }
+
+    function prependTo() {
+        $("<b class='parra2'>Bye</b> ").prependTo('#parra');
+        $(".parra1").hide();
+        $(".fua").hide();
+    }
+
+    function fua() {
+        //var a= document.getElementById('parra');
+        $("<img src='images/fua.jpg' width='100px' height='100px'> class='fua'").prependTo('#parra');
+        $(".parra1").hide();
+        $(".parra2").hide();
+    }
+    //---------------------------------------------------------- load - Marco
+    function loadButton(type) {
+        if (type == 'txt')
+            $("#loadDiv").load('loadfiles/loadedText.txt');
+        if (type == 'html')
+            $("#loadDiv").load('loadfiles/loadedpage.html');
+        if (type == 'img')
+            $("#loadDiv").load("loadfiles/loadedpage.html #maincontentx");
+    };
+
+    $("#btnload1").click(function () {
+        loadButton('txt');
+    });
+    $("#btnload2").click(function () {
+        loadButton('html');
+    });
+    $("#btnload3").click(function () {
+        loadButton('img');
+    });
+
+    //---------------------------------------------------------- Empty - Berman
+    $("#empty").click(function () {
+        $("#pempty").empty();
+    });
+
+    //---------------------------------------------------------- replaceWith - replaceAll - Graciela
+    $("#changeP").click(function () {
+        $(this).replaceWith("<ul class='lists'><li>List1</li><li>List2</li><li>List3</li><li>List4</li></ul>");
+    });
+    $("button.addRed").click(function () {
+        $(this).replaceWith("<div class='replacewith div'>" + $(this).text() + "</div>");
+    });
+    $("#allA").click(function () {
+        $('<p class="marked">The First!</p>').replaceAll(".a");
+    });
+    $("#allB").click(function () {
+        $('<p class="underline">Second paragraph</p>').replaceAll("p.b");
+    });
+    $("#allC").click(function () {
+        $("<span><b>This is the last 'p'</b></span>").replaceAll("p:last");
+    });
+
+</script>

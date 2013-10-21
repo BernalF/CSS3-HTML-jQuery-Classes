@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="maincontent">
+        <ul class="form">
+            <li>
+                <input type="hidden" id="mid" merchantid="520" />
+                <span>MerchantID:
+                    <label id="lblMID"></label>
+                </span>
+            </li>
+            <li>
+                <span>Total of Buttons: </span>
+                <label id="lbltbtns"></label>
+            </li>
+            <li>
+                <div class="containerD">
+                    <button id="btn1">Get MerchantID</button>
+                    <button class="button">Set MerchantID 10</button>
+                    <button id="btn3">Set MerchantID 10 + 5</button>
+                    <button class="button">Set MerchantID 20 and Add contractID 10</button>
+                    <button id="btn4" >Remove contractID</button>
+                    <button>GetTotalOfButtons</button>
+                </div>
+            </li>   
+        </ul>
+    </div>
+</body>
+</html>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    
+ //Tarea Andres Monge Villalobos    
+    
+ $(document).ready(function(){
+    
+     //Button 1//
+     $('#btn1').off('click.butt1').on('click.butt1',function(){
+        getAttrMID();
+        return false;
+     });
+     
+     
+     //Button 2//
+     $('.button:eq(0)').off('click.butt2').on('click.butt2',function(){     
+        $('#mid').attr('merchantid',function(){
+         return 520 + 10;
+       }) 
+        getAttrMID();
+        return false;
+     });
+     
+     
+     //Button 3//
+     $('#btn3').off('click.butt3').on('click.butt3',function(){     
+        $('#mid').attr('merchantid',function(){
+         return 520 + 5 + 10;
+       }) 
+        getAttrMID();
+        return false;
+     });
+     
+     
+     //Button 4
+      $('.button:last').off('click.butt4').on('click.butt4',function(){   
+        $('#mid').attr({
+            'merchantid':5040,
+            'contractid':1314520
+            });
+          
+        getAttrMID();
+          
+        $('#mid')
+        .siblings('span')
+        .after('<span>ContractID:<label id="lblCID">'+ $('#mid').attr('contractid') +'</label></span>')
+        
+        return false;
+     });
+
+     
+     //Button 5//
+     $('#btn4').off('click.butt5').on('click.butt5',function(){     
+        $('#mid').removeAttr('contractid');
+        $('#lblCID').parent('span').remove();
+        return false;
+     });
+     
+     
+      //Button 6//
+     $('button:last').off('click.butt6').on('click.butt6',function(){     
+       var $bts = $('.containerD button')
+        
+       $bts.each(function(i, obj){
+          $(obj).addClass('marked');
+       });
+        
+      $('#lbltbtns').html($bts.length);
+        return false;
+     });
+     
+    
+    });
+    
+    //Retrieve Attributes
+    function getAttrMID() {
+     var mid = $('#mid').attr('merchantid');
+      $('#lblMID').html(mid);
+    }
+    
+    
+</script>
