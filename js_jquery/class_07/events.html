@@ -179,7 +179,7 @@
             alert("nieto");
             //alert("He hecho " + e.type + " en el elemento " + e.target.nodeName + " de la clase '.nieto'");
             //alert("El ratón estaba en las coordenadas: x= " + e.pageX + " , y= " + e.pageY + "");
-            //e.stopPropagation();
+            e.stopPropagation();
         });
         $(".hijo").on("click", function (e) {
             alert("hijo");
@@ -194,26 +194,26 @@
             //e.stopPropagation();
         });
         //----------------------------------------------------------------------------------------------------
-        //--> event.stopImmediatePropagation() ---------------------------------------------------------------
-        //$(".nieto").on("click", function (e) {
-        //    alert("clic en nieto");
-        //    //e.stopImmediatePropagation();
-        //});
-        //$(".nieto").on("click", function (e) {
-        //    alert("Este evento clic sobre la clase '.nieto' procedería de otra librería");
-        //});
-        //$(".nieto").on("click", function (e) {
-        //    alert("Y este clic, de una tercera librería, también sobre la clase '.nieto'");
-        //});
+        //--> event.stopImmediatePropagation() ---------------------------------------------------------------        
+        $(".nieto").on("click", function (e) {
+            alert("clic en nieto");
+            e.stopImmediatePropagation();
+        });
+        $(".nieto").on("click", function (e) {
+            alert("Este evento clic sobre la clase '.nieto' procedería de otra librería");
+        });
+        $(".nieto").on("click", function (e) {
+            alert("Y este clic, de una tercera librería, también sobre la clase '.nieto'");
+        });
         //----------------------------------------------------------------------------------------------------
         //--> event.preventDefault() -------------------------------------------------------------------------
         // Evitar la acción por defecto del navegador
-        //$(".padre").on("click", function (e) {
-            //return false;
-            // e.preventDefault();
-            //alert("padre");
+        $(".padre").on("click", function (e) {
+            return false;
+            //e.preventDefault();
+           // alert("padre");
             // e.stopImmediatePropagation();
-        //});
+        });
         //----------------------------------------------------------------------------------------------------
     });
 </script>
