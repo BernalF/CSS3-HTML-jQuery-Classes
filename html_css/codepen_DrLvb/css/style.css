@@ -1,0 +1,88 @@
+@import url(http://fonts.googleapis.com/css?family=Oxygen:300);
+@import url(http://weloveiconfonts.com/api/?family=maki);
+[class*="maki-"]:before {
+  font-family: 'maki', sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oxygen', sans-serif;
+  font-size: medium;
+  line-height: 1.4;
+}
+
+.pizza-link {
+  display: block;
+  width: 230px;
+  border: 1px solid #ccc;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  padding: 1.5em;
+  margin: 1.5em;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+.pizza-link h3 {
+  border-bottom: 1px solid #eee;
+  padding: 3.5em 0 0.75em 0;
+  margin: 0 0 0.75em 0;
+  position: relative;
+}
+.pizza-link p {
+  color: #999;
+  margin: 0;
+  position: relative;
+  font-size: 0.9rem;
+}
+.pizza-link h3, .pizza-link p {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.pizza-link .icon {
+  position: absolute;
+  color: white;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  font-size: 1.5em;
+  margin-left: -25px;
+  left: 50%;
+}
+.pizza-link:before {
+  content: "";
+  background: #D62121;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  left: 50%;
+  margin-left: -25px;
+  -webkit-transition: width 0.2s, left 0.2s, margin-left 0.2s, top 0.2s, height 0.2s;
+  -webkit-transition-delay: 0s, 0s, 0s, 0.2s, 0.2s;
+  -moz-transition: width 0.2s, left 0.2s, margin-left 0.2s, top 0.2s 0.2s, height 0.2s 0.2s;
+  -o-transition: width 0.2s, left 0.2s, margin-left 0.2s, top 0.2s 0.2s, height 0.2s 0.2s;
+  transition: width 0.2s, left 0.2s, margin-left 0.2s, top 0.2s 0.2s, height 0.2s 0.2s;
+}
+.pizza-link:hover h3, .pizza-link:active h3 {
+  color: white;
+  border-bottom-color: #E14646;
+}
+.pizza-link:hover p, .pizza-link:active p {
+  color: white;
+}
+.pizza-link:hover:before, .pizza-link:active:before {
+  width: 230px;
+  left: 0;
+  top: 0;
+  margin-left: 0;
+  height: 320px;
+}

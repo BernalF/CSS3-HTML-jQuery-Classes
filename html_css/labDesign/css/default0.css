@@ -1,155 +1,109 @@
-﻿    body
+﻿@import url(http://fonts.googleapis.com/css?family=Oxygen:300);
+@import url(http://weloveiconfonts.com/api/?family=maki);
+
+[class*="maki-"]:before
 {
-    background-color: #a37f1d;
+    font-family: 'maki', sans-serif;
 }
 
-.header, h1, ul, li a
+*
 {
-    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.logo
+body
 {
-    background-color: #4ab7ba;
+    font-family: 'Oxygen', sans-serif;
+    font-size: medium;
+    line-height: 1.4;
 }
 
-    .logo a
-    {
-        background-color: #5934aa;
-        display: block;
-        padding: 10px;
-        line-height: 20px;
-        color: #fff;
-        font-size: 30px;
-    }
-
-.sample
+.pizza-link
 {
-    overflow: hidden;
-    background-color: #740fcc;
-}
-
-    .sample li
-    {
-        float: left;
-        background-color: #bee909;
-        margin: 5px;
-        width: 6.5%;
-        padding: 5px;
-    }
-
-        .sample li a
-        {
-            display: block;
-        }
-
-.maincontent
-{
-    margin: 0 0 0 10px;
-    width: 79%;
-    background-color: #289a43;
-    height: 100%;
+    display: block;
+    width: 230px;
+    border: 1px solid #ccc;
     float: left;
+    position: relative;
     overflow: hidden;
+    padding: 1.5em;
+    margin: 1.5em;
+    text-align: center;
+    text-decoration: none;
+    color: black;
 }
 
-.blueAside
-{
-    margin: 0 10px 10px;
-    width: 17%;
-    background-color: #080a2c;
-    height: 100%;
-    float: right;    
-}
-
-    .blueAside li
+    .pizza-link h3
     {
-        padding: 20px;
-        background-color: #4857d1;
-        padding: 10px;
-        margin: 10px;
+        border-bottom: 1px solid #eee;
+        padding: 3.5em 0 0.75em 0;
+        margin: 0 0 0.75em 0;
+        position: relative;
     }
 
-.footer
-{
-    background-color: #3EF509;
-    height: 60px;
-    margin: 0 0 0 10px;
-    overflow: hidden;
-    width: 98.5%;
-}
-
-.top
-{
-    background-color: #66e0ed;
-    margin: 10px 10px 0 20px;
-    padding: 20px;
-}
-
-.rightContent
-{
-    float: left;
-    overflow: hidden;
-    padding: 10px;
-    width: 77%;
-}
-
-    .rightContent li
+    .pizza-link p
     {
-        background-color: #d1e9e0;
-        padding: 10px;
-        margin: 10px;
+        color: #999;
+        margin: 0;
+        position: relative;
+        font-size: 0.9rem;
     }
 
-    
-.rightContent li:first-child{
-    height: 40px;
-}
-
-.rightContent li:last-child{
-    height: 20px;
-}
-
-.rightContent li:nth-child(2n){
-    height: 20px;
-}
-
-.leftContent {
-    float: right;
-    overflow: hidden;    
-    top: 0;
-    width: 17%;
-}
-
-    .leftContent li
+    .pizza-link h3, .pizza-link p
     {
-        background-color: #D1E9E0;
-        margin: 10px 0;    
-        width: 100%;
-        height: 10px;
+        -webkit-transition: 0.2s;
+        -moz-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
     }
 
-.leftContent li:first-child{
-    height: 40px;
-}
+    .pizza-link .icon
+    {
+        position: absolute;
+        color: white;
+        width: 50px;
+        height: 50px;
+        line-height: 40px;
+        font-size: 1.5em;
+        margin-left: -25px;
+        left: 50%;
+    }
 
-.leftContent li:nth-child(2n){
-    height: 20px;
-}
+    .pizza-link:before
+    {
+        content: "";
+        background: #D62121;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 20px;
+        left: 50%;
+        margin-left: -25px;
+        -webkit-transition: width 0.2s, left 0.2s, margin-left 0.2s, top 0.2s, height 0.2s;
+        -webkit-transition-delay: 0s, 0s, 0s, 0.2s, 0.2s;
+        -moz-transition: width 0.2s, left 0.2s, margin-left 0.2s, top 0.2s 0.2s, height 0.2s 0.2s;
+        -o-transition: width 0.2s, left 0.2s, margin-left 0.2s, top 0.2s 0.2s, height 0.2s 0.2s;
+        transition: width 0.2s, left 0.2s, margin-left 0.2s, top 0.2s 0.2s, height 0.2s 0.2s;
+    }
 
-.leftContent li:last-child{
-    height: 40px;
-}
+    .pizza-link:hover h3, .pizza-link:active h3
+    {
+        color: white;
+        border-bottom-color: #E14646;
+    }
 
-.bottom
-{
-    background-color: #195824;
-    bottom: 0;
-    float: left;
-    margin: 0 10px 10px 20px;
-    overflow: hidden;
-    padding: 20px;
-    width: 93%;
-}
+    .pizza-link:hover p, .pizza-link:active p
+    {
+        color: white;
+    }
 
-
+    .pizza-link:hover:before, .pizza-link:active:before
+    {
+        width: 230px;
+        left: 0;
+        top: 0;
+        margin-left: 0;
+        height: 320px;
+    }
