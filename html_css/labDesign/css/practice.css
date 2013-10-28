@@ -1,0 +1,68 @@
+﻿.blue
+{
+     background-color: #0026ff;
+     width:200px;
+     height:200px;
+     top:250px;
+     left:575px;
+     position:fixed;
+     z-index:1;
+}
+
+.trapezoid
+{
+    border-bottom: 100px solid red;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height:0px;
+    width:100px;
+    top:150px;
+    left:575px;
+    position:fixed;
+    z-index:2;
+}
+
+.door
+{
+     background-color: #221212;
+     width:35px;
+     height:85px;
+     top:364px;
+     left:660px;
+     position:fixed;
+     z-index:3;
+}
+
+
+.window1
+{
+     background-color: #ffd800;
+     width:55px;
+     height:55px;
+     top:285px;
+     left:700px;
+     position:fixed;
+     z-index:4;
+}
+
+.window2
+{
+     background-color: #ffd800;
+     width:55px;
+     height:55px;
+     top:285px;
+     left:600px;
+     position:fixed;
+     z-index:5;
+}
+
+.roof
+{
+     background-color: #ff6a00;
+     width:35px;
+     height:55px;
+     top:95px;
+     left:685px;
+     position:fixed;
+     z-index:6;
+}

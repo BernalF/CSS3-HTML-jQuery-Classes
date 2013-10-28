@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@import url(http://fonts.googleapis.com/css?family=Oxygen:300);
 @import url(http://weloveiconfonts.com/api/?family=maki);
 
@@ -107,3 +108,67 @@ body
         margin-left: 0;
         height: 320px;
     }
+=======
+﻿.maincontent
+{    
+    width: 1000px;
+    background-color: #289a43;
+    height: 600px;  
+}
+
+
+.ulhover
+{
+     background-color: #ff6a00;
+}
+
+    .ulhover li
+    {
+        background-color: #070b64;
+    color:#fff;
+        width:300px;
+        height:60px;
+        margin: 5px;
+    }
+.ulhover li:hover
+{
+    background-color: #fff;
+    color:#070b64;
+}
+
+.ulbefore
+{
+    background-color:#4cff00;
+    color:white;
+}
+
+.ulbefore li
+{
+    background-color:#00c5c5;
+    color:#000;
+    padding:10px;
+}
+
+    .ulbefore li:before
+    {
+        content:"Your name is: ";
+        font-weight:bold;
+    }
+
+    .ulbefore li:hover:before
+    {
+        background: red;
+    }
+
+.ulafter
+{
+    background-color:#00c5c5;
+    color:#fae70f;
+    padding:10px;
+}
+
+    .ulafter li:after
+    {
+        content:" championships:  " attr(championship);
+    }
+>>>>>>> 44ea4c8e1ab33cc8e8d885bf768d3f13093e03f4
