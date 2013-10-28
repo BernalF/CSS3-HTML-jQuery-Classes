@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Best Practices</title>
+    <style>
+        body
+        {
+            background: #22252b;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
+<script src="../js/jquery-2.0.3.js"></script>
+<script>
+    //----------------------------------------------------------------------------------------------------
+    //--> jQuery Ready Event -----------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------------------------
+    // ----- Most Projects do this
+    $("document").ready(function () {
+        // The DOM is ready!
+        // The rest of the code goes here
+    });
+    //  ----- Or use a shorter version...
+    $(function () {
+        // The DOM is ready!
+        // The rest of the code goes here
+    });
+    /*  ----- This is fine...
+        If you know the environments where your code will run
+        If you do not care about page load performance
+        If you don't care about best practices
+    */
+
+    //----------------------------------------------------------------------------------------------------
+    //  ----- This is Better http://jsbin.com/onahin/4/edit
+    // IIFE - Immediately Invoked Function Expression
+    (function ($, window, document) {
+        // The $ is now locally scoped 
+
+        // Listen for the jQuery ready event on the document
+        $(function () {
+            // The DOM is ready!
+            console.log('The DOM is ready!');
+        });
+        // The rest of the code goes here!
+        console.log('The DOM may not be ready!');
+    }(window.jQuery, window, document));
+    // The global jQuery object is passed as a parameter
+
+    //----------------------------------------------------------------------------------------------------
+    //  ----- This is Best http://jsbin.com/aseyaz/4/edit
+    // IIFE - Immediately Invoked Function Expression
+    (function (yourcode) {
+        // The global jQuery object is passed as a parameter
+        yourcode(window.jQuery, window, document);
+    }(function ($, window, document) {
+        // The $ is now locally scoped 
+
+        // Listen for the jQuery ready event on the document
+        $(function () {
+            // The DOM is ready!
+            console.log('The DOM is ready');
+        });
+        console.log('The DOM may not be ready');
+        // The rest of the code goes here!        
+    }));
+
+    //----------------------------------------------------------------------------------------------------
+    //--> DOM manipulation -------------------------------------------------------------------------------   
+    //----------------------------------------------------------------------------------------------------
+
+    // ----- Most Projects do this
+    // Set's an element's title attribute using it's current text
+    $(".container input#elem").attr("title", $(".container input#elem").text());
+
+    // Set's an element's text color to red
+    $(".container input#elem").css("color", "red");
+
+    // Makes the element hide
+    $(".container input#elem").hide();
+    /*  ----- This is fine...        
+        If you like repeating yourself
+        If you do not care about performance
+        If you don't care about best practices
+    */
+
+    //----------------------------------------------------------------------------------------------------
+    //  ----- This is Better
+    // Set's an element's title attribute using it's current text
+    $("#elem").attr("title", $("#elem").text());
+
+    // Set's an element's text color to red
+    $("#elem").css("color", "red");
+
+    // Makes the element hide
+    $("#elem").hide();
+    //----- Simplify your selectors
+
+    //----------------------------------------------------------------------------------------------------
+    //  ----- This is Best
+    // Stores the live DOM element inside of a variable
+    var elem = $("#elem");
+
+    // Set's an element's title attribute using it's current text
+    elem.attr("title", elem.text());
+
+    // Set's an element's text color to red
+    elem.css("color", "red");
+
+    // Makes the element hide
+    elem.hide();
+    //----- Cache your selectors in variables
+
+    // ----- or use a shorter version...
+    // Stores the live DOM element inside of a variable
+    var elem = $("#elem");
+    elem.attr("title", elem.text()).css("color", "red").hide();
+    //----- Chaining
+
+    //----------------------------------------------------------------------------------------------------
+    // ----- Most Projects do this
+    // Dynamically building an unordered list from an array
+    var localArr = ["Jimena", "Maria", "Belen", "Paco", "Lola"],
+      list = $("ul.people");
+    $.each(localArr, function (index, value) {
+        list.append("<li id=" + index + ">" + value + "</li>");
+    });
+    /*  ----- This is fine...                
+        If you like repeatedly appending elements to the DOM
+        If you like slow web apps
+        If you don't care about best practices
+    */
+    //  ----- This is Better
+    // Dynamically building an unordered list from an array
+    var localArr = ["Jimena", "Maria", "Belen", "Paco", "Lola"],
+      list = $("ul.people"),
+      dynamicItems = "";
+
+    $.each(localArr, function (index, value) {
+        dynamicItems += "<li id=" + index + ">" + value + "</li>";
+    });
+
+    list.append(dynamicItems);
+    //----- Append once
+
+    //----------------------------------------------------------------------------------------------------
+    //  ----- This is Best
+    var localArr = ["Jimena", "Maria", "Belen", "Paco", "Lola"],
+      list = $("ul.people"),
+      dynamicItems = [];
+
+    $.each(localArr, function (index, value) {
+        dynamicItems.push('<li id="');
+        dynamicItems.push(index);
+        dynamicItems.push('">');
+        dynamicItems.push(value);
+        dynamicItems.push('</li>');
+    });
+
+    list.append(dynamicItems.join(''));
+    //----- avoid concatenate with +
+
+    //----------------------------------------------------------------------------------------------------
+    //--> Event Handling ---------------------------------------------------------------------------------   
+    //----------------------------------------------------------------------------------------------------
+
+    // ----- Most Projects do this
+    $("#longlist li").on("mouseenter", function () {
+        $(this).text("Click me!");
+    });
+
+    $("#longlist li").on("click", function () {
+        $(this).text("Why did you click me?!");
+    });
+    /*  ----- This is fine...       
+        If you like using a lot of memory for event handlers
+        If you don't have many DOM elements
+        If you don't care about best practices
+    */
+    //----------------------------------------------------------------------------------------------------
+    //  ----- This is Better
+    var listItems = $("#longlist li");
+    listItems.off('mouseenter.list click.list').on({
+        "mouseenter.list": function () {
+            $(this).text("Click me!");
+        },
+        "click.list": function () {
+            $(this).text("Why did you click me?!");
+        }
+    });
+    //----- Don't Repeat Yourself
+
+    //----------------------------------------------------------------------------------------------------
+    //  ----- This is Best
+    var list = $("#longlist");
+    list.off("mouseenter.list", "li").on("mouseenter.list", "li", function () {
+        $(this).text("Click me!");
+    });
+    list.off("click.list", "li").on("click.list", "li", function () {
+        $(this).text("Why did you click me?!");
+    });
+    //----- Event Delegation
+
+    //----------------------------------------------------------------------------------------------------
+    //--> AJAX -------------------------------------------------------------------------------------------   
+    //----------------------------------------------------------------------------------------------------
+
+    // ----- Most Projects do this
+    function getName(personid) {
+        var dynamicData = {};
+        dynamicData["id"] = personID;
+        $.ajax({
+            url: "getName.php",
+            type: "get",
+            data: dynamicData,
+            success: function (data) {
+                // Updates the UI based the ajax result
+                $(".person-name").text(data.name);
+            }
+        });
+    }
+    getName("2342342");
+    /*  ----- This is fine...   
+       If you like inflexible code
+       If you don't have to worry about multiple ajax requests
+       If you don't care about best practices
+   */
+
+    //----------------------------------------------------------------------------------------------------
+    //  ----- This is Best
+    function getName(personid) {
+        var dynamicData = {};
+        dynamicData["id"] = personID;
+        return $.ajax({
+            url: "getName.php",
+            type: "get",
+            data: dynamicData
+        });
+    }
+    getName("2342342").done(function (data) {
+        // Updates the UI based the ajax result
+        $(".person-name").text(data.name);
+    });
+
+    //----- Uses Promises(object that represents a one-time event), Very Flexible http://www.funcion13.com/2012/03/26/comprendiendo-promesas-y-deferreds-en-jquery/
+
+    //----------------------------------------------------------------------------------------------------
+    //--> 5 Tips for More Efficient jQuery Selectors http://www.sitepoint.com/efficient-jquery-selectors/   
+
+</script>
