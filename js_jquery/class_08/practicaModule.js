@@ -68,7 +68,11 @@ practicaModule = (function () {
             tr.push('<tr><td><button edit>Edit</button></td><td><button del>Delete</button></td><td>');
             tr.push('<span name>' + $nameVal.val() + '</span><input style="display:none;" type="text" name/>');
             tr.push('</td><td>');
-            tr.push('<span genre sval="' + $genreVal.val() + '">' + $genreVal.text() + '</span><select style="display:none;width: 90px;"><option value="M">Male</option><option value="F">Female</option></select>');
+            tr.push('<span genre sval="');
+            tr.push($genreVal.val());
+            tr.push('">');
+            tr.push($genreVal.text());
+            tr.push('</span><select style="display:none;width: 90px;"><option value="M">Male</option><option value="F">Female</option></select>');
             tr.push('</td></tr>');
             $('#tbody').append(tr.join(''));
             $nameVal.val('');
