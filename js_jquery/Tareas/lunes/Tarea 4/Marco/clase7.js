@@ -1,50 +1,57 @@
-﻿var ACME = ACME || {};
+var ACME = ACME || {};
 
-ACME.button1 = (function () {
+ACME.class07 = (function(){
+    
     var options = {};
-	
-    var initialize = function (opts) {
-        $.extend(options, opts);
-        btn1HandleClick();
-		btn2HandleClick();
-		btn3HandleClick();
-		btn4HandleClick();
-		btn5HandleClick();
-		btn6HandleClick();		
+        
+    var initialize = function(opts){
+        $.extend(options,opts);    
+        btn1HandlerClick();
+        btn2HandlerClick();
+        btn3HandlerClick();
+        btn4HandlerCLick();
+        btn5HandlerClick();
+        btn6HandlerClick();
     };
-
+    
+    //Retrieve Attributes
     var getAttrMID = function () {
         var mid = $('#mid').attr('merchantid');
         $('#lblMID').html(mid);
     };
-
-    var btn1HandleClick = function () {
+    
+    var btn1HandlerClick = function(){
+        
         $('#btn1').off('click.btn1').on('click.btn1', function (e) {
             getAttrMID();
             e.stopPropagation();
         });
+    
     };
-	
-	var btn2HandleClick = function () {
-        $('button.button:eq(0)').off('click.btn2').on('click.btn2', function () {
+    
+    var btn2HandlerClick = function(){
+          $('button.button:eq(0)').off('click.btn2').on('click.btn2', function (e) {
             $('#mid').attr('merchantid', '920');
             getAttrMID();
             e.stopPropagation();
         });
+
     };
-	
-	 var btn3HandleClick = function () {
-        $('#btn3').off('click.btn3').on('click.btn3', function () {
+    
+    var btn3HandlerClick = function(){
+        $('#btn3').off('click.btn3').on('click.btn3', function (e) {
             $('#mid').attr('merchantid', function () {
                 return 520 + 10;
             });
             getAttrMID();
             e.stopPropagation();
         });
+        
     };
-	
-	var btn4HandleClick = function () {
-        $('button.button:last').off('click.btn4').on('click.btn4', function () {
+    
+    var btn4HandlerCLick = function(){
+    
+          $('button.button:last').off('click.btn4').on('click.btn4', function (e) {
             $('#mid').attr({
                 'merchantid': '520',
                 'contractid': '1314520'
@@ -57,21 +64,25 @@ ACME.button1 = (function () {
                             + $('#mid').attr('contractid')
                             + '</label></span>'
                         );
-            e.stopPropagation();
+            
         });
+    
     };
-	
-	 var btn5HandleClick = function () {
-         $('#btn4').off('click.btn4').on('click.btn4', function () {
+    
+    var btn5HandlerClick= function(){
+    
+        $('#btn4').off('click.btn4').on('click.btn4', function (e) {
             var $mid = $('#mid');
             $mid.removeAttr('contractid');
             $mid.siblings('span:eq(1)').remove();
             e.stopPropagation();
         });
+        
     };
     
-	var btn6HandleClick = function () {
-        $('button:last').off('click.btn6').on('click.btn6', function () {
+    var btn6HandlerClick = function(){
+    
+        $('button:last').off('cick.btn6').on('click.btn6', function () {
             var $btns = $('.containerD button');
             $btns.each(function () {
                 $(this).addClass('marked');
@@ -79,7 +90,20 @@ ACME.button1 = (function () {
             $('#lbltbtns').html($btns.length);
         });
     };
-    return {
+    
+    return{
         init: initialize
     };
+
+    
 })();
+
+/*
+ 
+
+        
+
+      
+        
+        
+*/

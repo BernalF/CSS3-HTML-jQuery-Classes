@@ -44,6 +44,7 @@
         {
             color: #fff;
             display: block;
+            text-decoration: none;
         }
 
         .containerP,
@@ -79,36 +80,6 @@
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
         }
-
-        .div
-        {
-            margin: 10px;
-            padding: 12px;
-            border: 2px solid #666;
-            width: 100px;
-            height: 100px;
-        }
-
-            .div a
-            {
-                width: 80px;
-                font-size: small;
-            }
-
-        .red
-        {
-            border-color: red;
-        }
-
-        .green
-        {
-            border-color: #1eb70d;
-        }
-
-        .yellow
-        {
-            border-color: #c7b812;
-        }
     </style>
 </head>
 <body>
@@ -126,11 +97,11 @@
             </li>
             <li>
                 <div class="containerD">
-                    <button id="btn1">Get YuplopID</button>
-                    <button class="button">Set YuplopID 920</button>
-                    <button id="btn3">Set YuplopID 520 + 10</button>
-                    <button class="button">Set YuplopID 520 and Add BerplopID 1314520</button>
-                    <button id="btn4">Remove BerplopID</button>
+                    <button id="btn1">Get MerchantID</button>
+                    <button class="button">Set MerchantID 920</button>
+                    <button id="btn3">Set MerchantID 520 + 10</button>
+                    <button class="button">Set MerchantID 520 and Add contractID 1314520</button>
+                    <button id="btn4">Remove contractID</button>
                     <button>GetTotalOfButtons</button>
                 </div>
             </li>
@@ -138,15 +109,10 @@
     </div>
 </body>
 </html>
-<script src="js/jquery-1.10.2.js"></script>
-<script src="class07.js"></script>
+<script src="./jquery-2.0.3.js"></script>
+<script src="./class_07.js"></script>
 <script>
     $(function () {
-        ACME.button1.init();
-		ACME.button2.init();
-		ACME.button3.init();
-		ACME.button4.init();
-		ACME.button5.init();
-		ACME.button6.init();
-    });	
+        ACME.class07.init();
+    });
 </script>
