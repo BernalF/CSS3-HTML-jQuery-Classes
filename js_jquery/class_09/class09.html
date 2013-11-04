@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body, div, ul, li, h1, h2, h3, h4, h5, form, input, textarea, p, table, tr, td
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+
+        .form
+        {
+            overflow: hidden;
+        }
+
+        body
+        {
+            background: #22252b;
+            color: #fff;
+        }
+
+        ul
+        {
+            list-style: none;
+            overflow: hidden;
+            text-align: justify;
+        }
+
+            ul li
+            {
+                padding: 5px;
+                border: 2px solid #5a5c63;
+            }
+
+        .maincontent
+        {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        a
+        {
+            color: #fff;
+            display: block;
+        }
+
+        .marked
+        {
+            border: 3px red solid;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .div
+        {
+            margin: 10px;
+            padding: 12px;
+            border: 2px solid #666;
+            width: 100px;
+            height: 100px;
+        }
+
+            .div a
+            {
+                width: 80px;
+                font-size: small;
+            }
+
+        .red
+        {
+            border-color: red;
+        }
+
+        .green
+        {
+            border-color: #1eb70d;
+        }
+
+        .yellow
+        {
+            border-color: #c7b812;
+        }
+
+        .hide
+        {
+            display: none;
+        }
+
+        .div
+        {
+            margin: 10px;
+            border: 2px solid #666;
+            width: 50px;
+            height: 50px;
+            float: left;
+        }
+
+        .blue
+        {
+            background: blue;
+        }
+
+        .green
+        {
+            background: #22d30e;
+        }
+
+        #f6
+        {
+            height: 120px;
+            position: relative;            
+        }
+
+        #cnt1
+        {
+            position: absolute;     
+            left:300px;          
+        }
+    </style>
+</head>
+<body>
+    <div class="maincontent">
+        <ul class="form">
+            <li>
+                <button id="btn1">Show it</button>
+                <button id="btn2">Hide it</button>
+                <p class="hide" id="p1">Wooow...!</p>
+                <span class="hide" id="s1">En</span>
+                <span class="hide" id="s2">ese</span>
+                <span class="hide" id="s3">sentioooo...</span>
+            </li>
+            <li>
+                <button id="btn3">Toggle</button>
+                <p class="hide" id="p2">Toggle rocks..!</p>
+            </li>
+            <li style="overflow: hidden" id="f1">
+                <button id="btn4">fadeIn</button>
+                <button id="btn5">fadeOut</button>
+                <div></div>
+                <span class="hide div blue"></span>
+                <span class="hide div green"></span>
+            </li>
+            <li id="f2" style="overflow: hidden">
+                <button id="btn6">fadeTo</button>
+                <div></div>
+                <span class="div blue"></span>
+                <span class="div green"></span>
+            </li>
+            <li id="f3" style="overflow: hidden">
+                <button id="btn7">slideDown</button>
+                <button id="btn8">slideUp</button>
+                <div></div>
+                <span class="hide div blue"></span>
+                <span class="hide div green"></span>
+            </li>
+            <li id="f4" style="overflow: hidden">
+                <p>
+                    <button id="btn9">slideToggle</button>
+                </p>
+                <div class="div green"></div>
+                <div class="div blue"></div>
+                <div class="div blue"></div>
+                <div class="div green"></div>
+                <div class="div green"></div>
+                <div class="div blue"></div>
+                <div class="div green"></div>
+            </li>
+            <li id="f5" style="overflow: hidden">
+                <p>
+                    <button id="btn10">animate</button>
+                    <button id="btn11">reset</button>
+                </p>
+                <div class="div green"></div>
+                <div class="div blue"></div>
+            </li>
+            <li id="f6">
+                <p>
+                    <button id="btn12">left</button>
+                    <button id="btn13">right</button>
+                </p>
+                <div id="cnt1" class="div green"></div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="../js/jquery-2.0.3.js"></script>
+<script>
+    $(function () {
+
+        /*
+            duration (default: 400): A string or number determining how long the animation will run.
+            easing (default: swing): A string indicating which easing function to use for the transition.  - linear - swing          
+            complete: A function to call once the animation is complete.
+            options: A map of additional options to pass to the method. (see jquery api documentantion for set of options)
+        */
+
+        //----------------------------------------------------------------------------------------------------
+        /// -> Show http://api.jquery.com/show/ 
+        /// .show() || .show( [duration ] [, complete ] ) || || .show( options ) || show( duration [, easing ] [, complete ] )
+        //----------------------------------------------------------------------------------------------------
+        $("#btn1").click(function () {
+            $("#p1").show("slow");
+
+            $("#s1").show("fast", function showNext() {
+                $(this).next("span").show("fast", showNext);
+            });
+        });
+
+        //----------------------------------------------------------------------------------------------------
+        /// -> Hide http://api.jquery.com/hide/
+        /// .hide() || .hide( options ) || .hide( duration [, easing ] [, complete ] )
+        //----------------------------------------------------------------------------------------------------
+        $("#btn2").click(function () {
+            $("#p1").hide(1500);
+
+            $("#s1").hide("slow", function showNext() {
+                $(this).next("span").hide("slow", showNext);
+            });
+        });
+
+        //----------------------------------------------------------------------------------------------------
+        /// -> Toggle http://api.jquery.com/toggle/
+        /// .toggle( [duration ] [, complete ] ) || .toggle( options ) || .toggle( duration [, easing ] [, complete ] ) || .toggle( showOrHide )
+        //----------------------------------------------------------------------------------------------------
+        $("#btn3").click(function () {
+            $("#p2").toggle("slow");
+        });
+
+        //----------------------------------------------------------------------------------------------------
+        /// -> fadeIn http://api.jquery.com/fadeIn/
+        /// .fadeIn( [duration ] [, complete ] ) || .fadeIn( options ) || .fadeIn( [duration ] [, easing ] [, complete ] )
+        //----------------------------------------------------------------------------------------------------
+        $("#btn4").click(function () {
+            $("#f1 .div").fadeIn();
+        });
+
+        //----------------------------------------------------------------------------------------------------
+        /// -> fadeOut http://api.jquery.com/fadeOut/
+        /// .fadeOut( [duration ] [, complete ] ) || .fadeOut( options ) || .fadeOut( [duration ] [, easing ] [, complete ] )
+        //----------------------------------------------------------------------------------------------------
+        $("#btn5").click(function () {
+            $("#f1 .div:first").fadeOut({ duration: 1500, easing: "linear" });
+            $("#f1 .div:last").fadeOut("fast");
+        });
+
+        //----------------------------------------------------------------------------------------------------
+        /// --> fadeTo http://api.jquery.com/fadeTo/
+        /// .fadeTo( duration, opacity [, complete ] ) || .fadeTo( duration, opacity [, easing ] [, complete ] ) 
+        //----------------------------------------------------------------------------------------------------
+        $("#btn6").click(function () {
+            $("#f2 .div:first").fadeTo(1500, 0.30);
+            $("#f2 .div:last").fadeTo(1500, 0.20, function () {
+                $(this).text('520')
+                    .css(
+                    {
+                        "font-weight": "bolder",
+                        opacity: 1,
+                        "text-align": "center"
+                    })
+            });
+        });
+
+        //----------------------------------------------------------------------------------------------------
+        /// --> SlideDown http://api.jquery.com/slideDown/
+        /// .slideDown( [duration ] [, complete ] ) || .slideDown( options ) || .slideDown( [duration ] [, easing ] [, complete ] )
+        //----------------------------------------------------------------------------------------------------
+        $("#btn7").click(function () {
+            $("#f3 .div").slideDown();
+        });
+
+        //----------------------------------------------------------------------------------------------------
+        /// --> slideUp http://api.jquery.com/slideUp/
+        /// .slideUp( [duration ] [, complete ] ) || .slideUp( options ) || .slideUp( [duration ] [, easing ] [, complete ] )
+        //----------------------------------------------------------------------------------------------------
+        $("#btn8").click(function () {
+            $("#f3 .div").slideUp();
+        });
+
+        //----------------------------------------------------------------------------------------------------
+        /// --> slideToggle http://api.jquery.com/slideUp/
+        /// .slideToggle( [duration ] [, complete ] ) || .slideToggle( options ) || .slideToggle( [duration ] [, easing ] [, complete ] )
+        //----------------------------------------------------------------------------------------------------
+        $("#btn9").click(function () {
+            $("#f4").find('.div:even').slideToggle("slow");
+        });
+
+        //----------------------------------------------------------------------------------------------------
+        /// --> animate http://api.jquery.com/animate/
+        /// .animate( properties [, duration ] [, easing ] [, complete ] ) || .animate( properties, options )  
+        /*
+                properties: A map of CSS properties that the animation will move toward.
+                duration: A string or number determining how long the animation will run.
+                easing: A string indicating which easing function to use for the transition.
+                callback: A function to call once the animation is complete.
+        */
+        //----------------------------------------------------------------------------------------------------
+        $("#btn11").click(function () {
+            $("#f5 div").removeAttr('style');
+        });
+
+        $("#btn10").click(function () {
+            $("#f5 .div:first").animate({ "height": "80px" }, "fast");
+
+            $("#f5 .div:last").animate({ "width": "350px" }, "fast");
+        });
+
+        //Move left - right
+        $("#btn12").click(function () {
+            $("#cnt1").animate(
+                    { "left": "-=50px" },
+                    "slow");
+        });
+
+        $("#btn13").click(function () {
+            $("#cnt1").animate(
+                    { "left": "+=50px" },
+                    "slow");
+        });
+
+        //Tarea Moral, investigar que hacen estos.... .clearQueue() - .delay() - .dequeue() - .finish() - jQuery.fx.interval - jQuery.fx.off - .queue() - .stop()
+
+
+    });
+</script>
