@@ -187,7 +187,7 @@
             <li>
                 <p>
                     <button id="btn14">animate</button>
-                    <button id="btn15">reset</button>
+                    <button id="btn15">stop</button>
                 </p>
                 <div class="div blue" id="block"></div>
             </li>
@@ -208,10 +208,10 @@
 
         //----------------------------------------------------------------------------------------------------
         /// -> Show http://api.jquery.com/show/ 
-        /// .show() || .show( [duration ] [, complete ] ) || || .show( options ) || show( duration [, easing ] [, complete ] )
+        /// .show() || .show( [duration ] [, complete ] ) || .show( options ) || show( duration [, easing ] [, complete ] )
         //----------------------------------------------------------------------------------------------------
         $("#btn1").click(function () {
-            $("#p1").show("slow");
+            $("#p1").show('slow');
 
             $("#s1").show("fast", function showNext() {
                 $(this).next("span").show("fast", showNext);
@@ -243,7 +243,7 @@
         /// .fadeIn( [duration ] [, complete ] ) || .fadeIn( options ) || .fadeIn( [duration ] [, easing ] [, complete ] )
         //----------------------------------------------------------------------------------------------------
         $("#btn4").click(function () {
-            $("#f1 .div").fadeIn();
+            $("#f1 .div").fadeIn(1600);
         });
 
         //----------------------------------------------------------------------------------------------------
@@ -293,7 +293,7 @@
         /// .slideToggle( [duration ] [, complete ] ) || .slideToggle( options ) || .slideToggle( [duration ] [, easing ] [, complete ] )
         //----------------------------------------------------------------------------------------------------
         $("#btn9").click(function () {
-            $("#f4").find('.div:even').slideToggle("slow");
+            $("#f4").find('.div:even').slideToggle(2000);
         });
 
         //----------------------------------------------------------------------------------------------------
@@ -311,7 +311,7 @@
         });
 
         $("#btn10").click(function () {
-            $("#f5 .div:first").animate({ "height": "80px" }, "fast");
+            $("#f5 .div:first").animate({ "height": "80px" }, "slow");
 
             $("#f5 .div:last").animate({ "width": "350px" }, "fast");
         });
@@ -341,6 +341,7 @@
                 //Animation Complete
             });
         });
+ 
 
         $("#btn15").click(function () {            
             $("#block").stop();
