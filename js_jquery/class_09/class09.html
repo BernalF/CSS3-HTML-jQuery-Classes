@@ -32,6 +32,7 @@
             {
                 padding: 5px;
                 border: 2px solid #5a5c63;
+                overflow: hidden;
             }
 
         .maincontent
@@ -111,13 +112,13 @@
         #f6
         {
             height: 120px;
-            position: relative;            
+            position: relative;
         }
 
         #cnt1
         {
-            position: absolute;     
-            left:300px;          
+            position: absolute;
+            left: 300px;
         }
     </style>
 </head>
@@ -136,27 +137,27 @@
                 <button id="btn3">Toggle</button>
                 <p class="hide" id="p2">Toggle rocks..!</p>
             </li>
-            <li style="overflow: hidden" id="f1">
+            <li id="f1">
                 <button id="btn4">fadeIn</button>
                 <button id="btn5">fadeOut</button>
                 <div></div>
                 <span class="hide div blue"></span>
                 <span class="hide div green"></span>
             </li>
-            <li id="f2" style="overflow: hidden">
+            <li id="f2">
                 <button id="btn6">fadeTo</button>
                 <div></div>
                 <span class="div blue"></span>
                 <span class="div green"></span>
             </li>
-            <li id="f3" style="overflow: hidden">
+            <li id="f3">
                 <button id="btn7">slideDown</button>
                 <button id="btn8">slideUp</button>
                 <div></div>
                 <span class="hide div blue"></span>
                 <span class="hide div green"></span>
             </li>
-            <li id="f4" style="overflow: hidden">
+            <li id="f4">
                 <p>
                     <button id="btn9">slideToggle</button>
                 </p>
@@ -168,7 +169,7 @@
                 <div class="div blue"></div>
                 <div class="div green"></div>
             </li>
-            <li id="f5" style="overflow: hidden">
+            <li id="f5">
                 <p>
                     <button id="btn10">animate</button>
                     <button id="btn11">reset</button>
@@ -182,6 +183,13 @@
                     <button id="btn13">right</button>
                 </p>
                 <div id="cnt1" class="div green"></div>
+            </li>
+            <li>
+                <p>
+                    <button id="btn14">animate</button>
+                    <button id="btn15">reset</button>
+                </p>
+                <div class="div blue" id="block"></div>
             </li>
         </ul>
     </div>
@@ -319,6 +327,23 @@
             $("#cnt1").animate(
                     { "left": "+=50px" },
                     "slow");
+        });
+
+        
+        $("#btn14").click(function () {
+            $("#block").animate({
+                width: "70%",
+                opacity: 0.4,
+                marginLeft: "0.6in",
+                fontSize: "3em",
+                borderWidth: "10px"
+            }, 1500, function () {
+                //Animation Complete
+            });
+        });
+
+        $("#btn15").click(function () {            
+            $("#block").stop();
         });
 
         //Tarea Moral, investigar que hacen estos.... .clearQueue() - .delay() - .dequeue() - .finish() - jQuery.fx.interval - jQuery.fx.off - .queue() - .stop()
