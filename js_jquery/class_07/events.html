@@ -179,13 +179,13 @@
             alert("nieto");
             //alert("He hecho " + e.type + " en el elemento " + e.target.nodeName + " de la clase '.nieto'");
             //alert("El ratón estaba en las coordenadas: x= " + e.pageX + " , y= " + e.pageY + "");
-            e.stopPropagation();
+            //e.stopPropagation();
         });
         $(".hijo").on("click", function (e) {
             alert("hijo");
             //alert("He hecho " + e.type + " en el elemento " + e.target.nodeName + " de la clase '.hijo'");
             //alert("El ratón estaba en las coordenadas: x= " + e.pageX + " , y= " + e.pageY + "");
-            //e.stopPropagation();
+            e.stopPropagation();
         });
         $(".padre").on("click", function (e) {
             alert("padre");
@@ -197,7 +197,7 @@
         //--> event.stopImmediatePropagation() ---------------------------------------------------------------        
         $(".nieto").on("click", function (e) {
             alert("clic en nieto");
-            e.stopImmediatePropagation();
+            e.stopImmediatePropagation();            
         });
         $(".nieto").on("click", function (e) {
             alert("Este evento clic sobre la clase '.nieto' procedería de otra librería");
@@ -209,10 +209,10 @@
         //--> event.preventDefault() -------------------------------------------------------------------------
         // Evitar la acción por defecto del navegador
         $(".padre").on("click", function (e) {
-            return false;
-            //e.preventDefault();
+            //return false;
+            e.preventDefault();
            // alert("padre");
-            // e.stopImmediatePropagation();
+             e.stopImmediatePropagation();
         });
         //----------------------------------------------------------------------------------------------------
     });

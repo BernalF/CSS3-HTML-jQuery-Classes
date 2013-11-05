@@ -7,10 +7,10 @@
         {
             background: #22252b;
             color: #fff;
-        }
+        }       
     </style>
 </head>
-<body>
+<body>    
 </body>
 </html>
 <script src="../js/jquery-2.0.3.js"></script>
@@ -36,7 +36,7 @@
 
     //----------------------------------------------------------------------------------------------------
     //  ----- This is Better http://jsbin.com/onahin/4/edit
-    // IIFE - Immediately Invoked Function Expression
+    // IIFE - Immediately Invoked Function Expression    
     (function ($, window, document) {
         // The $ is now locally scoped 
 
@@ -58,7 +58,7 @@
         yourcode(window.jQuery, window, document);
     }(function ($, window, document) {
         // The $ is now locally scoped 
-
+        
         // Listen for the jQuery ready event on the document
         $(function () {
             // The DOM is ready!
@@ -118,8 +118,7 @@
     // Stores the live DOM element inside of a variable
     var elem = $("#elem");
     elem.attr("title", elem.text()).css("color", "red").hide();
-    //----- Chaining
-
+    //----- Chaining    
     //----------------------------------------------------------------------------------------------------
     // ----- Most Projects do this
     // Dynamically building an unordered list from an array
@@ -175,6 +174,7 @@
     $("#longlist li").on("click", function () {
         $(this).text("Why did you click me?!");
     });
+
     /*  ----- This is fine...       
         If you like using a lot of memory for event handlers
         If you don't have many DOM elements
