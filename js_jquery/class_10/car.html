@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link href="reset.css" type="text/css" rel="stylesheet">
+    <link href="default.css" rel="stylesheet" />
+    <title>Clase 3</title>
+</head>
+<body>
+    <div id="wrapper">
+        <button id="btnPlay"></button>
+        <div id="cloud-01">
+            <div id="cloud-02">
+                <div id="mountains-03">
+                    <div id="ground">
+                        <div class="car">
+                            <div class="rack">
+                                <article>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </article>
+                            </div>
+                            <div class="arriba">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="abajo">
+                                <div class="cola">
+                                    <div class="blanca"></div>
+                                    <div class="roja"></div>
+                                </div>
+                                <div class="puerta1">
+                                    <div class="manilla"></div>
+                                    <div class="wc">
+                                        <div class="llanta">
+                                            <div class="aro"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="puerta2">
+                                    <div class="manilla"></div>
+                                    <div class="wc">
+                                        <div class="llanta">
+                                            <div class="aro"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="trompa">
+                                    <div class="blanca">
+                                        <div class="amarilla"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../js/jquery-2.0.3.js"></script>
+<script>
+    $(function () {
+        $('#btnPlay').off('click').on('click', function () {
+            startEngine(true);
+            $(".car").animate({ left: "100%", marginLeft: "200px" }, 5000).animate({ left: "0", marginLeft: "230px" }, 5000, function () {
+                $(".aro").stop().clearQueue().finish();
+            });
+        });
+        startEngine();
+
+        var num = 1;
+        function startEngine(x) {
+            num++;
+            if (!x) {
+                $(".arriba, .abajo, .rack, .trompa, .cola").animate({ top: "-=" + num + "px" }, 150).animate({ top: "+=" + num + "px" }, 150);
+            }
+            else {
+                $(".aro").animate({ top: "-=" + num + "px" }, 150).animate({ top: "+=" + num + "px" }, 150);
+            }
+            if (num < 4) {
+                setTimeout(function () { startEngine(x) }, 300);
+            } else {
+                setTimeout(function () {
+                    bounceHim(x);
+                }, 300);
+            }
+        };
+
+        function bounceHim(y) {
+            if (!y)
+                $(".arriba, .abajo, .rack, .trompa, .cola").animate({ top: "-=4px" }, 150).animate({ top: "+=4px" }, 150);
+            else
+                $(".aro").animate({ top: "-=4px" }, 150).animate({ top: "+=4px" }, 150);
+
+            setTimeout(function () {
+                bounceHim(y);
+            }, 300);
+        };
+
+    });
+
+
+
+</script>

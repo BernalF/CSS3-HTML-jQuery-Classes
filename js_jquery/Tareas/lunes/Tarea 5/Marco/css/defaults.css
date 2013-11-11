@@ -1,0 +1,146 @@
+body
+{
+    background:grey;
+}
+.perdiv
+{
+    background:white;
+    margin:20px auto 0 auto;
+    width:1000px;
+    height:500px;
+    border-style:solid;
+}
+.perdiv  ul{
+    margin: 10px 0 0 0;
+}
+
+.perdiv  ul li
+{
+    margin:0 0 0 10px;
+}
+.sonsdiv  
+{
+	position: relative;
+}
+.sonsdiv  h2
+{
+	margin: 10px ;
+	font-weight: bold;
+}
+.sonsdiv  ul
+{
+	margin: 10px ;
+}
+.list
+{
+    width:980px;
+    height:480px;
+    
+}
+.perfinfo{
+    width:500px;
+    display:block;
+}
+/* FORM LIST STARTS */
+
+.showList{
+    overflow:hidden;
+}
+.showList li{
+    float:left;
+    padding-bottom:10px;
+}
+.showList li:nth-child(odd){
+    width:100px;
+}
+.showList li:nth-child(even){
+    width:280px;
+}
+.rightson
+{
+  display: block;
+  float: left;  
+}
+.leftson
+{
+  display: block;   
+}
+
+button{
+    background-color:green;
+   -webkit-border-radius: 2px;
+   border: 2px solid #009900;
+   padding: 2px;
+   color:white;
+}
+
+
+div#left {
+    
+    position: absolute;
+    width: 225px;
+    float: left;
+    border-right:solid;
+    border-right-color: grey;
+    height:300px;
+    
+}
+div#right {
+    position: absolute;
+    margin-left: 225px;    
+    overflow:scroll;
+    height:300px;
+}
+
+#btnc{
+    position:relative;
+    top:325px;
+    right:-600%;
+}
+
+#Addson{
+    position:relative;
+    right:-150px;
+    top:-10px;
+}
+
+#right ul {
+      width: 700px;
+  }
+  li {
+    width: 150px;
+    height: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: inline-block;    
+  }
+  .header{
+        background:grey;
+        border-bottom: solid;
+            white-space:pre;
+        }
+
+table{
+border-collapse:collapse;
+border:1px solid black;
+width:700px;
+}
+
+table td{
+    border:1px solid black;
+}
+
+table tr #header{
+    background:grey;
+}
+
+table td #butt{
+    width:100px;
+    align:center;
+}
+
+table td #txt{
+    width:250px;
+    align:left;
+}
+

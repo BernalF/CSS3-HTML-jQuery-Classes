@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GRADUATION HOMEWORK</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/defaults.css" />
+</head>
+<body>
+    <div class="perdiv" id='personaldiv'>
+		<div class="perfinfo" id="personalinfo">
+				<ul class="showList">
+					<li >
+						<label for="txtname">Name *</label>
+					</li>
+					<li>
+						<input  id="txtname" type="text"/>
+					</li>
+					<li >
+						<label>Age *</label>
+						
+					</li>
+					<li >
+						<input id="txtage" type="text"/>
+					</li>
+					<li >
+						<label>Have Sons?</label>
+					</li>           
+					<li >
+						<input type="radio"  name="optson"   value="Yes">Yes
+						<input type="radio"  name="optson"  checked="checked" value="No">No
+					</li>    
+				</ul>			
+		</div>
+        <div  class="sonsdiv" id='sondiv'>
+			<h2>Sons Information</h2>
+                <div  id="left">
+                    <ul class="showList">
+                        <li >
+                            <label for="txtsonname">Son Name</label>
+                        </li>
+                        <li>
+                            <input id="txtsonname" type="text">
+                        </li>
+                        <li >
+                            <label>Genre</label>
+                            
+                        </li>
+                        <li>
+                            <select  id="genreopt" >
+                              <option value="male">Male</option>
+                              <option value="female">Female</option>
+                              <option value="Undefined">Not Defined</option>                              
+                            </select>
+                        </li>
+                        <li>
+                            <button id="Addson" value="Add" >Add</button>
+                        </li>
+                    </ul>                    
+                </div>
+                 <div  id="right">
+                     <table id="gridtable">
+                        <tr class="header">
+                            <td class="butt">   </td>
+                            <td class="butt">   </td>
+                            <td class="txt">Name</td>
+                            <td class="txt">Genre</td>
+                         </tr>
+                     </table>
+                </div>
+        </div>
+         <div >
+            <ul>
+                <li><button id="btnc" value="Save">Save</button></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/jquery-2.0.3.js"></script>
+<script src="js/final.js"></script>
+
+<script>
+    $(function () {
+       FINALHW.homework.init();
+    });
+</script>
+
+
+
+
+
+
+

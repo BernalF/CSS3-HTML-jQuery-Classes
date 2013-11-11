@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GRADUATION HOMEWORK</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/defaults.css" />
+</head>
+<body>
+    <div class="perdiv">
+        <ul>
+            <li><textarea readonly id="sonList" class="list"></textarea></li>
+        </ul>
+    </div>
+    
+</body>
+</html>
+<script src="js/jquery-2.0.3.js"></script>
+<script>
+    $(function () {
+    
+        var query = window.location.search;
+        if (query.substring(0, 1) == '?') {
+            query = query.substring(1);
+        }
+        if (query != ""){
+            var data = query.split(','); 
+            $("#sonList").val(' SUMMARY: ');
+            $("#sonList").val($("#sonList").val() + '\n');
+            $("#sonList").val($("#sonList").val() + '\n Nombre: ' +  data[1].replace(/\%20/g," "));
+            $("#sonList").val($("#sonList").val() + '\n Edad: ' +  data[0]);
+            $("#sonList").val($("#sonList").val() + '\n Hijos: ' + data[2].replace(/\%20/g," "));
+        }
+    });
+</script>

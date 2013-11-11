@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Final Task</title>
+        <link rel="stylesheet" href="Styles/reset.css" />        
+        <link rel="stylesheet" href="Styles/page_styles.css" />      
+  </head>
+  <body>
+        <form action="last_message.html" method="get">
+
+             <div id="Div2" class="mainContainer">
+                        <ul class="formContainer">
+                                <li>
+                                        <label for="txtName">Name *:</label>
+                                        <input type="text" name="lastname" id="txtName" placeholder="Enter Name" required>
+                                </li>
+                                <li>
+                                        <label for="txtAge">Age *:</label>
+                                        <input type="text" name="age" id="txtAge" placeholder="Enter Age" pattern="^[1-9]{1,2}$" required>
+                                </li>
+                                <li>
+                                        <label for="txtAge">Have sons ? :</label>
+                                        Yes<input type="radio" name="sons" id="cbxSons" value="y">
+                                        No<input type="radio" name="sons" id="cbxNoSons" value="n" checked>
+                                </li>
+                        </ul>      
+                                           
+                        <div id="sonsContainer" class="sonsContainer hideContainer">
+                        <p>Sons Information</p>
+                        <ul>
+                            <li>
+                                 <label>Son Name:</label>
+                                 <input type="text" id="txtSonName">
+                            </li>
+                              <ul>
+                                      <li><label>Genre:</label>
+                             
+                                            <select id="ddlsonGen" name="D1"> 
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                            </select>
+                                            </li>                              
+                                  <input type="button" value="Add" id="btnAddSon" />
+                              </ul>
+                           </ul>
+                        </div>   
+
+                        <div id="header" class="gridClass hideContainer">
+                          <ul >
+                            <li>
+                                <label id="lbl1" class="tab"></label>
+                                <label id="lbl2" class="tab"></label>
+                                <label id="lbl3" class="tab"></label>
+                                <label id="lblName" class="tab">Name</label>
+                                <label id="lblGenre" class="tab">Genre</label></li>
+                            
+                          </ul>  
+                          <ul id="detail" class="items">
+                          </ul>                      
+                        </div>
+              <div id="divfoot" class="footClass">
+                <input type="submit" value="Save" id="btnSave" />  
+            </div>
+        </div>     
+                
+        </form>
+  </body>
+</html>
+<script src="Scripts/Task.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+    $(function () {
+        ACME.Task.init();
+    });
+</script>
+

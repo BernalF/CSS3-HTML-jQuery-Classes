@@ -1,0 +1,144 @@
+﻿body
+{
+    background: #eee;
+}
+
+.mainContainer
+{
+    border: 1px solid navy;
+    margin: 10% auto;
+    width: 700px;
+    padding: 35px;
+    overflow: hidden;
+    background: #008080;
+    font-family: Monaco,Georgia,Times,serif;
+}
+
+.mainContainer div
+{
+    padding: 10px;
+    overflow: hidden;
+}
+
+.formContainer
+{
+    line-height: 50px;
+}
+
+.sonsContainer
+{
+    line-height: 60px;
+    background: #C0C0C0;
+}
+#sonsContainer
+{
+    float: left;
+    width: 43%;
+}
+#header
+{
+    float: right;
+    width: 50%;
+}
+
+.gridClass
+{
+    line-height: 30px;
+    background: #C0C0C1;
+    display: inline-block;
+    list-style: none;
+}
+
+#divfoot
+{
+    clear: both;
+    width: 100%;
+}
+
+.footClass
+{
+    line-height: 30px;
+}
+
+.sonsContainer p
+{
+    line-height: 50px; /*font-style:italic; */
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Helvetica' , 'Verdana' , 'Monaco' ,sans-serif;
+}
+
+.hideContainer
+{
+    display: none;
+}
+
+#btnAdd, #btnSave
+{
+    float: right;
+    width: 12%;
+    font-style: italic;
+    font-weight: bold;
+    color: #008080;
+    font-family: 'Helvetica' , 'Verdana' , 'Monaco' ,sans-serif;
+}
+
+.input
+{
+    border: 1px solid #006;
+    background: #ffc;
+    margin: 4px;
+    color: #000;
+    width: 30%;
+}
+.button
+{
+    border: 1px solid #006;
+    background: #9cf;
+}
+
+.mainContainer input
+{
+    color: #000;
+    width: 30%;
+}
+
+.gridClass input
+{
+    width: 15%;
+}
+
+.mainContainer select
+{
+    margin: 4px;
+    color: #808080;
+    width: 30%;
+}
+
+.mainContainer label
+{
+    display: inline-block;
+    margin: 2px;
+    color: #fff;
+    width: 26%;
+}
+
+#cbxSons, #cbxNoSons
+{
+    width: 5%;
+}
+
+#btnAddSon
+{
+    float: right;
+}
+
+#lblGenre, #lblName
+{
+    width: 15%;
+}
+
+#lbl1, #lbl2, #lbl3
+{
+    width: 7%;
+}

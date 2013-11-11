@@ -1,0 +1,273 @@
+﻿
+.mainContent
+{
+    margin: auto;
+    overflow: hidden;
+}
+
+#btnPlay
+{
+    height: 40px;
+    width: 65px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    position: relative;
+    float: right;
+}
+
+    #btnPlay:after
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 10.5px;
+        left: 24px;
+        margin: 0 auto;
+        border-style: solid;
+        border-width: 9.5px 0 9.5px 17px;
+        border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+    }
+
+#wrapper
+{
+    background: #bedfe4 url(images/sun.png) no-repeat left -30px;
+    border: 5px solid #402309;
+     position: relative;
+}
+
+#cloud-01
+{
+    background: url(images/clouds-01.png) no-repeat left -100px;
+     position: relative;
+}
+
+#cloud-02
+{
+    background: url(images/clouds-02.png) no-repeat left top;
+     position: relative;
+}
+
+#mountains-03
+{
+    background: url(images/mountain-03.png) no-repeat left bottom;
+     position: relative;
+}
+
+#ground
+{
+    background: url(images/ground-05.png) no-repeat left bottom;
+     position: relative;
+}
+
+.car
+{
+    position: relative;
+    width: 390px;
+    height: 380px;
+    background: #142576;
+    margin: 100px 230px;
+}
+
+.arriba
+{
+    width: 390px;
+    height: 190px;
+    background: #142576;
+    position: relative;
+    overflow: hidden;
+}
+
+.abajo
+{
+    width: 390px;
+    height: 190px;
+    background: #142576;
+}
+
+.cola,
+.puerta1,
+.puerta2,
+.trompa
+{
+    width: 190px;
+    height: 190px;
+    position: absolute;
+}
+
+.cola
+{
+    left: -190px;
+    overflow: hidden;
+    background: #142576;
+    top: 190px;
+}
+
+.puerta1
+{
+    background: #1b3281;
+}
+
+.puerta2
+{
+    background: #1b3281;
+    left: 200px;
+}
+
+.trompa
+{
+    background: #142576;
+    right: -190px;
+    top: 190px;
+}
+
+.blanca,
+.roja
+{
+    height: 60px;
+}
+
+.blanca
+{
+    width: 40px;
+    margin: 10px 0 0 10px;
+    background: #fff;
+}
+
+.roja
+{
+    width: 30px;
+    background: #f00;
+    margin: 0 0 0 15px;
+}
+
+.manilla
+{
+    width: 60px;
+    height: 20px;
+    margin: 5px;
+    background: #050505;
+}
+
+.trompa .blanca
+{
+    float: right;
+    margin-right: 10px;
+    height: 80px;
+    width: 35px;
+}
+
+.amarilla
+{
+    background: #ffd800;
+    width: 30px;
+    height: 70px;
+    margin: 5px 0 5px 5px;
+}
+
+.wc
+{
+    position: relative;
+    width: 190px;
+    height: 190px;
+}
+
+.llanta
+{
+    position: relative;
+    width: 130px;
+    height: 130px;
+    background: #050505;
+    -moz-border-radius: 65px;
+    border-radius: 65px;
+    left: -65px;
+    top: 90px;
+}
+
+.puerta2 .llanta
+{
+    left: initial;
+    left: 130px;
+    z-index: 30;
+}
+
+.aro
+{
+    width: 65px;
+    height: 65px;
+    background: #808080;
+    margin: 0 auto;
+    -moz-border-radius: 32.5px;
+    border-radius: 32.5px;
+    left: 32.5px;
+    position: absolute;
+    top: 32.5px;
+}
+
+.arriba div
+{
+    width: 155px;
+    height: 178px;
+    background: #1b1818;
+    margin: 10px 20px 30px 10px;
+    position: absolute;
+}
+
+    .arriba div:nth-child(1)
+    {
+        left: -145px;
+    }
+
+    .arriba div:nth-child(2)
+    {
+        left: 22px;
+    }
+
+    .arriba div:nth-child(3)
+    {
+        left: 192px;
+    }
+
+    .arriba div:nth-child(4)
+    {
+        right: -155px;
+    }
+
+.rack
+{
+    width: 440px;
+    height: 10px;
+    background: #808080;
+    position: absolute;
+    top: -25px;
+    right: 10px;
+    left: -30px;
+}
+
+    .rack article
+    {
+        position: relative;
+    }
+
+        .rack article div
+        {
+            width: 10px;
+            height: 40px;
+            position: absolute;
+            background: #808080;
+            top: -15px;
+        }
+
+            .rack article div:nth-child(1)
+            {
+                left: 60px;
+            }
+
+            .rack article div:nth-child(2)
+            {
+                left: 217px;
+            }
+
+            .rack article div:nth-child(3)
+            {
+                left: 374px;
+            }
