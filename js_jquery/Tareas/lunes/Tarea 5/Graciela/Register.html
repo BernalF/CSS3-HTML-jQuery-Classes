@@ -1,0 +1,71 @@
+﻿<html>
+<head>
+    <title>Family Pet</title>
+    <link rel="stylesheet" type="text/css" href="css/pets.css" />
+ </head>
+<body id="toregister">
+    <form class="form" method="post" onsubmit="return redirect()">
+        <div id="content">
+            <div id="main">
+                <h2>Registration</h2>
+                <p>
+                <label for="regname" class="infield">* Name</label>
+                <input id="regname" name="regname" required="required" type="text" class="main-content"/>
+                </p>
+                <p>
+                    <label for="regage" class="infield">* Age</label>
+                    <input id="regage" name="regage" required="required" type="number" min="0" max="130" class="main-content"/>
+                </p>
+                <p>
+                    <label for="regemail" class="infield">* Email</label>
+                    <input id="regemail" name="regemail" type="email" required="required" placeholder="example@domain.com" class="main-content"/>
+                </p>
+                 <p>
+                    <label for="havepets" class="infield"> Have pets? </label>
+                    <label class="infield"><input type="radio" name="havepet" id="havepetYes" value="1" class="main-content" /> Yes</label>
+                    <label class="infield"><input type="radio" name="havepet" id="havepetNo" value="0" class="main-content"  /> No</label>
+                </p>
+            </div>
+            <div id="petInformation" style="display:none;">
+                <h4>Pet Information</h4>
+                <input type="button" id="addPet" value="New" />
+                <div id="grid_details">
+                    <table id="tblData" class="datagrid">
+                        <thead>
+                            <tr>
+                                <th class="name">Name</th>
+                                <th class="type">Type</th>
+                                <th class="color">Color</th>
+                                <th class="commands"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                        <tfoot>
+                            <tr></tr>
+                        </tfoot>
+                    </table>
+                </div>            
+            </div>
+            <div id="button-submit">
+                <button id="save" type="submit" class="submit">Register</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/register.js"></script>
+<script type="text/javascript">
+    (function ($, window, document) {
+        $(function () {
+            PETS.register.init();
+        });
+    }(window.jQuery, window, document));
+    // Redirec to complete.
+    function redirect() {
+        var url = "Completed.html";
+        window.location.replace(url);
+        return false;
+    }
+</script>

@@ -1,0 +1,479 @@
+/* OPERATIONS */
+.relNav li.deleteOperation:hover
+{
+    /* hover states to show texts*/
+    width: 140px;
+}
+.operations
+{
+    background-image: url(../images/desktop/icon_operations.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.shareddiv
+{
+    overflow: auto;
+    height: 50px;
+    border: 2px solid;
+}
+/* Operations INDEX */
+.selectionTiles{
+    overflow:hidden;
+}
+.selectionTiles li{
+    margin-right:20px;
+    float:left;
+}
+.selectionTiles li .titleLink{
+    background-color:rgba(0,0,0,.7);
+    color:#fff;
+    font-family:'Segoe UI', 'Segoe condensed' sans-serif;
+    font-size:16px;
+    padding:5px;
+    display:block;
+    clear:both;
+}
+
+.operations{
+	background-image:url(../images/operations/operation.png);
+	background-position:center;
+	background-repeat:no-repeat;
+}
+.newOperation .icon
+{
+    background-image: url(../images/operations/new_operation.png);
+    background-repeat: no-repeat;
+}
+.newOperation a:after{
+	background-image:url(../images/operations/new_operation.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+.newOperation:hover{
+    width:135px;
+}
+.deleteOperation{
+	background-image:url(../images/operations/operation.png.png);
+	background-position:center;
+	background-repeat:no-repeat;
+}
+.deleteOperation .icon
+{
+    background-image: url(../images/defaults/trash_icon.png);
+    background-repeat: no-repeat;
+}
+.deleteOperation a:after{
+	background-image:url(../images/defaults/trash_icon.png);
+	background-repeat:no-repeat;
+}
+
+/* POPUP WINDOWS STARTS */
+#CreateSite,
+#CreateProduct,
+#CreateCompany{
+	width:350px;
+}
+
+#CreateSite ul.siteForm,
+#CreateProduct ul.productForm{
+	overflow:visible;
+}
+
+#CreateCompany ul.companyForm{
+	overflow:hidden;
+}
+
+#CreateSite ul.siteForm li,
+#CreateProduct ul.productForm li,
+#CreateCompany ul.companyForm li{
+	height:25px;
+	padding-bottom:10px;
+	overflow:hidden;
+}
+
+#CreateSite ul.siteForm li:nth-child(even),
+#CreateProduct ul.productForm li:nth-child(even),
+#CreateCompany ul.companyForm li:nth-child(even){
+	float:left;
+	width:200px;
+}
+
+#CreateSite ul.siteForm li:nth-child(odd),
+#CreateProduct ul.productForm li:nth-child(odd),
+#CreateCompany ul.companyForm li:nth-child(odd){
+	float:left;
+	width:150px;
+	font-family:delicious;
+	font-size:16px;
+	line-height:25px;
+}
+
+#CreateProduct ul.productForm li.checksList,
+#CreateCompany ul.companyForm li:nth-child(8){
+	height:auto;
+}
+
+#CreateSite ul.siteForm li.colorPicker,
+#CreateProduct ul.productForm li.colorPicker{
+	overflow:visible;
+	height:auto;
+}
+
+#CreateProduct ul.productForm li.checksList .checkHolder,
+#CreateCompany ul.companyForm li:nth-child(8) .checkHolder{
+	width:80px;
+}
+
+#CreateSite ul.siteForm li:last-child,
+#CreateProduct ul.productForm li:last-child,
+#CreateCompany ul.companyForm li:last-child{
+	width:100px;
+	padding:0;
+	float:right;
+}
+
+#SiteLogo,
+#ProdLogo,
+#CompLogo {
+	overflow:hidden;
+	width:320px;
+}
+
+#SiteLogo ul li,
+#ProdLogo ul li,
+#CompLogo ul li{
+	float:left;
+	padding-bottom:10px;
+	overflow:hidden;
+}
+
+#SiteLogo ul li:nth-child(1),
+#ProdLogo ul li:nth-child(1),
+#CompLogo ul li:nth-child(1){
+	width:120px;
+	font-family:delicious;
+	font-size:16px;
+	line-height:25px;
+}
+
+#SiteLogo ul li:nth-child(2),
+#ProdLogo ul li:nth-child(2),
+#CompLogo ul li:nth-child(2){
+	width:200px;
+}
+
+#SiteLogo ul li:last-child,
+#ProdLogo ul li:last-child,
+#CompLogo ul li:last-child{
+	width:100px;
+	float:right;
+	padding:0;
+}
+
+/* POPUP WINDOWS ENDS */
+
+/* EDIT OPERATIONS STARTS */
+
+#OperationsEdit,
+.infoHolder{
+    padding:20px;
+    /*width:550px;
+    min-width:550px;*/
+	background-color:#FFF;
+}
+
+#OperationsEdit h2.titleText{
+	width:550px;
+    margin:0 auto;
+}
+
+#OperationsEdit .editForm{
+	/**/width:550px;
+	min-width:550px;
+    margin:0 auto;
+    overflow:hidden;
+}
+
+#OperationsEdit .editForm li{
+    float:left;
+    margin-bottom:10px;
+    padding:0;
+}
+
+#OperationsEdit ul.editForm li:last-child{
+	margin-bottom:0;
+    margin-top:20px;
+    width:550px;
+    overflow:hidden;
+}
+
+#OperationsEdit .editForm li label {
+    width:90px;
+}
+
+#OperationsEdit .editForm li:nth-child(odd){
+    width:160px;
+    clear:both;
+}
+
+#OperationsEdit .editForm li:nth-child(even){
+    width:390px;
+}
+
+/* EDIT SHARE OPERATIONS STARTS */
+
+#OperationsEdit,
+.infoHolderShare{
+    padding:20px;
+	background-color:#FFF;
+}
+#OperationsEditShare h2.titleText{
+	width:100%;
+    margin:0 auto;
+}
+#OperationsEditShare .editForm{
+	width:100%;
+	min-width:40%;
+    margin:0 auto;
+    overflow:hidden;
+}
+#OperationsEditShare .editForm li{
+    float:left;
+    margin-bottom:10px;
+    padding:0;
+}
+#OperationsEditShare ul.editForm li:last-child{
+	margin-bottom:0;
+    margin-top:20px;
+    width:100%;
+    overflow:hidden;
+}
+#OperationsEditShare .editForm li label {
+    width:40%;
+}
+#OperationsEditShare .editForm li:nth-child(odd){
+    width:40%;
+    clear:both;
+}
+#OperationsEditShare .editForm li:nth-child(even){
+    width:60%;
+}
+/* EDIT SHARE OPERATIONS ENDS */
+h2.appDescription{
+    padding:0 0 20px 0;
+	line-height:40px;
+	margin-bottom:10px !important;
+	color:#525a5f;
+    font-family:'Segoe UI', 'Segoe condensed', sans-serif, Arial;
+}
+.appDescription{  
+    padding:0 0 0 0;  	
+	line-height:25px;
+	color:#525a5f;
+	margin-bottom:10px !important;
+    font-family:'Segoe UI', 'Segoe condensed', sans-serif, Arial;
+    font-size:20px;
+}
+.sectionHolder{
+	width:800px;
+	overflow:hidden;
+	margin:0 auto;
+}
+.leftContentHolder,
+.rightContentHolder{
+	width:49%;
+	float:left;
+}
+.rightContentHolder{
+	margin-left:2%;
+}
+.totalWidth
+{
+    width:100% !important; 
+}
+.searchWidth
+{
+    width:100%;
+    display:block;
+    float:left;
+}
+.dailyBlockerleft
+{
+     float: left;
+    padding:10;
+    width:100%;
+}
+.dailyBlockerright
+{  
+   left:94%;
+    position:absolute;
+}
+/*CUSTOM*/
+#divLeftContent{
+    width:40%;
+	display:block;
+	float:left;
+	margin:5px;
+}
+#divRightContent{
+    width:40%;
+	display:block;
+	float:right;
+	margin:5px;
+}
+#divCenterContent{
+    width:15%;
+	display:block;
+	float:left;
+	margin:5px;
+}
+.divisions{
+    overflow:hidden;
+	float:left;
+}
+.thrdWidth {
+    width:15%;
+    display:block;
+    float:left;
+}
+.thrdWidthSpan{
+    width:33%;
+    display:block;
+    float:left;
+}
+.floatBlocker li {
+    float: left;
+	width:15%;	
+}
+.widthOptions input {
+    width:14.2%;
+    display:block;
+    float:left;
+}
+.widthMap
+{
+    padding-left:2%;
+}
+.widthMap span {
+    width:16%;
+    height:40px;
+    display:block;
+    float:left;
+    border: 1px solid #666;
+    font-weight: bold;
+    text-align:center;
+}
+.selectMap {
+    /*background: purple;
+    color: #fff;*/
+	background-color: #800000 ;
+    color: #FFFFFF;
+}
+.divisionWidth
+{
+    overflow:hidden;
+    /*border: 1px solid black;*/
+    width:100%;    
+}
+.textAreaSpace {
+    width:100%;
+    max-width:100%;
+    height:150px;
+    max-height:150px;
+}
+.totalWidthArea
+{
+    width:100%; 
+    height:480px;
+    float:left;
+    display:block;
+    position:relative;
+    margin-top: 5px;
+}
+.subArea
+{
+   border: 1px solid black;    
+}
+.totalWidthInside
+{
+    width:100%; 
+    height:100%;
+    float:left;
+    overflow:hidden;
+}
+.halfWidth  {
+    width:49%;
+    height:100%;
+    display:block;
+    float:left;
+    margin-right:2px;
+}
+.h3ShareView {
+    padding: 0 0 20px 0 !important;
+    font-weight:bold;
+}
+.halfWidthlo  
+{
+    float:left;
+    width:100%;
+    margin:0 180px 0 0; 
+}
+
+.halfWidthlobtn
+{
+    position:absolute;
+    right:0px;
+    top:0px;
+    margin:0 0 0 2px;
+    padding:0px;
+    width:75px;
+    height:24px;
+}
+.halfWidthlobtn input
+{
+    width:75px;
+    height:100%;
+    margin:0;
+}
+#btnSearchLocations
+{
+    margin::0 0 0 1%;
+}
+.halfWidthlobtnView
+{
+    position:relative;
+	float:right;
+    /*right:0%;
+    top:10%;
+    margin:0 0 0 75%;*/
+    /*padding:0px;*/
+    width:100%;
+    height:24px;
+}
+.collapsableSection {
+	width:100%; 
+	height:34px;
+	background-color:#CCCCCC;
+	margin-top:5px;
+}
+.collapsableSection a, .collapsableSection input {
+	float:right;
+	width:70px;
+	margin:5px;    
+}
+.saveArea
+{
+    float:right;  
+}
+.saveArea a
+{
+    display:inline-block;
+     width: 40px;
+     height: 40px;
+     margin: 0 0 0 5px;    
+}
+.saveArea a img
+{
+     width: 40px;
+     height: 40px;
+}

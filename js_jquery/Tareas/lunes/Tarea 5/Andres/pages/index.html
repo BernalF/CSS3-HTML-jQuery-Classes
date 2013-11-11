@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../css/reset.css" type="text/css" rel="stylesheet">
+        <link href="../css/default.css" type="text/css" rel="stylesheet">
+        <title></title>
+    </head>
+    <body>
+        <form>
+        <div class="mainContainer">
+            <div>
+                <label class="title">Personal Information</label>
+                
+                <ul class="formList">
+                    <li><label>Name:</label></li>
+                    <li><input type="text" id="tname" placeholder="Name">
+                    <span class="error">Its required</span>
+                    </li>
+                    <li><label>Age:</label></li>
+                    <li><select id="age"><option value="">1</option></select>
+                    </li>
+                    <li><label>Adddress:</label></li>
+                    <li><input type="text" id="tadd" placeholder="Address">
+                    <span class="error">Its required</span>
+                    </li>
+                    <li><label>Email:</label></li>
+                    <li><input type="text" id="temail" placeholder="Email">
+                    <span class="error">Its required</span>
+                    </li>
+                    <li><label>Telephone:</label></li>
+                    <li><input type="text" id="telephone" placeholder="Telephone" maxlength="11">
+                    <span class="error">Its required</span>
+                    </li>
+                    <li><label>Have Sons?</label></li>
+                    <li><input type="radio" name="sRadio" id="yRadio" checked="false">Yes 
+                        <input type="radio" name="sRadio" id="nRadio"  checked="true"> No</li>    
+                </ul>
+                
+                <div id="inv">      
+                    <label class="title2">Type the name of the Sons</label>
+                    
+                    <ul class="formList2">
+                        <li><label>Name:</label></li>
+                        <li><input type="text" id="tname1" placeholder="Name">
+                        <span class="error">Required</span></li>
+                        <li><label>Genre:</label></li>      
+                        <li><select id="genre"><option>Female</option><option>Male</option></select><input type="button" value="Add" id="tNameE"></li>
+                    </ul>  
+                    <table id="table">
+                        <thead>
+                            <th>Name</th>
+                            <th>Genre</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </thead>
+                        <tbody id="tbody">                            
+                        </tbody>
+                    </table>
+                </div>  
+                
+                <label class="save"><input type="submit" value="Save" id="save"></label>
+                
+            </div>
+        </div>
+        </form>
+    </body>
+</html>
+
+<script src="../js/jquery-2.0.3.js"></script>
+<script src="../js/default.js"></script>
+<script>
+    $(function (){
+        ACME.HomeWork.init(); 
+    });
+</script>
+
+

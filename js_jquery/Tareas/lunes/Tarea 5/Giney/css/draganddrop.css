@@ -1,0 +1,385 @@
+/* MAINHOLDER STARTS */
+body, html {
+	width:100%;
+	height:100%;
+}
+.dragingHolder2{
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+}
+
+/* MAINHOLDER ENDS */
+
+/* SELECTIONS SECTION STARTS */
+
+.selectionNav{
+	background-color:#ccc;
+	width:100%;
+	padding-bottom:10px;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:2;
+}
+
+.itemsList{
+	padding:10px;
+	padding-right:70px;
+}
+
+.itemsList li{
+	float:left;
+	position:relative;
+}
+
+.itemsList li span{
+	display:block;
+
+}
+
+.itemsList li a.draggable{
+	display:block;
+	padding:0 10px 0 40px;
+	margin-right:10px;
+	background-color:#FFF;
+	position:relative;
+	cursor:pointer;
+	line-height:30px;
+}
+
+.itemsList li a.draggable:before{
+	content:"";
+	line-height:30px;
+	text-align:center;
+	display:block;
+	color:#fff;
+	width:30px;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:#39F;
+}
+
+.itemsList li a.link1:before{
+	content:"1";
+	background-color:#F60;
+}
+
+.itemsList li a.link2:before{
+	content:"2";
+	background-color:#F60;
+}
+
+.itemsList li a.link3:before{
+	content:"3";
+	background-color:#F60;
+}
+
+.itemsList li a.link4:before{
+	content:"4";
+	background-color:#F60;
+}
+
+/* SELECTIONS SECTION ENDS */
+
+/* BOARDS HOLDER STARTS */
+
+#boardsHolder{
+	width:100%;
+	height:94%;
+	position:absolute;
+	left:0;
+	top:0;
+	padding-top:50px;
+	padding-bottom:0px;
+	z-index:1;
+	overflow:hidden;
+}
+
+.hover{
+	/*box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	border:5px dashed #fff;*/
+	opacity:0.5;
+	background-color:#CCC;
+}
+
+#DefaultHolder{
+	display:none;
+}
+
+.boardInfo a{
+	color:#F90;
+}
+
+.boardInfo a:hover{
+	color:#CF0;
+}
+
+.boardInfo{
+	position:relative;
+}
+
+.boardInfo .cleanBoard,
+.boardInfo .dragContent,
+.deletable{
+	display:block;
+	width:40px;
+	height:40px;
+	text-indent:-9999px;
+	background-color:#F60;
+	background-image:url(../images/draggable_boards/clean_board.png);
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+.boardInfo .dragContent,
+.deletable{
+	background-color:#0C6;
+	background-image:url(../images/draggable_boards/move_board.png);
+	right:40px;
+}
+
+.boardInfo .cleanBoard:hover,
+.boardInfo .dragContent:hover,
+.deletable{
+	background-color:#999;
+}
+
+/* BOARDS LAYOUT SELECTION STARTS */
+
+.itemsList li.themeSelection{
+	position:absolute;
+	right:0;
+	top:10px;
+	width:70px;
+}
+
+.itemsList li.themeSelection ul{
+	overflow:hidden;
+	width:70px;
+	display:none;
+	background-color:#CCC;
+}
+
+.itemsList li.themeSelection ul.open{
+	height:auto;
+}
+
+.itemsList li.themeSelection ul li{
+	padding:10px;
+}
+
+.itemsList li.themeSelection ul li a,
+.itemsList li.themeSelection #CurrentView{
+	text-indent:-9999px;
+	display:block;
+	width:50px;
+	height:30px;
+	background-image:url(../images/draggable_boards/boards_selection.jpg);
+}
+
+.itemsList li.themeSelection #CurrentView{
+	margin-left:10px;
+}
+
+.itemsList li.themeSelection ul li a#DefaultView,
+.itemsList li.themeSelection a.DefaultView{
+	background-position:0 0;
+}
+
+.itemsList li.themeSelection ul li a#Vertical2,
+.itemsList li.themeSelection a.Vertical2{
+	background-position:0 -30px;
+}
+
+.itemsList li.themeSelection ul li a#Vertical3,
+.itemsList li.themeSelection a.Vertical3{
+	background-position:0 -60px;
+}
+
+.itemsList li.themeSelection ul li a#Horizontal2,
+.itemsList li.themeSelection a.Horizontal2{
+	background-position:0 -90px;
+}
+
+.itemsList li.themeSelection ul li a#Horizontal3,
+.itemsList li.themeSelection a.Horizontal3{
+	background-position:0 -120px;
+}
+
+.itemsList li.themeSelection ul li a#Half4,
+.itemsList li.themeSelection a.Half4{
+	background-position:0 -150px;
+}
+
+.itemsList li.themeSelection ul li a#Vertical4,
+.itemsList li.themeSelection a.Vertical4{
+	background-position:0 -180px;
+}
+
+/* BOARDS LAYOUT SELECTION ENDS */
+
+/* BOARDS DISTRIBUTIONS STARTS */
+#boardOne{
+	/*background-color:#036;*/
+}
+
+#boardTwo{
+	/*background-color:#15B5E3;*/
+}
+
+#boardThree{
+	/*background-color:#47DC78;*/
+}
+
+#boardFour{
+	/*background-color:#66F;*/
+}
+
+#boardThree, #boardTwo, #boardOne, #boardFour{
+	float:left;
+	overflow:auto;
+	/*color:#fff;*/
+	display:none;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+/* DEFAULT BOARD */
+.DefaultView #boardOne{
+	width:100%;
+	display:block;
+	height:100%;
+	overflow:auto;
+	color:#fff;
+}
+
+/* TWO VERTICALS*/
+.Vertical2 #boardOne,
+.Vertical2 #boardTwo{
+	float:left;
+	display:block;
+	width:50%;
+	height:100%;
+	overflow:auto;
+	color:#fff;
+}
+
+.Vertical2 #boardOne{
+	border-right:1px solid #000;
+}
+
+/* VERTICAL THREE */
+.Vertical3 #boardOne{
+	width:50%;
+	display:block;
+	height:100%;
+	border-right:1px solid #000;
+}
+.Vertical3 #boardTwo{
+	width:50%;
+	display:block;
+	height:50%;
+	border-bottom:1px solid #000;
+}
+
+.Vertical3 #boardThree{
+	width:50%;
+	display:block;
+	height:50%;
+}
+
+/* HORIZONTAL TWO */
+.Horizontal2 #boardOne{
+	width:100%;
+	height:50%;
+	display:block;
+}
+.Horizontal2 #boardTwo{
+	width:100%;
+	height:50%;
+	display:block;
+}
+
+.Horizontal2 #boardOne{
+	border-bottom:1px solid #000;
+}
+
+/* HORIZONTAL THREE */
+.Horizontal3 #boardOne{
+	width:50%;
+	height:50%;
+	display:block;
+}
+.Horizontal3 #boardTwo{
+	width:50%;
+	display:block;
+	height:50%;
+	border-left:1px solid #000;
+}
+
+.Horizontal3 #boardThree{
+	width:100%;
+	height:50%;
+	display:block;
+	border-top:1px solid #000;
+}
+
+/* HALF FOUR */
+.Half4 #boardOne,
+.Half4 #boardTwo,
+.Half4 #boardThree,
+.Half4 #boardFour{
+	display:block;
+	float:left;
+	width:50%;
+	height:50%;
+}
+
+.Half4 #boardOne{
+	border-bottom:1px solid #000;
+	border-right:1px solid #000;
+}
+
+.Half4 #boardTwo{
+	border-bottom:1px solid #000;
+}
+
+.Half4 #boardThree{
+	border-right:1px solid #000;
+}
+
+/* VERTICAL FOUR */
+
+.Vertical4 #boardOne{
+	display:block;
+	float:left;
+	width:70%;
+	height:100%;
+	border-right:1px solid #000;
+}
+
+.Vertical4 #boardTwo,
+.Vertical4 #boardThree,
+.Vertical4 #boardFour{
+	display:block;
+	float:left;
+	width:30%;
+	height:33.3%;
+}
+
+.Vertical4 #boardThree{
+	border-bottom:1px solid #000;
+	border-top:1px solid #000;
+}
+
+/* BOARDS DISTRIBUTIONS ENDS */
+
+/* BOARDS HOLDER ENDS */

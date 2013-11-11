@@ -1,0 +1,92 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <title>Basic Form</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/defaults.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+
+    <div class="PrincipalInformation">
+        <form name="input" action="SecondPage.html" method="get">
+            Name:
+        <input type="text" name="Name" value="" required><br>
+            Age:
+        <input type="number" id="inputage" name="Age" value="" required><br>
+            Have sons?
+            <input type="radio"
+                name="radAnswer"
+                id="answerNo"
+                value="No" />
+            <label for="answerNo">No</label>
+            <input type="radio"
+                name="radAnswer"
+                id="answerYes"
+                value="Yes" />
+            <label for="answerYes">Yes</label>
+
+            <div id="haveSonsMainSection">
+                <div id="divLeftSection">
+                    <ul id="leftSonsSection" class="editForm">
+                        <li>
+                            <label id="lblSonName">
+                                Son Name
+                            </label>
+                            <input type="text" id="inpSonName" name="SonName" value="">
+                        </li>
+                        <li>
+                            <label id="lblGenre">
+                                Genre
+                            </label>
+                            <select id="lstGenre">
+                                <option value="1">Female</option>
+                                <option value="2">Male</option>
+                            </select>
+                        </li>
+                        <li>
+                            <button type="button" id="bntAdd">Add</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="divRightSection">
+                        <table id="tbSonRegistry" class="editableTable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Genre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <input type="submit" id="bntSave" value="Save">
+        </form>
+    </div>
+
+    <!-- CRIPTS SECTION STARTS -->
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="js/Main.js"></script>
+</body>
+<script type="text/javascript">
+    $(function () {
+        mainPage.init({
+        });
+        
+    });
+
+</script>
+</html>
