@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home Work JS #2</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/defaults.css" />
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="mainContainer">
+        <form action="result.html" onsubmit="return ACME.HomeWork.validateMe()">
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <ul class="twoCols">
+                    <li>
+                        <label>
+                            Name
+                            <p>*</p>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="text" id="txtName" required-msj="Name is required field"/>
+                        <span class="triangle-right left hide"></span>
+                    </li>
+                    <li>
+                        <label>
+                            Age
+                            <p>*</p>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="text" id="txtAge" class="age" required-msj="Age is required field" no-number-msj="Invalid Number"/>
+                        <span class="triangle-right left hide"></span>
+                    </li>
+                    <li>
+                        <label>Do you have childrens?</label>
+                    </li>
+                    <li>
+                        <label>Yes</label>&nbsp;<input type="radio" name="childrens" onclick="ACME.HomeWork.showChildrensArea(true)" />&nbsp;&nbsp;&nbsp;&nbsp;<label>No</label>&nbsp;<input type="radio" name="childrens" checked onclick="ACME.HomeWork.showChildrensArea(false)" /></li>
+
+                </ul>
+                <div class="OneCol">&nbsp;</div>
+                <table id="childrensArea" class="w100 hide">
+                    <tr>
+                        <td class="w345px tleft">
+                            <ul class="OneCol">
+                                <li>
+                                    <label>Type the name of your child</label>
+                                </li>
+                                <li>
+                                    <label>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <input type="text" id="txtChildName" />
+                                </li>
+                                <li>
+                                    <label>Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <select id="selGender">
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                    <!--<button type="button" class="red" onclick="ACME.HomeWork.delChildName()">Delete</button>-->
+                                </li>
+                                <li class="right">
+                                    <button id="btnAdd" type="button" class="green">Add</button>
+                                </li>
+                            </ul>
+                        </td>
+                        <td class="tcen"></td>
+                        <td class="pl50 w100">
+                            <table id="childrens" class="w100">
+                                <tr>
+                                    <td class="th1">&nbsp;</td>
+                                    <td class="th2">&nbsp;</td>
+                                    <td class="th3">&nbsp;Name</td>
+                                    <td class="th4">&nbsp;Gender</td>
+                                </tr>                                
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <ul class="OneCol">
+                    <li>
+                        <hr />
+                    </li>
+                    <li class="right">
+                        <button type="submit" class="orange">Save</button>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+
+    (function (yourcode) {
+        // The global jQuery object is passed as a parameter
+        yourcode(window.jQuery, window, document);
+    }(function ($, window, document) {
+        // The $ is now locally scoped 
+
+        // Listen for the jQuery ready event on the document
+        $(function () {
+            // The DOM is ready!
+            ACME.HomeWork.init();
+        });
+        
+    }));
+
+</script>
