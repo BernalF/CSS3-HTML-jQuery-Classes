@@ -1,0 +1,102 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tarea Final</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/defaults.css">
+</head>
+<body class="maincontent">
+    <div class="title"><h1>Tarea Final Jquery</h1></div>
+    <section class="mainSection">
+        <ul>
+            
+            <li>
+                <div class="field"><span>Name *</span></div>
+                <input id="txtName" type="text" />
+                <span id="SpanName" class="error">Value is required</span>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <div class="field"><span>Age *</span></div>
+                <input id="txtAge" type="text" />
+                <span id="SpanAge" class="error">Value is required</span>
+            </li>
+        </ul>
+        <ul>
+            <li>Have Sons? *</li>
+            <li>
+                <input id="rdYes"name="sons" type="radio" value="Yes" />
+                Yes
+                <input id="rdNo" name="sons" type="radio" value="No" />
+                No
+            </li>
+        </ul>
+
+
+    </section>
+    <section id="addSons" class="sectionLeft">
+        <p>Type the name of the sons</p>
+        <ul class="sonInformation">
+            <li>
+                <span class="field">Name *</span>
+            </li>
+            <li>
+                <input id="txtNameSon" type="text" />
+            </li>
+            <li>
+                <span class="field">Genre</span>
+            </li>
+            <li>
+                <select id="Genre">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                
+            </li>
+            <li>
+                <input id="btnAdd" type="button" value="   Add Son   " />
+            </li>
+            
+                
+            
+        </ul>
+    </section>
+
+    <section  id="ListSon" class="sectionRight">
+        <table id="ListSons" border="1">
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Name</td>
+                <td>Genre</td>
+            </tr>
+            
+            
+        </table>
+    </section>
+
+    <footer class="footer">
+        <div id="btnSaveContainer">
+            <input id="btnGeneralSave" type="button" value="   Save   " />
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/FinalWork.js"></script>
+
+<script>
+
+    $(function() {
+        ACME.FinalWork.init();
+    });
+
+
+</script>

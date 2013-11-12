@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>animals and pets</title>
+
+    <link href="css/default.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container">
+        <div id="topsection">
+            <div id="topsection_title">ANIMALS &amp; PETS</div>
+
+
+        </div>
+        <div id="left_column">
+            <div id="left_top"></div>
+
+
+        </div>
+        <div id="right_column">
+            <div id="right_top"></div>
+            <div id="right_mid">
+                <h1>THANKS FOR YOUR INFORMATION</h1>
+                <div id="dvInfo" class="thanks"></div>
+           </div>
+            <div id="right_bot"></div>
+        </div>
+
+    </div>
+
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/pets.js"></script>
+
+   <script type="text/javascript">
+        $(function () {
+            var data = $.parseJSON($.cookie('dataJQ'));
+            var text = data.info[0].Name + ' is ' + data.info[0].Age + ' years old and ';
+            if (data.info[0].Pets.length == 0){
+                text = text + 'no has pets'
+            }
+            else{
+                text = text + 'has ' + data.info[0].Pets.length + ' pets: ';
+                $.each(data.info[0].Pets, function (index, value) {
+                    if (value != null || typeof value != "undefined") {
+                        text = text + value.PetName;
+                        if (index == (data.info[0].Pets.length - 1)) {
+                            text = text + '.';
+                        }
+                        else {
+                            text = text + ', ';
+                        }
+                    }
+                });
+            }
+
+
+            
+            $('#dvInfo')[0].innerText = text;
+            $('#dvInfo')[0].innerHTML = text;
+           
+        });
+       
+    </script>
+
+</body>
+</html>

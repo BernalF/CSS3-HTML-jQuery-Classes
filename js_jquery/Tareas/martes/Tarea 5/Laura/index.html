@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>animals and pets</title>
+
+    <link href="css/default.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container">
+        <div id="topsection">
+            <div id="topsection_title">ANIMALS &amp; PETS</div>
+
+
+        </div>
+        <div id="left_column">
+            <div id="left_top"></div>
+
+
+        </div>
+        <div id="right_column">
+            <div id="right_top"></div>
+            <div id="right_mid">
+                <h1>WELCOME TO OUR  WEBSITE</h1>
+                <div>
+                    <ul>
+                        <li>Name:</li>
+                        <li>
+                            <input id="txtName" type="text" class="req" /></li>
+                        <li>Age:</li>
+                        <li>
+                            <input id="txtAge" type="text" class="req" /></li>
+                        <li>Do you have pets?</li>
+                        <li>
+                            <input id="rbtYes" type="radio" value="Yes" title="Yes" name="Sons" />Yes
+                            <input id="rbtNo" type="radio" value="No" title="No" name="Sons" />No
+                        </li>
+                    </ul>
+                </div>
+                <div id="divDescription" class="hide">
+                    <h2>Pets Information </h2>
+                    <ul>
+                        <li>Pet Name:</li>
+                        <li>
+                            <input id="txtPetName" type="text" class="required" />
+                        </li>
+                        <li>Genre:</li>
+                        <li>
+                            <select id="ddlGenre">
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+
+                            </select>
+                        </li>
+                        <li></li>
+                        <li>
+                            <div id="btnAdd" class="button">ADD</div>
+                        </li>
+                    </ul>
+                   
+                    <div id="dvPets">
+                        <table id="tbPets" class="tbPets">
+                            <caption>Pets Description</caption>
+                            <thead>
+                                <tr>
+                                    <th class="show">Name</th>
+                                    <th class="show">Genre</th>
+                                    <th class="hide">Name</th>
+                                    <th class="hide">Genre</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+                <ul>
+                  <li><h1><div id="btnSave" class="button">SAVE</div></h1></li>
+                    <li></li>
+                </ul>
+            </div>
+           
+            <div id="right_bot"></div>
+        </div>
+
+    </div>
+
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/pets.js"></script>
+
+    <script>
+        $(function () {
+            PetsModule.init({
+
+            });
+        });
+    </script>
+
+</body>
+</html>

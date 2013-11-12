@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Homework</title>
+        <link href="style.css" rel="stylesheet" />
+    </head>
+
+    <body class="main">        
+        <form class="form" method="get" >
+            <!--  action="result.html"  onsubmit="return saveAll()-->
+            <div id="up">
+                <div class="row">       
+                    <div class="label">
+                        <span>Name</span>
+                    </div>
+                    <div class="field">
+                        <input type="text" id="NameField" />
+                    </div>                    
+                    <div class="field" id="vName"></div>  
+                </div>         
+                <div class="row">
+                    <div class="label">
+                        <span>Age *</span>
+                    </div>
+                    <div class="field">
+                        <input type="text" id="AgeField"/>
+                    </div>
+                    <div class="field" id="vAge"></div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        <span>Have Sons?</span>
+                    </div>
+                    <div class="field">
+                        <span>Yes</span><input type="radio" id="chkBoxY" name="Sons" value="Yes"/>
+                        <span>No</span><input type="radio" id="chkBoxN" name="Sons" value="No"/>
+                    </div>
+                </div> 
+            </div>                            
+                  
+            <div id="haveSons">
+                <p>Information Son's</p>
+                            
+                <div class="a1">
+                    <span>Name </span>
+                    <input id="iName" type="text" />
+                </div>
+                <div class="a1">
+                    <span>Genre </span>
+                    <select id="iGenre">
+                        <option value="1">Male</option>
+                        <option value="2">Famale</option>
+                    </select>
+                    <input type="button" id="AddSon" value="" />
+                </div>
+                <div id="scrollDiv">
+                    <table id="Mytable" border="1">
+                        <tr>
+                            <th class="tableTh"></th>
+                            <th class="tableTh"></th>
+                            <th class="tableEnca"> <span>Name </span></th>
+                            <th class="tableEnca"> <span>Genre </span></th>
+                        </tr>
+                    </table>
+                </div>
+                </div>
+               <div id="popup" style="display: none;">
+                   <div class="content-popup">
+                       <div class="close"><a href="#" id="close">
+                           <img src="images/close.png" /></a></div>
+                       <div id="PopClass">
+
+                       </div>
+                   </div>
+</div>
+
+            <div>
+                <input class="saveAll" type="button" value="Save" />
+            </div> 
+        </form>           
+   
+    </body>
+</html>
+<script src="./js/jquery-2.0.3.js"></script>
+<script  src = "./js/Index.js"></script>
+<script  src = "./js/Validate.js"></script>
+<script>
+
+    $(function () {
+        Index.init({
+        });
+    });
+</script>
+

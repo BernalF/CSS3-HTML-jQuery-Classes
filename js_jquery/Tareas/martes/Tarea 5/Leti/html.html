@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Mi Formulario</title>
+        <link rel="stylesheet" type="text/css" href="reset.css"/>
+        <link rel="stylesheet" type="text/css" href="tarea1.css"/>
+        <img src="paisaje.jpg" alt="paisaje" width="1229" height="1000">
+        </head>
+    <body>
+<form name="myForm" id="myform" action="https://www.google.com/" onsubmit="return validateForm()">
+<table id="myTable" border=0>
+  <tr>
+	<td>Name</td>
+	<td>
+	<input id="name" type="text" name="Name" value placeholder="Name" required="true">
+	</td>
+</tr>
+ <tr>
+	<td>Age</td>
+	<td>
+	<input id="Age" type=text name="Age" value placeholder="Age" required="true">
+	</td>
+</tr>
+   </table>
+   <p>Have sons?</p>
+    <label for="Yes">Yes</label>
+    <input id="P1" type="radio" value="Yes" onclick="test()">
+    <label for="No">No</label>
+    <input id="P2" type="radio" value="No"><br><br>
+  <span id="oculto">
+  <font color="black" size="4" face="Comic Sans MS, Arial, MS Sans Serif">
+      Sons Information</font><br>
+<table id="table1" border=0>
+    <tr>
+        <td>Son Name</td>
+        <td>
+        <input type="text" value placeholder="Son Name" name="SonName">
+        </td>
+    </tr>
+    <tr>
+	<td>Gender</td>
+	<td>
+	<select name="Gender">
+		<option VALUE="Male">Male</option>
+		<option VALUE="Female">Female</option>
+	</select><br>
+    <input id="btnAdd" type="button" onclick="Add()" value="Add">
+	</td>
+</tr>
+</table>
+     <table id="table2">
+            <tr>
+                <td><input type="button" id="btnEdit" value="Edit" onclick="Editar()"></td>
+                <td><input type="button" id="btnDelete" value="Delete" onclick="remover()"></td>
+                <td>Name</td>
+                <td>Gender</td>
+            </tr> 
+         </table>
+ </span>  
+<input id="boton" type="submit" value="Save" !important>
+ </form>
+ </body>
+</html>
+<script src="../js/jquery-2.0.3.js"></script>
+<script src="js/class07.js"></script>
+<script> 
+    function validateForm()
+ {
+var x=document.getElementById("Age").value;
+if(x==""||isNaN(x))
+	{
+	alert("The field Age just accept number");
+	}
+     if(document.myForm.Name.value == "" )
+   {
+     alert( "Please provide your name!" );
+     document.myForm.Name.focus();
+     return false;
+    }      
+  }  
+function test(){
+        if (document.myForm.P1.checked == true) {
+            document.getElementById('oculto').style.display='block';
+        }
+     if(document.myForm.P2.checked=false){
+             document.getElementById('oculto').style.display='none';
+   }
+ }    
+function Add(){ 
+    var tabla=document.getElementById("table1");
+    var dato=document.getElementById("table2");
+    
+    for(j=0;j<=-1;j++){
+        
+    dato = tabla.rows[j].cells[0].childNodes[0].nodeValue;
+    }
+} 
+function Editar() {
+  tab=document.getElementById('table2');
+  for (i=0; ele=tab.getElementsByTagName('input')[i]; i++) {
+    if (ele.checked) edita(ele);
+      alert( "Esta seguro que quiere modificar este dato" );
+    ele.checked = false;
+  }
+}
+function remover(){
+
+    var x;
+    var y = confirm("Esta seguro que quiere eliminar este dato");
+   if (y==true)
+   {
+     x= document.myForm.select1.options[document.myForm.select1.selectedIndex] = null;
+  }
+else
+  {
+  x=document.myForm.select1.options[document.myForm.select1.selectedIndex] = false;
+  }
+ }
+</script>
