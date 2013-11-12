@@ -1,0 +1,10 @@
+Cosas nuevas aprendidas
+
+Para hacer como una marca de agua se utiliza el valor placeholder
+Ejemplo:
+<input id="name" type="text" name="Name" value placeholder="Name" required="true">
+
+No pude terminar porque tenia que presentar otras tareas en la U
+
+y no supe como pasar los datos de una tabla a otra
+:(
