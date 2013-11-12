@@ -1,0 +1,76 @@
+body, div, ul, li, h1, h2, h3, h4, h5, form, input, textarea, p, table, tr, td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #01317D;
+    color: #01317D;
+    font-weight: bold;
+    font-family: Tahoma;
+}
+
+.principalContent {
+    border-color: gray;
+    border-style: outset;
+    border-width: 4px;
+    width: 410px;
+    margin: 18% auto;
+    padding-top: 130px;
+    padding-left: 80px;
+    padding-bottom: 150px;
+    background: white;
+}
+
+span {
+    font-family: Tahoma;
+    color: red;
+    display: none;
+    font-size: 12px;
+}
+
+#newSon {
+    width: 100%;
+    padding-top: 20px;
+    display: none;
+    margin: 0 auto;
+}
+
+#table {
+    background-color: white;
+    width: 200px;
+    color: #01317D;
+}
+
+    #table tbody tr {
+        background: white;
+        font-family: Tahoma;
+    }
+
+.base-row {
+    display: none;
+}
+
+.delete td {
+    cursor: pointer;
+    color: #000;
+}
+
+.add {
+    cursor: pointer;
+    color: #000;
+    background-color: #01317D;
+    color: white;
+    height: 25px;
+    width: 50px;
+    display: inline-block;
+    margin-right: inherit;
+}
+
+.button {
+    background-color: #01317D;
+    color: white;
+    height: 25px;
+    width: 50px;
+    display: inline-block;
+}

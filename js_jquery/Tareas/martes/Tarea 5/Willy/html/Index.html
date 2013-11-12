@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JQueryProject Willy Ruiz</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/design.css">
+</head>
+<body>
+    <div class="principalContent">
+        
+        <h1>Personal Information</h1>
+        
+        <ul>
+            <li>Name *</li>
+            <li>
+                <input id="txtSonName" type="text" /></li>
+            <li><span id="spanAlertName">Value is required</span></li>
+        </ul>
+
+        <ul>
+            <li>Age *</li>
+            <li>
+                <input id="txtSonAge" type="text" /></li>
+            <li><span id="spanAlertAge">Value is required</span></li>
+        </ul>
+        <ul>
+            <li>Have Sons? *</li>
+            <li>
+                <input id="rdYesOption" name="sons" type="radio" value="Yes" />
+                Yes
+            <input id="rdNoOption" name="sons" type="radio" value="No" />
+                No
+            </li>
+        </ul>
+
+
+        <div id="newSon">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Last Name</th>
+                        <th>Genre</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="base-row">
+                        <td>
+                            <input type="text" class="name" /></td>
+                        <td>
+                            <input type="text" class="lastName" /></td>
+                        <td>
+                            <select class="genre">
+                                <option value="0"></option>
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                            </select>
+                        </td>
+                        <td class="delete">Delete</td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="button" class="add" id="add" value="Add" />
+        </div>
+
+        <div id="secondaryContainer">
+            <input id="btnSave" type="button" class="button" value="Save" />
+        </div>
+    </div>
+</body>
+</html>
+<script src="../js/jquery-2.0.3.js"></script>
+<script src="../js/module.js"></script>
+<script>
+
+    $(function () {
+        willy.init({
+        });
+    });
+
+
+</script>

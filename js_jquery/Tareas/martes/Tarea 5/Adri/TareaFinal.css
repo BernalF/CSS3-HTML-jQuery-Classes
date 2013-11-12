@@ -1,0 +1,91 @@
+﻿body,
+html {
+    margin:30px;
+    padding:0;
+    color:#000;
+    background:white;
+}
+#AddSection {
+    width:750px;
+    margin:0 auto;
+    background:#A0B6CC;
+}
+ul
+{
+    list-style: none;
+    overflow: hidden;
+    text-align: justify;
+}
+ul li
+{
+    padding: 5px;   
+}
+.cHidden
+{
+    visibility:hidden;
+}    
+.cShown
+{
+    visibility:visible;
+}    
+.cButton, .btnEdit, .btnDelete
+{
+    width: 60px;
+    background-color: #000080;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.combobox
+{
+    width:80px;
+}
+#wrap {
+    width:750px;
+    margin:0 auto;
+    background:#A0B6CC;
+}
+#footer {
+    clear:both;
+    margin-left:600px;
+    height: 30px;
+    margin-top: 6px;
+}
+#column1 
+{
+    float:left;
+    width:280px;
+    height:370px;
+    background:#CCCCFF;
+    border-width:3px;
+    border-right-style:solid;
+}
+#column2{
+    float:right;
+    width:450px;
+    height:370px;
+    background:#CCCCFF;
+    overflow:auto;
+    border-width:3px;
+    border-right-style:solid;
+}
+#txtName,
+#iName,
+#iSonName
+{
+    width: 150px;
+}
+#iAge
+{
+    width: 50px;
+}
+#lname,
+#lAge,
+#SonName,
+#Genre
+{
+    display:inline-block;
+    width:70px; 
+}
+.red {
+    color:red;
+}
