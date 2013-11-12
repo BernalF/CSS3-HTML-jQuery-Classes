@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>NEED FOR SPEED 10.0</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/defaults.css" />
+    
+</head>
+<body>
+    <div id="racearea">
+		<img id="car1" src="images/car1.jpg" alt="car 1" /><br/>
+		<img id="car2" src="images/car2.jpg" alt="car 2" /><br/>
+		<img id="car3" src="images/car3.jpg" alt="car 3" /><br/>
+		<img id="car4" src="images/car4.jpg" alt="car 4" /><br/>
+		<img id="car5" src="images/car5.jpg" alt="car 5" /><br/>
+		<img id="car6" src="images/car6.jpg" alt="car 5" /><br/>
+		<img id="car7" src="images/car7.jpg" alt="car 5" /><br/>
+		<button id="startbtn">Start</button>
+	</div>
+	
+	
+   
+</body>
+</html>
+<script src="js/jquery-2.0.3.js"></script>
+
+<script>
+   var car1 = 0;
+   var car2 = 0;
+   var car3 = 0;
+   var car4 = 0;
+   $(document).keypress(function(e) {
+		if (car1 <= 18 && car2 <= 18 && car3 <= 18 && car4 <= 18){
+		  if (e.which == 97 && (car1 <= 18 && car2 <= 18 && car3 <= 18 && car4 <= 18)) {
+				$('#car1').animate({marginLeft: "+=50px"}, 1000);
+				car1 += 1;
+			}
+		   if (e.which == 100 && (car1 <= 18 && car2 <= 18 && car3 <= 18 && car4 <= 18)){
+			 	$('#car2').animate({marginLeft: "+=50px"}, 1000);
+				car2 += 1;
+		  }
+		   if(e.which == 104 && (car1 <= 18 && car2 <= 18 && car3 <= 18 && car4 <= 18)) {
+			 	$('#car3').animate({marginLeft: "+=50px"}, 1000);
+				car3 += 1;
+		  }
+		   if(e.which == 108 && (car1 <= 18 && car2 <= 18 && car3 <= 18 && car4 <= 18)) {
+				$('#car4').animate({marginLeft: "+=50px"}, 1000);			
+				car4 += 1;
+		  }
+		  
+		}		  
+		 else{
+			if (car1 >= 18){
+				$('#car1').fadeIn();
+				$('#car1').fadeOut();
+				$('#car1').fadeIn();
+				$('#car1').fadeOut();
+				$('#car1').fadeIn();
+				$('#car1').fadeOut();
+				$('#car1').fadeIn();
+				$('#car1').css('marginLeft', '0');
+				$('#car2').css('marginLeft', '0');
+				$('#car3').css('marginLeft', '0');
+				$('#car4').css('marginLeft', '0');
+				car1 = 0;
+			    car2 = 0;
+			    car3 = 0;
+			    car4 = 0;
+			}
+			if (car2 >= 18){
+				$('#car2').fadeIn();
+				$('#car2').fadeOut();
+				$('#car2').fadeIn();
+				$('#car2').fadeOut();
+				$('#car2').fadeIn();
+				$('#car2').fadeOut();
+				$('#car2').fadeIn();
+				$('#car1').css('marginLeft', '0');
+				$('#car2').css('marginLeft', '0');
+				$('#car3').css('marginLeft', '0');
+				$('#car4').css('marginLeft', '0');
+				car1 = 0;
+			    car2 = 0;
+			    car3 = 0;
+			    car4 = 0;
+			}
+			if (car3 >= 18){
+				$('#car3').fadeIn();
+				$('#car3').fadeOut();
+				$('#car3').fadeIn();
+				$('#car3').fadeOut();
+				$('#car3').fadeIn();
+				$('#car3').fadeOut();
+				$('#car3').fadeIn();
+				$('#car1').css('marginLeft', '0');
+				$('#car2').css('marginLeft', '0');
+				$('#car3').css('marginLeft', '0');
+				$('#car4').css('marginLeft', '0');
+				car1 = 0;
+			    car2 = 0;
+			    car3 = 0;
+			    car4 = 0;
+			}
+			if (car4 >= 18){
+				$('#car4').fadeIn();
+				$('#car4').fadeOut();
+				$('#car4').fadeIn();
+				$('#car4').fadeOut();
+				$('#car4').fadeIn();
+				$('#car4').fadeOut();
+				$('#car4').fadeIn();
+				$('#car1').css('marginLeft', '0');
+				$('#car2').css('marginLeft', '0');
+				$('#car3').css('marginLeft', '0');
+				$('#car4').css('marginLeft', '0');
+				car1 = 0;
+			    car2 = 0;
+			    car3 = 0;
+			    car4 = 0;
+			}
+		 }
+	 
+   });
+    $(function () {
+       $('#startbtn').off('click.startbtn').on('click.startbtn', function (e) {
+	   
+		for (var i = 0; i < 9; i++) {
+			$('#car5').animate({marginLeft: "+=100px"}, "fast");
+			$('#car6').animate({marginLeft: "+=100px"}, "4000");
+			$('#car7').animate({marginLeft: "+=100px"}, "4000");
+		}	
+		
+		$('#car5').fadeIn();
+		$('#car5').fadeOut();
+		$('#car5').fadeIn();
+		$('#car5').fadeOut();
+		$('#car5').fadeIn();
+		$('#car5').fadeOut();
+		$('#car5').fadeIn();
+		$('#car5').animate({marginLeft: "-=900px"}, "fast");
+		$('#car6').animate({marginLeft: "-=900px"}, "4000");
+		$('#car7').animate({marginLeft: "-=900px"}, "4000");
+		
+	   });
+    });
+	
+	
+</script>
+
+
+
+
+
+
+

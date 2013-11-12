@@ -1,0 +1,16 @@
+body
+{
+    background:grey;	
+}
+#racearea
+{
+    background:white;
+	margin:20px auto 0 auto;
+    width:1000px;
+    height:700px;
+    border-style:solid;
+	background-image:url('../images/goal.jpg');
+    background-repeat:repeat-y;
+	background-position: center right;
+}
+
