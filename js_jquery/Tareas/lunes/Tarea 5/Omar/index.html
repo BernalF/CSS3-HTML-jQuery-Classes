@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zion Paradise</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/zion.css" />
+</head>
+<body>
+    <header>
+    </header>
+
+    <article>
+        <ul id="principalForm" class="center">
+            <li class="title">
+                <h1 class="center">Zion Suvivors</h1>
+            </li>
+            <li class="suvivorInfo">
+                <ul>
+                    <li class="row">
+                        <label>Name*</label>
+                    </li>
+                    <li class="row">
+                        <input type="text" id="name_input" placeholder="Name" />
+                    </li>
+
+                    <li class="row">
+                        <label>Age*</label>
+                    </li>
+                    <li class="row">
+                        <input type="text" id="age_input" placeholder="Age" />
+                    </li>
+
+                    <li>
+                        <label class="errormsj hide">Required Fields Empty*</label>
+                    </li>
+
+                    <li class="row">
+                        <label>Have Sons?</label>
+                    </li>
+                    <li class="row">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="yes">
+                            Yes
+                        </label>
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="no" checked>
+                            No
+                        </label>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="sonsInfo hide">
+                <label class="subtitle">Sons Information</label>
+                <ul>
+                    <li class="row">
+                        <ul>
+                            <li>
+                                <label class="errormsj hide">Required Fields Empty*</label>
+                            </li>
+                            <li class="row">
+                                <label>Son Name*</label>
+                            </li>
+                            <li class="row">
+                                <input type="text" id="sonName_input" placeholder="Son Name" />
+                            </li>
+                            <li class="row">
+                                <label>Genre</label>
+                            </li>
+                            <li class="row">
+                                <select id="genre_select">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </li>
+                            <li class="row" id="addButtom">
+                                <a href="#" class="btn">Add </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="row bordered">
+                        <!--TEST-->
+                        <ul id="SonsTable">
+                            <li class="headersSonsTable">
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li>Name</li>
+                                    <li>Genre</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </li>
+            <li class="saveArea">
+                <a href="#" class="btn save savebtn">Save </a>
+            </li>
+        </ul>
+    </article>
+
+    <footer></footer>
+</body>
+</html>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/zion.js"></script>
+<script>
+    $(function () {
+        zion.init({
+            param1: 10,
+            param2: 1
+        });
+    });
+</script>

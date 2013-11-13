@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zion Paradise</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./css/zion.css" />
+</head>
+<body>
+    <header>
+    </header>
+
+    <article>
+        <div class="center">
+
+        </div>
+    </article>
+
+    <footer></footer>
+</body>
+</html>
+<script src="./js/jquery-2.0.3.min.js"></script>
+<script src="./js/zion.js"></script>
+<script>
+    $(function () {
+        zion.init({
+            param1: 10,
+            param2: 1
+        });
+
+        var param = zion.getParams('suvivor');
+        param = param.replace(/%22/gi, '"');
+
+        var suvivor = JSON.parse(param);
+
+        var suvivorInfo = '';
+        suvivorInfo += 'Name= ' + suvivor.name + '<br>';
+        suvivorInfo += 'Age= ' + suvivor.age + '<br><br>';
+        //        suvivorInfo += 'Name= ' + suvivor.name + '<br>';
+
+        suvivorInfo += 'SONS <br>';
+
+        for (var i = 0; i < suvivor.sons.length; i++) {
+            suvivorInfo += 'Name: ' + suvivor.sons[i].name + ',';
+            suvivorInfo += 'Genre: ' + suvivor.sons[i].genre + '<br><br>';
+        }
+
+        $('.center').html(suvivorInfo);
+        
+    });
+</script>

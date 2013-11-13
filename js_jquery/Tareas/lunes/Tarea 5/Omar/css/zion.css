@@ -1,0 +1,200 @@
+﻿body {
+    height: 768px;
+    background-color: black;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+div.center {
+    width: 175px;
+    padding-top: 1%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.errormsj {
+    color: red;
+    margin-bottom: 5px;
+}
+
+header {
+    height: 10%;
+    background-color: #006C4C;
+}
+
+footer {
+    height: 5%;
+    background-color: black;
+}
+
+article {
+    height: 70%;
+    background-color: white;
+    padding-top: 20px;
+}
+
+.row {
+    float: left;
+    width: 45%;
+}
+
+ul#principalForm {
+    width: 750px;
+    padding-top: 1%;
+    position: relative;
+    border: solid black 1px;
+    background-color: rgba(183, 223, 235, 0.69);
+    margin-bottom: 20px;
+}
+
+    ul#principalForm > li {
+        padding-top: 5px;
+        display: inline-block;
+        /*padding-left: 15px;*/
+    }
+
+        ul#principalForm > li label {
+            padding-left: 15px;
+        }
+
+    ul#principalForm li.title {
+        width: 90%;
+        font-size: 3em;
+        padding-bottom: 3%;
+        display: block;
+        padding-left: 20px;
+    }
+
+    ul#principalForm li.suvivorInfo {
+        width: 90%;
+    }
+
+    ul#principalForm li.sonsInfo {
+        width: 90%;
+        height: 300px;
+        padding-top: 5%;
+        float: left;
+    }
+
+    ul#principalForm .subtitle {
+        font-size: 1.5em;
+    }
+
+    ul#principalForm li.sonsInfo > ul {
+        padding-top: 10px;
+    }
+
+
+
+#sonName_input, #genre_select {
+    width: 100px;
+}
+
+.sonNameEdit {
+    width:80px;
+}
+.sonGenreEdit {
+    width: 60px;
+    height:20px;
+}
+
+#addButtom {
+    width: 100%;
+    position: relative;
+}
+
+    #addButtom a {
+        position: absolute;
+        right: 10px;
+    }
+
+.bordered {
+    border-left: solid 2px gray;
+    height: 200px;
+    padding-left: 30px;
+    overflow-y: auto;
+}
+
+#SonsTable > li ul li {
+    border-left: solid 2px white;
+    height: 20px;
+    margin: 1px 0;
+}
+
+#SonsTable .headersSonsTable ul li {
+    float: left;
+    display: block;
+    background-color: #97A6A1;
+    font-weight: bold;
+}
+
+#SonsTable .rowSonsTable {
+    clear: both;
+}
+
+    #SonsTable .headersSonsTable ul > li:nth-child(1),
+    #SonsTable .headersSonsTable ul > li:nth-child(2),
+    #SonsTable .headersSonsTable ul > li:nth-child(4),
+    #SonsTable .rowSonsTable ul > li:nth-child(1),
+    #SonsTable .rowSonsTable ul > li:nth-child(2),
+    #SonsTable .rowSonsTable ul > li:nth-child(4) {
+        width: 60px;
+    }
+
+    #SonsTable .headersSonsTable ul > li:nth-child(3),
+    #SonsTable .rowSonsTable ul > li:nth-child(3) {
+        width: 90px;
+    }
+
+    #SonsTable .rowSonsTable ul > li:nth-child(3) {
+        text-align: right;
+    }
+
+    #SonsTable .rowSonsTable ul li {
+        float: left;
+        display: inline-block;
+    }
+
+.btn {
+    display: block;
+    background-color: #143C69;
+    color: white;
+    border-radius: 15px;
+    width: 50px;
+    text-align: center;
+}
+
+    .btn:hover {
+        display: block;
+        background-color: black;
+    }
+
+.savebtn {
+    background-color: #2DB417;
+}
+
+.cancelbtn {
+    background-color: #C2000D;
+}
+
+.saveArea {
+    display: block;
+    width: 90%;
+    padding-top: 0px;
+    clear: both;
+    background: none !important;
+    position: relative;
+}
+
+.btn.save {
+    position: absolute;
+    right: 0px;
+    bottom: 25px;
+    width: 100px;
+}

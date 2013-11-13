@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Animation</title>
+        <style type="text/css" defanghtml_media="screen"> 
+        .animator {
+        width: 150px;
+        height: 150px;
+        background: #b62a2a;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        }
+
+            img {
+                margin: 0 auto;
+            }
+        </style>
+</head>
+
+<body>
+<div class="animator"> <img height="100" width="80" src="elvis.gif"/></div>
+
+
+<!--<defanghtml_script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></defanghtml_script>-->
+<!--<defanghtml_script>
+    $(document).ready(function () {
+        $(".animator").mouseover(function () {
+            var left = randomBetween(-100, 100);
+            var top = randomBetween(-100, 100);
+            var width = 15;
+            var height = 15;
+            $('html').css('background-color', 'black');
+            $(this).animate({
+                left: "+=" + left,
+                top: "+=" + top,
+                height: "+=" + height,
+     
+                width: "+=" + width, opacity: '0.8'
+            }, "fast", function () {
+                $(this).css({ background: random_color() }).animate({ opacity: 0.5 }, "fast");
+                $(this).find('img').animate({
+                    height: "+=" + height,
+                    width: "+=" + width
+                }, "fast");
+            }
+            );
+        });
+    });
+
+    function randomBetween(min, max) {
+        if (min < 0) {
+            return min + Math.random() * (Math.abs(min) + max);
+        } else {
+            return min + Math.random() * max;
+        }
+    }
+
+    function random_color() {
+        return "#" + ("000" + (Math.random() * (1 << 24) | 0).toString(16)).substr(-6)
+    }
+</defanghtml_script>-->
+</body>
+</html>
