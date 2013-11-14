@@ -1,0 +1,157 @@
+
+
+.Info {
+    display:inline-block;
+    list-style-type:none;
+    color:#354179;
+    padding-left:20px;
+    
+}
+.btnsaveli {
+    
+   text-align:right;
+   width:760px;
+   color:#354179;
+   margin-bottom:10px;
+ 
+}
+.border {
+    width:770px;
+    border-color:#51566E;
+    border-style:double;
+    margin:50px;
+    padding:30px;
+    
+}
+
+.maindiv {
+    width:950px;
+    background-color:grey;  
+    height:50%;
+    padding:10px;
+}
+
+.subtitle {
+    display:block;
+    list-style-type:none;
+    color:#354179;
+    font-weight:bold;
+    font-size:16;
+    padding-left:20px;
+    padding-top:20px;
+}
+
+.soninfo1 {
+    display:inline-block;
+    list-style-type:none;
+    color:#354179;
+    float: left;
+   
+}
+   
+.soninfo2 {
+    display:inline-block;
+    list-style-type:none;
+    color:#354179;
+    float: left;
+         padding-left:20px;
+   
+}
+.btnadd {
+    display: block;
+    background-color: #456;
+    color: grey;
+    border-radius: 5px;
+    width: 50px;
+    text-align: center;
+}
+
+.btnsave {
+    display: inline-block;
+    background-color: #456;
+    color: grey;
+    border-radius: 5px;
+    width: 50px;
+    text-align: center;
+}
+.btnaddli {
+   text-align:right;
+   color:#354179;
+   margin-left:100px;
+ 
+}
+
+.cell {
+     display:inline-block !important;
+    list-style-type:none;
+    width: 45%;
+    display:inline-block;
+    float:left;
+    padding-left:20px;
+}
+.bordered {
+    border-left: solid 2px black;
+    height: 200px; 
+    overflow-y: auto;
+    margin-left:300px;
+}
+
+#SonsTable > li ul li {
+    border-left: solid 2px white;
+    height: 20px;
+    margin: 1px 0;
+      list-style-type:none;
+}
+
+#SonsTable .headersSonsTable ul li {
+    float: left;
+    display: block;
+    background-color: #97A6A1;
+    font-weight: bold;
+     
+}
+
+#SonsTable .rowSonsTable {
+    clear: both;
+   
+}
+
+#SonsTable .headersSonsTable ul > li:nth-child(1),
+#SonsTable .headersSonsTable ul > li:nth-child(2),
+#SonsTable .headersSonsTable ul > li:nth-child(4),
+#SonsTable .rowSonsTable ul > li:nth-child(1),
+#SonsTable .rowSonsTable ul > li:nth-child(2),
+#SonsTable .rowSonsTable ul > li:nth-child(4) {
+    width: 60px;
+}
+
+#SonsTable .headersSonsTable ul > li:nth-child(3),
+#SonsTable .rowSonsTable ul > li:nth-child(3) {
+    width: 90px;
+}
+
+#SonsTable .rowSonsTable ul > li:nth-child(3) {
+    text-align: right;
+}
+
+#SonsTable .rowSonsTable ul li {
+    float: left;
+    display: inline-block;
+    border-bottom-style:solid;
+    border-bottom-color:blue;
+    list-style:none;
+}
+
+.btnstl {
+    display: block;
+    background-color: #456;
+    color: white;
+    border-radius: 5px;
+    width: 50px;
+    text-align: center;
+}
+
+.btnstl:hover {
+    display: block;
+    background-color: black;
+}

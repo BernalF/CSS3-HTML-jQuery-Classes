@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta chartset="utf-8">
+	
+	<title>Demo HTML5 Template</title>
+	       <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/Tarea.css">
+      
+    
+    <script>
+      function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+ 
+         return true;
+      }
+        
+      function noHaveSons(evt)
+      {
+          var x=document.getElementById("sondiv");
+          x.remove();
+      }
+
+      function addValueToList(nameSon)
+      {
+        var s=document.form1.select1; 
+
+       
+        var option=document.createElement("option"); 
+        option.value=nameSon;
+        option.text=nameSon; 
+      }
+    
+        function insertOption(evt)
+
+        {
+        
+        elm=document.getElementById("texto").value;
+        var y=document.createElement('option');
+        
+        y.text=elm;
+        
+        var x=document.getElementById("Select1");
+        
+        try
+        
+        {x.add(y,null); }
+        
+        catch(ex)
+        
+        {x.add(y); }
+        document.getElementById("texto").value="";
+        }
+        
+        function removeOption()
+        {
+            confirm("Esta seguro que desea eliminar este valor");
+            if(confirm)
+            {
+            var x=document.getElementById("Select1");
+            x.remove(x.selectedIndex);
+            }
+        }
+    </script>
+    </head>
+    
+    <body>
+        <form id="form1" class="maindiv">
+            <div class="border">
+                <ul class="Info">
+                    <li >Name* </li>
+                    <li >Age* </li>
+                    <li >Have sons? </li>
+                </ul>
+                  <ul  class="Info">
+                    <li > <input type="text" required/></li>
+                    <li > <input type="text" onkeypress="return isNumberKey(event)" required /></li>
+                    <li > <input type="radio" name="yes" id="1" onclick="HaveSons(event)" checked/>Yes <input type="radio" name="no" id="0" onclick="noHaveSons(event)"/>No</li>
+                </ul>
+                <div id="sondiv">
+                    <li class="subtitle">Sons Information</li>
+              
+                <ul class="Info">
+                          <ul class="soninfo1">
+                            <li><label>Son Name*</label></li>
+                            <li><label>Genre</label></li>
+                         </ul>
+                          <ul class="soninfo2">
+                            <li><input type="text" id="sonNametxt" placeholder="Son Name" /></li>
+                            <li> <select id="genre">
+                                 <option value="Male"> </option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </li>
+                            <li class="btnaddli" id="addButtom">
+                                <a href="#" class="btnadd">Add </a>
+                            </li>
+                        </ul>
+                     <li class="info bordered" style="padding-left:20px">
+                        <ul id="SonsTable">
+                            <li class="headersSonsTable">
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li>Name</li>
+                                    <li>Genre</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+                </div>
+                <div  class="btnsaveli">
+                    <input type="submit" name="save" id="save" class="btnsave" value="Save"/> 
+               </div>
+            </div>
+        </form>
+    </body>
+</html>
+
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/Tarea.js"></script>
+<script>
+    $(function () {
+        people.tarea.init({
+        });
+    });
+</script>
