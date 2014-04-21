@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta charset="utf-8">
+
+<title>Web News</title>
+<meta name="description" content="Demo HTML5 Template">
+<meta name="author" content="Dreamincoloronline.com">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="apple-touch-icon" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-iphone4.png">  
+<link rel="shortcut icon" type="image/x-icon" href="http://10.0.3.54/favicon.ico">
+<link rel="icon" type="image/x-icon" href="http://10.0.3.54/favicon.ico">  
+
+<link rel="stylesheet" href="L2_files/reset.css">
+<link rel="stylesheet" href="L2_files/defaults.css">
+
+  
+<link rel="stylesheet" href="L2_files/internal.css">
+<link rel="stylesheet" href="L2_files/trainings.css">
+</head>
+
+    <body class="Padawan">
+
+<header class="top">
+    <nav>
+    	<h1><a href="http://10.0.3.54/index.php/eis_news">eis 5 news</a></h1>
+        
+        <ul class="mainNavigation">
+        	<li class="homeLink"><a href="http://10.0.3.54/index.php/eis_news">Home</a></li>
+            <li class="architectureLink"><a href="http://10.0.3.54/index.php/eis_news/architecture">Architecture News</a></li>
+            <li class="dataLink"><a href="http://10.0.3.54/index.php/eis_news/data_base">Data Base News</a></li>
+            <li class="qaLink"><a href="http://10.0.3.54/index.php/eis_news/arq_qa">QA Arch News</a></li>
+            <li class="contactLink"><a href="http://10.0.3.54/index.php/eis_news/knowledge_base">Knowledge Base</a></li>
+        </ul>
+		<ul class="userLogin">
+            <li>
+            	<a href="http://10.0.3.54/index.php/member/login">Login</a>
+            	<span class="block"><a href="http://10.0.3.54/index.php/member/register">Register</a></span>
+            </li>
+            <li class="userPhoto">
+            	<img src="L2_files/default_user.png" alt="">
+            </li>
+		</ul>
+	
+    </nav>
+</header>
+
+<!-- MAIN CONTENT STARTS -->
+
+<header class="mainTitle trainingsBigTitle">
+
+    <h2>Padawan Lessons</h2>
+
+</header>
+
+<section class="mainContent">
+	<div class="contentHolder">
+<!-- LEFT CONTENT STARTS -->
+    	<article>
+        
+            
+                            <p class="backBtn">
+                    <a href="http://10.0.3.54/index.php/eis_news/padawan_trainings" class="back">Back to Padawan Lessons</a>
+                </p>
+                        
+        
+        	
+            
+
+            <h2 class="contentTitle">LESSON 2 - CSS AS A MODIFIER</h2>
+            <p class="metaData">By <a href="#">Caleb Briancesco</a> 07/23/13 at 10:01 am</p>
+                        <p class="relatives">HTML, HTML5, CSS</p>
+                        
+            <div class="infoContent">
+            	<p>
+	<span style="color:#ff8c00;"><span style="font-size:20px;"><b>CSS RESET</b></span></span><br>
+	The goal of a reset stylesheet is to reduce browser inconsistencies in 
+things like default line heights, margins and font sizes of headings, 
+and so on.<br>
+	All browsers have differences between each other in matter of how the 
+display or render each element or even interpret attributes.<br>
+	With the reset.css we can take all those values and set them to 0 by 
+making all mayor browsers see the same thing or at least the most 
+similar perception of the elements in the HTML.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color:#ff8c00;"><span style="font-size:20px;"><b>About simple structures</b></span></span></p>
+<p>
+	<b>Header tag (&lt;header&gt;):</b><br>
+	In this tag you can include navigation if needed; the navigation should be hosted into a nav tag (&lt;nav&gt;).</p>
+<p>
+	<b>Anchor (&lt;a&gt;):</b><br>
+	An anchor should only exist into a text container such as a p, li, table, titles (h1, h2, h3, h4, h5, h6), and so on.</p>
+<p>
+	<b>List Item (&lt;li&gt;):</b><br>
+	The li should NEVER be out of an ul (unordered list) or an ol. At the 
+same time the UL or the OL should NEVER EVER hold any element but an LI.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<b><span style="font-size:20px;"><span style="color:#ff8c00;">About behavior of elements</span></span></b></p>
+<p>
+	<b>Inline elements:</b><br>
+	Generally, inline elements may contain only data and other inline 
+elements. By default, inline elements do not begin with new line.<br>
+	Inline elements naturally will only grow according to the amount of content inside them.<br>
+	These are inline elements:</p>
+<table style="width: 500px;" cellpadding="1" cellspacing="1" border="1">
+	<tbody>
+		<tr>
+			<td>
+				b, big, i, small, tt, abbr, acronym, cite, code, dfn, em, kbd, 
+strong, samp, var, a, bdo, br, img, map, object, q, script, span, sub, 
+sup, button, input, label, select, textarea</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	<b>Block elements:</b><br>
+	Their most significant characteristic is that they typically are 
+formatted with a line break before and after the element (thereby 
+creating a stand-alone block of content). By default, block-level 
+elements begin on new lines.<br>
+	Block elements will grow horizontally according to the free space they have.</p>
+<p>
+	Generally, block-level elements may contain inline elements and other 
+block-level elements. Inherent in this structural distinction is the 
+idea that block elements create "larger" structures than inline 
+elements.</p>
+<table style="width: 500px;" cellpadding="1" cellspacing="1" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<p>
+					&lt;address&gt;</p>
+				<p>
+					Contact information.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;article&gt; HTML5</p>
+				<p>
+					Article content.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;aside&gt; HTML5</p>
+				<p>
+					Aside content.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;audio&gt; HTML5</p>
+				<p>
+					Audio player.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;blockquote&gt;</p>
+				<p>
+					Long ("block") quotation.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;canvas&gt; HTML5</p>
+				<p>
+					Drawing canvas.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;dd&gt;</p>
+				<p>
+					Definition description.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;div&gt;</p>
+				<p>
+					Document division.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;dl&gt;</p>
+				<p>
+					Definition list.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;fieldset&gt;</p>
+				<p>
+					Field set label.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;figcaption&gt; HTML5</p>
+				<p>
+					Figure caption.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;figure&gt; HTML5</p>
+				<p>
+					Groups media content with a caption (see &lt;figcaption&gt;).</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;footer&gt; HTML5</p>
+				<p>
+					Section or page footer.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;form&gt;</p>
+				<p>
+					Input form.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;</p>
+				<p>
+					Heading levels 1-6.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;header&gt; HTML5</p>
+				<p>
+					Section or page header.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;hgroup&gt; HTML5</p>
+				<p>
+					Groups header information.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;hr&gt;</p>
+				<p>
+					Horizontal rule (dividing line).</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;noscript&gt;</p>
+				<p>
+					Content to use if scripting is not supported or turned off.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;ol&gt;</p>
+				<p>
+					Ordered list.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;output&gt; HTML5</p>
+				<p>
+					Form output.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;p&gt;</p>
+				<p>
+					Paragraph.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;pre&gt;</p>
+				<p>
+					Preformatted text.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;section&gt; HTML5</p>
+				<p>
+					Section of a web page.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;table&gt;</p>
+				<p>
+					Table.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;tfoot&gt;</p>
+				<p>
+					Table footer.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;ul&gt;</p>
+				<p>
+					Unordered list.</p>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;video&gt; HTML5</p>
+				<p>
+					Video player.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size:20px;"><span style="color:#ff8c00;"><b>CSS TAKES CONTROL!</b></span></span><br>
+	We can also change the way an element behaves using CSS, we can create 
+an inline element and make it work as a block element and the other way 
+around.</p>
+<p>
+	The inline elements won’t be able to change their size unless we make 
+them work as a block or as an inline-block; the size restriction will 
+always work on block elements.<br>
+	If we make a block element float, it will behave as an inline block 
+element growing according to the amount of content it holds and also 
+being able to change its size by request (adding specific size on the 
+CSS).<br>
+	&nbsp;</p>
+<p>
+	<b>CSS ATTRIBUTES WE SAW</b></p>
+<p>
+	padding:;<br>
+	margin:;<br>
+	line-height:;<br>
+	font-family:;<br>
+	font-size:;<br>
+	width:;<br>
+	height:;<br>
+	display:;<br>
+	clear:;</p>
+<p>
+	&nbsp;</p>
+<hr>
+<p>
+	<br>
+	<span style="color:#ff8c00;"><b><span style="font-size:16px;">Doubts of the last lesson:</span></b></span><br>
+	Q) Why are the new HTML5 tags different than divs? / Are we able to keep using divs?<br>
+	R) <a href="http://html5doctor.com/you-can-still-use-div/" target="_blank">HERE</a></p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size:20px;"><b><span style="color:#ff0000;">HOMEWORK:</span></b></span></p>
+<p>
+	Develop the next sample by showing the most similar structure based on 
+the new thml5 tags and the previous css attributes we have seen.&nbsp;</p>
+<p>
+	<img alt="" src="L2_files/class_project.jpg" style="width: 800px; height: 534px;"></p>
+            </div>
+            
+            
+    	</article>        
+<!-- LEFT CONTENT ENDS -->
+
+    </div>
+</section>
+
+<nav class="subNav">
+	<!--<ul class="sections">
+    	<li class="green"><a href="#">Green Attitude</a></li>
+        <li class="design"><a href="#">Web Design</a></li>
+        <li class="dev"><a href="#">Web Development</a></li>
+        <li class="tech"><a href="#">New Technologies</a></li>
+        <li class="super"><a href="#">We're Super</a></li>
+    </ul> -->
+    <ul class="sections">
+    	<li class="youngling"><a href="http://10.0.3.54/index.php/eis_news/youngling_trainings">Youngling Lessons</a></li>
+        <li class="padawan"><a href="http://10.0.3.54/index.php/eis_news/padawan_trainings">Padawan Lessons</a></li>
+        <li class="jedi"><a href="#">Jedi Lessons</a></li>
+        <li class="training"><a href="http://10.0.3.54/index.php/eis_news/quizes">Quizes &amp; Tests</a></li>
+    </ul>
+</nav>
+<ul class="bottomInfo">
+
+	<li class="Youngling">
+
+    	<h3><a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-07-pseudo-elements-laboratory">Lesson 07 - Pseudo Elements Laboratory</a></h3>
+
+        <span class="metaData">By <a href="#">Cristopher Castillo</a> 11/01/13 at 01:33 pm</span>
+        <div>
+        <h1> <strong>Pseudo Elements</strong></h1> <p> <br> A pseudo-element does exactly what the word implies. It creates a new element and…
+        </p></div>
+        <span class="buttons">
+            <a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-07-pseudo-elements-laboratory" class="btn">See More</a>
+        </span>
+    </li>
+
+	<li class="Padawan">
+
+    	<h3><a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-09-javascript-dom-manipulation">Lesson 09 - JAVASCRIPT DOM MANIPULATION</a></h3>
+
+        <span class="metaData">By <a href="#">Bernal Fernandez</a> 10/02/13 at 12:37 pm</span>
+        <div>
+        <p> <span style="color: #ff8c00;"><span style="font-size: 20px;">Javascript DOM (Document Object Model) Manipulation</span></span> </p> When a web page is loaded, the browser…
+        </div>
+        <span class="buttons">
+            <a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-09-javascript-dom-manipulation" class="btn">See More</a>
+        </span>
+    </li>
+
+</ul>
+
+<!-- MAN CONTENT ENDS -->
+
+<!-- JavaScript -->
+<script src="L2_files/jquery-1.js"></script>
+<script src="L2_files/modernizr-2.js"></script>
+
+
+</body></html>

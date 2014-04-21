@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta charset="utf-8">
+
+<title>Web News</title>
+<meta name="description" content="Demo HTML5 Template">
+<meta name="author" content="Dreamincoloronline.com">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="apple-touch-icon" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-iphone4.png">  
+<link rel="shortcut icon" type="image/x-icon" href="http://10.0.3.54/favicon.ico">
+<link rel="icon" type="image/x-icon" href="http://10.0.3.54/favicon.ico">  
+
+<link rel="stylesheet" href="L6_files/reset.css">
+<link rel="stylesheet" href="L6_files/defaults.css">
+
+  
+<link rel="stylesheet" href="L6_files/internal.css">
+<link rel="stylesheet" href="L6_files/trainings.css">
+</head>
+
+    <body class="Youngling">
+
+<header class="top">
+    <nav>
+    	<h1><a href="http://10.0.3.54/index.php/eis_news">eis 5 news</a></h1>
+        
+        <ul class="mainNavigation">
+        	<li class="homeLink"><a href="http://10.0.3.54/index.php/eis_news">Home</a></li>
+            <li class="architectureLink"><a href="http://10.0.3.54/index.php/eis_news/architecture">Architecture News</a></li>
+            <li class="dataLink"><a href="http://10.0.3.54/index.php/eis_news/data_base">Data Base News</a></li>
+            <li class="qaLink"><a href="http://10.0.3.54/index.php/eis_news/arq_qa">QA Arch News</a></li>
+            <li class="contactLink"><a href="http://10.0.3.54/index.php/eis_news/knowledge_base">Knowledge Base</a></li>
+        </ul>
+		<ul class="userLogin">
+            <li>
+            	<a href="http://10.0.3.54/index.php/member/login">Login</a>
+            	<span class="block"><a href="http://10.0.3.54/index.php/member/register">Register</a></span>
+            </li>
+            <li class="userPhoto">
+            	<img src="L6_files/default_user.png" alt="">
+            </li>
+		</ul>
+	
+    </nav>
+</header>
+
+<!-- MAIN CONTENT STARTS -->
+
+<header class="mainTitle trainingsBigTitle">
+
+    <h2>Youngling Lessons</h2>
+
+</header>
+
+<section class="mainContent">
+	<div class="contentHolder">
+<!-- LEFT CONTENT STARTS -->
+    	<article>
+        
+            
+                            <p class="backBtn">
+                    <a href="http://10.0.3.54/index.php/eis_news/youngling_trainings" class="back">Back to Youngling Lessons</a>
+                </p>
+                        
+        
+        	
+            
+
+            <h2 class="contentTitle">Lesson 06 - Specificity &amp; jQuery Introduction</h2>
+            <p class="metaData">By <a href="#">Bernal Fernandez</a> 09/04/13 at 10:39 am</p>
+                        <p class="relatives">HTML, CSS, JS / JQuery, Web Design</p>
+                        
+            <div class="infoContent">
+            	<p>
+	<span style="font-size:20px;"><span style="color:#ff8c00;">Specificity</span></span><br>
+	The different weight of selectors is usually the reason why your 
+CSS-rules don't apply to some elements, although you think they should 
+have. In order to minimize the time for bug hunting you need to 
+understand, how browsers interpret your code. And to understand that, 
+you need to have a firm understanding on how specificity works.<br>
+	In most cases such problems are caused by the simple fact that 
+somewhere among your CSS-rules you've defined a more specific selector. 
+CSS Specificity is very simple.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size:20px;"><span style="color:#ff8c00;">What is Specificity?</span></span><br>
+	Specificity determines, which CSS rule is applied by browsers. 
+"Specificity is a type of weighting that has a bearing on how your 
+cascading style sheet (CSS) rules are displayed".</p>
+<p>
+	Selector specificity is a process used to determine which rules take 
+precedence in CSS when several rules could be applied to the same 
+element in markup.</p>
+<p>
+	Every selector has its specificity. "All rules in your CSS carry a 
+specificity rating regardless of selector type, although the weighting 
+that is given to each selector type varies and will ultimately affect 
+the styling of your web documents".</p>
+<p>
+	If two selectors apply to the same element, the one with higher specificity wins.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color:#ff8c00;"><span style="font-size:20px;">Specificity hierarchy</span></span><br>
+	Every selector has its place in the specificity hierarchy. There are a 
+few distinct categories which define the specificity level of a given 
+selector:</p>
+<p>
+	1. Elements as a, p, li, section (every one tag on the code).&nbsp;</p>
+<p>
+	2. Classes, attributes and pseudo-classes (# of class selectors). This 
+group includes .classes, [attributes] and pseudo-classes such as :hover,
+ :focus etc. (we’ll see more about this pseudo-classes and attributes in
+ upcoming lessons)</p>
+<p>
+	3. IDs (# of ID selectors) ID is an identifier for your page elements, such as #Darth.</p>
+<p>
+	4. We will see more specificity selectors and values in upcoming lessons.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size:20px;"><span style="color:#ff8c00;">How to measure specificity?</span></span><br>
+	Memorize how to measure specificity. "Start at 0, add 1 for each 
+element name or pseudo-element, add 10 for each class or pseudo-class, 
+add 100 for each ID and so on. We’ll see more specificity values soon.</p>
+<p>
+	If you don't know what exactly each of these terms stands for or you 
+think is a little bit too messy perhaps you can understand it a little 
+bit better with the star wars hierarchy, you can take a look at the 
+brief overview of them; in the next image:</p>
+<p>
+	<img alt="" src="L6_files/specificity_01.jpg" style="width: 756px; height: 285px; margin: 0px auto;"></p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size:20px;"><span style="color:#ff8c00;">Sample of Layout</span></span></p>
+<table style="width: 500px;" cellpadding="1" cellspacing="1" border="1">
+	<tbody>
+		<tr>
+			<td>
+				&lt;!DOCTYPE html&gt;<br>
+				&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;<br>
+				&lt;head&gt;<br>
+				&nbsp;&nbsp;&nbsp; &lt;style&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; margin:0px;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; padding:0px;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #MainFrame {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; width:400px;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background-color:#808080;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; margin-left:auto;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; margin-right:auto;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; overflow:hidden;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #MainFrame UL {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; list-style-type:none;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background-color:green;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #MainFrame ul li {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; float:left;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; width:200px;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; margin-top:2px;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+				&nbsp;&nbsp;&nbsp; &lt;/style&gt;<br>
+				&lt;/head&gt;<br>
+				&lt;body&gt;<br>
+				&nbsp;&nbsp;&nbsp; &lt;div id="MainFrame"&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ul&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;<br>
+				
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &lt;span&gt;Textbox 1:&lt;/span&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type="text" /&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;<br>
+				
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &lt;span&gt;Textbox 2:&lt;/span&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type="text" /&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;<br>
+				
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &lt;span&gt;Textbox 3:&lt;/span&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type="text" /&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;<br>
+				
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &lt;span&gt;Textbox 4:&lt;/span&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type="text" /&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ul&gt;<br>
+				&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>
+				&lt;/body&gt;<br>
+				&lt;/html&gt;</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<hr>
+<p>
+	&nbsp;</p>
+<h1>
+	<b>jQuery Introduction</b></h1>
+<p>
+	&nbsp;</p>
+<h2>
+	<b>What is jQuery?</b></h2>
+<ul>
+	<li>
+		jQuery is a lightweight, "write less, do more", JavaScript library.</li>
+	<li>
+		The purpose of jQuery is to make it much easier to use JavaScript on your website.</li>
+	<li>
+		jQuery takes a lot of common tasks that require many lines of 
+JavaScript code to accomplish, and wraps them into methods that you can 
+call with a single line of code.</li>
+	<li>
+		jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.</li>
+</ul>
+<h3>
+	<b>Features</b></h3>
+<ul>
+	<li>
+		HTML/DOM manipulation</li>
+	<li>
+		CSS manipulation</li>
+	<li>
+		HTML event methods</li>
+	<li>
+		Effects and animations</li>
+	<li>
+		AJAX</li>
+	<li>
+		Utilities</li>
+</ul>
+<h2>
+	<b>Why jQuery?</b></h2>
+<ul>
+	<li>
+		The most popular</li>
+	<li>
+		The most extendable (flexible)</li>
+	<li>
+		The great documentation</li>
+	<li>
+		It's easy and awesome <img src="L6_files/wink.htm" alt="wink" style="border:0;" height="19" width="19"></li>
+</ul>
+<h2>
+	<b>jQuery Install</b></h2>
+<p>
+	There are several ways to start using jQuery on your web site. You can:</p>
+<ul>
+	<li>
+		&nbsp;&nbsp;&nbsp; Download the jQuery library from jQuery.com</li>
+	<li>
+		&nbsp;&nbsp;&nbsp; Include jQuery from a CDN, like Google</li>
+</ul>
+<h2>
+	<b>Downloading jQuery</b></h2>
+<p>
+	There are two versions of jQuery available for downloading:</p>
+<ul>
+	<li>
+		&nbsp;&nbsp;&nbsp; Production version - this is for your live website because it has been minified and compressed</li>
+	<li>
+		&nbsp;&nbsp;&nbsp; Development version - this is for testing and development (uncompressed and readable code)</li>
+</ul>
+<p>
+	Both versions can be downloaded from <a href="http://jquery.com/download/">jQuery.com</a>.</p>
+<p>
+	The jQuery library is a single JavaScript file, and you reference it 
+with the HTML &lt;script&gt; tag (notice that the &lt;script&gt; tag 
+should be inside the &lt;head&gt; section):<br>
+	&lt;head&gt;<br>
+	&lt;script src="jquery-2.0.3.js"&gt;&lt;/script&gt;<br>
+	&lt;/head&gt;</p>
+<h2>
+	<b>jQuery Syntax</b></h2>
+<p>
+	The jQuery syntax is tailor made for selecting HTML elements and performing some action on the element(s).</p>
+<p>
+	Basic syntax is: <b>$(selector).action()</b></p>
+<p>
+	&nbsp;&nbsp;&nbsp; A $ sign to define/access jQuery<br>
+	&nbsp;&nbsp;&nbsp; A (selector) to "query (or find)" HTML elements<br>
+	&nbsp;&nbsp;&nbsp; A jQuery action() to be performed on the element(s)</p>
+<h2>
+	<b>Examples</b></h2>
+<h3>
+	Hides the current Element and Show Sibling</h3>
+<div>
+	<p style="color:blue; font-family:consolas;">
+		&lt;a href="#" id="a1" onclick="hideMe(this);"&gt;Hides the current Element&lt;/a&gt;</p>
+	<p style="color:blue; font-family:consolas;">
+		&lt;a href="#" onclick="ShowSibling();"&gt;Show Sibling&lt;/a&gt;</p>
+	<p style="color:blue; font-family:consolas;">
+		&lt;script&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function hideMe(el) {<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(el).hide();<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+	<p style="color:blue; font-family:consolas;">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function ShowSibling(el) {<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $('#a1').show();<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+		&lt;/script&gt;</p>
+</div>
+<h3>
+	<b>Hide and Show All anchords</b></h3>
+<div>
+	<p style="color:blue; font-family:consolas;">
+		&lt;input type="button" value="Hide All ancords" onclick="hideAllA();" /&gt;</p>
+	<p style="color:blue; font-family:consolas;">
+		&lt;input type="button" value="Show All ancords" onclick="showAllA();"
+ /&gt;&lt;a href="#" onclick="ShowSibling();"&gt;Show Sibling&lt;/a&gt;</p>
+	<p style="color:blue; font-family:consolas;">
+		&lt;script&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function hideAllA() {<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $('a').hide();<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+	<p style="color:blue; font-family:consolas;">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function showAllA() {<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $('a').show();<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+		&lt;/script&gt;</p>
+</div>
+<h3>
+	<b>Hide and Show </b><b>anchords</b><b> by ID </b></h3>
+<div>
+	<p style="color:blue; font-family:consolas;">
+		&lt;input type="button" value="Hide by ID ancords" onclick="hideByID();" /&gt;</p>
+	<p style="color:blue; font-family:consolas;">
+		&lt;input type="button" value="Show by ID ancords" onclick="showbyID();" /&gt;</p>
+	<p style="color:blue; font-family:consolas;">
+		&lt;script&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function showbyID() {<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $('#p2').show();<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+	<p style="color:blue; font-family:consolas;">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function hideByID() {<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $('#p2').hide();<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+		&lt;/script&gt;</p>
+</div>
+<h3>
+	<b>Hide and Show anchords by class</b></h3>
+<div>
+	<p style="color:blue; font-family:consolas;">
+		&lt;input type="button" value="Hide by class ancords" onclick="hidebyClass();" /&gt;</p>
+	<p style="color:blue; font-family:consolas;">
+		&lt;input type="button" value="Show by class ancords" onclick="showbyClass();" /&gt;</p>
+	<p style="color:blue; font-family:consolas;">
+		&lt;script&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp; function hidebyClass() {<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $('.p3').hide();<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+	<p style="color:blue; font-family:consolas;">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function showbyClass() {<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $('.p3').show();<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+		&lt;/script&gt;</p>
+</div>
+<h2>
+	<b>The Document Ready Event</b></h2>
+<p>
+	You might have noticed that all jQuery methods in our examples, are inside a document ready event:</p>
+<p style="color:blue; font-family:consolas;">
+	<br>
+	$(document).ready(function(){<br>
+	&nbsp; // jQuery methods go here...<br>
+	});</p>
+<p>
+	This is to prevent any jQuery code from running before the document is finished loading (is ready).</p>
+<p>
+	It is good practice to wait for the document to be fully loaded and 
+ready before working with it. This also allows you to have your 
+JavaScript code before the body of your document, in the head section.</p>
+<p>
+	Here are some examples of actions that can fail if methods are run before the document is fully loaded:</p>
+<ul>
+	<li>
+		&nbsp;&nbsp;&nbsp; Trying to hide an element that is not created yet</li>
+	<li>
+		&nbsp;&nbsp;&nbsp; Trying to get the size of an image that is not loaded yet</li>
+</ul>
+<p>
+	Tip: The jQuery team has also created an even shorter method for the document ready event:</p>
+<p style="color:blue; font-family:consolas;">
+	$(function(){<br>
+	&nbsp;&nbsp; // jQuery methods go here...<br>
+	});</p>
+<p>
+	Use the syntax you prefer.&nbsp; I prefer the second one! <img alt="cool" src="L6_files/shades_smile.gif" title="cool" height="20" width="20"></p>
+            </div>
+            
+                        <p class="relatives">http://vm-eisnews/images/trainings_lessons/class_03.zip</p>
+            
+    	</article>        
+<!-- LEFT CONTENT ENDS -->
+
+    </div>
+</section>
+
+<nav class="subNav">
+	<!--<ul class="sections">
+    	<li class="green"><a href="#">Green Attitude</a></li>
+        <li class="design"><a href="#">Web Design</a></li>
+        <li class="dev"><a href="#">Web Development</a></li>
+        <li class="tech"><a href="#">New Technologies</a></li>
+        <li class="super"><a href="#">We're Super</a></li>
+    </ul> -->
+    <ul class="sections">
+    	<li class="youngling"><a href="http://10.0.3.54/index.php/eis_news/youngling_trainings">Youngling Lessons</a></li>
+        <li class="padawan"><a href="http://10.0.3.54/index.php/eis_news/padawan_trainings">Padawan Lessons</a></li>
+        <li class="jedi"><a href="#">Jedi Lessons</a></li>
+        <li class="training"><a href="http://10.0.3.54/index.php/eis_news/quizes">Quizes &amp; Tests</a></li>
+    </ul>
+</nav>
+<ul class="bottomInfo">
+
+	<li class="Youngling">
+
+    	<h3><a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-07-pseudo-elements-laboratory">Lesson 07 - Pseudo Elements Laboratory</a></h3>
+
+        <span class="metaData">By <a href="#">Cristopher Castillo</a> 11/01/13 at 01:33 pm</span>
+        <div>
+        <h1> <strong>Pseudo Elements</strong></h1> <p> <br> A pseudo-element does exactly what the word implies. It creates a new element and…
+        </p></div>
+        <span class="buttons">
+            <a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-07-pseudo-elements-laboratory" class="btn">See More</a>
+        </span>
+    </li>
+
+	<li class="Padawan">
+
+    	<h3><a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-09-javascript-dom-manipulation">Lesson 09 - JAVASCRIPT DOM MANIPULATION</a></h3>
+
+        <span class="metaData">By <a href="#">Bernal Fernandez</a> 10/02/13 at 12:37 pm</span>
+        <div>
+        <p> <span style="color: #ff8c00;"><span style="font-size: 20px;">Javascript DOM (Document Object Model) Manipulation</span></span> </p> When a web page is loaded, the browser…
+        </div>
+        <span class="buttons">
+            <a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-09-javascript-dom-manipulation" class="btn">See More</a>
+        </span>
+    </li>
+
+</ul>
+
+<!-- MAN CONTENT ENDS -->
+
+<!-- JavaScript -->
+<script src="L6_files/jquery-1.js"></script>
+<script src="L6_files/modernizr-2.js"></script>
+
+
+</body></html>

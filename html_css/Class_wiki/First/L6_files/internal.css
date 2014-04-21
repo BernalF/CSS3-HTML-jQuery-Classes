@@ -1,0 +1,313 @@
+.top nav{
+	background:#343434;
+}
+
+/* MAIN TITLE STARTS */
+
+.mainTitle{
+	background-color:#fff;
+	border-top:50px solid #fff;
+	border-bottom:5px solid #343434;	
+}
+
+.mainTitle h2{
+	line-height:100px;
+	width:90%;
+	color:#fff;
+	max-width:80%;
+	max-width:1000px;
+	margin:0 auto;
+	font-size:50px;
+	text-transform:uppercase;
+	text-indent:100px;
+	position:relative;
+	text-shadow:2px 2px 0 #343434;	
+}
+
+.mainTitle h2:before{
+	content:"";
+	display:block;
+	width:80px;
+	height:80px;
+	position:absolute;
+	left:0;
+	top:50%;
+	margin-top:-40px;
+	background-image:url(../images/defaults/utilities.png);
+	background-color:rgba(0,0,0,.3);
+}
+
+/* MAIN TITLE ENDS */
+
+.mainContent{
+	padding:20px 0;
+	min-height:200px;
+	background:url(../images/home/main_info_bg.jpg) repeat-x bottom #fff;
+	overflow:hidden;
+}
+
+.contentHolder{
+	width:80%;
+	max-width:1000px;
+	margin:auto;
+	overflow:hidden;
+}
+/* LEFT CONTENT HOLDER STARTS */
+.leftContent{
+	width:70%;
+	float:left;
+}
+
+.leftContent .infoContent img{
+	max-height:200px !important;
+	max-width:200px !important;
+}
+
+.contentTitle{
+	display:block;
+	font-size:30px;
+	position:relative;
+	line-height:30px;
+	padding:5px 0 5px 30px;
+}
+
+.contentTitle:before{
+	content:"";
+	display:block;
+	width:20px;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background:#e44d26;
+}
+
+.contentTitle a{
+	display:block;
+	font-size:30px;
+	line-height:30px;
+	color:#343434;
+}
+
+.contentTitle a:hover{
+	color:#0eb339;
+}
+
+.infoContent{
+	padding-right:20px;
+	overflow:hidden;
+}
+
+.infoContent a{
+	font-size:inherit;
+}
+
+.relatives{
+	display:inline-block;
+	background-color:#15afd5;
+	padding:2px 5px;
+	color:#fff;
+	margin:0 0 10px 0;
+}
+
+.relatives a:hover{
+	background-color:#CCC;
+	color:#343434;
+}
+
+/* LEFT CONTENT HOLDER ENDS */
+
+/* RIGHT CONTENT HOLDER STARTS */
+
+.rightContent{
+	width:30%;
+	float:left;
+}
+
+.itemsList li{
+	position:relative;
+	padding:0 0 3px 20px;
+	margin-bottom:10px;
+}
+
+.itemsList li:before{
+	content:"";
+	display:block;
+	width:10px;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background:#e44d26;
+}
+
+.itemsList .sectionTitle{
+	padding:0;
+	margin:0;
+}
+
+.itemsList .sectionTitle:before{
+	height:0;
+}
+
+.itemsList .sectionTitle h3{
+	text-transform:uppercase;
+	position:relative;
+	font-size:20px;
+	line-height:20px;
+}
+
+.itemsList .sectionTitle h3{
+	text-transform:uppercase;
+	display:block;
+	position:relative;
+	font-size:20px;
+	color:#343434;
+	line-height:20px;
+	padding:0 0 10px 50px;
+}
+
+.itemsList .sectionTitle h3 a:hover{
+	color:#e44d26;
+}
+
+.itemsList .sectionTitle h3:before{
+	content:"";
+	background-color:#39C;
+	display:block;
+	width:40px;
+	height:40px;
+	position:absolute;
+	top:2px;
+	left:0;
+	background-image:url(../images/defaults/utilities.png);
+}
+
+.itemsList h2 a{
+	display:block;
+	font-size:16px;
+	line-height:20px;
+	color:#343434;
+}
+
+.itemsList h2 a:hover{
+	color:#0eb339;
+}
+
+.itemsList .metaData,
+.itemsList .metaData a{
+	font-size:12px;
+	line-height:14px;
+}
+
+/* LATEST NEWS */
+
+.itemsList .sectionTitle h3.arch a:before{
+	background-position:-360px 0;
+}
+
+.itemsList .sectionTitle h3.data a:before{
+	background-position:-320px 0;
+}
+
+.itemsList .sectionTitle h3.qa a:before{
+	background-position:-80px -40px;
+}
+
+.itemsList .sectionTitle h3.knowledge:before{
+	background-position:-360px -40px;
+}
+
+.itemsList .sectionTitle h3.trainings:before{
+	background-position:-360px -80px;
+}
+/* RIGHT CONTENT HOLDER ENDS */
+
+/* PAGINATOR STARTS */
+
+.paginator{
+	margin-top:10px;
+	text-align:center;
+	line-height:30px;
+}
+
+.paginator a{
+	background-color:#e44d26;
+	color:#fff;
+	display:inline-block;
+	padding:0 10px;
+	position:relative;
+}
+
+.paginator a:after{
+	content:"";
+	display:block;
+	width:30px;
+	height:100%;
+	background-image:url(../images/defaults/utilities.png);
+	position:absolute;
+	top:0;
+}
+
+.paginator a:hover{
+	background-color:#919191;
+}
+
+.paginator .nextLink{
+	padding-right:40px;
+}
+
+.paginator .nextLink:after{
+	right:0;
+	background-position:0px -120px;
+}
+
+.paginator .prevLink{
+	padding-left:40px;
+}
+
+.paginator .prevLink:after{
+	left:0;
+	background-position:-40px -120px;
+}
+
+/* PAGINATOR ENDS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

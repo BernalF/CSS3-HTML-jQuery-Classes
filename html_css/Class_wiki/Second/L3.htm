@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta charset="utf-8">
+
+<title>Web News</title>
+<meta name="description" content="Demo HTML5 Template">
+<meta name="author" content="Dreamincoloronline.com">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="apple-touch-icon" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-iphone4.png">  
+<link rel="shortcut icon" type="image/x-icon" href="http://10.0.3.54/favicon.ico">
+<link rel="icon" type="image/x-icon" href="http://10.0.3.54/favicon.ico">  
+
+<link rel="stylesheet" href="L3_files/reset.css">
+<link rel="stylesheet" href="L3_files/defaults.css">
+
+  
+<link rel="stylesheet" href="L3_files/internal.css">
+<link rel="stylesheet" href="L3_files/trainings.css">
+</head>
+
+    <body class="Padawan">
+
+<header class="top">
+    <nav>
+    	<h1><a href="http://10.0.3.54/index.php/eis_news">eis 5 news</a></h1>
+        
+        <ul class="mainNavigation">
+        	<li class="homeLink"><a href="http://10.0.3.54/index.php/eis_news">Home</a></li>
+            <li class="architectureLink"><a href="http://10.0.3.54/index.php/eis_news/architecture">Architecture News</a></li>
+            <li class="dataLink"><a href="http://10.0.3.54/index.php/eis_news/data_base">Data Base News</a></li>
+            <li class="qaLink"><a href="http://10.0.3.54/index.php/eis_news/arq_qa">QA Arch News</a></li>
+            <li class="contactLink"><a href="http://10.0.3.54/index.php/eis_news/knowledge_base">Knowledge Base</a></li>
+        </ul>
+		<ul class="userLogin">
+            <li>
+            	<a href="http://10.0.3.54/index.php/member/login">Login</a>
+            	<span class="block"><a href="http://10.0.3.54/index.php/member/register">Register</a></span>
+            </li>
+            <li class="userPhoto">
+            	<img src="L3_files/default_user.png" alt="">
+            </li>
+		</ul>
+	
+    </nav>
+</header>
+
+<!-- MAIN CONTENT STARTS -->
+
+<header class="mainTitle trainingsBigTitle">
+
+    <h2>Padawan Lessons</h2>
+
+</header>
+
+<section class="mainContent">
+	<div class="contentHolder">
+<!-- LEFT CONTENT STARTS -->
+    	<article>
+        
+            
+                            <p class="backBtn">
+                    <a href="http://10.0.3.54/index.php/eis_news/padawan_trainings" class="back">Back to Padawan Lessons</a>
+                </p>
+                        
+        
+        	
+            
+
+            <h2 class="contentTitle">LESSON 3 - MARGIN, PADDING AND SPECIFICITY</h2>
+            <p class="metaData">By <a href="#">Caleb Briancesco</a> 07/30/13 at 12:11 pm</p>
+                        <p class="relatives">CSS, CSS3</p>
+                        
+            <div class="infoContent">
+            	<p>
+	<span style="font-size:20px;"><span style="color:#ff8c00;">Margin and Padding</span></span></p>
+<p>
+	<strong>Margin </strong>is the space created from the border of the 
+element to the outside, margin won’t increase or decrease the size of an
+ element and it allows negative values.<br>
+	If we want to add margin to an element with a specific width size the 
+margin will display by pushing space from the border to the outside at 
+the same time respecting the width size, if the element is hosted into a
+ container with specific size and we add margin, this will work by 
+pulling the element in order to meet the margin space between the border
+ of the element and the free area of the container.</p>
+<p>
+	<strong>Padding</strong> is the space created from the border to the inside. Padding will increase the size of the element we apply it.<br>
+	If we create an element with a specific width size and we add a padding
+ it will increase the size by the same value of the padding added.<br>
+	If we create a block element without specific width size and we add 
+padding to the right or left the size of the element will be the same as
+ it is, because as a block element it will grow according to the free 
+space it have and the padding will push all the content of that element 
+inside itself, this way we can create separations between the border of 
+the element and the content inside an element.</p>
+
+	<img alt="" src="L3_files/margin_padding_.jpg" style="width: 289px; height: 289px; margin: 0px auto;">
+<p>
+	<span style="font-size:20px;"><span style="color:#ff8c00;">Specificity</span></span><br>
+	The different weight of selectors is usually the reason why your 
+CSS-rules don't apply to some elements, although you think they should 
+have. In order to minimize the time for bug hunting you need to 
+understand, how browsers interpret your code. And to understand that, 
+you need to have a firm understanding on how specificity works.<br>
+	In most cases such problems are caused by the simple fact that 
+somewhere among your CSS-rules you've defined a more specific selector. 
+CSS Specificity is very simple.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size:20px;"><span style="color:#ff8c00;">What is Specificity?</span></span><br>
+	Specificity determines, which CSS rule is applied by browsers. 
+"Specificity is a type of weighting that has a bearing on how your 
+cascading style sheet (CSS) rules are displayed".</p>
+<p>
+	Selector specificity is a process used to determine which rules take 
+precedence in CSS when several rules could be applied to the same 
+element in markup.</p>
+<p>
+	Every selector has its specificity. "All rules in your CSS carry a 
+specificity rating regardless of selector type, although the weighting 
+that is given to each selector type varies and will ultimately affect 
+the styling of your web documents".</p>
+<p>
+	If two selectors apply to the same element, the one with higher specificity wins.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color:#ff8c00;"><span style="font-size:20px;">Specificity hierarchy</span></span><br>
+	Every selector has its place in the specificity hierarchy. There are a 
+few distinct categories which define the specificity level of a given 
+selector:</p>
+<p>
+	1. Elements as a, p, li, section (every one tag on the code).&nbsp;</p>
+<p>
+	2. Classes, attributes and pseudo-classes (# of class selectors). This 
+group includes .classes, [attributes] and pseudo-classes such as :hover,
+ :focus etc. (we’ll see more about this pseudo-classes and attributes in
+ upcoming lessons)</p>
+<p>
+	3. IDs (# of ID selectors) ID is an identifier for your page elements, such as #Darth.</p>
+<p>
+	4. We will see more specificity selectors and values in upcoming lessons.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size:20px;"><span style="color:#ff8c00;">How to measure specificity?</span></span><br>
+	Memorize how to measure specificity. "Start at 0, add 1 for each 
+element name or pseudo-element, add 10 for each class or pseudo-class, 
+add 100 for each ID and so on. We’ll see more specificity values soon.</p>
+<p>
+	If you don't know what exactly each of these terms stands for or you 
+think is a little bit too messy perhaps you can understand it a little 
+bit better with the star wars hierarchy, you can take a look at the 
+brief overview of them; in the next image:</p>
+
+	<img alt="" src="L3_files/specificity_01.jpg" style="width: 756px; height: 285px; margin: 0px auto;">
+<p>
+	&nbsp;</p>
+<hr>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size:20px;"><span style="color:#ff0000;">HOMEWORK</span></span></p>
+<p>
+	Into the "Resources Download" section you'll find the zip file with the html and css files you need.</p>
+<p>
+	All you have to do is create a CSS file that will overwrite the values 
+of the previous CSS I made so you can create at the end this layout:</p>
+
+	<img alt="" src="L3_files/sample.png" style="width: 999px; height: 430px; margin: 0px auto;">
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size:20px;"><span style="color:#ff0000;">IMPORTANT</span></span></p>
+<p>
+	DO NOT TOUCH THE HTML FILES NOR THE CSS FILES ALREADY CREATED, ONLY CREATE A NEW CSS FILE IN ORDER TO MAKE THE MAGIC HAPPEN!</p>
+            </div>
+            
+            
+    	</article>        
+<!-- LEFT CONTENT ENDS -->
+
+    </div>
+</section>
+
+<nav class="subNav">
+	<!--<ul class="sections">
+    	<li class="green"><a href="#">Green Attitude</a></li>
+        <li class="design"><a href="#">Web Design</a></li>
+        <li class="dev"><a href="#">Web Development</a></li>
+        <li class="tech"><a href="#">New Technologies</a></li>
+        <li class="super"><a href="#">We're Super</a></li>
+    </ul> -->
+    <ul class="sections">
+    	<li class="youngling"><a href="http://10.0.3.54/index.php/eis_news/youngling_trainings">Youngling Lessons</a></li>
+        <li class="padawan"><a href="http://10.0.3.54/index.php/eis_news/padawan_trainings">Padawan Lessons</a></li>
+        <li class="jedi"><a href="#">Jedi Lessons</a></li>
+        <li class="training"><a href="http://10.0.3.54/index.php/eis_news/quizes">Quizes &amp; Tests</a></li>
+    </ul>
+</nav>
+<ul class="bottomInfo">
+
+	<li class="Youngling">
+
+    	<h3><a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-07-pseudo-elements-laboratory">Lesson 07 - Pseudo Elements Laboratory</a></h3>
+
+        <span class="metaData">By <a href="#">Cristopher Castillo</a> 11/01/13 at 01:33 pm</span>
+        <div>
+        <h1> <strong>Pseudo Elements</strong></h1> <p> <br> A pseudo-element does exactly what the word implies. It creates a new element and…
+        </p></div>
+        <span class="buttons">
+            <a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-07-pseudo-elements-laboratory" class="btn">See More</a>
+        </span>
+    </li>
+
+	<li class="Padawan">
+
+    	<h3><a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-09-javascript-dom-manipulation">Lesson 09 - JAVASCRIPT DOM MANIPULATION</a></h3>
+
+        <span class="metaData">By <a href="#">Bernal Fernandez</a> 10/02/13 at 12:37 pm</span>
+        <div>
+        <p> <span style="color: #ff8c00;"><span style="font-size: 20px;">Javascript DOM (Document Object Model) Manipulation</span></span> </p> When a web page is loaded, the browser…
+        </div>
+        <span class="buttons">
+            <a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-09-javascript-dom-manipulation" class="btn">See More</a>
+        </span>
+    </li>
+
+</ul>
+
+<!-- MAN CONTENT ENDS -->
+
+<!-- JavaScript -->
+<script src="L3_files/jquery-1.js"></script>
+<script src="L3_files/modernizr-2.js"></script>
+
+
+</body></html>
