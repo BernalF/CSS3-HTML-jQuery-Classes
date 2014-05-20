@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta charset="utf-8">
+
+<title>Web News</title>
+<meta name="description" content="Demo HTML5 Template">
+<meta name="author" content="Dreamincoloronline.com">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="apple-touch-icon" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-iphone4.png">  
+<link rel="shortcut icon" type="image/x-icon" href="http://10.0.3.54/favicon.ico">
+<link rel="icon" type="image/x-icon" href="http://10.0.3.54/favicon.ico">  
+
+<link rel="stylesheet" href="L4_files/reset.css">
+<link rel="stylesheet" href="L4_files/defaults.css">
+
+  
+<link rel="stylesheet" href="L4_files/internal.css">
+<link rel="stylesheet" href="L4_files/trainings.css">
+</head>
+
+    <body class="Youngling">
+
+<header class="top">
+    <nav>
+    	<h1><a href="http://10.0.3.54/index.php/eis_news">eis 5 news</a></h1>
+        
+        <ul class="mainNavigation">
+        	<li class="homeLink"><a href="http://10.0.3.54/index.php/eis_news">Home</a></li>
+            <li class="architectureLink"><a href="http://10.0.3.54/index.php/eis_news/architecture">Architecture News</a></li>
+            <li class="dataLink"><a href="http://10.0.3.54/index.php/eis_news/data_base">Data Base News</a></li>
+            <li class="qaLink"><a href="http://10.0.3.54/index.php/eis_news/arq_qa">QA Arch News</a></li>
+            <li class="contactLink"><a href="http://10.0.3.54/index.php/eis_news/knowledge_base">Knowledge Base</a></li>
+        </ul>
+		<ul class="userLogin">
+            <li>
+            	<a href="http://10.0.3.54/index.php/member/login">Login</a>
+            	<span class="block"><a href="http://10.0.3.54/index.php/member/register">Register</a></span>
+            </li>
+            <li class="userPhoto">
+            	<img src="L4_files/default_user.png" alt="">
+            </li>
+		</ul>
+	
+    </nav>
+</header>
+
+<!-- MAIN CONTENT STARTS -->
+
+<header class="mainTitle trainingsBigTitle">
+
+    <h2>Youngling Lessons</h2>
+
+</header>
+
+<section class="mainContent">
+	<div class="contentHolder">
+<!-- LEFT CONTENT STARTS -->
+    	<article>
+        
+            
+                            <p class="backBtn">
+                    <a href="http://10.0.3.54/index.php/eis_news/youngling_trainings" class="back">Back to Youngling Lessons</a>
+                </p>
+                        
+        
+        	
+            
+
+            <h2 class="contentTitle">Lesson 04 - Html Introduction</h2>
+            <p class="metaData">By <a href="#">Cristopher Castillo</a> 08/23/13 at 12:45 pm</p>
+                        <p class="relatives">HTML, HTML5, CSS, CSS3, JS / JQuery, Web Design</p>
+                        
+            <div class="infoContent">
+            	<h1>
+	Iframes</h1>
+<p>
+	&nbsp;</p>
+<p>
+	As software developer, sometimes is required to embebed content from 
+another sources, ie: as requirement you need to load content from 
+specific web page in order to display important information, or simply 
+display a document; for thus, you can go over using an iFrame element. 
+The iframe element give us powerful control of his actions, so, you can 
+define which types of documents you would like to display, or if you 
+allow scripts execution, or load contents from another sources than the 
+original.</p>
+<p>
+	&nbsp;</p>
+<h2>
+	Advantages</h2>
+<p>
+	&nbsp;</p>
+<p>
+	As advantages of iFrames using, we can mention:</p>
+<ul>
+	<li>
+		Provides a measure of separation between the application and the content to load.</li>
+	<li>
+		Won’t have access to your page’s DOM, or data you’ve stored locally.</li>
+	<li>
+		Won’t be able to draw to arbitrary positions on the page.</li>
+	<li>
+		It’s limited in scope to the frame’s outline.</li>
+	<li>
+		Restrictions and policies could be applied.</li>
+</ul>
+<h2>
+	&nbsp;</h2>
+<h2>
+	How to declare it?</h2>
+<p>
+	&nbsp;</p>
+<ul>
+	<li>
+		<strong>&lt;iframe name="myFrame"&gt;&lt;/iframe&gt; &nbsp; &nbsp;&nbsp;</strong>(Here we're declaring an iframe which name is "MyFrame").</li>
+	<li>
+		&nbsp;</li>
+	<li>
+		<strong>&lt;iframe&nbsp;<strong>name="myFrame"&nbsp;</strong>sandbox="allow-same-origin allow-scripts allow-popups allow-forms“ src=""&gt;&lt;/iframe&gt; </strong>(Now,
+ we're declaring an iframe with the same name that the previous one, 
+but, using the sandbox attribute we're delimiting the functionality of 
+the iframe).</li>
+</ul>
+<h2>
+	&nbsp;</h2>
+<h2>
+	Loading content into iFrame</h2>
+<p>
+	&nbsp;</p>
+<p>
+	If you type the following code in your html web page:</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;a&nbsp; 
+href="http://www.advanceme.com/" target="myFrame"&gt;View Web Site 
+1&lt;/a&gt;</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	You will be able to load the content of advanceme.com into the frame (MyFrame) that we declared previously.</p>
+<p>
+	Now, if you type:</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp;&lt;a&nbsp; href="Documents/public.txt" target="myFrame"&gt;View 
+Content 2&lt;/a&gt;</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	You will be able to load the content of the public.txt file into the the frame (MyFrame) that we declared previously.</p>
+<p>
+	&nbsp;</p>
+<h1>
+	HTML Entities</h1>
+<p>
+	&nbsp;</p>
+<p>
+	Many times we need to display special characters in our web pages, so, 
+how we can display it and keep it around the differents web browsers?The
+ answer is using Html Entities. HTML Entities are part of the 
+ISO&nbsp;8859-1, which&nbsp;is the default character set in most 
+browsers.</p>
+<h2>
+	&nbsp;</h2>
+<h2>
+	How to declare it?</h2>
+<p>
+	&nbsp;</p>
+<p>
+	There are two specific ways to do it, the first one is using the entity
+ name and the second one using the entity number, please see bellow:</p>
+<p>
+	<strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&amp;entity_name;</strong></p>
+<p>
+	<strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&amp;#entity_number;</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	So,lets see an example. If you type the following in your html code:</p>
+<p>
+	&nbsp; &nbsp; &nbsp;&amp;reg;</p>
+<p>
+	<strong>&nbsp; &nbsp; &nbsp;OR</strong></p>
+<p>
+	&nbsp; &nbsp; &nbsp;&amp;#174;</p>
+<p>
+	You will get the registered trademark symbol, please see bellow:</p>
+<p>
+	<strong>&nbsp; &nbsp; &nbsp; &nbsp;®</strong></p>
+<p>
+	<span style="font-size:48px;"><strong>Javascript Introduction</strong></span><strong> <span style="font-size:48px;">- Class 01</span></strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">What Is JavaScript?</span></span></p>
+<ul>
+	<li>
+		<p>
+			Was designed to add interactivity to HTML pages</p>
+	</li>
+	<li>
+		<p>
+			Is a scripting language (a scripting language is a lightweight programming language)</p>
+	</li>
+	<li>
+		<p>
+			JavaScript code is usually embedded directly into HTML pages</p>
+	</li>
+	<li>
+		<p>
+			JavaScript is an interpreted language (means that scripts execute without preliminary compilation)</p>
+	</li>
+</ul>
+<p>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">Why Javascript?</span></span></p>
+<ul>
+	<li>
+		<p>
+			Mobility</p>
+	</li>
+	<li>
+		<p>
+			Cloud &amp; Server-Side Development</p>
+	</li>
+	<li>
+		<p>
+			Becoming The Default Enterprise Programming Language</p>
+	</li>
+	<li>
+		<p>
+			Job Oportunity</p>
+	</li>
+</ul>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">The real world</span></span></p>
+<ul>
+	<li>
+		<p>
+			SitePoint, an Australian book publisher focused on developers, 
+compared data from job vacancies for 2012 and showed that JavaScript 
+demand has increased faster than any other language. JavaScript doubles 
+Ruby, Objective C and Android (Java), and over three times more than C++
+ and C#.</p>
+	</li>
+	<li>
+		<p>
+			For June 2013 it showed that JavaScript was the fifth fastest growing
+ language, year over year, after Objective C, PHP, Java and Python.</p>
+	</li>
+</ul>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">What can a JavaScript do?</span></span></p>
+<ul>
+	<li>
+		<p>
+			JavaScript gives HTML designers a programming tool</p>
+	</li>
+	<li>
+		<p>
+			JavaScript can put dynamic text into an HTML page</p>
+	</li>
+	<li>
+		<p>
+			JavaScript can react to events</p>
+	</li>
+	<li>
+		<p>
+			JavaScript can read and write HTML elements</p>
+	</li>
+	<li>
+		<p>
+			JavaScript can be used to validate input data</p>
+	</li>
+	<li>
+		<p>
+			JavaScript can be used to detect the visitor's browser</p>
+	</li>
+	<li>
+		<p>
+			JavaScript can be used to create cookies</p>
+	</li>
+	<li>
+		<p>
+			In resume, anything its possible with JavaScript</p>
+	</li>
+</ul>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">How and Where do you place JavaScript code, how to start?</span></span><br>
+	You can put your javascrip code anywhere in the page, like in the Head 
+section or at the end of Body, but the standard web way is the at the 
+end of Body.<br>
+	The javscript tag to start to write all your awesome ideas, start with <span style="font-family: Consolas; font-size: 12px; color: #052aba;">&lt;script&gt;</span></p>
+<p>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">Comments</span></span><br>
+	The tow ways to make comments in javascript are with // and /* */<br>
+	// -&gt; to single lines or statements comments<br>
+	/* */ -&gt; to code blocks comments</p>
+<p>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">Statements</span></span><br>
+	The statements ends always with ;<br>
+	Like a important to know; all in javascript are case sensitive</p>
+<p>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">Variables</span></span><br>
+	Are case sensitive, can't be start with numbers or &amp;*%<br>
+	&nbsp;</p>
+<p>
+	<style type="text/css">
+li
+        {
+            font-size: 12px;
+        }	</style>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">Types of data in Javascript</span></span><br>
+	JavaScript has dynamic types. This means that the same variable can be used as different types<br>
+	Examples</p>
+<div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+	<ul style="font-family: Consolas; font-size: 12px;">
+		<li>
+			&nbsp; var x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Now x is undefined</li>
+		<li>
+			&nbsp; var x = 5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Now x is a Number</li>
+		<li>
+			&nbsp; var x = "John";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Now x is a String</li>
+	</ul>
+</div>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #329d04;"><span style="font-size: 15px;">Number</span></span><br>
+	Support decimal, negative, exponential, etc<br>
+	Examples</p>
+<div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+	<ul style="font-family: Consolas; font-size: 12px;">
+		<li>
+			&nbsp; isNaN(NaN);&nbsp;&nbsp; //return true</li>
+		<li>
+			&nbsp; isNaN(10);&nbsp;&nbsp; //return false</li>
+		<li>
+			&nbsp; isNaN(’10’);&nbsp;&nbsp; // return false</li>
+		<li>
+			&nbsp; isNaN(‘cool’);&nbsp; //return true</li>
+	</ul>
+</div>
+<p>
+	Note: IsNaN means "not a number" javascript native function.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #329d04;"><span style="font-size: 15px;">String ("" &amp; ')</span></span><br>
+	String is a variable which stores a series of characters like "John 
+Doe". A string can be any text inside quotes. You can use single or 
+double quotes<br>
+	Examples</p>
+<div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+	<ul style="font-family: Consolas; font-size: 12px;">
+		<li>
+			&nbsp; var x="He is called 'Johnny'";</li>
+		<li>
+			&nbsp; var x='He is called "Johnny"';</li>
+		<li>
+			&nbsp; var x="He is called \"Johnny"\ ";</li>
+	</ul>
+</div>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #329d04;"><span style="font-size: 15px;">Boolean</span></span><br>
+	Booleans can only have two values: true or false.</p>
+<p>
+	<span style="color: #329d04;"><span style="font-size: 15px;">Undefined and Null</span></span><br>
+	<span style="font-weight: bold;">Undefined</span> is the value of a variable with no value.<br>
+	Variables can be emptied by setting the value to <span style="font-weight: bold;">null</span><br>
+	Examples</p>
+<div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+	<ul style="font-family: Consolas; font-size: 12px;">
+		<li>
+			&nbsp; var temp = null;</li>
+		<li>
+			&nbsp; alert(null == undefined) //true</li>
+		<li>
+			&nbsp; alert(null === undefined) //false</li>
+		<li>
+			&nbsp; var temp;</li>
+		<li>
+			&nbsp; alert(temp);&nbsp;&nbsp; //undefined</li>
+		<li>
+			&nbsp; alert(typeof temp === ‘undefined’) //true</li>
+	</ul>
+</div>
+<br>
+<p>
+	Note: If you have declared but not initialized the variable, it is considered undefined:</p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #329d04;"><span style="font-size: 15px;">Arrays</span></span><br>
+	Examples</p>
+<div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+	<ul style="font-family: Consolas; font-size: 12px;">
+		<li>
+			&nbsp; var cars= [];</li>
+		<li>
+			&nbsp; cars[0]="Saab";</li>
+		<li>
+			&nbsp; cars[1]="Volvo";</li>
+		<li>
+			&nbsp; cars[2]="BMW";</li>
+		<li>
+			&nbsp; var cars=["Saab","Volvo","BMW"];</li>
+	</ul>
+</div>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #329d04;"><span style="font-size: 15px;">Objects</span></span><br>
+	An object is delimited by curly braces. Inside the braces the object's 
+properties are defined as name and value pairs (name : value). The 
+properties are separated by commas<br>
+	Examples</p>
+<ul>
+	<li>
+		&nbsp; var person={firstname:"John", lastname:"Doe", id:5566};</li>
+</ul>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">JavaScript Operators</span></span><br>
+	The assignment operator = is used to assign values to JavaScript variables.<br>
+	The arithmetic operator + is used to add values together.</p>
+<p>
+	<span style="color: #329d04;"><span style="font-size: 15px;">Comparison Operators</span></span></p>
+<p>
+	<img alt="" src="L4_files/Capture2.PNG" style="width: 631px; height: 463px;"></p>
+<p>
+	<span style="color: #329d04;"><span style="font-size: 15px;">Arithmetic Operators</span></span></p>
+<p>
+	<img alt="" src="L4_files/Capture.PNG" style="width: 626px; height: 381px;"></p>
+<p>
+	<span style="color: #329d04;"><span style="font-size: 15px;">Assignment Operators</span></span></p>
+<p>
+	<img alt="" src="L4_files/Capture1.PNG" style="width: 626px; height: 261px;"></p>
+<p>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">Conditional Statements Sintax</span></span></p>
+<div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+	if (condition)<br>
+	{<br>
+	&nbsp; code to be executed if condition is true<br>
+	}<br>
+	else<br>
+	{<br>
+	&nbsp; code to be executed if condition is not true<br>
+	}<br>
+	&nbsp;</div>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">Switch Statement Sintax</span></span></p>
+<div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+	switch(n)<br>
+	{<br>
+	case 1:<br>
+	&nbsp;&nbsp; execute code block 1<br>
+	&nbsp;&nbsp; break;<br>
+	case 2:<br>
+	&nbsp;&nbsp; execute code block 2<br>
+	&nbsp;&nbsp; break;<br>
+	default:<br>
+	&nbsp;&nbsp; code to be executed if n is different from case 1 and 2<br>
+	}<br>
+	&nbsp;</div>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">Popup Boxes</span></span><br>
+	There are 3 types of popup boxes in javascript</p>
+<p>
+	<span style="color: #329d04;"><span style="font-size: 15px;">Alert Box</span></span><br>
+	Example</p>
+<div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+	alert("some text");</div>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #329d04;"><span style="font-size: 15px;">Confirm Box</span></span><br>
+	Example</p>
+<div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+	&nbsp; var r=confirm("Press a button");<br>
+	&nbsp; if (r==true) {<br>
+	&nbsp;&nbsp; x="You pressed OK!";<br>
+	&nbsp; }<br>
+	&nbsp; else {<br>
+	&nbsp;&nbsp; x="You pressed Cancel!";<br>
+	&nbsp; }&nbsp;&nbsp;</div>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #329d04;"><span style="font-size: 15px;">Prompt Box</span></span><br>
+	Example</p>
+<div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+	&nbsp; var person = prompt("Please enter your name","Harry Potter");<br>
+	&nbsp; if (person != null &amp;&amp; person !="" ) {<br>
+	&nbsp;&nbsp; x= " Hello " + person + "! How are you today?";<br>
+	&nbsp; }</div>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">JavaScript Functions Syntax</span></span></p>
+<div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+	function functionname()<br>
+	{<br>
+	&nbsp; some code to be executed<br>
+	}<br>
+	functionname();</div>
+<p>
+	The lifetime JavaScript variables starts when they are declared.<br>
+	Local variables are deleted when the function is completed.<br>
+	Global variables are deleted when you close the page.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">JavaScript: Reacting to Events</span></span><br>
+	A JavaScript can be executed when an event occurs, like when a user clicks on an HTML element.<br>
+	To execute code when a user clicks on an element, add JavaScript code to an HTML event attribute<br>
+	Example</p>
+<div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+	&lt;button type="button" onclick="alert('Welcome!')"&gt;Click Me!&lt;/button&gt;</div>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">Loops</span></span><br>
+	Loops are handy, if you want to run the same code over and over again, each time with a different value.<br>
+	Often this is the case when working with arrays</p>
+<p>
+	<span style="color: #329d04;"><span style="font-size: 15px;">For Loop</span></span><br>
+	Example</p>
+<div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+	cars=["BMW","Volvo","Saab","Ford"];<br>
+	for (var i=0; i &lt; cars.length; i++) {<br>
+	&nbsp; document.write(cars + "&lt;br&gt;");<br>
+	}</div>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #329d04;"><span style="font-size: 15px;">While Loop</span></span><br>
+	Example</p>
+<div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+	&lt;body&gt;<br>
+	&lt;p&gt;Click the button to loop through a block of as long as &lt;em&gt;i&lt;/em&gt; is less than 5.&lt;/p&gt;<br>
+	&lt;button onclick="myFunction()"&gt;Try it&lt;/button&gt;<br>
+	&lt;p id="demo"&gt;&lt;/p&gt;<br>
+	&lt;script&gt;<br>
+	&nbsp; function myFunction()<br>
+	&nbsp; {<br>
+	&nbsp; var x="",i=0;<br>
+	&nbsp; while (i&lt;5)<br>
+	&nbsp;&nbsp;&nbsp; {<br>
+	&nbsp;&nbsp;&nbsp; x=x + "The number is " + i + "&lt;br&gt;";<br>
+	&nbsp;&nbsp;&nbsp; i++;<br>
+	&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp; document.getElementById("demo").innerHTML=x;<br>
+	&nbsp; }<br>
+	&lt;/script&gt;<br>
+	&lt;/body&gt;<br>
+	&nbsp;</div>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="color: #ff8c00;"><span style="font-size: 20px;">JavaScript Form Validation Example</span></span><br>
+	HTML</p>
+<div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+	&lt;head&gt;<br>
+	&nbsp; &lt;script&gt;<br>
+	&nbsp;&nbsp; function validateForm()<br>
+	&nbsp;&nbsp; {<br>
+	&nbsp;&nbsp;&nbsp; var x=document.forms["myForm"]["fname"].value;<br>
+	&nbsp;&nbsp;&nbsp; if (x==null || x=="")<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("First name must be filled out");<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return false;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+	&nbsp;&nbsp; }<br>
+	&nbsp; &lt;/script&gt;<br>
+	&lt;/head&gt;</div>
+<p>
+	Javascript</p>
+<div style="border: solid 1px; padding: 10px; font-family: Consolas; font-size: 12px;">
+	&lt;body&gt;<br>
+	&nbsp; &lt;form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post"&gt;<br>
+	&nbsp;&nbsp; First name: &lt;input type="text" name="fname"&gt;<br>
+	&nbsp;&nbsp; &lt;input type="submit" value="Submit"&gt;<br>
+	&nbsp; &lt;/form&gt;<br>
+	&lt;/body&gt;</div>
+            </div>
+            
+                        <p class="relatives">http://vm-eisnews/images/trainings_lessons/class_01_js.zip</p>
+            
+    	</article>        
+<!-- LEFT CONTENT ENDS -->
+
+    </div>
+</section>
+
+<nav class="subNav">
+	<!--<ul class="sections">
+    	<li class="green"><a href="#">Green Attitude</a></li>
+        <li class="design"><a href="#">Web Design</a></li>
+        <li class="dev"><a href="#">Web Development</a></li>
+        <li class="tech"><a href="#">New Technologies</a></li>
+        <li class="super"><a href="#">We're Super</a></li>
+    </ul> -->
+    <ul class="sections">
+    	<li class="youngling"><a href="http://10.0.3.54/index.php/eis_news/youngling_trainings">Youngling Lessons</a></li>
+        <li class="padawan"><a href="http://10.0.3.54/index.php/eis_news/padawan_trainings">Padawan Lessons</a></li>
+        <li class="jedi"><a href="#">Jedi Lessons</a></li>
+        <li class="training"><a href="http://10.0.3.54/index.php/eis_news/quizes">Quizes &amp; Tests</a></li>
+    </ul>
+</nav>
+<ul class="bottomInfo">
+
+	<li class="Youngling">
+
+    	<h3><a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-07-pseudo-elements-laboratory">Lesson 07 - Pseudo Elements Laboratory</a></h3>
+
+        <span class="metaData">By <a href="#">Cristopher Castillo</a> 11/01/13 at 01:33 pm</span>
+        <div>
+        <h1> <strong>Pseudo Elements</strong></h1> <p> <br> A pseudo-element does exactly what the word implies. It creates a new element and…
+        </p></div>
+        <span class="buttons">
+            <a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-07-pseudo-elements-laboratory" class="btn">See More</a>
+        </span>
+    </li>
+
+	<li class="Padawan">
+
+    	<h3><a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-09-javascript-dom-manipulation">Lesson 09 - JAVASCRIPT DOM MANIPULATION</a></h3>
+
+        <span class="metaData">By <a href="#">Bernal Fernandez</a> 10/02/13 at 12:37 pm</span>
+        <div>
+        <p> <span style="color: #ff8c00;"><span style="font-size: 20px;">Javascript DOM (Document Object Model) Manipulation</span></span> </p> When a web page is loaded, the browser…
+        </div>
+        <span class="buttons">
+            <a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-09-javascript-dom-manipulation" class="btn">See More</a>
+        </span>
+    </li>
+
+</ul>
+
+<!-- MAN CONTENT ENDS -->
+
+<!-- JavaScript -->
+<script src="L4_files/jquery-1.js"></script>
+<script src="L4_files/modernizr-2.js"></script>
+
+
+</body></html>

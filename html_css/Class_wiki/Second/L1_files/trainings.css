@@ -1,0 +1,47 @@
+/* TOP TITLE */
+
+.trainingsBigTitle{
+	background:url(../images/internals/composition6.png) right center no-repeat #006a84;
+}
+
+.trainingsBigTitle h2:before{
+	background-position:-280px -40px;
+}
+
+
+/* TOP TITLE */
+
+.youngling .trainingsBigTitle,
+.Youngling .trainingsBigTitle{
+	background:url(../images/internals/composition6.png) right center no-repeat #699;
+}
+
+.youngling .trainingsBigTitle h2:before,
+.Youngling .trainingsBigTitle h2:before{
+	background-position:-80px -120px;
+}
+
+/* TOP TITLE */
+
+.padawan .trainingsBigTitle,
+.Padawan .trainingsBigTitle{
+	background:url(../images/internals/composition6.png) right center no-repeat #82be42;
+}
+
+.padawan .trainingsBigTitle h2:before,
+.Padawan .trainingsBigTitle h2:before{
+	background-position:-160px -120px;
+}
+
+
+/* TOP TITLE */
+
+.jedi .trainingsBigTitle,
+.Jedi .trainingsBigTitle{
+	background:url(../images/internals/composition6.png) right center no-repeat #ffb74f;
+}
+
+.jedi .trainingsBigTitle h2:before,
+.Jedi .trainingsBigTitle h2:before{
+	background-position:-240px -120px;
+}

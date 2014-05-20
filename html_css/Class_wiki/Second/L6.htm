@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta charset="utf-8">
+
+<title>Web News</title>
+<meta name="description" content="Demo HTML5 Template">
+<meta name="author" content="Dreamincoloronline.com">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="apple-touch-icon" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-iphone4.png">  
+<link rel="shortcut icon" type="image/x-icon" href="http://10.0.3.54/favicon.ico">
+<link rel="icon" type="image/x-icon" href="http://10.0.3.54/favicon.ico">  
+
+<link rel="stylesheet" href="L6_files/reset.css">
+<link rel="stylesheet" href="L6_files/defaults.css">
+
+  
+<link rel="stylesheet" href="L6_files/internal.css">
+<link rel="stylesheet" href="L6_files/trainings.css">
+</head>
+
+    <body class="Padawan">
+
+<header class="top">
+    <nav>
+    	<h1><a href="http://10.0.3.54/index.php/eis_news">eis 5 news</a></h1>
+        
+        <ul class="mainNavigation">
+        	<li class="homeLink"><a href="http://10.0.3.54/index.php/eis_news">Home</a></li>
+            <li class="architectureLink"><a href="http://10.0.3.54/index.php/eis_news/architecture">Architecture News</a></li>
+            <li class="dataLink"><a href="http://10.0.3.54/index.php/eis_news/data_base">Data Base News</a></li>
+            <li class="qaLink"><a href="http://10.0.3.54/index.php/eis_news/arq_qa">QA Arch News</a></li>
+            <li class="contactLink"><a href="http://10.0.3.54/index.php/eis_news/knowledge_base">Knowledge Base</a></li>
+        </ul>
+		<ul class="userLogin">
+            <li>
+            	<a href="http://10.0.3.54/index.php/member/login">Login</a>
+            	<span class="block"><a href="http://10.0.3.54/index.php/member/register">Register</a></span>
+            </li>
+            <li class="userPhoto">
+            	<img src="L6_files/default_user.png" alt="">
+            </li>
+		</ul>
+	
+    </nav>
+</header>
+
+<!-- MAIN CONTENT STARTS -->
+
+<header class="mainTitle trainingsBigTitle">
+
+    <h2>Padawan Lessons</h2>
+
+</header>
+
+<section class="mainContent">
+	<div class="contentHolder">
+<!-- LEFT CONTENT STARTS -->
+    	<article>
+        
+            
+                            <p class="backBtn">
+                    <a href="http://10.0.3.54/index.php/eis_news/padawan_trainings" class="back">Back to Padawan Lessons</a>
+                </p>
+                        
+        
+        	
+            
+
+            <h2 class="contentTitle">LESSON 6 - BACKGROUNDS!</h2>
+            <p class="metaData">By <a href="#">Caleb Briancesco</a> 09/10/13 at 04:41 pm</p>
+                        <p class="relatives">CSS</p>
+                        
+            <div class="infoContent">
+            	<p>
+	<strong><span style="font-size:18px;"><span style="color:#ff8c00;">Background Color:</span></span></strong><br>
+	The background color sets the background color of any element, it will 
+accept hexadecimal values, rgb values, rgba values (and a few more that 
+we’ll not see at the moment).</p>
+<table style="width: 500px;" cellpadding="1" cellspacing="1" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<p>
+					Background-color: #ddeeff;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	<strong><span style="font-size:18px;"><span style="color:#ff8c00;">Background Image:</span></span></strong><br>
+	This attribute will set an image as the background of the element. In 
+this case we can select the path of the image starting from the location
+ of the css file we’re working on.<br>
+	For example: If we have two folders, one for the css and one for the 
+images and those two folders are in the same level, like in the next 
+image&nbsp; (image 01); we will need to ask the css to find the image 
+file outside its content folder and look into another one, we can get 
+out of our own container folder using this: “../”. By using ../ we are 
+telling the css to look back out side our folder and we can still add 
+more specifications so be can find the file such as the name of the next
+ folder we would like to look at and the name and extension of the file 
+we’re looking for.<br>
+	For example: ../images/my_image.jpg</p>
+<table style="width: 500px;" cellpadding="1" cellspacing="1" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<p>
+					Background-image: url(../images/my_image.jpg);</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size:18px;"><span style="color:#ff8c00;"><strong>Background Repeat:</strong></span></span><br>
+	In case we’re using an image as our background we can use many extra 
+attributes to add position or size or many other kinds of ways to make 
+it work, one of those values is “background repeat” and it works by 
+using the same image we set as background but using it multiple times to
+ cover all the space of the element we’re adding this attribute.</p>
+<p>
+	We can also use the background repeat by repeating the background in three different ways:<br>
+	• Repeat<br>
+	• Repeat-x<br>
+	• Repeat-y</p>
+<p>
+	Repeat is the default value and it means that the background will be multiply by the x and y values at the same time.</p>
+<p>
+	Repeat-x and repeat-y will multiply the background image by each specific value.</p>
+<p>
+	If we don’t want the background to be repeated we can just set the value of background-repeat to no-repeat.</p>
+<table style="width: 500px;" cellpadding="1" cellspacing="1" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<p>
+					background-repeat:no-repeat;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size:18px;"><span style="color:#ff8c00;"><strong>Background position:</strong></span></span><br>
+	Wen we have a background we can set its vertical and horizontal 
+position with this attribute; it also works with the x and y values 
+respectively and we can set four different preset values and numeric 
+values as well.</p>
+<p>
+	Background position requires 2 values to be applied, those values must 
+be specified if we are working with numeric values but the browser can 
+infer one of them if we use the preset values:<br>
+	• Top<br>
+	• Left<br>
+	• Bottom<br>
+	• Right</p>
+<p>
+	If we set the value to left it will apply also the center value so it 
+will actually apply left and center,&nbsp; if we apply center, if will 
+also apply the center as second value so the browser will apply center 
+and center.</p>
+<p>
+	We can set all this attributes separately or all of them in a single 
+line separately with a single space by using the attribute background 
+like this:</p>
+<table style="width: 500px;" cellpadding="1" cellspacing="1" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<p>
+					background:url(../images/image.jpg) no-repeat -250px -30px #13F7FF;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	We can also apply multiple backgrounds at the same time.</p>
+            </div>
+            
+            
+    	</article>        
+<!-- LEFT CONTENT ENDS -->
+
+    </div>
+</section>
+
+<nav class="subNav">
+	<!--<ul class="sections">
+    	<li class="green"><a href="#">Green Attitude</a></li>
+        <li class="design"><a href="#">Web Design</a></li>
+        <li class="dev"><a href="#">Web Development</a></li>
+        <li class="tech"><a href="#">New Technologies</a></li>
+        <li class="super"><a href="#">We're Super</a></li>
+    </ul> -->
+    <ul class="sections">
+    	<li class="youngling"><a href="http://10.0.3.54/index.php/eis_news/youngling_trainings">Youngling Lessons</a></li>
+        <li class="padawan"><a href="http://10.0.3.54/index.php/eis_news/padawan_trainings">Padawan Lessons</a></li>
+        <li class="jedi"><a href="#">Jedi Lessons</a></li>
+        <li class="training"><a href="http://10.0.3.54/index.php/eis_news/quizes">Quizes &amp; Tests</a></li>
+    </ul>
+</nav>
+<ul class="bottomInfo">
+
+	<li class="Youngling">
+
+    	<h3><a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-07-pseudo-elements-laboratory">Lesson 07 - Pseudo Elements Laboratory</a></h3>
+
+        <span class="metaData">By <a href="#">Cristopher Castillo</a> 11/01/13 at 01:33 pm</span>
+        <div>
+        <h1> <strong>Pseudo Elements</strong></h1> <p> <br> A pseudo-element does exactly what the word implies. It creates a new element and…
+        </p></div>
+        <span class="buttons">
+            <a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-07-pseudo-elements-laboratory" class="btn">See More</a>
+        </span>
+    </li>
+
+	<li class="Padawan">
+
+    	<h3><a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-09-javascript-dom-manipulation">Lesson 09 - JAVASCRIPT DOM MANIPULATION</a></h3>
+
+        <span class="metaData">By <a href="#">Bernal Fernandez</a> 10/02/13 at 12:37 pm</span>
+        <div>
+        <p> <span style="color: #ff8c00;"><span style="font-size: 20px;">Javascript DOM (Document Object Model) Manipulation</span></span> </p> When a web page is loaded, the browser…
+        </div>
+        <span class="buttons">
+            <a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-09-javascript-dom-manipulation" class="btn">See More</a>
+        </span>
+    </li>
+
+</ul>
+
+<!-- MAN CONTENT ENDS -->
+
+<!-- JavaScript -->
+<script src="L6_files/jquery-1.js"></script>
+<script src="L6_files/modernizr-2.js"></script>
+
+
+</body></html>

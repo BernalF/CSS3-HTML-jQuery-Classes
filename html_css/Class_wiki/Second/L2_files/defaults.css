@@ -1,0 +1,430 @@
+/* GLOBAL ATRIBUTES STARTS */
+body, html{
+	width:100%;
+	height:100%;
+	font-family:"Myrad Pro","Segoe UI", "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+body{
+	background-color:#343434;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family:"Myrad Pro","Segoe UI", "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+p, li, a, table, ul, ol{
+	font-size:14px;
+}
+p{
+	padding-bottom:10px;
+}
+
+/* GLOBAL ATRIBUTES ENDS */
+
+/* GLOBAL CLASSES STARTS */
+
+.clear {
+	clear:both;
+}
+
+.block{
+	display:block;
+}
+
+.bold{
+	font-weight:bold;
+}
+
+.metaData{
+	display:block;
+	font-size:14px;
+	line-height:18px;
+	padding-top:8px;
+}
+
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+.textLeft{
+	text-align:left !important;
+}
+
+.textRight{
+	text-align:right !important;
+}
+
+.textCenter{
+	text-align:center !important;
+}
+
+a,
+.metaData a{
+	color:#008df9;
+	font-size:14px;
+}
+
+a:hover,
+.metaData a:hover{
+	color:#e44d26;
+}
+
+/* BUTTONS STARTS */
+
+.buttons{
+	display:block;
+	padding-top:10px;
+	text-align:right;
+	clear:both;
+}
+
+.backBtn{
+	display:block;
+	padding-bottom:20px;
+}
+
+.backBtn a,
+.buttons a{
+	font-size:14px;
+	line-height:30px;
+	padding:5px 40px 5px 10px;
+	color:#fff;
+	background-color:#0eb339;
+	position:relative;
+	text-transform:uppercase;
+}
+
+.backBtn a.back{
+	padding:5px 10px 5px 40px;
+}
+
+.backBtn a:hover,
+.buttons a:hover{
+	background-color:#999;
+	color:fff;
+}
+
+.backBtn a:after,
+.buttons a:after{
+	content:"";
+	width:30px;
+	height:100%;
+	display:block;
+	position:absolute;
+	right:0;
+	top:0;
+	background:url(../images/defaults/utilities.png) -40px 0;
+}
+
+.backBtn a.back:after{
+	left:0;
+	background:url(../images/defaults/utilities.png) -80px -80px;
+}
+
+/* GLOBAL CLASSES ENDS */
+
+/* TOP STARTS */
+
+.top{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+}
+
+.top a{
+	color:#fff;
+}
+
+.top nav{
+	overflow:hidden;
+	background-color:rgba(0,0,0,.6);
+}
+
+.top nav h1{
+	float:left;
+}
+
+.top nav h1 a{
+	display:block;
+	text-indent:-9999px;
+	width:170px;
+	height:50px;
+	background:url(../images/defaults/logo.png) no-repeat center;
+}
+
+/* TOP ENDS */
+
+/* MAIN NAVIGATION STARTS */
+
+.mainNavigation{
+	margin:0 auto;
+	width:621px;
+	padding:10px 0;
+}
+
+.mainNavigation li{
+	float:left;
+	line-height:30px;
+	margin-right:20px;
+}
+
+.mainNavigation li:nth-last-child(1){
+	margin-right:0;
+}
+
+.mainNavigation li:hover,
+.homePage .homeLink,
+.architecturePage .architectureLink,
+.dataBasePage .dataLink,
+.qaPage .qaLink,
+.knowledgePage .contactLink{
+	-moz-box-shadow:0px 0px 0px 1px #fff;
+	-webkit-box-shadow:0px 0px 0px 1px #fff;
+	box-shadow:0px 0px 0px 1px #fff;
+}
+
+.mainNavigation li a{
+	display:block;
+	line-height:30px;
+	padding:0 10px;
+	font-size:14px;
+	transition: all 0.5s;
+}
+
+.homePage .homeLink a,
+.architecturePage .architectureLink a,
+.dataBasePage .dataLink a,
+.qaPage .qaLink a,
+.knowledgePage .contactLink a
+.mainNavigation li a:hover a,
+.mainNavigation li.selected a,
+.mainNavigation li a:hover{
+	background:rgba(0,0,0,.6);
+	-moz-box-shadow:inset 0px 0px 8px 0px #000;
+	-webkit-box-shadow:inset 0px 0px 8px 0px #000;
+	box-shadow:inset 0px 0px 8px 0px #000;
+}
+
+.userLogin{
+	position:absolute;
+	right:10px;
+	top:10px;
+}
+
+.userLogin li{
+	float:left;
+	font-size:14px;
+	line-height:15px;
+	margin-left:10px;
+	text-align:right;
+	color:#fff;
+}
+
+.userLogin li a{
+	color:#28fffc;
+	font-size:14px;
+}
+
+.userLogin li a:hover{
+	color:#fff;
+}
+
+/* MAIN NAVIGATION ENDS */
+
+/* SECTIONS NAVIGATION STARTS */
+
+.subNav{
+	background:#343434;
+	padding:10px 0;
+	-moz-box-shadow:0px 0px 150px 0px rgba(0,0,0,.7);
+	-webkit-box-shadow:0px 0px 150px 0px rgba(0,0,0,.7);
+	box-shadow:0px 0px 150px 0px rgba(0,0,0,.7);
+}
+
+.subNav .sections{
+	overflow:hidden;
+	width:1000px;
+	margin:0 auto;
+}
+
+.subNav .sections li{
+	float:left;
+	margin-right:20px;
+}
+
+.subNav .sections li a{
+	display:block;
+	font-size:18px;
+	line-height:47px;
+	color:#fff;
+	position:relative;
+	text-transform:uppercase;
+	padding:0 0 0 57px;
+}
+
+.subNav .sections li a:before{
+	width:47px;
+	height:47px;
+	content:"";
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:#505050;
+	background-image:url(../images/defaults/utilities.png);
+}
+
+.subNav .sections li.green a:before{
+	background-position:-78px 4px;
+}
+
+.subNav .sections li.green a:hover:before{
+	background-color:#1f7f51;
+}
+
+.subNav .sections li.youngling a:before{
+	background-position:-120px 4px;
+}
+
+.subNav .sections li.youngling a:hover:before{
+	background-color:#699;
+}
+
+.subNav .sections li.padawan a:before{
+	background-position:-164px 4px;
+}
+
+.subNav .sections li.padawan a:hover:before{
+	background-color:#82be42;
+}
+
+.subNav .sections li.jedi a:before{
+	background-position:-208px 4px;
+}
+
+.subNav .sections li.jedi a:hover:before{
+	background-color:#ffb74f;
+}
+
+.subNav .sections li.super a:before{
+	background-position:-250px 4px;
+}
+
+.subNav .sections li.super a:hover:before{
+	background-color:#0d61c8;
+}
+
+.subNav .sections li.training a:before{
+	background-position:-357px -77px;
+}
+
+.subNav .sections li.training a:hover:before{
+	background-color:#006a84;
+}
+
+/* SECTIONS NAVIGATION ENDS */
+
+/* BOTTOM INFO STARTS */
+.bottomInfo{
+	width:80%;
+	margin:0 auto;
+	padding:0 0 40px 0;
+	overflow:hidden;
+}
+
+.bottomInfo .metaData{
+	padding-bottom:20px;
+}
+
+.bottomInfo h3 a{
+	margin-top:10px;
+	font-size:20px;
+	display:block;
+	text-transform:uppercase;
+	line-height:20px;
+	padding-left:25px;
+	font-weight:bold;
+	color:#ffb74f;
+	position:relative;
+	padding-bottom:5px;
+}
+
+.bottomInfo h3 a:hover{
+	color:#0eb339;
+}
+
+.bottomInfo h3 a:before{
+	content:"";
+	display:block;
+	width:20px;
+	height:100%;
+	background-color:#e44d26;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.bottomInfo .Youngling h3 a:before{
+	background-color:#699;
+}
+
+.bottomInfo .Padawan h3 a:before{
+	background-color:#82be42;
+}
+
+.bottomInfo .Jedi h3 a:before{
+	background-color:#ffb74f;
+}
+
+.bottomInfo > li{
+	color:#ccc;
+	padding-top:10px;
+	font-size:14px;
+	line-height:18px;
+	float:left;
+	width:48%;
+	margin:0 1% 0 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

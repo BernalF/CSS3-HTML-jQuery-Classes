@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta charset="utf-8">
+
+<title>Web News</title>
+<meta name="description" content="Demo HTML5 Template">
+<meta name="author" content="Dreamincoloronline.com">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="apple-touch-icon" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://10.0.3.54/index.php/eis_news/trainings_entry/touch-icon-iphone4.png">  
+<link rel="shortcut icon" type="image/x-icon" href="http://10.0.3.54/favicon.ico">
+<link rel="icon" type="image/x-icon" href="http://10.0.3.54/favicon.ico">  
+
+<link rel="stylesheet" href="L7_files/reset.css">
+<link rel="stylesheet" href="L7_files/defaults.css">
+
+  
+<link rel="stylesheet" href="L7_files/internal.css">
+<link rel="stylesheet" href="L7_files/trainings.css">
+</head>
+
+    <body class="Padawan">
+
+<header class="top">
+    <nav>
+    	<h1><a href="http://10.0.3.54/index.php/eis_news">eis 5 news</a></h1>
+        
+        <ul class="mainNavigation">
+        	<li class="homeLink"><a href="http://10.0.3.54/index.php/eis_news">Home</a></li>
+            <li class="architectureLink"><a href="http://10.0.3.54/index.php/eis_news/architecture">Architecture News</a></li>
+            <li class="dataLink"><a href="http://10.0.3.54/index.php/eis_news/data_base">Data Base News</a></li>
+            <li class="qaLink"><a href="http://10.0.3.54/index.php/eis_news/arq_qa">QA Arch News</a></li>
+            <li class="contactLink"><a href="http://10.0.3.54/index.php/eis_news/knowledge_base">Knowledge Base</a></li>
+        </ul>
+		<ul class="userLogin">
+            <li>
+            	<a href="http://10.0.3.54/index.php/member/login">Login</a>
+            	<span class="block"><a href="http://10.0.3.54/index.php/member/register">Register</a></span>
+            </li>
+            <li class="userPhoto">
+            	<img src="L7_files/default_user.png" alt="">
+            </li>
+		</ul>
+	
+    </nav>
+</header>
+
+<!-- MAIN CONTENT STARTS -->
+
+<header class="mainTitle trainingsBigTitle">
+
+    <h2>Padawan Lessons</h2>
+
+</header>
+
+<section class="mainContent">
+	<div class="contentHolder">
+<!-- LEFT CONTENT STARTS -->
+    	<article>
+        
+            
+                            <p class="backBtn">
+                    <a href="http://10.0.3.54/index.php/eis_news/padawan_trainings" class="back">Back to Padawan Lessons</a>
+                </p>
+                        
+        
+        	
+            
+
+            <h2 class="contentTitle">LESSON 7 - PSEUDO ELEMENTS</h2>
+            <p class="metaData">By <a href="#">Caleb Briancesco</a> 09/16/13 at 01:03 pm</p>
+                        <p class="relatives">HTML, HTML5, CSS, CSS3</p>
+                        
+            <div class="infoContent">
+            	<p>
+	<span style="font-size:20px;"><span style="color:#ff8c00;">Pseudo Elements</span></span><br>
+	A pseudo-element does exactly what the word implies. It creates a new 
+element and inserts it before or after the content of the element that 
+you’ve targeted.</p>
+<p>
+	The word “pseudo” is a transliteration of a Greek word that basically 
+means “lying, deceitful, false.” So, calling them pseudo-elements is 
+appropriate, because they don’t actually change anything in the 
+document. Rather, they insert ghost-like elements that are visible to 
+the user and that are style-able in the CSS.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size:20px;"><span style="color:#ff8c00;">After &amp; Before</span></span><br>
+	The :before and :after pseudo-elements are very easy to code (as are 
+most CSS properties that don’t require a ton of vendor prefixes). Here 
+is a simple example:</p>
+<p>
+	&nbsp;</p>
+<table style="width: 500px;" cellpadding="1" cellspacing="1" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<p>
+					&nbsp;</p>
+				<p>
+					#example:before {<br>
+					&nbsp;&nbsp; content: "#";<br>
+					}</p>
+				<p>
+					#example:after {<br>
+					&nbsp;&nbsp; content: ".";<br>
+					}</p>
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	<br>
+	There are two things to note about this example. First, we’re targeting
+ the same element using #example:before and #example:after. Strictly 
+speaking, they are the pseudo-elements in the code.</p>
+<p>
+	Secondly, without the content property, which is part of the generated 
+content module in the specification, pseudo-elements are useless. So, 
+while the pseudo-element selector itself is needed to target the 
+element, you won’t be able to insert anything without adding the content
+ property.</p>
+<p>
+	In this example, the element with the id example will have a hash 
+symbol placed “before” its content, and a period (or full stop) placed 
+“after” its content.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size:20px;"><span style="color:#ff8c00;">Content value</span></span><br>
+	You could leave the content property empty and just treat the pseudo-element like a content-less box, like this:</p>
+<table style="width: 500px;" cellpadding="1" cellspacing="1" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<p>
+					&nbsp;</p>
+				<p>
+					#example:before {<br>
+					&nbsp;&nbsp; content: "";<br>
+					&nbsp;&nbsp; display: block;<br>
+					&nbsp;&nbsp; width: 100px;<br>
+					&nbsp;&nbsp; height: 100px;<br>
+					}</p>
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	However, you can’t remove the content property altogether. If you did, 
+the pseudo-element wouldn’t work. At the very least, the content 
+property needs empty quotes as its value.</p>
+<p>
+	You may have noticed that you can also code pseudo-elements using the 
+double-colon syntax (::before and ::after; the short explanation is that
+ there is no difference between the two syntaxes; it’s just a way to 
+differentiate pseudo-elements (double colon) from pseudo-classes (single
+ colon) in CSS3.</p>
+<p>
+	One final point regarding the syntax; technically, you could implement a
+ pseudo-element universally, without targeting any element, like this:</p>
+<p>
+	<br>
+	&nbsp;</p>
+<table style="width: 500px;" cellpadding="1" cellspacing="1" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<p>
+					&nbsp;</p>
+				<p>
+					:before {<br>
+					&nbsp;&nbsp; content: "#";<br>
+					}</p>
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	While the above is valid, it’s pretty useless. The code will insert a 
+hash symbol before the content in each element in the DOM. Even if you 
+removed the &lt;body&gt; tag and all of its content, you’d still see two
+ hash symbols on the page: one in the &lt;html&gt; element, and one in 
+the &lt;body&gt; tag, which the browser automatically constructs.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size:20px;"><span style="color:#ff8c00;">Characteristics Of Inserted Content</span></span><br>
+	As mentioned, the content that is inserted is not visible in the page’s source. It’s visible only in the CSS.</p>
+<p>
+	Also, the inserted element is by default an inline element (or, in 
+HTML5 terms, in the category of text-level semantics). So, to give the 
+inserted element a height, padding, margins and so forth, you’ll usually
+ have to define it explicitly as a block-level element.</p>
+<p>
+	This leads well into a brief description of how to style pseudo-elements. Look at this graphic:</p>
+<p>
+	<img alt="" src="L7_files/styles-pseudo-elements.jpg" style="width: 500px; height: 324px;"></p>
+<p>
+	&nbsp;</p>
+<p>
+	In this example, I’ve highlighted the styles that will be applied to 
+the elements inserted before and after the targeted element’s content. 
+Pseudo-elements are somewhat unique in this way, because you insert the 
+content and the styles in the same declaration block.</p>
+<p>
+	Also note that typical CSS inheritance rules apply to the inserted 
+elements. If you had, for example, a font stack of Helvetica, Arial, 
+sans-serif applied to the &lt;body&gt; element of the document, then the
+ pseudo-element would inherit that font stack the same as any other 
+element would.</p>
+<p>
+	Likewise, pseudo-elements don’t inherit styles that aren’t naturally 
+inherited from parent elements (such as padding and margins).</p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size:20px;"><span style="color:#ff8c00;">Before Or After What?</span></span><br>
+	Your hunch on seeing the :before and :after pseudo-elements might be 
+that the inserted content will be injected before and after the targeted
+ element. But, as alluded to above, that’s not the case.</p>
+<p>
+	The content that’s injected will be child content in relation to the 
+targeted element, but it will be placed “before” or “after” any other 
+content in that element.<br>
+	To demonstrate this, look at the following code. First, the HTML:</p>
+<p>
+	<br>
+	&nbsp;</p>
+<table style="width: 500px;" cellpadding="1" cellspacing="1" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<p>
+					&nbsp;</p>
+				<p>
+					&lt;p class="box"&gt;Other content.&lt;/p&gt;</p>
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	And here’s the CSS that inserts a pseudo-element:</p>
+<p>
+	<br>
+	&nbsp;</p>
+<table style="width: 500px;" cellpadding="1" cellspacing="1" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<p>
+					&nbsp;</p>
+				<p>
+					p.box {<br>
+					&nbsp;&nbsp; width: 300px;<br>
+					&nbsp;&nbsp; border: solid 1px white;<br>
+					&nbsp;&nbsp; padding: 20px;<br>
+					}</p>
+				<p>
+					p.box:before {<br>
+					&nbsp;&nbsp; content: "#";<br>
+					&nbsp;&nbsp; border: solid 1px white;<br>
+					&nbsp;&nbsp; padding: 2px;<br>
+					&nbsp;&nbsp; margin: 0 10px 0 0;<br>
+					}</p>
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	In the HTML, all you would see is a paragraph with a class of box, with
+ the words “Other content” inside it (the same as what you would see if 
+you viewed the source on the live page). In the CSS, the paragraph is 
+given a set width, along with some padding and a visible border.</p>
+<p>
+	Then we have the pseudo-element. In this case, it’s a hash symbol 
+inserted “before” the paragraph’s content. The subsequent CSS gives it a
+ border, along with some padding and margins.<br>
+	Here’s the result viewed in the browser:</p>
+<p>
+	&nbsp;</p>
+<p>
+	<img alt="" src="L7_files/pseudo-elements.jpg" style="width: 500px; height: 175px;"></p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size:20px;"><span style="color:#ff8c00;">Inserting Non-Text Content</span></span><br>
+	I mentioned briefly that you can leave the content property’s value as 
+an empty string or insert text content. You basically have two 
+additional options of what to include as the value of the content 
+property.</p>
+<p>
+	First, you can include a URL that points to an image, just as you would do when including a background image in the CSS:</p>
+<table style="width: 500px;" cellpadding="1" cellspacing="1" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<p>
+					&nbsp;</p>
+				<p>
+					p:before {<br>
+					&nbsp;&nbsp; content: url(image.jpg);<br>
+					}</p>
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	<br>
+	Notice that the quotes are missing. If you wrapped the URL reference in
+ quotes, then it would become a literal string and insert the text 
+“url(image.jpg)” as the content, instead of inserting the image itself.</p>
+<p>
+	Naturally, you could include a Data URI in place of the image reference, just as you can with a CSS background.</p>
+<p>
+	You also have the option to include a function in the form of attr(X). 
+This function, according to the spec, “returns as a string the value of 
+attribute X for the subject of the selector.”</p>
+<p>
+	Here’s an example:</p>
+<table style="width: 500px;" cellpadding="1" cellspacing="1" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<p>
+					&nbsp;</p>
+				<p>
+					a:after {<br>
+					&nbsp;&nbsp; content: attr(href);<br>
+					}</p>
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	What does the attr() function do? It takes the value of the specified 
+attribute and places it as text content to be inserted as a 
+pseudo-element.</p>
+<p>
+	The code above would cause the href value of every &lt;a&gt; element on
+ the page to be placed immediately after each respective &lt;a&gt; 
+element. This could be used in a print style sheet to include full URLs 
+next to all links when a document is printed.</p>
+<p>
+	You could also use this function to grab the value of an element’s 
+title attribute, or even microdata values. Of course, not all of these 
+examples would be practical in and of themselves; but depending on the 
+situation, a specific attribute value could be practical as a 
+pseudo-element.</p>
+<p>
+	While being able to grab the title or alt text of an image and display 
+it on the page as a pseudo-element would be practical, this isn’t 
+possible. Remember that the pseudo-element must be a child of the 
+element to which it is being applied. Images, which are void (or empty) 
+elements, don’t have child elements, so it wouldn’t work in this case. 
+The same would apply to other void elements, such as &lt;input&gt;.</p>
+            </div>
+            
+            
+    	</article>        
+<!-- LEFT CONTENT ENDS -->
+
+    </div>
+</section>
+
+<nav class="subNav">
+	<!--<ul class="sections">
+    	<li class="green"><a href="#">Green Attitude</a></li>
+        <li class="design"><a href="#">Web Design</a></li>
+        <li class="dev"><a href="#">Web Development</a></li>
+        <li class="tech"><a href="#">New Technologies</a></li>
+        <li class="super"><a href="#">We're Super</a></li>
+    </ul> -->
+    <ul class="sections">
+    	<li class="youngling"><a href="http://10.0.3.54/index.php/eis_news/youngling_trainings">Youngling Lessons</a></li>
+        <li class="padawan"><a href="http://10.0.3.54/index.php/eis_news/padawan_trainings">Padawan Lessons</a></li>
+        <li class="jedi"><a href="#">Jedi Lessons</a></li>
+        <li class="training"><a href="http://10.0.3.54/index.php/eis_news/quizes">Quizes &amp; Tests</a></li>
+    </ul>
+</nav>
+<ul class="bottomInfo">
+
+	<li class="Youngling">
+
+    	<h3><a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-07-pseudo-elements-laboratory">Lesson 07 - Pseudo Elements Laboratory</a></h3>
+
+        <span class="metaData">By <a href="#">Cristopher Castillo</a> 11/01/13 at 01:33 pm</span>
+        <div>
+        <h1> <strong>Pseudo Elements</strong></h1> <p> <br> A pseudo-element does exactly what the word implies. It creates a new element and…
+        </p></div>
+        <span class="buttons">
+            <a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-07-pseudo-elements-laboratory" class="btn">See More</a>
+        </span>
+    </li>
+
+	<li class="Padawan">
+
+    	<h3><a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-09-javascript-dom-manipulation">Lesson 09 - JAVASCRIPT DOM MANIPULATION</a></h3>
+
+        <span class="metaData">By <a href="#">Bernal Fernandez</a> 10/02/13 at 12:37 pm</span>
+        <div>
+        <p> <span style="color: #ff8c00;"><span style="font-size: 20px;">Javascript DOM (Document Object Model) Manipulation</span></span> </p> When a web page is loaded, the browser…
+        </div>
+        <span class="buttons">
+            <a href="http://10.0.3.54/index.php/eis_news/trainings_entry/lesson-09-javascript-dom-manipulation" class="btn">See More</a>
+        </span>
+    </li>
+
+</ul>
+
+<!-- MAN CONTENT ENDS -->
+
+<!-- JavaScript -->
+<script src="L7_files/jquery-1.js"></script>
+<script src="L7_files/modernizr-2.js"></script>
+
+
+</body></html>
