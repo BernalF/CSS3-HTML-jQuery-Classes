@@ -1,0 +1,85 @@
+{doctype}
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Customer Portal</title>
+	{ami_default_styles}
+	{ami_default_scripts}
+</head>
+<html>
+<body>
+	<div id="PageContent">
+		<div id="MainContent">
+			<!-- TOP STARTS -->
+			{embed="ami_includes/.top"} <!-- TOP ENDS -->
+			<!-- LEFT CONTENT STARTS -->
+			<div id="LeftContent">
+				<h2 class="bigTitle blue">Processing your request</h2>
+				<ul class="infoContent">
+					<li>
+						<p>
+							Thank you, <span class="bold">our team is processing your request</span> and this process may take a while. <span class="block">Please come back later.</span>
+						</p>
+					</li>
+					<li class="important2">
+						If you have any questions please contact us from any of the options in the Need Help section.
+					</li>
+				</ul>
+			</div>
+			<!-- LEFT CONTENT ENDS -->
+			<!-- RIGHT CONTENT STARTS -->
+			<div id="RightContent">
+				{amiBoxHelp}
+
+				{embed="ami_includes/.portal_tips"}
+			</div>
+			<!-- RIGHT CONTENT ENDS -->
+		</div>
+	</div>
+	<!-- BOTTOM STARTS -->
+	{embed="ami_includes/.bottom"} <!-- BOTTOM STARTS -->
+	{MessagesError}
+</body>
+</html> <script type="text/javascript" src="{site_url}system/expressionengine/CAN/scripts/CANutil.js"></script>
+<script type="text/javascript">
+	$.ajaxSetup({
+		async : false,
+		cache : false
+	});
+	$(window).load("{path='ami_site/AMI_General_Messages_Wait.php'}");
+
+	TimerModule.start(function() {
+		$.ajaxSetup({
+			async : false,
+			cache : false
+		});
+		$(window).load("{path='ami_site/AMI_General_Messages_Wait.php'}", {isAjaxRequest : true}, function(response, status, xhr) {
+			if (isUrl(response)) {
+				window.location.replace(response);
+			} else {
+				DisplayError(response);
+			}
+		});
+	}, 10000);
+
+	window.setTimeout(function() {
+		TimerModule.stop();
+	}, 2000000);
+
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){    
+        $(".link3 a").removeAttr("topReadOnly");
+        $('.link2 a[topReadOnly|="true"]').attr("href", "{path=ami_site/AMI_General_No_Available_Page}");  
+        $('.link5 a[topReadOnly|="true"]').attr("href", "{path=ami_site/AMI_General_No_Available_Page}");  
+   });//END document.READY
+</script>
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+if (isset($_SESSION["isReadOnlyTop1"])) {
+    unset($_SESSION["isReadOnlyTop1"]);
+}
+$_SESSION["isReadOnlyTop1"] = 1;
+?>
